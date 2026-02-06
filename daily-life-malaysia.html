@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-<!-- Google Analytics 4 - KLP -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SPPNGS1L2L"></script>
+<!-- Google Analytics 4 - English Landing Page -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZMYRDNSQ7"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     
-    gtag('config', 'G-SPPNGS1L2L', {
+    gtag('config', 'G-5ZMYRDNSQ7', {
         send_page_view: true,
         allow_google_signals: true,
         allow_ad_personalization_signals: true,
         custom_map: {
-            'custom_parameter_1': 'korean_recruitment'
+            'custom_parameter_1': 'daily_life_malaysia_english'
         }
     });
     
     function trackCustomEvent(eventName, parameters = {}) {
         gtag('event', eventName, {
-            event_category: 'KLP_Program',
-            event_label: 'Korean_Recruitment',
+            event_category: 'Daily_Life_Malaysia',
+            event_label: 'English_Version',
             ...parameters
         });
     }
@@ -51,18 +51,18 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>현지 생활 (음식·교통·주거) | TP 채용 말레이시아·태국</title>
-<meta name="description" content="말레이시아(KL/페낭) 생활 가이드. 음식·교통·주거·의료·쇼핑·주말 활동·생활 팁 소개.">
+<title>Daily Life (Food · Transport · Housing) | TP Careers Malaysia & Thailand</title>
+<meta name="description" content="Malaysia (KL/Penang) lifestyle guide. Introduction to food, transport, housing, healthcare, shopping, weekend activities, and living tips.">
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="photos/TPLogo11.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 <style>
 :root{--tp-black:#000;--tp-dark:#1a1a1a;--tp-charcoal:#2d2d2d;--tp-gray-dark:#4a4a4a;--tp-gray:#666;--tp-gray-light:#999;--tp-silver:#ccc;--tp-light:#e5e5e5;--tp-off:#f5f5f5;--tp-white:#fff;--gold-primary:#FFD700;--gold-light:#FFAA00;--gold-dark:#E6B800;--gold-pale:#FFFBEB;--max:1050px;--shadow-xs:0 1px 2px rgba(0,0,0,.05);--shadow-sm:0 2px 4px rgba(0,0,0,.08);--shadow-md:0 4px 8px rgba(0,0,0,.12);--shadow-lg:0 8px 16px rgba(0,0,0,.16);--shadow-gold:0 4px 12px rgba(255,215,0,.3);--radius:12px}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--tp-dark);line-height:1.75;background:var(--tp-white);-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--tp-dark);line-height:1.75;background:var(--tp-white);-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;height:auto}
 .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -121,21 +121,21 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 .footer-bottom a{color:var(--tp-white);text-decoration:underline;margin:0 .3rem}
 .floating-apply{position:fixed;bottom:20px;right:20px;background:rgba(255,215,0,.95);color:var(--tp-black);padding:.75rem 1.25rem;border-radius:50px;font-weight:600;box-shadow:var(--shadow-gold);z-index:999;transition:all .3s;border:2px solid var(--gold-primary);font-size:.85rem;backdrop-filter:blur(10px)}
 .floating-apply:hover,.floating-apply:focus{transform:scale(1.05);box-shadow:0 6px 20px rgba(255,215,0,.4);background:var(--gold-primary)}
-.floating-casual{position:fixed;bottom:20px;right:140px;background:rgba(255,255,255,.85);color:var(--tp-black);padding:.75rem 1.25rem;border-radius:50px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.15);z-index:998;transition:all .3s;border:2px solid var(--tp-black);font-size:.85rem;backdrop-filter:blur(10px)}
+.floating-casual{position:fixed;bottom:20px;right:170px;background:rgba(255,255,255,.85);color:var(--tp-black);padding:.75rem 1.25rem;border-radius:50px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.15);z-index:998;transition:all .3s;border:2px solid var(--tp-black);font-size:.85rem;backdrop-filter:blur(10px)}
 .floating-casual:hover,.floating-casual:focus{transform:scale(1.05);box-shadow:0 6px 20px rgba(0,0,0,.2);background:rgba(255,255,255,1)}
 .back-to-top{position:fixed;bottom:80px;right:20px;width:40px;height:40px;background:rgba(255,255,255,.8);border:2px solid var(--tp-black);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s;z-index:997;backdrop-filter:blur(10px);font-size:1rem;font-weight:bold}
 .back-to-top.show{opacity:1;visibility:visible}
 .back-to-top:hover{background:var(--tp-black);color:var(--tp-white);transform:translateY(-2px)}
 .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--tp-black) 0%,var(--tp-charcoal) 100%);padding:3.6rem 20px;text-align:center;color:var(--tp-white)}
-.hero::before{content:'한';position:absolute;top:50%;right:5%;font-size:clamp(150px,25vw,350px);font-weight:900;font-family:'Noto Serif KR',serif;opacity:.03;transform:translateY(-50%);pointer-events:none;color:var(--gold-primary)}
-.hero h1{font-size:clamp(1.5rem,4vw,2.3rem);font-weight:900;color:var(--gold-primary);margin-bottom:.45rem;font-family:'Noto Serif KR',serif}
+.hero::before{content:'🌏';position:absolute;top:50%;right:5%;font-size:clamp(150px,25vw,350px);font-weight:900;opacity:.03;transform:translateY(-50%);pointer-events:none;color:var(--gold-primary)}
+.hero h1{font-size:clamp(1.5rem,4vw,2.3rem);font-weight:900;color:var(--gold-primary);margin-bottom:.45rem;font-family:'Playfair Display',serif}
 .hero p{color:var(--tp-silver);max-width:700px;margin:0 auto}
 .hero-cta{margin-top:1.5rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
 .pill-nav{margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center}
 .pill{padding:.45rem .75rem;border:1px solid var(--tp-gray);border-radius:999px;font-weight:700;font-size:.92rem;text-decoration:none;color:var(--tp-silver);transition:all .3s}
 .pill:hover{border-color:var(--gold-primary);color:var(--gold-primary)}
 .section{max-width:1200px;margin:1.6rem auto;padding:0 20px}
-.section h2{font-size:1.6rem;color:var(--tp-black);font-weight:900;margin-bottom:.6rem;font-family:'Noto Serif KR',serif}
+.section h2{font-size:1.6rem;color:var(--tp-black);font-weight:900;margin-bottom:.6rem;font-family:'Playfair Display',serif}
 .lead{color:var(--tp-gray-dark)}
 .muted{color:var(--tp-gray-dark)}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
@@ -155,235 +155,235 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 </style>
 </head>
 <body>
-<a href="#main" class="sr-only">본문으로 이동</a>
+<a href="#main" class="sr-only">Skip to main content</a>
 <header role="banner">
   <div class="header-inner">
-    <a class="brand" href="index.html"><img src="photos/TPLogo11.png" alt="TP" width="40" height="40"><div class="brand-text"><span class="brand-name">TP</span><span class="brand-tagline">말레이시아·태국</span></div></a>
-    <nav aria-label="주요 내비게이션"><ul><li><a href="index.html">홈</a></li><li><a href="about-tp.html">회사 소개</a></li><li><a href="salary-and-benefits.html">급여·복리후생</a></li><li><a href="hiring-process.html">채용 프로세스</a></li><li><a href="why-malaysia-thailand.html">도시 소개</a></li><li><a href="relocation-visa.html">비자 지원</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=korean" target="_blank" rel="noopener noreferrer" class="apply-btn">지원하기</a></li></ul></nav>
-    <button class="mobile-toggle" id="mobileToggle" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a class="brand" href="index-en.html"><img src="photos/TPLogo11.png" alt="TP" width="40" height="40"><div class="brand-text"><span class="brand-name">TP</span><span class="brand-tagline">Malaysia · Thailand</span></div></a>
+    <nav aria-label="Main navigation"><ul><li><a href="index-en.html">Home</a></li><li><a href="about-tp-en.html">About TP</a></li><li><a href="salary-and-benefits.html">Salary & Benefits</a></li><li><a href="hiring-process.html">Hiring Process</a></li><li><a href="why-malaysia-thailand.html">Cities</a></li><li><a href="relocation-visa.html">Visa Support</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual" target="_blank" rel="noopener noreferrer" class="apply-btn">Apply Now</a></li></ul></nav>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
-  <nav class="mobile-menu" id="mobileMenu" aria-label="모바일 내비게이션"><ul><li><a href="index.html">홈</a></li><li><a href="about-tp.html">회사 소개</a></li><li><a href="salary-and-benefits.html">급여·복리후생</a></li><li><a href="hiring-process.html">채용 프로세스</a></li><li><a href="why-malaysia-thailand.html">도시 소개</a></li><li><a href="relocation-visa.html">비자 지원</a></li><li><a href="daily-life-malaysia.html" aria-current="page">현지 생활</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=korean" target="_blank" rel="noopener noreferrer" class="apply-btn">지원하기</a></li></ul></nav>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation"><ul><li><a href="index-en.html">Home</a></li><li><a href="about-tp-en.html">About TP</a></li><li><a href="salary-and-benefits.html">Salary & Benefits</a></li><li><a href="hiring-process.html">Hiring Process</a></li><li><a href="why-malaysia-thailand.html">Cities</a></li><li><a href="relocation-visa.html">Visa Support</a></li><li><a href="daily-life-malaysia-en.html" aria-current="page">Daily Life</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual" target="_blank" rel="noopener noreferrer" class="apply-btn">Apply Now</a></li></ul></nav>
 </header>
 <main id="main">
   <section class="hero">
-    <h1>현지 생활 (음식·교통·주거)</h1>
-    <p>한국보다 더 "여유로운" 생활을 느낄 수 있는 나라, 말레이시아.<br>여기서는 <strong>음식, 교통, 주거, 의료, 주말</strong>까지, 생활의 전체 모습을 소개합니다.</p>
-    <div class="hero-cta" role="group" aria-label="관련 링크">
-      <a class="btn-solid" href="open-jobs.html">채용 공고 보기</a>
-      <a class="btn" href="relocation-visa.html">이주 지원</a>
-      <a class="btn" href="why-malaysia-thailand.html">도시 소개</a>
+    <h1>Daily Life (Food · Transport · Housing)</h1>
+    <p>Malaysia: a country where you can enjoy a more "relaxed" lifestyle.<br>Here we introduce the complete picture of life: <strong>food, transport, housing, healthcare, and weekends</strong>.</p>
+    <div class="hero-cta" role="group" aria-label="Quick links">
+      <a class="btn-solid" href="open-jobs.html">View Open Jobs</a>
+      <a class="btn" href="relocation-visa.html">Relocation Support</a>
+      <a class="btn" href="why-malaysia-thailand.html">Cities</a>
     </div>
-    <div class="pill-nav" aria-label="페이지 내 목차">
-      <a class="pill" href="#food">음식</a>
-      <a class="pill" href="#transport">교통</a>
-      <a class="pill" href="#housing">주거</a>
-      <a class="pill" href="#healthcare">의료·안전</a>
-      <a class="pill" href="#shopping">쇼핑</a>
-      <a class="pill" href="#leisure">주말</a>
-      <a class="pill" href="#tips">팁</a>
-      <a class="pill" href="#next">다음 단계</a>
+    <div class="pill-nav" aria-label="Page navigation">
+      <a class="pill" href="#food">Food</a>
+      <a class="pill" href="#transport">Transport</a>
+      <a class="pill" href="#housing">Housing</a>
+      <a class="pill" href="#healthcare">Healthcare</a>
+      <a class="pill" href="#shopping">Shopping</a>
+      <a class="pill" href="#leisure">Weekends</a>
+      <a class="pill" href="#tips">Tips</a>
+      <a class="pill" href="#next">Next Steps</a>
     </div>
   </section>
 
   <section id="food" class="section">
-    <h2>음식: 로컬도 한식도 "합리적인 가격"</h2>
+    <h2>Food: Both Local and International at "Reasonable Prices"</h2>
     <div class="grid-3" style="margin-top:.7rem">
       <div class="card">
-        <h3>🍛 다국적 음식이 일상</h3>
-        <p class="muted">말레이/중화/인도/호커에 더해, 한식·양식·일식까지 폭넓게 선택 가능. 한국 음식점도 많이 있어요.</p>
+        <h3>🍛 Multicultural Cuisine Daily</h3>
+        <p class="muted">Beyond Malay, Chinese, Indian, and hawker food, you'll find a wide selection including international, Western, and Japanese cuisine.</p>
       </div>
       <div class="card">
-        <h3>💰 가격 참고 (KL)</h3>
+        <h3>💰 Price Reference (KL)</h3>
         <table class="mini">
-          <tr><th>카테고리</th><th>참고가</th></tr>
-          <tr><td>호커·로컬 식당</td><td>RM10~18 (약 3,000~5,400원)/1끼</td></tr>
-          <tr><td>카페 점심</td><td>RM25~45 (약 7,500~13,500원)</td></tr>
-          <tr><td>카페 커피</td><td>RM8~15 (약 2,400~4,500원)</td></tr>
+          <tr><th>Category</th><th>Reference Price</th></tr>
+          <tr><td>Hawker · Local Restaurant</td><td>RM10~18 (approx. $2.20~4 USD)/meal</td></tr>
+          <tr><td>Cafe Lunch</td><td>RM25~45 (approx. $5.50~10 USD)</td></tr>
+          <tr><td>Cafe Coffee</td><td>RM8~15 (approx. $1.80~3.30 USD)</td></tr>
         </table>
-        <p class="muted"><small>※ 표시 가격은 참고용입니다.</small></p>
+        <p class="muted"><small>※ Prices are for reference only.</small></p>
       </div>
       <div class="card">
-        <h3>🛒 한국 식재료 구매처 완비</h3>
-        <p class="muted">KL에는 <strong>AEON/Village Grocer/NSK</strong> 등 아시안 슈퍼마켓이 완비. 한국 식품도 쉽게 구할 수 있어요.</p>
+        <h3>🛒 International Groceries Available</h3>
+        <p class="muted">KL has Asian supermarkets like <strong>AEON/Village Grocer/NSK</strong>. International food items are easily accessible.</p>
       </div>
     </div>
   </section>
 
   <section id="transport" class="section">
-    <h2>교통: 전철 + Grab으로 편하게 이동</h2>
+    <h2>Transport: Easy Travel with Metro + Grab</h2>
     <div class="grid-2" style="margin-top:.7rem">
       <div class="card">
-        <h3>🚇 대중교통 & 차량 호출 앱</h3>
+        <h3>🚇 Public Transport & Ride-Hailing Apps</h3>
         <ul class="muted">
-          <li>LRT/MRT/모노레일이 주요 지역 커버.</li>
-          <li>문 앞까지는 <strong>Grab</strong>이 편리하고 저렴해요.</li>
-          <li>월간 총액 <strong>수만 원 수준</strong>으로 컨트롤 가능한 경우가 많아요.</li>
+          <li>LRT/MRT/Monorail cover major areas.</li>
+          <li><strong>Grab</strong> is convenient and affordable for door-to-door service.</li>
+          <li>Monthly total costs can often be controlled at <strong>just a few hundred RM</strong>.</li>
         </ul>
       </div>
       <div class="card">
-        <h3>💡 통근 팁</h3>
+        <h3>💡 Commuting Tips</h3>
         <ul class="muted">
-          <li>역 근처나 직장 근처에 살면 교통비와 시간 절약.</li>
-          <li>피크 시간은 Grab 가격이 오르니 출퇴근 시간 조절도 고려.</li>
-          <li>짧은 거리는 도보+전철, 퇴근 시만 Grab 등 스마트하게 조합.</li>
+          <li>Living near a station or workplace saves transport costs and time.</li>
+          <li>Grab prices rise during peak hours—consider adjusting commute times.</li>
+          <li>Smart combination: walk + metro for short distances, Grab only after work.</li>
         </ul>
       </div>
     </div>
   </section>
 
   <section id="housing" class="section">
-    <h2>주거: 시설 "포함"이 기본. 바로 편한 생활</h2>
-    <p class="lead">가구·가전 포함, 24시간 경비, <strong>수영장/헬스장</strong> 등이 "당연히" 있어요.</p>
+    <h2>Housing: Facilities "Included" as Standard. Comfortable Living from Day One</h2>
+    <p class="lead">Furniture and appliances included, 24-hour security, <strong>pool/gym</strong> are "naturally" provided.</p>
     <div class="grid-3" style="margin-top:.7rem">
       <div class="card">
-        <h3>🏢 주거 특징</h3>
+        <h3>🏢 Housing Features</h3>
         <ul class="muted">
-          <li>가구·가전 (풀옵션) 포함</li>
-          <li>24시간 경비 & 출입 통제</li>
-          <li>공용시설: 수영장/헬스장/사우나/바베큐/라운지/코워킹 등</li>
-          <li>주차 1대 포함인 물건도 많음</li>
+          <li>Furniture & appliances (fully furnished) included</li>
+          <li>24-hour security & access control</li>
+          <li>Shared facilities: pool/gym/sauna/BBQ/lounge/co-working, etc.</li>
+          <li>Parking for 1 car often included</li>
         </ul>
       </div>
       <div class="card">
-        <h3>📍 지역별 분위기 (KL/페낭)</h3>
-        <table class="mini" aria-label="지역별 분위기">
-          <tr><th>도시</th><th>지역</th><th>분위기</th></tr>
-          <tr><td>KL</td><td>Mont Kiara</td><td>외국인 많음·고급 콘도·생활 편리◎</td></tr>
-          <tr><td>KL</td><td>KLCC 주변</td><td>도심·최신 건물·통근 접근성◎</td></tr>
-          <tr><td>페낭</td><td>George Town</td><td>역사 지구 근처·맛집 많음·활기참</td></tr>
-          <tr><td>페낭</td><td>Bayan Lepas</td><td>공항·산업단지 근처·조용함</td></tr>
+        <h3>📍 Area Characteristics (KL/Penang)</h3>
+        <table class="mini" aria-label="Area characteristics">
+          <tr><th>City</th><th>Area</th><th>Vibe</th></tr>
+          <tr><td>KL</td><td>Mont Kiara</td><td>Expat-friendly · Premium condos · Convenient◎</td></tr>
+          <tr><td>KL</td><td>KLCC Area</td><td>City center · Modern buildings · Easy commute◎</td></tr>
+          <tr><td>Penang</td><td>George Town</td><td>Near historic district · Many restaurants · Vibrant</td></tr>
+          <tr><td>Penang</td><td>Bayan Lepas</td><td>Near airport/industrial area · Quiet</td></tr>
         </table>
       </div>
       <div class="card">
-        <h3>💵 월세 시세 (원룸)</h3>
+        <h3>💵 Rent Rates (Studio)</h3>
         <table class="mini">
-          <tr><th>도시</th><th>시세</th></tr>
-          <tr><td>KL</td><td>RM1,500~2,500 (약 45만~75만원)</td></tr>
-          <tr><td>페낭</td><td>RM1,300~2,100 (KL보다 약간 저렴)</td></tr>
+          <tr><th>City</th><th>Rate</th></tr>
+          <tr><td>KL</td><td>RM1,500~2,500 (approx. $330~550 USD)</td></tr>
+          <tr><td>Penang</td><td>RM1,300~2,100 (slightly lower than KL)</td></tr>
         </table>
-        <p class="muted"><small>※ 참고: 물건·시설에 따라 변동.</small></p>
+        <p class="muted"><small>※ Reference: Varies by property & facilities.</small></p>
       </div>
     </div>
     <div class="callout" style="margin-top:1rem">
-      <strong>입주 흐름 (예시)</strong><br>
-      도착 후 호텔(회사 제공·말레이시아) 숙박 기간에 집 보기 → 신청·계약 → 입주. 한국어 스태프가 중개소 소개·계약 조언까지 서포트합니다.
+      <strong>Move-in Flow (Example)</strong><br>
+      After arrival, stay at hotel (provided by company in Malaysia) while viewing apartments → Apply & sign contract → Move in. Our multilingual staff support you from real estate agent introductions to contract advice.
     </div>
   </section>
 
   <section id="healthcare" class="section">
-    <h2>의료·안전: 영어 서비스 의료시설 다수</h2>
+    <h2>Healthcare & Safety: Many English-Service Medical Facilities</h2>
     <div class="grid-2" style="margin-top:.7rem">
       <div class="card">
-        <h3>🏥 의료</h3>
-        <p class="muted">의료 수준이 높고, KL/페낭 모두 영어 서비스 병원·클리닉이 다수. 회사의 <strong>의료보험</strong>도 완비되어 안심.</p>
+        <h3>🏥 Healthcare</h3>
+        <p class="muted">High medical standards, with many English-service hospitals and clinics in both KL and Penang. Company <strong>medical insurance</strong> is also provided for peace of mind.</p>
       </div>
       <div class="card">
-        <h3>🛡️ 안전</h3>
+        <h3>🛡️ Safety</h3>
         <ul class="muted">
-          <li>치안은 상대적으로 안정적. 기본적인 안전 의식 필요.</li>
-          <li>밤에는 밝은 길·사람 많은 지역 선택.</li>
-          <li>Grab 픽업 위치 정확히. 가방은 몸 앞쪽으로.</li>
+          <li>Public safety is relatively stable. Basic safety awareness is necessary.</li>
+          <li>At night, choose well-lit, crowded areas.</li>
+          <li>Use correct Grab pickup locations. Keep bags in front of you.</li>
         </ul>
       </div>
     </div>
   </section>
 
   <section id="shopping" class="section">
-    <h2>쇼핑·서비스: 쇼핑몰 천국 & 아시안 마켓 완비</h2>
+    <h2>Shopping & Services: Shopping Mall Paradise & Asian Markets Fully Equipped</h2>
     <div class="grid-3" style="margin-top:.7rem">
       <div class="card">
-        <h3>🛍️ 쇼핑</h3>
-        <p class="muted">대형 쇼핑몰·슈퍼마켓이 곳곳에. KLCC, Pavilion, Mid Valley 등 "뭐든 있는" 환경.</p>
+        <h3>🛍️ Shopping</h3>
+        <p class="muted">Large shopping malls and supermarkets everywhere. KLCC, Pavilion, Mid Valley offer an "everything available" environment.</p>
       </div>
       <div class="card">
-        <h3>📶 통신</h3>
-        <p class="muted">휴대폰은 선불 요금제와 저가 플랜이 완비. 집에서는 광섬유 인터넷으로 쾌적.<br><small>(예: 휴대폰 RM40 전후/월이 기준)</small></p>
+        <h3>📶 Telecommunications</h3>
+        <p class="muted">Mobile prepaid plans and budget options are available. Fiber internet at home is fast and reliable.<br><small>(Example: Mobile around RM40/month is standard)</small></p>
       </div>
       <div class="card">
-        <h3>🍜 아시안 마켓</h3>
-        <p class="muted">아시안 슈퍼마켓, 한식당도 매우 많음(KL). 익숙한 맛을 쉽게 찾을 수 있어요.</p>
+        <h3>🍜 Asian Markets</h3>
+        <p class="muted">Many Asian supermarkets and international restaurants (especially in KL). Familiar flavors are easy to find.</p>
       </div>
     </div>
   </section>
 
   <section id="leisure" class="section">
-    <h2>주말 & 액티비티: 바다도 산도 "바로 거기"</h2>
-    <p class="lead">러닝·요가·하이킹·해변·야시장… 휴일도 활동적으로 보내세요.</p>
+    <h2>Weekends & Activities: Ocean and Mountains "Right There"</h2>
+    <p class="lead">Running, yoga, hiking, beaches, night markets… Spend your holidays actively.</p>
     <div class="grid-3" style="margin-top:.7rem">
       <div class="card">
-        <h3>🏖️ 주말 리조트</h3>
+        <h3>🏖️ Weekend Resorts</h3>
         <ul class="muted">
-          <li>랑카위/르당/페낭 등 섬 리조트</li>
-          <li>Grab + 단거리 비행으로 편하게 여행</li>
+          <li>Island resorts like Langkawi, Redang, Penang</li>
+          <li>Easy travel with Grab + short flights</li>
         </ul>
       </div>
       <div class="card">
-        <h3>✈️ 주변 국가도 가까워</h3>
-        <p class="muted">저가항공(에어아시아)으로 싱가포르/베트남/발리/대만 등 <strong>2~4시간</strong> 권내. 주말 해외여행도 일상.</p>
+        <h3>✈️ Neighboring Countries Nearby</h3>
+        <p class="muted">Budget airlines (AirAsia) connect Singapore, Vietnam, Bali, Taiwan within <strong>2~4 hours</strong>. Weekend international trips are routine.</p>
       </div>
       <div class="card">
-        <h3>☕ 카페 & 맛집</h3>
-        <p class="muted">외식이 "일상 가격". 새로운 가게 탐방의 즐거움이 끝이 없어요.</p>
+        <h3>☕ Cafes & Restaurants</h3>
+        <p class="muted">Dining out is at "everyday prices". The joy of exploring new places is endless.</p>
       </div>
     </div>
   </section>
 
   <section id="tips" class="section">
-    <h2>생활 팁: 초기 비용 절약하고 편하게 시작</h2>
+    <h2>Living Tips: Save Initial Costs and Start Comfortably</h2>
     <div class="grid-3" style="margin-top:.7rem">
       <div class="card">
-        <h3>🏠 집 찾기</h3>
-        <p class="muted">도착 후 호텔 숙박 기간에 집 보기→신청이 순조로워요. 역 근처·직장 근처, 시설 우선순위를 정해두면 효율적.</p>
+        <h3>🏠 Finding a Home</h3>
+        <p class="muted">Viewing apartments during hotel stay after arrival → application is smooth. Decide priorities like near station, near work, facilities for efficiency.</p>
       </div>
       <div class="card">
-        <h3>💳 결제</h3>
-        <p class="muted">카드 & QR 결제 보급. 월세는 은행 이체가 일반적. 현금은 소액 상비.</p>
+        <h3>💳 Payments</h3>
+        <p class="muted">Card & QR payments are widespread. Rent is typically paid via bank transfer. Keep small cash on hand.</p>
       </div>
       <div class="card">
-        <h3>🤝 커뮤니티</h3>
-        <p class="muted">회사 이벤트나 취미 커뮤니티에 참여하면 생활 정보도 친구도 늘어나 더 안심.</p>
+        <h3>🤝 Community</h3>
+        <p class="muted">Joining company events or hobby communities helps you gain life information and friends, bringing more peace of mind.</p>
       </div>
     </div>
   </section>
 
   <section id="next" class="section">
-    <h2>다음 단계</h2>
+    <h2>Next Steps</h2>
     <div class="grid-3" style="margin-top:.6rem">
       <div class="card">
-        <h3 style="color:#000">채용 공고 보기</h3>
-        <p class="muted">한국어 포지션 다수. 무경험 OK인 직무도 있어요.</p>
-        <p style="margin-top:.4rem"><a class="btn" href="open-jobs.html">채용 공고</a></p>
+        <h3 style="color:#000">View Open Jobs</h3>
+        <p class="muted">Multiple multilingual positions. Some roles OK for fresh graduates.</p>
+        <p style="margin-top:.4rem"><a class="btn" href="open-jobs.html">Open Jobs</a></p>
       </div>
       <div class="card">
-        <h3 style="color:#000">이주·비자 지원</h3>
-        <p class="muted">취업비자, 도착 후 호텔, 공항 픽업 등 한국어 서포트.</p>
-        <p style="margin-top:.4rem"><a class="btn" href="relocation-visa.html">자세히 보기</a></p>
+        <h3 style="color:#000">Relocation · Visa Support</h3>
+        <p class="muted">Work visa, hotel after arrival, airport pickup—all with multilingual support.</p>
+        <p style="margin-top:.4rem"><a class="btn" href="relocation-visa.html">Learn More</a></p>
       </div>
       <div class="card">
-        <h3 style="color:#000">캐주얼 면담 (한국어)</h3>
-        <p class="muted">선발이 아니에요. 생활·업무 궁금증 30분 편하게 상담.</p>
-        <p style="margin-top:.4rem"><a class="btn" href="casual-interview.html">지금 예약</a></p>
+        <h3 style="color:#000">Casual Chat</h3>
+        <p class="muted">Not an interview. 30-minute relaxed consultation about life and work.</p>
+        <p style="margin-top:.4rem"><a class="btn" href="casual-interview-en.html">Book Now</a></p>
       </div>
     </div>
   </section>
 </main>
 <footer>
   <div class="footer-content">
-    <div class="footer-brand"><div class="footer-logo"><img src="photos/TPLogo11.png" alt="TP"><span class="footer-logo-text">TP</span></div><p class="footer-desc">전 세계 100개국 이상에서 운영되는 글로벌 BPO 기업<br>한국어 인재의 새로운 커리어를 지원합니다</p><div class="badges"><span class="badge-item">🏆 말레이시아 최고의 직장 6년 연속</span><span class="badge-item">🏆 글로벌 최고의 직장 5년 연속</span></div><div class="footer-cta"><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=korean" target="_blank" rel="noopener noreferrer" class="btn btn-solid">지원하기</a></div></div>
-    <div class="footer-section"><h3>회사 정보</h3><ul><li><a href="about-tp.html">회사 소개</a></li><li><a href="salary-and-benefits.html">급여·복리후생</a></li><li><a href="office-environment.html">근무 환경</a></li><li><a href="ta-team.html">채용팀 소개</a></li></ul></div>
-    <div class="footer-section"><h3>채용·지원</h3><ul><li><a href="open-jobs.html">채용 공고</a></li><li><a href="hiring-process.html">채용 프로세스</a></li><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="casual-interview.html">캐주얼 면담</a></li></ul></div>
-    <div class="footer-section"><h3>생활 정보</h3><ul><li><a href="why-malaysia-thailand.html">도시 소개</a></li><li><a href="relocation-visa.html">이주 지원</a></li><li><a href="daily-life-malaysia.html" aria-current="page">현지 생활</a></li><li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINE 공식</a></li></ul></div>
+    <div class="footer-brand"><div class="footer-logo"><img src="photos/TPLogo11.png" alt="TP"><span class="footer-logo-text">TP</span></div><p class="footer-desc">Global BPO company operating in 100+ countries worldwide<br>Supporting the next careers of multilingual talent</p><div class="badges"><span class="badge-item">🏆 6 Years Great Place to Work® Malaysia</span><span class="badge-item">🏆 5 Years World's Best Workplaces™</span></div><div class="footer-cta"><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual" target="_blank" rel="noopener noreferrer" class="btn btn-solid">Apply Now</a></div></div>
+    <div class="footer-section"><h3>Company Info</h3><ul><li><a href="about-tp-en.html">About TP</a></li><li><a href="salary-and-benefits.html">Salary & Benefits</a></li><li><a href="office-environment.html">Work Environment</a></li><li><a href="ta-team.html">Recruitment Team</a></li></ul></div>
+    <div class="footer-section"><h3>Recruitment</h3><ul><li><a href="open-jobs.html">Open Jobs</a></li><li><a href="hiring-process.html">Hiring Process</a></li><li><a href="faq.html">FAQ</a></li><li><a href="casual-interview-en.html">Casual Chat</a></li></ul></div>
+    <div class="footer-section"><h3>Living Info</h3><ul><li><a href="why-malaysia-thailand.html">Cities</a></li><li><a href="relocation-visa.html">Relocation Support</a></li><li><a href="daily-life-malaysia-en.html" aria-current="page">Daily Life</a></li><li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINE Official</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><p class="ssm-info">Teleperformance Malaysia Sdn Bhd의 SSM(말레이시아 기업위원회) 등록번호: 201601023769 (1194708-K)</p><p>&copy; 2026 TP. All rights reserved. | <a href="#">개인정보 처리방침</a> | <a href="#">이용약관</a></p></div>
+  <div class="footer-bottom"><p class="ssm-info">Teleperformance Malaysia Sdn Bhd SSM (Companies Commission of Malaysia) Registration No: 201601023769 (1194708-K)</p><p>&copy; 2026 TP. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p></div>
 </footer>
-<a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=korean" target="_blank" rel="noopener noreferrer" class="floating-apply" aria-label="지원하기">지원하기</a>
-<a href="casual-interview.html" class="floating-casual" aria-label="면담 예약">캐주얼 면담</a>
-<button class="back-to-top" id="backToTop" aria-label="맨 위로">↑</button>
+<a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual" target="_blank" rel="noopener noreferrer" class="floating-apply" aria-label="Apply now">Apply Now</a>
+<a href="casual-interview-en.html" class="floating-casual" aria-label="Book chat">Casual Chat</a>
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 <script>
 (function(){const toggle=document.getElementById('mobileToggle');const menu=document.getElementById('mobileMenu');if(toggle&&menu){toggle.addEventListener('click',function(){toggle.classList.toggle('active');menu.classList.toggle('active');toggle.setAttribute('aria-expanded',menu.classList.contains('active'))});menu.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{toggle.classList.remove('active');menu.classList.remove('active');toggle.setAttribute('aria-expanded','false')})});document.addEventListener('click',e=>{if(!menu.contains(e.target)&&!toggle.contains(e.target)){menu.classList.remove('active');toggle.classList.remove('active');toggle.setAttribute('aria-expanded','false')}})}})();
 (function(){const backToTop=document.getElementById('backToTop');if(!backToTop)return;window.addEventListener('scroll',()=>{if(window.pageYOffset>300)backToTop.classList.add('show');else backToTop.classList.remove('show')});backToTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})})();
 (function(){document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){const href=this.getAttribute('href');if(href==='#')return;e.preventDefault();const target=document.querySelector(href);if(target){const offset=80;const targetPosition=target.getBoundingClientRect().top+window.pageYOffset-offset;window.scrollTo({top:targetPosition,behavior:'smooth'})}})})})();
-console.log('TP Korean daily life page initialized');
+console.log('TP English daily life page initialized');
 </script>
 </body>
 </html>
