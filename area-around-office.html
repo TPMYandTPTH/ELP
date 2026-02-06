@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Analytics 4 - KLP -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SPPNGS1L2L"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-SPPNGS1L2L', {
+        send_page_view: true,
+        allow_google_signals: true,
+        allow_ad_personalization_signals: true,
+        custom_map: {
+            'custom_parameter_1': 'korean_recruitment'
+        }
+    });
+    
+    function trackCustomEvent(eventName, parameters = {}) {
+        gtag('event', eventName, {
+            event_category: 'KLP_Program',
+            event_label: 'Korean_Recruitment',
+            ...parameters
+        });
+    }
+    
+    function trackPageEngagement() {
+        let startTime = Date.now();
+        let maxScroll = 0;
+        
+        window.addEventListener('scroll', function() {
+            let scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            if (scrollPercent > maxScroll) {
+                maxScroll = scrollPercent;
+            }
+        });
+        
+        window.addEventListener('beforeunload', function() {
+            let timeSpent = Math.round((Date.now() - startTime) / 1000);
+            gtag('event', 'page_engagement', {
+                event_category: 'User_Engagement',
+                custom_parameter_time_spent: timeSpent,
+                custom_parameter_max_scroll: maxScroll,
+                non_interaction: true
+            });
+        });
+    }
+    
+    document.addEventListener('DOMContentLoaded', trackPageEngagement);
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오피스 주변 환경 | TP 채용 말레이시아·태국</title>
+<meta name="description" content="각 근무지(쿠알라룸푸르/페낭/방콕)의 주변 환경 소개. 통근, 맛집, 카페, 쇼핑, 공원 등 일상 생활 체험.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="photos/TPLogo11.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{--tp-black:#000;--tp-dark:#1a1a1a;--tp-charcoal:#2d2d2d;--tp-gray-dark:#4a4a4a;--tp-gray:#666;--tp-gray-light:#999;--tp-silver:#ccc;--tp-light:#e5e5e5;--tp-off:#f5f5f5;--tp-white:#fff;--gold-primary:#FFD700;--gold-light:#FFAA00;--gold-dark:#E6B800;--gold-pale:#FFFBEB;--max:1050px;--shadow-sm:0 2px 4px rgba(0,0,0,.08);--shadow-md:0 4px 8px rgba(0,0,0,.12);--shadow-lg:0 8px 16px rgba(0,0,0,.16);--shadow-gold:0 4px 12px rgba(255,215,0,.3);--radius:12px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--tp-dark);line-height:1.8;background:var(--tp-white);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.container{max-width:var(--max);margin:0 auto;padding:0 20px}
+.section-title{text-align:center;font-size:clamp(1.5rem,3vw,2rem);margin-bottom:.625rem;font-weight:900;color:var(--tp-black);letter-spacing:.02em;font-family:'Noto Serif KR',serif}
+.section-subtitle{text-align:center;color:var(--tp-gray);margin-bottom:2rem;font-size:.9rem}
+header{position:sticky;top:0;background:rgba(255,255,255,.97);border-bottom:1px solid var(--tp-light);z-index:1000;backdrop-filter:blur(10px);box-shadow:var(--shadow-sm)}
+.header-inner{max-width:var(--max);margin:0 auto;padding:.75rem 20px;display:flex;justify-content:space-between;align-items:center;gap:1.25rem}
+.brand{display:flex;align-items:center;gap:.625rem}
+.brand img{width:40px;height:40px;object-fit:contain}
+.brand-text{display:flex;flex-direction:column;line-height:1.2}
+.brand-name{font-size:1rem;font-weight:700;color:var(--tp-black)}
+.brand-tagline{font-size:.7rem;color:var(--tp-gray)}
+nav ul{display:flex;gap:1rem;list-style:none;align-items:center}
+nav a{font-size:.85rem;position:relative;transition:all .3s;padding:.2rem 0;white-space:nowrap}
+nav a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--gold-primary);transition:width .3s ease}
+nav a:hover::after{width:100%}
+nav a[aria-current="page"]{font-weight:600}
+nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
+.apply-btn{background:var(--tp-black);color:var(--tp-white);padding:.5rem 1.25rem;border-radius:4px;font-weight:600;border:2px solid var(--tp-black);transition:all .3s}
+.apply-btn:hover{background:var(--gold-primary);color:var(--tp-black);border-color:var(--gold-primary)}
+.apply-btn::after{display:none}
+.mobile-toggle{display:none;width:36px;height:36px;background:transparent;border:2px solid var(--tp-black);border-radius:4px;cursor:pointer;position:relative}
+.mobile-toggle span{display:block;width:18px;height:2px;background:var(--tp-black);position:absolute;left:50%;transform:translateX(-50%);transition:all .3s}
+.mobile-toggle span:nth-child(1){top:10px}
+.mobile-toggle span:nth-child(2){top:17px}
+.mobile-toggle span:nth-child(3){bottom:10px}
+.mobile-toggle.active span:nth-child(1){transform:translateX(-50%) rotate(45deg);top:17px}
+.mobile-toggle.active span:nth-child(2){opacity:0}
+.mobile-toggle.active span:nth-child(3){transform:translateX(-50%) rotate(-45deg);bottom:17px}
+.mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:var(--tp-white);border-top:1px solid var(--tp-light);box-shadow:var(--shadow-lg);max-height:calc(100vh - 60px);overflow-y:auto;z-index:999}
+.mobile-menu.active{display:block}
+.mobile-menu ul{list-style:none;padding:.875rem 0}
+.mobile-menu a{display:block;padding:.625rem 1.25rem;border-bottom:1px solid var(--tp-light);transition:background .3s}
+.mobile-menu a:hover{background:var(--gold-pale)}
+.btn{padding:.75rem 1.75rem;border-radius:4px;font-weight:600;display:inline-block;transition:all .3s;text-align:center;border:2px solid var(--tp-black);cursor:pointer;font-size:.9rem}
+.btn-gold{background:var(--gold-primary);color:var(--tp-black);border-color:var(--gold-primary);padding:.85rem 1.2rem;font-weight:900;border-radius:999px}
+.btn-gold:hover{background:var(--tp-black);color:var(--gold-primary);filter:brightness(.95)}
+.btn-outline{border-color:var(--gold-primary);color:var(--gold-primary);border-radius:999px;padding:.85rem 1.2rem;font-weight:900}
+.btn-outline:hover{background:var(--gold-pale)}
+footer{background:var(--tp-black);color:var(--tp-white);padding:40px 20px 16px;position:relative;overflow:hidden}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold-primary),transparent)}
+.footer-content{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:2fr repeat(3,1fr);gap:2rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-brand{display:flex;flex-direction:column;gap:.875rem}
+.footer-logo{display:flex;align-items:center;gap:.625rem}
+.footer-logo img{width:42px;height:42px;filter:brightness(0) invert(1)}
+.footer-logo-text{font-size:1.15rem;font-weight:700}
+.footer-desc{opacity:.8;line-height:1.75;font-size:.85rem}
+.footer-section h3{margin-bottom:.75rem;font-size:.9rem;letter-spacing:.05em;opacity:.9;color:var(--gold-primary)}
+.footer-section ul{list-style:none}
+.footer-section li{margin-bottom:.3rem}
+.footer-section a{opacity:.7;transition:opacity .3s;font-size:.8rem}
+.footer-section a:hover{opacity:1}
+.badges{display:flex;gap:.75rem;align-items:center;margin-top:.75rem;flex-wrap:wrap}
+.badges .badge-item{display:flex;align-items:center;gap:.3rem;font-size:.8rem;opacity:.8}
+.footer-cta{margin-top:1rem}
+.footer-bottom{text-align:center;padding-top:12px;font-size:.75rem;opacity:.6}
+.footer-bottom a{color:var(--tp-white);text-decoration:underline;margin:0 .3rem}
+.ssm-info{font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:.5rem}
+.floating-apply{position:fixed;bottom:20px;right:20px;background:var(--tp-black);color:var(--tp-white);padding:.75rem 1.25rem;border-radius:50px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.3);z-index:999;transition:all .3s;border:2px solid var(--gold-primary);font-size:.85rem;backdrop-filter:blur(10px)}
+.floating-apply:hover{transform:scale(1.05);box-shadow:var(--shadow-gold);background:var(--gold-primary);color:var(--tp-black)}
+.floating-casual{position:fixed;bottom:20px;right:130px;background:rgba(255,255,255,.9);color:var(--tp-black);padding:.75rem 1.25rem;border-radius:50px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.15);z-index:998;transition:all .3s;border:2px solid var(--tp-black);font-size:.85rem;backdrop-filter:blur(10px)}
+.floating-casual:hover{transform:scale(1.05);box-shadow:var(--shadow-gold);border-color:var(--gold-primary)}
+.back-to-top{position:fixed;bottom:80px;right:20px;width:40px;height:40px;background:rgba(255,255,255,.9);border:2px solid var(--gold-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s;z-index:997;backdrop-filter:blur(10px);font-size:1rem;font-weight:bold;color:var(--gold-dark)}
+.back-to-top.show{opacity:1;visibility:visible}
+.back-to-top:hover{background:var(--gold-primary);color:var(--tp-black);transform:translateY(-2px)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--tp-white) 0%,var(--tp-off) 100%);padding:3.6rem 20px;text-align:center}
+.hero::before{content:'';position:absolute;top:50%;right:6%;width:clamp(220px,32vw,480px);height:clamp(220px,32vw,480px);background-image:url('photos/TPLogo11.png');background-size:contain;background-repeat:no-repeat;background-position:center;opacity:.04;filter:saturate(0);transform:translateY(-50%);pointer-events:none}
+.hero h1{font-size:2.3rem;font-weight:900;color:#000;margin-bottom:.45rem;font-family:'Noto Serif KR',serif}
+.hero p{color:var(--tp-gray-dark)}
+.hero-cta{margin-top:1rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+.pill-nav{margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center}
+.pill{padding:.45rem .75rem;border:1px solid var(--tp-light);border-radius:999px;font-weight:700;font-size:.92rem;text-decoration:none;color:var(--tp-dark);transition:all .3s}
+.pill:hover{border-color:var(--gold-primary);color:var(--gold-dark);background:var(--gold-pale)}
+.section{max-width:1200px;margin:1.6rem auto;padding:0 20px}
+.section h2{font-size:1.6rem;color:#000;font-weight:900;margin-bottom:.6rem;font-family:'Noto Serif KR',serif}
+.lead{color:var(--tp-gray-dark)}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.card{background:#fff;border:1px solid var(--tp-light);border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow-sm);transition:all .3s}
+.card:hover{border-color:var(--gold-primary);box-shadow:var(--shadow-gold);transform:translateY(-2px)}
+.card h3{font-size:1.05rem;color:#000;margin-bottom:.35rem;font-weight:700}
+.muted{color:var(--tp-gray-dark);font-size:.95rem}
+.img-tile{position:relative;overflow:hidden;border-radius:12px;border:1px solid var(--tp-light);background:#fff;transition:all .3s}
+.img-tile:hover{box-shadow:var(--shadow-md);border-color:var(--gold-primary)}
+.img-tile img{display:block;width:100%;height:200px;object-fit:cover}
+.img-tile .caption{padding:.6rem .75rem;font-weight:800}
+.img-tile small{display:block;color:var(--tp-gray-dark);font-weight:500;font-size:.85rem}
+.city-h{display:flex;align-items:center;gap:.75rem;margin:.2rem 0 1rem}
+.city-h img{width:44px;height:44px;object-fit:cover;border-radius:8px;border:1px solid var(--tp-light)}
+.person{display:flex;gap:1rem;align-items:flex-start}
+.avatar{width:64px;height:64px;border-radius:50%;background:#eee;flex:0 0 64px;object-fit:cover;border:1px solid var(--tp-light)}
+blockquote{border-left:4px solid var(--gold-primary);padding:.4rem .9rem;background:var(--gold-pale);border-radius:8px;margin-top:.4rem;font-style:italic;color:var(--tp-gray-dark)}
+@media(max-width:1100px){.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.grid-3{grid-template-columns:1fr 1fr}nav{display:none}.mobile-toggle{display:block}.floating-casual{bottom:80px;right:20px}.back-to-top{bottom:140px}}
+@media(max-width:768px){.section-title{font-size:1.4rem}.grid-3,.grid-2,.grid-4{grid-template-columns:1fr}.footer-content{grid-template-columns:1fr;text-align:center}.floating-apply{bottom:14px;right:14px;padding:.625rem 1rem;font-size:.8rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a href="#main" class="sr-only">본문으로 이동</a>
+<header role="banner">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><img src="photos/TPLogo11.png" alt="TP" width="40" height="40"><div class="brand-text"><span class="brand-name">TP</span><span class="brand-tagline">말레이시아·태국</span></div></a>
+    <nav aria-label="주요 내비게이션"><ul><li><a href="index.html">홈</a></li><li><a href="open-jobs.html">채용 공고</a></li><li><a href="about-tp.html">회사 소개</a></li><li><a href="salary-and-benefits.html">급여·복리후생</a></li><li><a href="hiring-process.html">채용 프로세스</a></li><li><a href="area-around-office.html" aria-current="page">오피스 주변</a></li><li><a href="relocation-visa.html">비자·이주 지원</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=korean" target="_blank" rel="noopener noreferrer" class="apply-btn">지원하기</a></li></ul></nav>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="모바일 내비게이션"><ul><li><a href="index.html">홈</a></li><li><a href="open-jobs.html">채용 공고</a></li><li><a href="about-tp.html">회사 소개</a></li><li><a href="salary-and-benefits.html">급여·복리후생</a></li><li><a href="hiring-process.html">채용 프로세스</a></li><li><a href="area-around-office.html">오피스 주변</a></li><li><a href="relocation-visa.html">비자·이주 지원</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=korean" target="_blank" rel="noopener noreferrer" class="apply-btn">지원하기</a></li></ul></nav>
+</header>
+<main id="main">
+  <section class="hero">
+    <h1>오피스 주변 환경</h1>
+    <p>편리한 교통, 풍부한 맛집, 쾌적한 생활. 좋은 일상 환경이 업무와 성장에 집중할 수 있게 해줍니다.</p>
+    <div class="hero-cta" role="group" aria-label="관련 링크">
+      <a class="btn-gold" href="#kl">쿠알라룸푸르</a>
+      <a class="btn btn-outline" href="#penang">페낭</a>
+      <a class="btn btn-outline" href="#bangkok">방콕</a>
+    </div>
+    <div class="pill-nav" aria-label="페이지 내비게이션">
+      <a class="pill" href="#kl">쿠알라룸푸르</a>
+      <a class="pill" href="#penang">페낭</a>
+      <a class="pill" href="#bangkok">방콕</a>
+      <a class="pill" href="#tips">직원 후기</a>
+    </div>
+  </section>
+
+  <!-- KL Section -->
+  <section id="kl" class="section">
+    <div class="city-h">
+      <img src="photos/KL%201.jpg" alt="쿠알라룸푸르 도시 풍경">
+      <h2>쿠알라룸푸르 (KL)</h2>
+    </div>
+    <p class="lead">도시의 활기와 자연 풍경이 어우러진 다문화 도시. 편리한 교통, 다양한 맛집, 풍부한 엔터테인먼트.</p>
+    <div class="grid-4" style="margin-top:.8rem">
+      <figure class="img-tile">
+        <img src="photos/G%20TOWER.jpg" alt="오피스 빌딩 외관">
+        <figcaption class="caption">오피스 위치<small>중심 상업 지구, 교통 편리</small></figcaption>
+      </figure>
+      <figure class="img-tile">
+        <img src="photos/KL%202.jpg" alt="쿠알라룸푸르 시내">
+        <figcaption class="caption">도시 풍경<small>퇴근 후 갈 곳이 많아요</small></figcaption>
+      </figure>
+      <figure class="img-tile">
+        <img src="photos/Reception.png" alt="오피스 리셉션">
+        <figcaption class="caption">근무 환경<small>쾌적하고 전문적인 공간</small></figcaption>
+      </figure>
+      <figure class="img-tile">
+        <img src="photos/Maho%20in%20front%20ofKLCC.jpg" alt="KLCC 주변">
+        <figcaption class="caption">주말 핫플<small>쇼핑, 맛집, 엔터테인먼트 집결지</small></figcaption>
+      </figure>
+    </div>
+    <div class="grid-3" style="margin-top:1rem">
+      <div class="card">
+        <h3>교통</h3>
+        <p class="muted">지하철, 버스, 그랩 앱 완비. 도심 위치로 빠르고 편리한 출퇴근.</p>
+      </div>
+      <div class="card">
+        <h3>맛집</h3>
+        <p class="muted">노점, 로컬 음식, 일식, 카페까지 다양. 외식비가 저렴하고 매일 새로운 발견.</p>
+      </div>
+      <div class="card">
+        <h3>운동·휴식</h3>
+        <p class="muted">아파트에 헬스장·수영장 완비, 주변 공원과 운동 시설 충실. 퇴근 후 몸과 마음 재충전.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Penang Section -->
+  <section id="penang" class="section">
+    <div class="city-h">
+      <img src="photos/Penang.jpg" alt="페낭 해변">
+      <h2>페낭 (Penang)</h2>
+    </div>
+    <p class="lead">바다와 가까운 섬, 여유로운 생활 리듬. 조용한 환경, 저렴한 생활비, 아름다운 자연.</p>
+    <div class="grid-4" style="margin-top:.8rem">
+      <figure class="img-tile">
+        <img src="photos/Penang.jpg" alt="페낭 전경">
+        <figcaption class="caption">해변 근처<small>주말 해변 산책이 일상</small></figcaption>
+      </figure>
+      <figure class="img-tile">
+        <img src="photos/Condo.jpg" alt="아파트 시설">
+        <figcaption class="caption">주거 시설<small>헬스장·수영장 기본 제공</small></figcaption>
+      </figure>
+      <figure class="img-tile">
+        <img src="photos/Reception%20(2).png" alt="오피스 내부">
+        <figcaption class="caption">근무 공간<small>쾌적하고 조용한 환경</small></figcaption>
+      </figure>
+      <figure class="img-tile">
+        <img src="photos/Reception%20(1).png" alt="리셉션 구역">
+        <figcaption class="caption">리셉션<small>전문적인 오피스 시설</small></figcaption>
+      </figure>
+    </div>
+    <div class="grid-3" style="margin-top:1rem">
+      <div class="card">
+        <h3>교통</h3>
+        <p class="muted">그랩 앱이 주요 이동 수단. 해변이든 시내든 쉽게 이동 가능.</p>
+      </div>
+      <div class="card">
+        <h3>음식 문화</h3>
+        <p class="muted">노점 음식, 푸드코트, 카페 문화 발달. 다양한 음식 선택, 매일 다른 맛.</p>
+      </div>
+      <div class="card">
+        <h3>여가 생활</h3>
+        <p class="muted">해변 산책, 바다 놀이, 카페 모임. 여유로운 라이프스타일이 일상.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bangkok Section -->
+  <section id="bangkok" class="section">
+    <div class="city-h">
+      <img src="photos/Bangkok1.jpg" alt="방콕 도시 풍경">
+      <h2>방콕 (Bangkok)</h2>
+    </div>
+    <p class="lead">동남아시아에서 가장 국제적인 도시. 발달된 교통, 완벽한 서비스, 풍부한 선택지.</p>
+    <div class="grid-4" style="margin-top:.8rem">
+      <figure class="img-tile">
+        <img src="photos/Singha%20Complex1.jpg" alt="상업 중심지">
+        <figcaption class="caption">오피스 주변<small>쇼핑과 맛집 완비</small></figcaption>
+      </figure>
+      <figure class="img-tile">
+        <img src="photos/Singha%20Complex2.jpg" alt="교통 편리">
+        <figcaption class="caption">교통 편리<small>지하철과 그랩 모두 편리</small></figcaption>
+      </figure>
+      <figure class="img-tile">
+        <img src="photos/Bangkok%202.jpg" alt="방콕 야경">
+        <figcaption class="caption">나이트라이프<small>풍부한 엔터테인먼트</small></figcaption>
+      </figure>
+      <figure class="img-tile">
+        <img src="photos/Reception%20(1).png" alt="오피스 리셉션">
+        <figcaption class="caption">오피스 시설<small>현대적인 근무 환경</small></figcaption>
+      </figure>
+    </div>
+    <div class="grid-3" style="margin-top:1rem">
+      <div class="card">
+        <h3>교통</h3>
+        <p class="muted">지하철망 발달, 주요 지역 직결. 그랩 앱도 저렴하고 편리.</p>
+      </div>
+      <div class="card">
+        <h3>한인 커뮤니티</h3>
+        <p class="muted">한식당, 한국 마트, 한국어 지원 병원 완비. 처음 오는 분도 빠르게 적응 가능.</p>
+      </div>
+      <div class="card">
+        <h3>여가 생활</h3>
+        <p class="muted">대형 쇼핑몰, 특색 있는 레스토랑, 다양한 이벤트. 퇴근 후 즐길 거리 풍부.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tips Section -->
+  <section id="tips" class="section">
+    <h2>직원 후기</h2>
+    <div class="grid-3" style="margin-top:.6rem">
+      <div class="card">
+        <div class="person">
+          <img class="avatar" src="photos/TPLogo11.png" alt="H.U">
+          <div>
+            <strong>H.U (쿠알라룸푸르)</strong>
+            <blockquote>"음식 선택지가 너무 많아요. 노점, 쇼핑몰, 한식까지. 생활비도 저렴하고 매일 행복해요."</blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="person">
+          <img class="avatar" src="photos/TPLogo11.png" alt="M.Y">
+          <div>
+            <strong>M.Y (페낭)</strong>
+            <blockquote>"바다 가까이 사는 게 좋아요. 주말에 해변 산책하고 카페 가면 스트레스가 확 줄어요."</blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="person">
+          <img class="avatar" src="photos/TPLogo11.png" alt="A.T">
+          <div>
+            <strong>A.T (방콕)</strong>
+            <blockquote>"지하철이 정말 편해요. 퇴근 후 어디든 갈 수 있어요. 활기차고 에너지 넘치는 도시예요."</blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-4" style="margin-top:1rem">
+      <figure class="img-tile">
+        <img src="photos/OPOutside.png" alt="페낭 맛집">
+        <figcaption class="caption">맛집 모음<small>다양한 로컬 음식</small></figcaption>
+      </figure>
+      <figure class="img-tile">
+        <img src="photos/JPteam.png" alt="채용팀">
+        <figcaption class="caption">든든한 지원<small>한국어 팀이 도와드려요</small></figcaption>
+      </figure>
+      <figure class="img-tile">
+        <img src="photos/Joseph%20on%20vacation.jpg" alt="휴가 생활">
+        <figcaption class="caption">충실한 휴가<small>여행, 휴식 모두 가능</small></figcaption>
+      </figure>
+      <figure class="img-tile">
+        <img src="photos/G%20TOWER.jpg" alt="오피스 빌딩 주변">
+        <figcaption class="caption">쾌적한 생활<small>편리한 일상 환경</small></figcaption>
+      </figure>
+    </div>
+    <p class="muted" style="margin-top:.8rem"><small>일부 이미지는 참고용입니다. 실제 근무지, 통근 방법, 오피스 시설은 프로젝트와 시기에 따라 다를 수 있습니다.</small></p>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="grid-3">
+      <div class="card">
+        <h3>채용 공고 보기</h3>
+        <p class="muted">한국어 포지션 다수. 신입 지원자도 환영합니다.</p>
+        <p style="margin-top:.4rem"><a class="btn-gold" href="open-jobs.html">채용 공고</a></p>
+      </div>
+      <div class="card">
+        <h3>캐주얼 면담</h3>
+        <p class="muted">면접이 아닌 편안한 대화. 한국어로 질문해도 괜찮아요.</p>
+        <p style="margin-top:.4rem"><a class="btn btn-outline" href="casual-interview.html">면담 예약</a></p>
+      </div>
+      <div class="card">
+        <h3>LINE 공식 계정</h3>
+        <p class="muted">최신 채용 정보, 현지 생활 정보, 팁 공유. 궁금한 점은 바로 물어보세요.</p>
+        <p style="margin-top:.4rem"><a class="btn btn-outline" target="_blank" rel="noopener noreferrer" href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd">친구 추가</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand"><div class="footer-logo"><img src="photos/TPLogo11.png" alt="TP"><span class="footer-logo-text">TP</span></div><p class="footer-desc">전 세계 100개국 이상에서 운영되는 글로벌 BPO 기업<br>한국어 인재의 새로운 커리어를 지원합니다</p><div class="badges"><span class="badge-item">🏆 말레이시아 최고의 직장 6년 연속</span><span class="badge-item">🏆 글로벌 최고의 직장 5년 연속</span></div><div class="footer-cta"><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=korean" target="_blank" rel="noopener noreferrer" class="btn btn-gold">지원하기</a></div></div>
+    <div class="footer-section"><h3>회사 정보</h3><ul><li><a href="about-tp.html">회사 소개</a></li><li><a href="salary-and-benefits.html#benefits">복리후생</a></li><li><a href="office-environment.html">근무 환경</a></li><li><a href="ta-team.html">채용팀 소개</a></li></ul></div>
+    <div class="footer-section"><h3>채용·지원</h3><ul><li><a href="open-jobs.html">채용 공고</a></li><li><a href="hiring-process.html">채용 프로세스</a></li><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="casual-interview.html">문의하기</a></li></ul></div>
+    <div class="footer-section"><h3>생활 정보</h3><ul><li><a href="area-around-office.html">오피스 주변</a></li><li><a href="relocation-visa.html">이주 지원</a></li><li><a href="daily-life-malaysia.html">라이프스타일</a></li><li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINE 공식</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p class="ssm-info">Teleperformance Malaysia Sdn Bhd의 SSM(말레이시아 기업위원회) 등록번호: 201601023769 (1194708-K)</p><p>&copy; 2026 TP. All rights reserved. | <a href="#">개인정보 처리방침</a> | <a href="#">이용약관</a></p></div>
+</footer>
+<a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=korean" target="_blank" rel="noopener noreferrer" class="floating-apply">지원하기</a>
+<a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer" class="floating-casual">캐주얼 면담</a>
+<button class="back-to-top" id="backToTop">↑</button>
+<script>
+(function(){const toggle=document.getElementById('mobileToggle');const menu=document.getElementById('mobileMenu');if(toggle&&menu){toggle.addEventListener('click',function(){toggle.classList.toggle('active');menu.classList.toggle('active');toggle.setAttribute('aria-expanded',menu.classList.contains('active'))});menu.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{toggle.classList.remove('active');menu.classList.remove('active');toggle.setAttribute('aria-expanded','false')})});document.addEventListener('click',e=>{if(!menu.contains(e.target)&&!toggle.contains(e.target)){menu.classList.remove('active');toggle.classList.remove('active');toggle.setAttribute('aria-expanded','false')}})}})();
+(function(){const backToTop=document.getElementById('backToTop');if(!backToTop)return;window.addEventListener('scroll',()=>{if(window.pageYOffset>300)backToTop.classList.add('show');else backToTop.classList.remove('show')});backToTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})})();
+(function(){document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){const href=this.getAttribute('href');if(href==='#')return;e.preventDefault();const target=document.querySelector(href);if(target){const offset=70;const targetPosition=target.getBoundingClientRect().top+window.pageYOffset-offset;window.scrollTo({top:targetPosition,behavior:'smooth'})}})})})();
+console.log('TP Area Around Office - Korean version loaded');
+</script>
+</body>
+</html>

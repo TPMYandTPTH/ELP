@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Analytics 4 - KLP -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SPPNGS1L2L"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-SPPNGS1L2L', {
+        send_page_view: true,
+        allow_google_signals: true,
+        allow_ad_personalization_signals: true,
+        custom_map: {
+            'custom_parameter_1': 'korean_recruitment'
+        }
+    });
+    
+    function trackCustomEvent(eventName, parameters = {}) {
+        gtag('event', eventName, {
+            event_category: 'KLP_Program',
+            event_label: 'Korean_Recruitment',
+            ...parameters
+        });
+    }
+    
+    function trackPageEngagement() {
+        let startTime = Date.now();
+        let maxScroll = 0;
+        
+        window.addEventListener('scroll', function() {
+            let scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            if (scrollPercent > maxScroll) {
+                maxScroll = scrollPercent;
+            }
+        });
+        
+        window.addEventListener('beforeunload', function() {
+            let timeSpent = Math.round((Date.now() - startTime) / 1000);
+            gtag('event', 'page_engagement', {
+                event_category: 'User_Engagement',
+                custom_parameter_time_spent: timeSpent,
+                custom_parameter_max_scroll: maxScroll,
+                non_interaction: true
+            });
+        });
+    }
+    
+    document.addEventListener('DOMContentLoaded', trackPageEngagement);
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>현지 생활 (음식·교통·주거) | TP 채용 말레이시아·태국</title>
+<meta name="description" content="말레이시아(KL/페낭) 생활 가이드. 음식·교통·주거·의료·쇼핑·주말 활동·생활 팁 소개.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="photos/TPLogo11.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{--tp-black:#000;--tp-dark:#1a1a1a;--tp-charcoal:#2d2d2d;--tp-gray-dark:#4a4a4a;--tp-gray:#666;--tp-gray-light:#999;--tp-silver:#ccc;--tp-light:#e5e5e5;--tp-off:#f5f5f5;--tp-white:#fff;--gold-primary:#FFD700;--gold-light:#FFAA00;--gold-dark:#E6B800;--gold-pale:#FFFBEB;--max:1050px;--shadow-xs:0 1px 2px rgba(0,0,0,.05);--shadow-sm:0 2px 4px rgba(0,0,0,.08);--shadow-md:0 4px 8px rgba(0,0,0,.12);--shadow-lg:0 8px 16px rgba(0,0,0,.16);--shadow-gold:0 4px 12px rgba(255,215,0,.3);--radius:12px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--tp-dark);line-height:1.75;background:var(--tp-white);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.container{max-width:var(--max);margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:rgba(255,255,255,.97);border-bottom:1px solid var(--tp-light);z-index:1000;backdrop-filter:blur(10px);box-shadow:var(--shadow-xs)}
+.header-inner{max-width:var(--max);margin:0 auto;padding:.75rem 20px;display:flex;justify-content:space-between;align-items:center;gap:1.25rem}
+.brand{display:flex;align-items:center;gap:.625rem}
+.brand img{width:40px;height:40px;object-fit:contain}
+.brand-text{display:flex;flex-direction:column;line-height:1.2}
+.brand-name{font-size:1rem;font-weight:700;color:var(--tp-black)}
+.brand-tagline{font-size:.7rem;color:var(--tp-gray)}
+nav ul{display:flex;gap:1rem;list-style:none;align-items:center}
+nav a{font-size:.85rem;position:relative;transition:all .3s;padding:.2rem 0;white-space:nowrap}
+nav a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--gold-primary);transition:width .3s ease}
+nav a:hover::after,nav a:focus::after{width:100%}
+nav a[aria-current="page"]{font-weight:600}
+nav a[aria-current="page"]::after{width:100%}
+.apply-btn{background:var(--gold-primary);color:var(--tp-black);padding:.5rem 1.25rem;border-radius:4px;font-weight:600;border:2px solid var(--gold-primary);transition:all .3s}
+.apply-btn:hover,.apply-btn:focus{background:var(--tp-black);color:var(--gold-primary)}
+.apply-btn::after{display:none}
+.mobile-toggle{display:none;width:36px;height:36px;background:transparent;border:2px solid var(--tp-black);border-radius:4px;cursor:pointer;position:relative}
+.mobile-toggle span{display:block;width:18px;height:2px;background:var(--tp-black);position:absolute;left:50%;transform:translateX(-50%);transition:all .3s}
+.mobile-toggle span:nth-child(1){top:10px}
+.mobile-toggle span:nth-child(2){top:17px}
+.mobile-toggle span:nth-child(3){bottom:10px}
+.mobile-toggle.active span:nth-child(1){transform:translateX(-50%) rotate(45deg);top:17px}
+.mobile-toggle.active span:nth-child(2){opacity:0}
+.mobile-toggle.active span:nth-child(3){transform:translateX(-50%) rotate(-45deg);bottom:17px}
+.mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:var(--tp-white);border-top:1px solid var(--tp-light);box-shadow:var(--shadow-lg);max-height:calc(100vh - 60px);overflow-y:auto;z-index:999}
+.mobile-menu.active{display:block}
+.mobile-menu ul{list-style:none;padding:.875rem 0}
+.mobile-menu a{display:block;padding:.625rem 1.25rem;border-bottom:1px solid var(--tp-light);transition:background .3s}
+.mobile-menu a:hover,.mobile-menu a:focus{background:var(--tp-off)}
+.btn{padding:.85rem 1.2rem;font-weight:700;border-radius:999px;text-decoration:none;display:inline-block;border:2px solid var(--gold-primary);color:var(--gold-primary);transition:.2s;background:transparent}
+.btn:hover{background:var(--gold-primary);color:var(--tp-black)}
+.btn-solid{background:var(--gold-primary);color:var(--tp-black);border-color:var(--gold-primary);border-radius:999px;padding:.85rem 1.2rem;font-weight:700;display:inline-block;border:2px solid var(--gold-primary)}
+.btn-solid:hover{background:var(--tp-black);color:var(--gold-primary)}
+footer{background:var(--tp-black);color:var(--tp-white);padding:40px 20px 16px;position:relative;overflow:hidden;margin-top:40px}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold-primary),transparent)}
+.footer-content{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:2fr repeat(3,1fr);gap:2rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-brand{display:flex;flex-direction:column;gap:.875rem}
+.footer-logo{display:flex;align-items:center;gap:.625rem}
+.footer-logo img{width:42px;height:42px;filter:brightness(0) invert(1)}
+.footer-logo-text{font-size:1.15rem;font-weight:700}
+.footer-desc{opacity:.8;line-height:1.75;font-size:.85rem}
+.footer-section h3{margin-bottom:.75rem;font-size:.9rem;letter-spacing:.05em;opacity:.9;color:var(--gold-primary)}
+.footer-section ul{list-style:none}
+.footer-section li{margin-bottom:.3rem}
+.footer-section a{opacity:.7;transition:opacity .3s;font-size:.8rem}
+.footer-section a:hover,.footer-section a:focus{opacity:1;color:var(--gold-primary)}
+.badges{display:flex;gap:.75rem;align-items:center;margin-top:.75rem;flex-wrap:wrap}
+.badges .badge-item{display:flex;align-items:center;gap:.3rem;font-size:.8rem;opacity:.8;color:var(--gold-primary)}
+.footer-cta{margin-top:1rem}
+.footer-bottom{text-align:center;padding-top:12px;font-size:.75rem;opacity:.6}
+.footer-bottom .ssm-info{margin-bottom:.5rem;font-size:.7rem}
+.footer-bottom a{color:var(--tp-white);text-decoration:underline;margin:0 .3rem}
+.floating-apply{position:fixed;bottom:20px;right:20px;background:rgba(255,215,0,.95);color:var(--tp-black);padding:.75rem 1.25rem;border-radius:50px;font-weight:600;box-shadow:var(--shadow-gold);z-index:999;transition:all .3s;border:2px solid var(--gold-primary);font-size:.85rem;backdrop-filter:blur(10px)}
+.floating-apply:hover,.floating-apply:focus{transform:scale(1.05);box-shadow:0 6px 20px rgba(255,215,0,.4);background:var(--gold-primary)}
+.floating-casual{position:fixed;bottom:20px;right:140px;background:rgba(255,255,255,.85);color:var(--tp-black);padding:.75rem 1.25rem;border-radius:50px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.15);z-index:998;transition:all .3s;border:2px solid var(--tp-black);font-size:.85rem;backdrop-filter:blur(10px)}
+.floating-casual:hover,.floating-casual:focus{transform:scale(1.05);box-shadow:0 6px 20px rgba(0,0,0,.2);background:rgba(255,255,255,1)}
+.back-to-top{position:fixed;bottom:80px;right:20px;width:40px;height:40px;background:rgba(255,255,255,.8);border:2px solid var(--tp-black);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s;z-index:997;backdrop-filter:blur(10px);font-size:1rem;font-weight:bold}
+.back-to-top.show{opacity:1;visibility:visible}
+.back-to-top:hover{background:var(--tp-black);color:var(--tp-white);transform:translateY(-2px)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--tp-black) 0%,var(--tp-charcoal) 100%);padding:3.6rem 20px;text-align:center;color:var(--tp-white)}
+.hero::before{content:'한';position:absolute;top:50%;right:5%;font-size:clamp(150px,25vw,350px);font-weight:900;font-family:'Noto Serif KR',serif;opacity:.03;transform:translateY(-50%);pointer-events:none;color:var(--gold-primary)}
+.hero h1{font-size:clamp(1.5rem,4vw,2.3rem);font-weight:900;color:var(--gold-primary);margin-bottom:.45rem;font-family:'Noto Serif KR',serif}
+.hero p{color:var(--tp-silver);max-width:700px;margin:0 auto}
+.hero-cta{margin-top:1.5rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+.pill-nav{margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center}
+.pill{padding:.45rem .75rem;border:1px solid var(--tp-gray);border-radius:999px;font-weight:700;font-size:.92rem;text-decoration:none;color:var(--tp-silver);transition:all .3s}
+.pill:hover{border-color:var(--gold-primary);color:var(--gold-primary)}
+.section{max-width:1200px;margin:1.6rem auto;padding:0 20px}
+.section h2{font-size:1.6rem;color:var(--tp-black);font-weight:900;margin-bottom:.6rem;font-family:'Noto Serif KR',serif}
+.lead{color:var(--tp-gray-dark)}
+.muted{color:var(--tp-gray-dark)}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.card{background:var(--tp-white);border:1px solid var(--tp-light);border-radius:var(--radius);padding:1.25rem;box-shadow:var(--shadow-sm);transition:all .3s}
+.card:hover{border-color:var(--gold-primary);box-shadow:var(--shadow-md)}
+.card h3{font-size:1.05rem;color:var(--tp-black);margin-bottom:.35rem}
+.mini{width:100%;border-collapse:collapse;margin-top:.5rem}
+.mini th,.mini td{border:1px solid var(--tp-light);padding:.65rem .75rem;font-size:.96rem;vertical-align:top}
+.mini th{background:var(--gold-pale);text-align:left;color:var(--tp-black)}
+.callout{border:1px solid var(--gold-primary);background:var(--gold-pale);padding:1rem;border-radius:10px}
+@media(max-width:1020px){.grid-3{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){nav{display:none}.mobile-toggle{display:block}.floating-casual{bottom:80px;right:20px}.back-to-top{bottom:140px}}
+@media(max-width:768px){.footer-content{grid-template-columns:1fr;text-align:center}.floating-apply{bottom:14px;right:14px;padding:.625rem 1rem;font-size:.8rem}}
+@media(max-width:720px){.grid-3,.grid-2{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a href="#main" class="sr-only">본문으로 이동</a>
+<header role="banner">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><img src="photos/TPLogo11.png" alt="TP" width="40" height="40"><div class="brand-text"><span class="brand-name">TP</span><span class="brand-tagline">말레이시아·태국</span></div></a>
+    <nav aria-label="주요 내비게이션"><ul><li><a href="index.html">홈</a></li><li><a href="about-tp.html">회사 소개</a></li><li><a href="salary-and-benefits.html">급여·복리후생</a></li><li><a href="hiring-process.html">채용 프로세스</a></li><li><a href="why-malaysia-thailand.html">도시 소개</a></li><li><a href="relocation-visa.html">비자 지원</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=korean" target="_blank" rel="noopener noreferrer" class="apply-btn">지원하기</a></li></ul></nav>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="모바일 내비게이션"><ul><li><a href="index.html">홈</a></li><li><a href="about-tp.html">회사 소개</a></li><li><a href="salary-and-benefits.html">급여·복리후생</a></li><li><a href="hiring-process.html">채용 프로세스</a></li><li><a href="why-malaysia-thailand.html">도시 소개</a></li><li><a href="relocation-visa.html">비자 지원</a></li><li><a href="daily-life-malaysia.html" aria-current="page">현지 생활</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=korean" target="_blank" rel="noopener noreferrer" class="apply-btn">지원하기</a></li></ul></nav>
+</header>
+<main id="main">
+  <section class="hero">
+    <h1>현지 생활 (음식·교통·주거)</h1>
+    <p>한국보다 더 "여유로운" 생활을 느낄 수 있는 나라, 말레이시아.<br>여기서는 <strong>음식, 교통, 주거, 의료, 주말</strong>까지, 생활의 전체 모습을 소개합니다.</p>
+    <div class="hero-cta" role="group" aria-label="관련 링크">
+      <a class="btn-solid" href="open-jobs.html">채용 공고 보기</a>
+      <a class="btn" href="relocation-visa.html">이주 지원</a>
+      <a class="btn" href="why-malaysia-thailand.html">도시 소개</a>
+    </div>
+    <div class="pill-nav" aria-label="페이지 내 목차">
+      <a class="pill" href="#food">음식</a>
+      <a class="pill" href="#transport">교통</a>
+      <a class="pill" href="#housing">주거</a>
+      <a class="pill" href="#healthcare">의료·안전</a>
+      <a class="pill" href="#shopping">쇼핑</a>
+      <a class="pill" href="#leisure">주말</a>
+      <a class="pill" href="#tips">팁</a>
+      <a class="pill" href="#next">다음 단계</a>
+    </div>
+  </section>
+
+  <section id="food" class="section">
+    <h2>음식: 로컬도 한식도 "합리적인 가격"</h2>
+    <div class="grid-3" style="margin-top:.7rem">
+      <div class="card">
+        <h3>🍛 다국적 음식이 일상</h3>
+        <p class="muted">말레이/중화/인도/호커에 더해, 한식·양식·일식까지 폭넓게 선택 가능. 한국 음식점도 많이 있어요.</p>
+      </div>
+      <div class="card">
+        <h3>💰 가격 참고 (KL)</h3>
+        <table class="mini">
+          <tr><th>카테고리</th><th>참고가</th></tr>
+          <tr><td>호커·로컬 식당</td><td>RM10~18 (약 3,000~5,400원)/1끼</td></tr>
+          <tr><td>카페 점심</td><td>RM25~45 (약 7,500~13,500원)</td></tr>
+          <tr><td>카페 커피</td><td>RM8~15 (약 2,400~4,500원)</td></tr>
+        </table>
+        <p class="muted"><small>※ 표시 가격은 참고용입니다.</small></p>
+      </div>
+      <div class="card">
+        <h3>🛒 한국 식재료 구매처 완비</h3>
+        <p class="muted">KL에는 <strong>AEON/Village Grocer/NSK</strong> 등 아시안 슈퍼마켓이 완비. 한국 식품도 쉽게 구할 수 있어요.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="transport" class="section">
+    <h2>교통: 전철 + Grab으로 편하게 이동</h2>
+    <div class="grid-2" style="margin-top:.7rem">
+      <div class="card">
+        <h3>🚇 대중교통 & 차량 호출 앱</h3>
+        <ul class="muted">
+          <li>LRT/MRT/모노레일이 주요 지역 커버.</li>
+          <li>문 앞까지는 <strong>Grab</strong>이 편리하고 저렴해요.</li>
+          <li>월간 총액 <strong>수만 원 수준</strong>으로 컨트롤 가능한 경우가 많아요.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>💡 통근 팁</h3>
+        <ul class="muted">
+          <li>역 근처나 직장 근처에 살면 교통비와 시간 절약.</li>
+          <li>피크 시간은 Grab 가격이 오르니 출퇴근 시간 조절도 고려.</li>
+          <li>짧은 거리는 도보+전철, 퇴근 시만 Grab 등 스마트하게 조합.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="housing" class="section">
+    <h2>주거: 시설 "포함"이 기본. 바로 편한 생활</h2>
+    <p class="lead">가구·가전 포함, 24시간 경비, <strong>수영장/헬스장</strong> 등이 "당연히" 있어요.</p>
+    <div class="grid-3" style="margin-top:.7rem">
+      <div class="card">
+        <h3>🏢 주거 특징</h3>
+        <ul class="muted">
+          <li>가구·가전 (풀옵션) 포함</li>
+          <li>24시간 경비 & 출입 통제</li>
+          <li>공용시설: 수영장/헬스장/사우나/바베큐/라운지/코워킹 등</li>
+          <li>주차 1대 포함인 물건도 많음</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>📍 지역별 분위기 (KL/페낭)</h3>
+        <table class="mini" aria-label="지역별 분위기">
+          <tr><th>도시</th><th>지역</th><th>분위기</th></tr>
+          <tr><td>KL</td><td>Mont Kiara</td><td>외국인 많음·고급 콘도·생활 편리◎</td></tr>
+          <tr><td>KL</td><td>KLCC 주변</td><td>도심·최신 건물·통근 접근성◎</td></tr>
+          <tr><td>페낭</td><td>George Town</td><td>역사 지구 근처·맛집 많음·활기참</td></tr>
+          <tr><td>페낭</td><td>Bayan Lepas</td><td>공항·산업단지 근처·조용함</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>💵 월세 시세 (원룸)</h3>
+        <table class="mini">
+          <tr><th>도시</th><th>시세</th></tr>
+          <tr><td>KL</td><td>RM1,500~2,500 (약 45만~75만원)</td></tr>
+          <tr><td>페낭</td><td>RM1,300~2,100 (KL보다 약간 저렴)</td></tr>
+        </table>
+        <p class="muted"><small>※ 참고: 물건·시설에 따라 변동.</small></p>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:1rem">
+      <strong>입주 흐름 (예시)</strong><br>
+      도착 후 호텔(회사 제공·말레이시아) 숙박 기간에 집 보기 → 신청·계약 → 입주. 한국어 스태프가 중개소 소개·계약 조언까지 서포트합니다.
+    </div>
+  </section>
+
+  <section id="healthcare" class="section">
+    <h2>의료·안전: 영어 서비스 의료시설 다수</h2>
+    <div class="grid-2" style="margin-top:.7rem">
+      <div class="card">
+        <h3>🏥 의료</h3>
+        <p class="muted">의료 수준이 높고, KL/페낭 모두 영어 서비스 병원·클리닉이 다수. 회사의 <strong>의료보험</strong>도 완비되어 안심.</p>
+      </div>
+      <div class="card">
+        <h3>🛡️ 안전</h3>
+        <ul class="muted">
+          <li>치안은 상대적으로 안정적. 기본적인 안전 의식 필요.</li>
+          <li>밤에는 밝은 길·사람 많은 지역 선택.</li>
+          <li>Grab 픽업 위치 정확히. 가방은 몸 앞쪽으로.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="shopping" class="section">
+    <h2>쇼핑·서비스: 쇼핑몰 천국 & 아시안 마켓 완비</h2>
+    <div class="grid-3" style="margin-top:.7rem">
+      <div class="card">
+        <h3>🛍️ 쇼핑</h3>
+        <p class="muted">대형 쇼핑몰·슈퍼마켓이 곳곳에. KLCC, Pavilion, Mid Valley 등 "뭐든 있는" 환경.</p>
+      </div>
+      <div class="card">
+        <h3>📶 통신</h3>
+        <p class="muted">휴대폰은 선불 요금제와 저가 플랜이 완비. 집에서는 광섬유 인터넷으로 쾌적.<br><small>(예: 휴대폰 RM40 전후/월이 기준)</small></p>
+      </div>
+      <div class="card">
+        <h3>🍜 아시안 마켓</h3>
+        <p class="muted">아시안 슈퍼마켓, 한식당도 매우 많음(KL). 익숙한 맛을 쉽게 찾을 수 있어요.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="leisure" class="section">
+    <h2>주말 & 액티비티: 바다도 산도 "바로 거기"</h2>
+    <p class="lead">러닝·요가·하이킹·해변·야시장… 휴일도 활동적으로 보내세요.</p>
+    <div class="grid-3" style="margin-top:.7rem">
+      <div class="card">
+        <h3>🏖️ 주말 리조트</h3>
+        <ul class="muted">
+          <li>랑카위/르당/페낭 등 섬 리조트</li>
+          <li>Grab + 단거리 비행으로 편하게 여행</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>✈️ 주변 국가도 가까워</h3>
+        <p class="muted">저가항공(에어아시아)으로 싱가포르/베트남/발리/대만 등 <strong>2~4시간</strong> 권내. 주말 해외여행도 일상.</p>
+      </div>
+      <div class="card">
+        <h3>☕ 카페 & 맛집</h3>
+        <p class="muted">외식이 "일상 가격". 새로운 가게 탐방의 즐거움이 끝이 없어요.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tips" class="section">
+    <h2>생활 팁: 초기 비용 절약하고 편하게 시작</h2>
+    <div class="grid-3" style="margin-top:.7rem">
+      <div class="card">
+        <h3>🏠 집 찾기</h3>
+        <p class="muted">도착 후 호텔 숙박 기간에 집 보기→신청이 순조로워요. 역 근처·직장 근처, 시설 우선순위를 정해두면 효율적.</p>
+      </div>
+      <div class="card">
+        <h3>💳 결제</h3>
+        <p class="muted">카드 & QR 결제 보급. 월세는 은행 이체가 일반적. 현금은 소액 상비.</p>
+      </div>
+      <div class="card">
+        <h3>🤝 커뮤니티</h3>
+        <p class="muted">회사 이벤트나 취미 커뮤니티에 참여하면 생활 정보도 친구도 늘어나 더 안심.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="next" class="section">
+    <h2>다음 단계</h2>
+    <div class="grid-3" style="margin-top:.6rem">
+      <div class="card">
+        <h3 style="color:#000">채용 공고 보기</h3>
+        <p class="muted">한국어 포지션 다수. 무경험 OK인 직무도 있어요.</p>
+        <p style="margin-top:.4rem"><a class="btn" href="open-jobs.html">채용 공고</a></p>
+      </div>
+      <div class="card">
+        <h3 style="color:#000">이주·비자 지원</h3>
+        <p class="muted">취업비자, 도착 후 호텔, 공항 픽업 등 한국어 서포트.</p>
+        <p style="margin-top:.4rem"><a class="btn" href="relocation-visa.html">자세히 보기</a></p>
+      </div>
+      <div class="card">
+        <h3 style="color:#000">캐주얼 면담 (한국어)</h3>
+        <p class="muted">선발이 아니에요. 생활·업무 궁금증 30분 편하게 상담.</p>
+        <p style="margin-top:.4rem"><a class="btn" href="casual-interview.html">지금 예약</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand"><div class="footer-logo"><img src="photos/TPLogo11.png" alt="TP"><span class="footer-logo-text">TP</span></div><p class="footer-desc">전 세계 100개국 이상에서 운영되는 글로벌 BPO 기업<br>한국어 인재의 새로운 커리어를 지원합니다</p><div class="badges"><span class="badge-item">🏆 말레이시아 최고의 직장 6년 연속</span><span class="badge-item">🏆 글로벌 최고의 직장 5년 연속</span></div><div class="footer-cta"><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=korean" target="_blank" rel="noopener noreferrer" class="btn btn-solid">지원하기</a></div></div>
+    <div class="footer-section"><h3>회사 정보</h3><ul><li><a href="about-tp.html">회사 소개</a></li><li><a href="salary-and-benefits.html">급여·복리후생</a></li><li><a href="office-environment.html">근무 환경</a></li><li><a href="ta-team.html">채용팀 소개</a></li></ul></div>
+    <div class="footer-section"><h3>채용·지원</h3><ul><li><a href="open-jobs.html">채용 공고</a></li><li><a href="hiring-process.html">채용 프로세스</a></li><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="casual-interview.html">캐주얼 면담</a></li></ul></div>
+    <div class="footer-section"><h3>생활 정보</h3><ul><li><a href="why-malaysia-thailand.html">도시 소개</a></li><li><a href="relocation-visa.html">이주 지원</a></li><li><a href="daily-life-malaysia.html" aria-current="page">현지 생활</a></li><li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINE 공식</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p class="ssm-info">Teleperformance Malaysia Sdn Bhd의 SSM(말레이시아 기업위원회) 등록번호: 201601023769 (1194708-K)</p><p>&copy; 2026 TP. All rights reserved. | <a href="#">개인정보 처리방침</a> | <a href="#">이용약관</a></p></div>
+</footer>
+<a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=korean" target="_blank" rel="noopener noreferrer" class="floating-apply" aria-label="지원하기">지원하기</a>
+<a href="casual-interview.html" class="floating-casual" aria-label="면담 예약">캐주얼 면담</a>
+<button class="back-to-top" id="backToTop" aria-label="맨 위로">↑</button>
+<script>
+(function(){const toggle=document.getElementById('mobileToggle');const menu=document.getElementById('mobileMenu');if(toggle&&menu){toggle.addEventListener('click',function(){toggle.classList.toggle('active');menu.classList.toggle('active');toggle.setAttribute('aria-expanded',menu.classList.contains('active'))});menu.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{toggle.classList.remove('active');menu.classList.remove('active');toggle.setAttribute('aria-expanded','false')})});document.addEventListener('click',e=>{if(!menu.contains(e.target)&&!toggle.contains(e.target)){menu.classList.remove('active');toggle.classList.remove('active');toggle.setAttribute('aria-expanded','false')}})}})();
+(function(){const backToTop=document.getElementById('backToTop');if(!backToTop)return;window.addEventListener('scroll',()=>{if(window.pageYOffset>300)backToTop.classList.add('show');else backToTop.classList.remove('show')});backToTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})})();
+(function(){document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){const href=this.getAttribute('href');if(href==='#')return;e.preventDefault();const target=document.querySelector(href);if(target){const offset=80;const targetPosition=target.getBoundingClientRect().top+window.pageYOffset-offset;window.scrollTo({top:targetPosition,behavior:'smooth'})}})})})();
+console.log('TP Korean daily life page initialized');
+</script>
+</body>
+</html>

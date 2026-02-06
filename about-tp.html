@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- Google Analytics 4 - KLP -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SPPNGS1L2L"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-SPPNGS1L2L', {
+        send_page_view: true,
+        allow_google_signals: true,
+        allow_ad_personalization_signals: true,
+        custom_map: {
+            'custom_parameter_1': 'korean_recruitment'
+        }
+    });
+    
+    function trackCustomEvent(eventName, parameters = {}) {
+        gtag('event', eventName, {
+            event_category: 'KLP_Program',
+            event_label: 'Korean_Recruitment',
+            ...parameters
+        });
+    }
+    
+    function trackPageEngagement() {
+        let startTime = Date.now();
+        let maxScroll = 0;
+        
+        window.addEventListener('scroll', function() {
+            let scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            if (scrollPercent > maxScroll) {
+                maxScroll = scrollPercent;
+            }
+        });
+        
+        window.addEventListener('beforeunload', function() {
+            let timeSpent = Math.round((Date.now() - startTime) / 1000);
+            gtag('event', 'page_engagement', {
+                event_category: 'User_Engagement',
+                custom_parameter_time_spent: timeSpent,
+                custom_parameter_max_scroll: maxScroll,
+                non_interaction: true
+            });
+        });
+    }
+    
+    document.addEventListener('DOMContentLoaded', trackPageEngagement);
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>회사 소개 | TP 채용 말레이시아·태국</title>
+<meta name="description" content="TP(Teleperformance)는 전 세계 100개국 이상에서 운영되는 글로벌 BPO 기업입니다. 한국어 인재가 말레이시아·태국에서 새로운 커리어를 시작할 수 있도록 지원합니다.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="photos/TPLogo11.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{--tp-black:#000;--tp-dark:#1a1a1a;--tp-charcoal:#2d2d2d;--tp-gray-dark:#4a4a4a;--tp-gray:#666;--tp-gray-light:#999;--tp-silver:#ccc;--tp-light:#e5e5e5;--tp-off:#f5f5f5;--tp-white:#fff;--gold-primary:#FFD700;--gold-light:#FFAA00;--gold-dark:#E6B800;--gold-pale:#FFFBEB;--max:1050px;--shadow-sm:0 2px 4px rgba(0,0,0,.08);--shadow-md:0 4px 8px rgba(0,0,0,.12);--shadow-lg:0 8px 16px rgba(0,0,0,.16);--shadow-gold:0 4px 12px rgba(255,215,0,.3)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--tp-dark);line-height:1.8;background:var(--tp-white);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.container{max-width:var(--max);margin:0 auto;padding:0 20px}
+.section-title{text-align:center;font-size:clamp(1.5rem,3vw,2rem);margin-bottom:.625rem;font-weight:900;color:var(--tp-black);letter-spacing:.02em;font-family:'Noto Serif KR',serif}
+.section-subtitle{text-align:center;color:var(--tp-gray);margin-bottom:2rem;font-size:.9rem}
+header{position:sticky;top:0;background:rgba(255,255,255,.97);border-bottom:1px solid var(--tp-light);z-index:1000;backdrop-filter:blur(10px);box-shadow:var(--shadow-sm)}
+.header-inner{max-width:var(--max);margin:0 auto;padding:.75rem 20px;display:flex;justify-content:space-between;align-items:center;gap:1.25rem}
+.brand{display:flex;align-items:center;gap:.625rem}
+.brand img{width:40px;height:40px;object-fit:contain}
+.brand-text{display:flex;flex-direction:column;line-height:1.2}
+.brand-name{font-size:1rem;font-weight:700;color:var(--tp-black)}
+.brand-tagline{font-size:.7rem;color:var(--tp-gray)}
+nav ul{display:flex;gap:1rem;list-style:none;align-items:center}
+nav a{font-size:.85rem;position:relative;transition:all .3s;padding:.2rem 0;white-space:nowrap}
+nav a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--gold-primary);transition:width .3s ease}
+nav a:hover::after,nav a:focus::after{width:100%}
+nav a[aria-current="page"]{font-weight:600}
+nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
+.apply-btn{background:var(--tp-black);color:var(--tp-white);padding:.5rem 1.25rem;border-radius:4px;font-weight:600;border:2px solid var(--tp-black);transition:all .3s}
+.apply-btn:hover{background:var(--gold-primary);color:var(--tp-black);border-color:var(--gold-primary)}
+.apply-btn::after{display:none}
+.mobile-toggle{display:none;width:36px;height:36px;background:transparent;border:2px solid var(--tp-black);border-radius:4px;cursor:pointer;position:relative}
+.mobile-toggle span{display:block;width:18px;height:2px;background:var(--tp-black);position:absolute;left:50%;transform:translateX(-50%);transition:all .3s}
+.mobile-toggle span:nth-child(1){top:10px}
+.mobile-toggle span:nth-child(2){top:17px}
+.mobile-toggle span:nth-child(3){bottom:10px}
+.mobile-toggle.active span:nth-child(1){transform:translateX(-50%) rotate(45deg);top:17px}
+.mobile-toggle.active span:nth-child(2){opacity:0}
+.mobile-toggle.active span:nth-child(3){transform:translateX(-50%) rotate(-45deg);bottom:17px}
+.mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:var(--tp-white);border-top:1px solid var(--tp-light);box-shadow:var(--shadow-lg);max-height:calc(100vh - 60px);overflow-y:auto;z-index:999}
+.mobile-menu.active{display:block}
+.mobile-menu ul{list-style:none;padding:.875rem 0}
+.mobile-menu a{display:block;padding:.625rem 1.25rem;border-bottom:1px solid var(--tp-light);transition:background .3s}
+.mobile-menu a:hover{background:var(--gold-pale)}
+.btn{padding:.75rem 1.75rem;border-radius:4px;font-weight:600;display:inline-block;transition:all .3s;text-align:center;border:2px solid var(--tp-black);cursor:pointer;font-size:.9rem}
+.btn:focus{outline:2px solid var(--gold-primary);outline-offset:4px}
+.btn-gold{background:var(--gold-primary);color:var(--tp-black);border-color:var(--gold-primary)}
+.btn-gold:hover{background:var(--tp-black);color:var(--gold-primary);transform:translateY(-2px);box-shadow:var(--shadow-gold)}
+footer{background:var(--tp-black);color:var(--tp-white);padding:40px 20px 16px;position:relative;overflow:hidden}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold-primary),transparent)}
+.footer-content{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:2fr repeat(3,1fr);gap:2rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-brand{display:flex;flex-direction:column;gap:.875rem}
+.footer-logo{display:flex;align-items:center;gap:.625rem}
+.footer-logo img{width:42px;height:42px;filter:brightness(0) invert(1)}
+.footer-logo-text{font-size:1.15rem;font-weight:700}
+.footer-desc{opacity:.8;line-height:1.75;font-size:.85rem}
+.footer-section h3{margin-bottom:.75rem;font-size:.9rem;letter-spacing:.05em;opacity:.9;color:var(--gold-primary)}
+.footer-section ul{list-style:none}
+.footer-section li{margin-bottom:.3rem}
+.footer-section a{opacity:.7;transition:opacity .3s;font-size:.8rem}
+.footer-section a:hover{opacity:1}
+.badges{display:flex;gap:.75rem;align-items:center;margin-top:.75rem;flex-wrap:wrap}
+.badges .badge-item{display:flex;align-items:center;gap:.3rem;font-size:.8rem;opacity:.8}
+.footer-cta{margin-top:1rem}
+.footer-bottom{text-align:center;padding-top:12px;font-size:.75rem;opacity:.6}
+.footer-bottom a{color:var(--tp-white);text-decoration:underline;margin:0 .3rem}
+.ssm-info{font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:.5rem}
+.floating-apply{position:fixed;bottom:20px;right:20px;background:var(--tp-black);color:var(--tp-white);padding:.75rem 1.25rem;border-radius:50px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.3);z-index:999;transition:all .3s;border:2px solid var(--gold-primary);font-size:.85rem;backdrop-filter:blur(10px)}
+.floating-apply:hover{transform:scale(1.05);box-shadow:var(--shadow-gold);background:var(--gold-primary);color:var(--tp-black)}
+.floating-casual{position:fixed;bottom:20px;right:130px;background:rgba(255,255,255,.9);color:var(--tp-black);padding:.75rem 1.25rem;border-radius:50px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.15);z-index:998;transition:all .3s;border:2px solid var(--tp-black);font-size:.85rem;backdrop-filter:blur(10px)}
+.floating-casual:hover{transform:scale(1.05);box-shadow:var(--shadow-gold);border-color:var(--gold-primary)}
+.back-to-top{position:fixed;bottom:80px;right:20px;width:40px;height:40px;background:rgba(255,255,255,.9);border:2px solid var(--gold-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s;z-index:997;backdrop-filter:blur(10px);font-size:1rem;font-weight:bold;color:var(--gold-dark)}
+.back-to-top.show{opacity:1;visibility:visible}
+.back-to-top:hover{background:var(--gold-primary);color:var(--tp-black);transform:translateY(-2px)}
+.about-hero{padding:120px 20px 56px;background:linear-gradient(135deg,var(--tp-white) 0%,var(--tp-off) 100%);position:relative;overflow:hidden}
+.about-hero::before{content:'';position:absolute;top:50%;right:5%;width:clamp(240px,35vw,520px);height:clamp(240px,35vw,520px);background-image:url('photos/TPLogo11.png');background-size:contain;background-repeat:no-repeat;background-position:center;opacity:.04;filter:saturate(0);transform:translateY(-50%);pointer-events:none}
+.about-content{display:grid;grid-template-columns:1.5fr 1fr;gap:2rem;align-items:center;max-width:var(--max);margin:3rem auto;padding:2rem 0}
+.about-text{color:var(--tp-gray-dark);line-height:1.9}
+.about-text h2{font-size:1.5rem;font-weight:900;color:var(--tp-black);margin-bottom:1rem;letter-spacing:.02em;font-family:'Noto Serif KR',serif}
+.about-text p{margin-bottom:1rem;font-size:.95rem}
+.about-image{position:relative;text-align:center}
+.about-image img{width:100%;max-width:280px;height:auto;border-radius:8px;box-shadow:var(--shadow-lg)}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:2rem 0}
+.stat-item{text-align:center;padding:1.5rem;background:var(--tp-white);border:2px solid var(--gold-primary);border-radius:12px;transition:all .3s;box-shadow:var(--shadow-gold)}
+.stat-item:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(212,175,55,.3)}
+.stat-number{font-size:2.5rem;font-weight:900;background:linear-gradient(90deg,#FFD700,#FFAA00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;line-height:1;margin-bottom:.5rem;font-family:'Noto Serif KR',serif}
+.stat-label{font-size:.9rem;font-weight:700;color:var(--tp-black);margin-bottom:.3rem}
+.stat-desc{font-size:.8rem;color:var(--tp-gray)}
+.award-list{display:flex;flex-direction:column;gap:1rem;margin-top:1.5rem}
+.award-item{display:flex;align-items:center;gap:1.5rem;padding:1.25rem;background:var(--tp-white);border:1px solid var(--tp-light);border-radius:8px;transition:all .3s}
+.award-item:hover{transform:translateX(8px);box-shadow:var(--shadow-md);border-color:var(--gold-primary)}
+.award-icon{font-size:2.5rem;flex-shrink:0}
+.award-item h3{font-size:1.1rem;font-weight:700;margin-bottom:.3rem;color:var(--tp-black)}
+.award-item p{margin:0;color:var(--tp-gray);font-size:.85rem}
+.gptw-section{padding:60px 20px;background:linear-gradient(135deg,var(--gold-pale) 0%,var(--tp-white) 100%);position:relative;overflow:hidden}
+.gptw-section::before{content:'한';position:absolute;top:50%;right:10%;transform:translateY(-50%);font-size:20rem;font-family:'Noto Serif KR',serif;color:var(--gold-primary);opacity:.03;pointer-events:none}
+.gptw-header{display:flex;align-items:center;justify-content:center;gap:2rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.gptw-badge{width:160px;height:auto;filter:drop-shadow(0 4px 20px rgba(255,215,0,.3));animation:glow 3s ease-in-out infinite}
+@keyframes glow{0%,100%{filter:drop-shadow(0 4px 20px rgba(255,215,0,.3))}50%{filter:drop-shadow(0 4px 30px rgba(255,215,0,.5))}}
+.gptw-title-block{text-align:left}
+.gptw-section .section-title{color:var(--tp-black);text-align:left;margin-bottom:.5rem}
+.gptw-section .section-subtitle{color:var(--tp-gray);text-align:left;margin-bottom:0}
+.gptw-highlight{display:inline-block;background:linear-gradient(90deg,#FFD700,#FFAA00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:900}
+.gptw-description{max-width:800px;margin:0 auto 2.5rem;text-align:center;color:var(--tp-gray-dark);font-size:1rem;line-height:1.8}
+.gptw-banner{width:100%;max-width:900px;margin:0 auto 2.5rem;border-radius:12px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.gptw-banner img{width:100%;height:auto;display:block}
+.gptw-gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;max-width:var(--max);margin:0 auto}
+.gptw-gallery-item{border-radius:8px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.2);transition:all .3s;cursor:pointer}
+.gptw-gallery-item:hover{transform:scale(1.05);box-shadow:0 8px 24px rgba(255,215,0,.3)}
+.gptw-gallery-item img{width:100%;height:auto;display:block}
+.gptw-stats{display:flex;justify-content:center;gap:3rem;margin-top:2.5rem;flex-wrap:wrap}
+.gptw-stat{text-align:center}
+.gptw-stat-number{font-size:3rem;font-weight:900;background:linear-gradient(90deg,#FFD700,#FFAA00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:.5rem;font-family:'Noto Serif KR',serif}
+.gptw-stat-label{color:var(--tp-gray-dark);font-size:.9rem}
+.gptw-announcement{background:rgba(255,255,255,.6);border-radius:12px;padding:1.5rem;margin-bottom:2rem;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1)}
+.gptw-announcement h3{color:var(--tp-black);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.gptw-announcement p{color:var(--tp-gray-dark);line-height:1.6}
+.gptw-quote{font-style:italic;color:var(--tp-gray);margin:1rem 0;padding-left:1rem;border-left:3px solid rgba(255,215,0,.5)}
+.testimonials{padding:56px 20px;background:var(--tp-off)}
+.testimonial-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:1.5rem}
+.testimonial{background:var(--tp-white);padding:1.5rem;border-radius:8px;position:relative;border:1px solid var(--tp-light);transition:all .3s}
+.testimonial:hover{box-shadow:0 6px 20px rgba(0,0,0,.08);transform:translateY(-2px);border-color:var(--gold-primary)}
+.testimonial::before{content:'"';font-size:2.5rem;color:var(--gold-pale);position:absolute;top:8px;left:16px;font-family:Georgia,serif}
+.testimonial-content{margin-bottom:1rem;padding-top:1rem;font-size:.9rem;line-height:1.75;color:var(--tp-dark)}
+.testimonial-author{display:flex;align-items:center;gap:.75rem}
+.author-img{width:50px;height:50px;border-radius:50%;object-fit:cover}
+.author-info strong{display:block;font-size:.85rem;margin-bottom:.1rem}
+.author-info span{color:var(--tp-gray);font-size:.75rem}
+.contact{padding:80px 20px;background:var(--tp-off);position:relative;overflow:hidden}
+.contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:var(--max);margin:3rem auto 0;position:relative;z-index:1}
+.contact-card{background:var(--tp-white);border-radius:12px;padding:2rem;text-align:center;position:relative;overflow:hidden;transition:all .3s;border:2px solid transparent;cursor:pointer;box-shadow:var(--shadow-md)}
+.contact-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold-primary);transform:scaleX(0);transition:transform .3s}
+.contact-card:hover::before{transform:scaleX(1)}
+.contact-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:var(--gold-primary)}
+.contact-card-icon{font-size:2.5rem;margin-bottom:1rem;display:block}
+.contact-card h3{font-size:1.2rem;font-weight:700;margin-bottom:.5rem;color:var(--tp-black)}
+.contact-card p{font-size:.95rem;color:var(--tp-gray);margin-bottom:1rem;line-height:1.6}
+.contact-card-action{display:inline-block;font-size:.9rem;font-weight:600;color:var(--gold-dark);position:relative;transition:all .3s}
+.contact-card:hover .contact-card-action{transform:translateX(5px)}
+@media(max-width:880px){.reasons-grid{grid-template-columns:1fr}}
+@media(max-width:900px){nav{display:none}.mobile-toggle{display:block}.floating-casual{bottom:80px;right:20px}.back-to-top{bottom:140px}}
+@media(max-width:768px){.about-content{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr}.contact-cards{grid-template-columns:1fr}.gptw-gallery{grid-template-columns:repeat(2,1fr)}.gptw-gallery-item:nth-child(5){grid-column:span 2;max-width:50%;margin:0 auto}.floating-apply{bottom:14px;right:14px;padding:.625rem 1rem;font-size:.8rem}.footer-content{grid-template-columns:1fr;text-align:center}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a href="#main" class="sr-only">본문으로 이동</a>
+<header role="banner">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><img src="photos/TPLogo11.png" alt="TP" width="40" height="40"><div class="brand-text"><span class="brand-name">TP</span><span class="brand-tagline">말레이시아·태국</span></div></a>
+    <nav aria-label="주요 내비게이션"><ul><li><a href="index.html">홈</a></li><li><a href="open-jobs.html">채용 공고</a></li><li><a href="about-tp.html" aria-current="page">회사 소개</a></li><li><a href="salary-and-benefits.html">급여·복리후생</a></li><li><a href="hiring-process.html">채용 프로세스</a></li><li><a href="why-malaysia-thailand.html">도시 소개</a></li><li><a href="relocation-visa.html">비자·이주 지원</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=korean" target="_blank" rel="noopener noreferrer" class="apply-btn">지원하기</a></li></ul></nav>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="모바일 내비게이션"><ul><li><a href="index.html">홈</a></li><li><a href="open-jobs.html">채용 공고</a></li><li><a href="about-tp.html">회사 소개</a></li><li><a href="salary-and-benefits.html">급여·복리후생</a></li><li><a href="hiring-process.html">채용 프로세스</a></li><li><a href="why-malaysia-thailand.html">도시 소개</a></li><li><a href="relocation-visa.html">비자·이주 지원</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=korean" target="_blank" rel="noopener noreferrer" class="apply-btn">지원하기</a></li></ul></nav>
+</header>
+<main id="main">
+  <section class="about-hero">
+    <div class="container">
+      <h1 class="section-title">회사 소개</h1>
+      <p class="section-subtitle">글로벌 최대 BPO 기업, 한국어 인재를 위한 커리어 기회 제공</p>
+    </div>
+  </section>
+  <section style="padding:0 20px;">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>TP 소개</h2>
+        <p>TP(Teleperformance)는 1978년 프랑스 파리에서 설립된 글로벌 BPO(Business Process Outsourcing) 선두 기업입니다. 현재 전 세계 100개국 이상에서 운영되며, 50만 명 이상의 직원이 근무하고 있습니다.</p>
+        <p>우리는 최첨단 기술과 우수한 인재를 결합하여 세계적인 브랜드에 탁월한 고객 경험 서비스를 제공합니다. 현재 말레이시아와 태국에서 한국어 인재를 적극 채용하고 있습니다.</p>
+        <p>신입이든 경력자이든, 우리는 다양하고 포용적인 근무 환경을 제공합니다.</p>
+      </div>
+      <div class="about-image">
+        <img src="photos/GBS.jpeg" alt="TP 근무 환경" loading="lazy">
+      </div>
+    </div>
+  </section>
+  <section class="gptw-section">
+    <div class="container">
+      <div class="gptw-announcement">
+        <h3>🎉 중요 공지</h3>
+        <p>공식 발표: TP가 Great Place to Work®에서 선정한 「World's Best Workplaces™」에서 <strong>5년 연속</strong> 인증을 받았습니다!</p>
+        <p class="gptw-quote">"이 인증은 직원들의 피드백과 신뢰를 바탕으로 하며, 우리의 강력한 기업 문화를 충분히 보여줍니다"</p>
+      </div>
+      <div class="gptw-stats">
+        <div class="gptw-stat">
+          <div class="gptw-stat-number">5</div>
+          <div class="gptw-stat-label">연속 수상 연수</div>
+        </div>
+        <div class="gptw-stat">
+          <div class="gptw-stat-number">100+</div>
+          <div class="gptw-stat-label">사업 운영 국가</div>
+        </div>
+        <div class="gptw-stat">
+          <div class="gptw-stat-number">500K+</div>
+          <div class="gptw-stat-label">전 세계 직원 수</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="padding:60px 20px;background:var(--tp-off);">
+    <div class="container">
+      <h2 class="section-title">글로벌 규모</h2>
+      <p class="section-subtitle">전 세계 각지에서 고객에게 최상의 서비스를 제공합니다</p>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">100+</div>
+          <div class="stat-label">운영 국가</div>
+          <p class="stat-desc">전 세계에 분포된 서비스 센터</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">500,000+</div>
+          <div class="stat-label">전 세계 직원</div>
+          <p class="stat-desc">다양한 배경의 우수한 인재</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">7,000+</div>
+          <div class="stat-label">말레이시아/태국 직원</div>
+          <p class="stat-desc">양국 합계 (지속 성장 중)</p>
+        </div>
+      </div>
+      <div style="margin-top:3rem;">
+        <h2 class="section-title">수상 및 인증</h2>
+        <div class="award-list">
+          <div class="award-item">
+            <span class="award-icon">🏆</span>
+            <div>
+              <h3>Great Place to Work®</h3>
+              <p>말레이시아 6년 연속 수상</p>
+            </div>
+          </div>
+          <div class="award-item">
+            <span class="award-icon">🌍</span>
+            <div>
+              <h3>World's Best Workplaces™</h3>
+              <p>글로벌 5년 연속 인증</p>
+            </div>
+          </div>
+          <div class="award-item">
+            <span class="award-icon">📈</span>
+            <div>
+              <h3>성장 기업</h3>
+              <p>한국어 인재 채용 지속 확대</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">직원의 목소리</h2>
+      <p class="section-subtitle">실제 직원들의 진솔한 피드백</p>
+      <div class="testimonial-cards">
+        <div class="testimonial">
+          <p class="testimonial-content">"다름이 괜찮다"는 가치관 덕분에 마음이 자유로워졌어요. 자신을 더 솔직하게 드러내며 일하고 생활할 수 있게 됐습니다.</p>
+          <div class="testimonial-author">
+            <img src="photos/TPLogo11.png" alt="TP" class="author-img">
+            <div class="author-info">
+              <strong>H.N</strong>
+              <span>채용팀</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-content">능력으로만 평가받는 문화 덕분에 팀 리더로 승진할 수 있었습니다. 커리어의 가능성이 무한해요!</p>
+          <div class="testimonial-author">
+            <img src="photos/TPLogo11.png" alt="TP" class="author-img">
+            <div class="author-info">
+              <strong>N.T</strong>
+              <span>팀 리더</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-content">말레이시아 생활이 생각보다 편해요. 한식도 풍부하고, 주말에는 주변 국가로 여행도 다녀요!</p>
+          <div class="testimonial-author">
+            <img src="photos/TPLogo11.png" alt="TP" class="author-img">
+            <div class="author-info">
+              <strong>H.K</strong>
+              <span>QA 스페셜리스트</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact">
+    <div class="container">
+      <h2 class="section-title">문의하기</h2>
+      <p class="section-subtitle">목적에 맞게 빠르게 접근하세요</p>
+      <div class="contact-cards">
+        <a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <span class="contact-card-icon">🗓️</span>
+          <h3>캐주얼 면담 예약</h3>
+          <p>30분 온라인 상담</p>
+          <span class="contact-card-action">예약하기 →</span>
+        </a>
+        <a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <span class="contact-card-icon">💬</span>
+          <h3>LINE 공식 계정</h3>
+          <p>최신 채용 정보 푸시</p>
+          <span class="contact-card-action">추가하기 →</span>
+        </a>
+        <a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=korean" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <span class="contact-card-icon">✍️</span>
+          <h3>지원하기</h3>
+          <p>이력서 업로드로 간단 지원</p>
+          <span class="contact-card-action">지원하기 →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand"><div class="footer-logo"><img src="photos/TPLogo11.png" alt="TP"><span class="footer-logo-text">TP</span></div><p class="footer-desc">전 세계 100개국 이상에서 운영되는 글로벌 BPO 기업<br>한국어 인재의 새로운 커리어를 지원합니다</p><div class="badges"><span class="badge-item">🏆 말레이시아 최고의 직장 6년 연속</span><span class="badge-item">🏆 글로벌 최고의 직장 5년 연속</span></div><div class="footer-cta"><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=korean" target="_blank" rel="noopener noreferrer" class="btn btn-gold">지원하기</a></div></div>
+    <div class="footer-section"><h3>회사 정보</h3><ul><li><a href="about-tp.html">회사 소개</a></li><li><a href="salary-and-benefits.html#benefits">복리후생</a></li><li><a href="office-environment.html">근무 환경</a></li><li><a href="ta-team.html">채용팀 소개</a></li></ul></div>
+    <div class="footer-section"><h3>채용·지원</h3><ul><li><a href="open-jobs.html">채용 공고</a></li><li><a href="hiring-process.html">채용 프로세스</a></li><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="casual-interview.html">문의하기</a></li></ul></div>
+    <div class="footer-section"><h3>생활 정보</h3><ul><li><a href="why-malaysia-thailand.html">근무 도시</a></li><li><a href="relocation-visa.html">이주 지원</a></li><li><a href="daily-life-malaysia.html">라이프스타일</a></li><li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINE 공식</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p class="ssm-info">Teleperformance Malaysia Sdn Bhd의 SSM(말레이시아 기업위원회) 등록번호: 201601023769 (1194708-K)</p><p>&copy; 2026 TP. All rights reserved. | <a href="#">개인정보 처리방침</a> | <a href="#">이용약관</a></p></div>
+</footer>
+<a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=korean" target="_blank" rel="noopener noreferrer" class="floating-apply">지원하기</a>
+<a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer" class="floating-casual">캐주얼 면담</a>
+<button class="back-to-top" id="backToTop">↑</button>
+<script>
+(function(){const toggle=document.getElementById('mobileToggle');const menu=document.getElementById('mobileMenu');if(toggle&&menu){toggle.addEventListener('click',function(){toggle.classList.toggle('active');menu.classList.toggle('active');toggle.setAttribute('aria-expanded',menu.classList.contains('active'))});menu.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{toggle.classList.remove('active');menu.classList.remove('active');toggle.setAttribute('aria-expanded','false')})});document.addEventListener('click',e=>{if(!menu.contains(e.target)&&!toggle.contains(e.target)){menu.classList.remove('active');toggle.classList.remove('active');toggle.setAttribute('aria-expanded','false')}})}})();
+(function(){const backToTop=document.getElementById('backToTop');if(!backToTop)return;window.addEventListener('scroll',()=>{if(window.pageYOffset>300)backToTop.classList.add('show');else backToTop.classList.remove('show')});backToTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})})();
+(function(){document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){const href=this.getAttribute('href');if(href==='#')return;e.preventDefault();const target=document.querySelector(href);if(target){const offset=70;const targetPosition=target.getBoundingClientRect().top+window.pageYOffset-offset;window.scrollTo({top:targetPosition,behavior:'smooth'})}})})})();
+(function(){const observerOptions={threshold:0.1,rootMargin:'0px 0px -50px 0px'};const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.style.opacity='1';entry.target.style.transform='translateY(0)'}})},observerOptions);const elements=document.querySelectorAll('.about-content,.stat-item,.award-item,.testimonial,.contact-card,.gptw-gallery-item,.gptw-banner');elements.forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity 0.6s, transform 0.6s';observer.observe(el)})})();
+console.log('TP About page initialized - Korean version');
+</script>
+</body>
+</html>
