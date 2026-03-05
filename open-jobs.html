@@ -59,7 +59,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 <style>
-:root{--tp-black:#000;--tp-dark:#1a1a1a;--tp-charcoal:#2d2d2d;--tp-gray-dark:#4a4a4a;--tp-gray:#666;--tp-gray-light:#999;--tp-silver:#ccc;--tp-light:#e5e5e5;--tp-off:#f5f5f5;--tp-white:#fff;--gold-primary:#FFD700;--gold-light:#FFAA00;--gold-dark:#E6B800;--gold-pale:#FFFBEB;--accent-blue:#0066cc;--accent-green:#00a86b;--max:1200px;--shadow-sm:0 2px 4px rgba(0,0,0,.08);--shadow-md:0 4px 8px rgba(0,0,0,.12);--shadow-lg:0 8px 16px rgba(0,0,0,.16);--shadow-gold:0 4px 12px rgba(255,215,0,.3);--transition:all .3s cubic-bezier(.4,0,.2,1)}
+:root{--tp-black:#000;--tp-dark:#1a1a1a;--tp-charcoal:#2d2d2d;--tp-gray-dark:#4a4a4a;--tp-gray:#666;--tp-gray-light:#999;--tp-silver:#ccc;--tp-light:#e5e5e5;--tp-off:#f5f5f5;--tp-white:#fff;--gold-primary:#FFD700;--gold-light:#FFAA00;--gold-dark:#E6B800;--gold-pale:#FFFBEB;--accent-blue:#0066cc;--accent-green:#00a86b;--max:1200px;--shadow-sm:0 2px 4px rgba(0,0,0,.08);--shadow-md:0 4px 8px rgba(0,0,0,.12);--shadow-lg:0 8px 16px rgba(0,0,0,.16);--shadow-gold:0 4px 12px rgba(255,215,0,.3);--transition:all .3s cubic-bezier(.4,0,.2,1);--top-bar-h:56px;--bottom-nav-h:64px;--radius:12px}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--tp-dark);line-height:1.75;background:var(--tp-white);-webkit-font-smoothing:antialiased}
@@ -67,34 +67,47 @@ a{color:inherit;text-decoration:none;transition:var(--transition)}
 img{max-width:100%;height:auto}
 .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .container{max-width:var(--max);margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;background:rgba(255,255,255,.97);border-bottom:1px solid var(--tp-light);z-index:1000;backdrop-filter:blur(10px);box-shadow:var(--shadow-sm)}
-.header-inner{max-width:var(--max);margin:0 auto;padding:.75rem 20px;display:flex;justify-content:space-between;align-items:center;gap:1.25rem}
-.brand{display:flex;align-items:center;gap:.625rem}
-.brand img{width:40px;height:40px;object-fit:contain}
+/* === TOP BAR === */
+.top-bar{position:sticky;top:0;height:var(--top-bar-h);background:rgba(255,255,255,.97);border-bottom:1px solid var(--tp-light);z-index:1000;backdrop-filter:blur(10px);box-shadow:var(--shadow-sm);display:flex;align-items:center;padding:0 20px}
+.top-bar-inner{max-width:var(--max);margin:0 auto;width:100%;display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:.5rem}
+.brand img{width:36px;height:36px;object-fit:contain}
 .brand-text{display:flex;flex-direction:column;line-height:1.2}
-.brand-name{font-size:1rem;font-weight:700;color:var(--tp-black)}
-.brand-tagline{font-size:.7rem;color:var(--tp-gray)}
-nav ul{display:flex;gap:1rem;list-style:none;align-items:center}
-nav a{font-size:.85rem;position:relative;transition:var(--transition);padding:.2rem 0;white-space:nowrap}
-nav a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--gold-primary);transition:width .3s ease}
-nav a:hover::after{width:100%}
-nav a[aria-current="page"]{font-weight:600}
-nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
-.apply-btn{background:var(--tp-black);color:var(--tp-white);padding:.5rem 1.25rem;border-radius:4px;font-weight:600;border:2px solid var(--tp-black);transition:all .3s}
-.apply-btn:hover{background:var(--gold-primary);color:var(--tp-black);border-color:var(--gold-primary)}
-.mobile-toggle{display:none;width:36px;height:36px;background:transparent;border:2px solid var(--tp-black);border-radius:4px;cursor:pointer;position:relative}
-.mobile-toggle span{display:block;width:18px;height:2px;background:var(--tp-black);position:absolute;left:50%;transform:translateX(-50%);transition:all .3s}
-.mobile-toggle span:nth-child(1){top:10px}
-.mobile-toggle span:nth-child(2){top:17px}
-.mobile-toggle span:nth-child(3){bottom:10px}
-.mobile-toggle.active span:nth-child(1){transform:translateX(-50%) rotate(45deg);top:17px}
-.mobile-toggle.active span:nth-child(2){opacity:0}
-.mobile-toggle.active span:nth-child(3){transform:translateX(-50%) rotate(-45deg);bottom:17px}
-.mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:var(--tp-white);border-top:1px solid var(--tp-light);box-shadow:var(--shadow-lg);max-height:calc(100vh - 60px);overflow-y:auto;z-index:999}
-.mobile-menu.active{display:block}
-.mobile-menu ul{list-style:none;padding:.875rem 0}
-.mobile-menu a{display:block;padding:.625rem 1.25rem;border-bottom:1px solid var(--tp-light);transition:background .3s}
-.mobile-menu a:hover{background:var(--gold-pale)}
+.brand-name{font-size:.95rem;font-weight:700;color:var(--tp-black)}
+.brand-tagline{font-size:.65rem;color:var(--tp-gray)}
+.menu-btn{width:40px;height:40px;background:transparent;border:2px solid var(--tp-black);border-radius:6px;cursor:pointer;position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:8px;transition:all .3s}
+.menu-btn span{display:block;width:20px;height:2px;background:var(--tp-black);transition:all .3s;transform-origin:center}
+.menu-btn.active{border-color:var(--gold-primary)}
+.menu-btn.active span:nth-child(1){transform:rotate(45deg) translate(2.5px,2.5px)}
+.menu-btn.active span:nth-child(2){opacity:0}
+.menu-btn.active span:nth-child(3){transform:rotate(-45deg) translate(2.5px,-2.5px)}
+/* === SIDE PANEL === */
+.side-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1001;opacity:0;visibility:hidden;transition:all .3s}
+.side-overlay.open{opacity:1;visibility:visible}
+.side-panel{position:fixed;top:0;right:0;bottom:0;width:320px;max-width:85vw;background:var(--tp-white);z-index:1002;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);box-shadow:-4px 0 20px rgba(0,0,0,.15);display:flex;flex-direction:column;overflow-y:auto}
+.side-panel.open{transform:translateX(0)}
+.side-panel-header{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem;border-bottom:1px solid var(--tp-light)}
+.side-panel-header .brand{gap:.4rem}
+.side-panel-close{width:36px;height:36px;background:transparent;border:2px solid var(--tp-light);border-radius:50%;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;transition:all .3s;color:var(--tp-gray-dark)}
+.side-panel-close:hover{border-color:var(--gold-primary);color:var(--tp-black)}
+.side-panel-links{list-style:none;padding:1rem 0;flex:1}
+.side-panel-links a{display:block;padding:.75rem 1.5rem;font-size:.95rem;font-weight:500;color:var(--tp-dark);transition:all .2s;border-left:3px solid transparent}
+.side-panel-links a:hover,.side-panel-links a.active{background:var(--gold-pale);border-left-color:var(--gold-primary);color:var(--tp-black);font-weight:600}
+.side-panel-links .divider{height:1px;background:var(--tp-light);margin:.5rem 1.5rem}
+.side-panel-cta{padding:1rem 1.25rem;border-top:1px solid var(--tp-light);display:flex;flex-direction:column;gap:.5rem}
+.side-panel-cta a{display:block;text-align:center;padding:.75rem;border-radius:8px;font-weight:700;font-size:.9rem;transition:all .3s}
+.btn-apply-panel{background:var(--gold-primary);color:var(--tp-black);border:2px solid var(--gold-primary)}
+.btn-apply-panel:hover{background:var(--tp-black);color:var(--gold-primary)}
+.btn-chat-panel{background:var(--tp-white);color:var(--tp-black);border:2px solid var(--tp-black)}
+.btn-chat-panel:hover{border-color:var(--gold-primary);color:var(--gold-dark)}
+/* === BOTTOM NAV (mobile only) === */
+.bottom-nav{display:none;position:fixed;bottom:0;left:0;right:0;height:var(--bottom-nav-h);background:var(--tp-white);border-top:1px solid var(--tp-light);z-index:999;box-shadow:0 -2px 10px rgba(0,0,0,.08);align-items:stretch}
+.bottom-nav-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:.65rem;color:var(--tp-gray);text-decoration:none;transition:all .2s;border:none;background:transparent;cursor:pointer;font-family:inherit;padding:4px 0}
+.bottom-nav-item.active{color:var(--gold-dark);font-weight:700}
+.bottom-nav-item.active .bottom-nav-icon{color:var(--gold-primary)}
+.bottom-nav-icon{font-size:1.3rem;line-height:1}
+.bottom-nav-label{font-size:.65rem;white-space:nowrap}
+@media(max-width:768px){.bottom-nav{display:flex}}
 .btn{padding:.8rem 1.2rem;font-weight:900;border-radius:999px;text-decoration:none;display:inline-block;border:2px solid var(--gold-primary);color:var(--gold-primary);transition:var(--transition)}
 .btn:hover{background:var(--gold-primary);color:#000;transform:translateY(-2px);box-shadow:var(--shadow-md)}
 .btn-solid{background:var(--gold-primary);color:#000;border:2px solid var(--gold-primary);border-radius:999px;padding:.85rem 1.2rem;font-weight:900;display:inline-block}
@@ -171,28 +184,55 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 .helper h2{font-size:1.6rem;font-weight:900;color:#000;margin-bottom:.4rem;font-family:'Playfair Display',serif}
 .helper p{color:var(--tp-gray-dark)}
 @media(max-width:1060px){.grid{grid-template-columns:repeat(2,1fr)}.card{min-height:600px}}
-@media(max-width:768px){.grid{grid-template-columns:1fr}.card{min-height:auto}.content-scroll{max-height:400px}.footer-row.two-buttons{grid-template-columns:1fr}nav{display:none}.mobile-toggle{display:block}.floating-casual{bottom:80px;right:20px}.back-to-top{bottom:140px}.footer-content{grid-template-columns:1fr;text-align:center}}
+@media(max-width:768px){.grid{grid-template-columns:1fr}.card{min-height:auto}.content-scroll{max-height:400px}.footer-row.two-buttons{grid-template-columns:1fr}.floating-apply{bottom:calc(var(--bottom-nav-h) + 14px);right:14px;padding:.6rem 1rem;font-size:.8rem}.floating-casual{bottom:calc(var(--bottom-nav-h) + 14px);right:auto;left:14px;padding:.6rem 1rem;font-size:.8rem}.back-to-top{bottom:calc(var(--bottom-nav-h) + 70px)}.footer-content{grid-template-columns:1fr;text-align:center}footer{padding-bottom:calc(16px + var(--bottom-nav-h))}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 <a href="#main" class="sr-only">Skip to main content</a>
-<header role="banner">
-  <div class="header-inner">
-    <a class="brand" href="index-en.html"><img src="photos/TPLogo11.png" alt="TP" width="40" height="40"><div class="brand-text"><span class="brand-name">TP</span><span class="brand-tagline">Malaysia · Thailand</span></div></a>
-    <nav aria-label="Main navigation"><ul><li><a href="index-en.html">Home</a></li><li><a href="about-tp-en.html">About TP</a></li><li><a href="salary-and-benefits.html">Salary & Benefits</a></li><li><a href="hiring-process-en.html">Hiring Process</a></li><li><a href="area-around-office-en.html">Around Office</a></li><li><a href="cost-of-living-en.html">Cost of Living</a></li><li><a href="open-jobs-en.html" aria-current="page">Open Jobs</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual" target="_blank" rel="noopener noreferrer" class="apply-btn">Apply Now</a></li></ul></nav>
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<!-- TOP BAR -->
+<header class="top-bar" role="banner">
+  <div class="top-bar-inner">
+    <a class="brand" href="index.html"><img src="photos/TPLogo11.png" alt="TP" width="36" height="36"><div class="brand-text"><span class="brand-name">TP</span><span class="brand-tagline">Malaysia &middot; Thailand</span></div></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
-  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation"><ul><li><a href="index-en.html">Home</a></li><li><a href="about-tp-en.html">About TP</a></li><li><a href="salary-and-benefits.html">Salary & Benefits</a></li><li><a href="hiring-process-en.html">Hiring Process</a></li><li><a href="area-around-office-en.html">Around Office</a></li><li><a href="cost-of-living-en.html">Cost of Living</a></li><li><a href="open-jobs-en.html">Open Jobs</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual" target="_blank" rel="noopener noreferrer" class="apply-btn">Apply Now</a></li></ul></nav>
 </header>
+
+<!-- SIDE PANEL OVERLAY -->
+<div class="side-overlay" id="sideOverlay"></div>
+<nav class="side-panel" id="sidePanel" aria-label="Navigation menu">
+  <div class="side-panel-header">
+    <div class="brand"><img src="photos/TPLogo11.png" alt="TP" width="28" height="28"><div class="brand-text"><span class="brand-name">TP</span><span class="brand-tagline">Careers</span></div></div>
+    <button class="side-panel-close" id="sidePanelClose" aria-label="Close menu">&times;</button>
+  </div>
+  <ul class="side-panel-links">
+    <li><a href="index.html#hero">Home</a></li>
+    <li><a href="index.html#about">About TP</a></li>
+    <li><a href="open-jobs.html" class="active">Open Jobs</a></li>
+    <li><a href="index.html#benefits">Salary & Benefits</a></li>
+    <li><a href="index.html#hiring">Hiring Process</a></li>
+    <li><a href="index.html#cities">Cities</a></li>
+    <li><a href="index.html#relocation">Relocation & Visa</a></li>
+    <li><a href="index.html#office">Office Environment</a></li>
+    <li><a href="index.html#life">Living Info</a></li>
+    <li><a href="index.html#team">Recruitment Team</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="index.html#chat">Casual Chat</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="side-panel-cta">
+    <a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual" target="_blank" rel="noopener noreferrer" class="btn-apply-panel">Apply Now</a>
+    <a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer" class="btn-chat-panel">Casual Chat</a>
+  </div>
+</nav>
 <main id="main">
   <section class="hero">
     <h1>Open Jobs</h1>
     <p>Multilingual positions now hiring. Locations in Kuala Lumpur, Penang, Bangkok. Work visa and relocation support included.</p>
     <div class="hero-cta" role="group" aria-label="Quick links">
-      <a class="btn" href="salary-and-benefits.html">View Salary & Benefits</a>
-      <a class="btn-solid" href="hiring-process-en.html">Learn About Hiring Process</a>
-      <a class="btn" href="casual-interview-en.html">Book Casual Chat</a>
+      <a class="btn" href="index.html#benefits">View Salary & Benefits</a>
+      <a class="btn-solid" href="index.html#hiring">Learn About Hiring Process</a>
+      <a class="btn" href="index.html#chat">Book Casual Chat</a>
     </div>
   </section>
 
@@ -236,7 +276,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
         <div class="card-footer">
           <div class="footer-row two-buttons">
             <a class="process" target="_blank" rel="noopener" href="https://forms.office.com/e/2UvpbweQww">Casual Chat</a>
-            <a class="process" href="hiring-process-en.html">Process Guide</a>
+            <a class="process" href="index.html#hiring">Process Guide</a>
           </div>
           <div class="footer-row two-buttons">
             <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual">Apply Now</a>
@@ -280,7 +320,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
         <div class="card-footer">
           <div class="footer-row two-buttons">
             <a class="process" target="_blank" rel="noopener" href="https://forms.office.com/e/2UvpbweQww">Casual Chat</a>
-            <a class="process" href="hiring-process-en.html">Process Guide</a>
+            <a class="process" href="index.html#hiring">Process Guide</a>
           </div>
           <div class="footer-row two-buttons">
             <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual">Apply Now</a>
@@ -324,7 +364,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
         <div class="card-footer">
           <div class="footer-row two-buttons">
             <a class="process" target="_blank" rel="noopener" href="https://forms.office.com/e/2UvpbweQww">Casual Chat</a>
-            <a class="process" href="hiring-process-en.html">Process Guide</a>
+            <a class="process" href="index.html#hiring">Process Guide</a>
           </div>
           <div class="footer-row two-buttons">
             <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual">Apply Now</a>
@@ -368,7 +408,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
         <div class="card-footer">
           <div class="footer-row two-buttons">
             <a class="process" target="_blank" rel="noopener" href="https://forms.office.com/e/2UvpbweQww">Casual Chat</a>
-            <a class="process" href="hiring-process-en.html">Process Guide</a>
+            <a class="process" href="index.html#hiring">Process Guide</a>
           </div>
           <div class="footer-row two-buttons">
             <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual">Apply Now</a>
@@ -412,7 +452,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
         <div class="card-footer">
           <div class="footer-row two-buttons">
             <a class="process" target="_blank" rel="noopener" href="https://forms.office.com/e/2UvpbweQww">Casual Chat</a>
-            <a class="process" href="hiring-process-en.html">Process Guide</a>
+            <a class="process" href="index.html#hiring">Process Guide</a>
           </div>
           <div class="footer-row two-buttons">
             <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual">Apply Now</a>
@@ -456,7 +496,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
         <div class="card-footer">
           <div class="footer-row two-buttons">
             <a class="process" target="_blank" rel="noopener" href="https://forms.office.com/e/2UvpbweQww">Casual Chat</a>
-            <a class="process" href="hiring-process-en.html">Process Guide</a>
+            <a class="process" href="index.html#hiring">Process Guide</a>
           </div>
           <div class="footer-row two-buttons">
             <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual">Apply Now</a>
@@ -472,7 +512,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
       <h2>Not Sure Which Position Fits?</h2>
       <p>Book a casual chat (30 minutes) to discuss any questions you have.</p>
       <div style="margin-top:.8rem">
-        <a class="btn" href="casual-interview-en.html">Book Chat</a>
+        <a class="btn" href="index.html#chat">Book Chat</a>
       </div>
     </div>
   </section>
@@ -480,20 +520,69 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 <footer>
   <div class="footer-content">
     <div class="footer-brand"><div class="footer-logo"><img src="photos/TPLogo11.png" alt="TP"><span class="footer-logo-text">TP</span></div><p class="footer-desc">Global BPO company operating in 100+ countries worldwide<br>Supporting the next careers of multilingual talent</p><div class="badges"><span class="badge-item">🏆 6 Years Great Place to Work® Malaysia</span><span class="badge-item">🏆 5 Years World's Best Workplaces™</span></div><div class="footer-cta"><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual" target="_blank" rel="noopener noreferrer" class="btn btn-solid">Apply Now</a></div></div>
-    <div class="footer-section"><h3>Company Info</h3><ul><li><a href="about-tp-en.html">About TP</a></li><li><a href="salary-and-benefits.html">Salary & Benefits</a></li><li><a href="office-environment-en.html">Office Environment</a></li><li><a href="ta-team.html">Recruitment Team</a></li></ul></div>
-    <div class="footer-section"><h3>Recruitment</h3><ul><li><a href="open-jobs-en.html" aria-current="page">Open Jobs</a></li><li><a href="hiring-process-en.html">Hiring Process</a></li><li><a href="faq.html">FAQ</a></li><li><a href="casual-interview-en.html">Casual Chat</a></li></ul></div>
-    <div class="footer-section"><h3>Living Info</h3><ul><li><a href="area-around-office-en.html">Around Office</a></li><li><a href="relocation-visa.html">Relocation Support</a></li><li><a href="daily-life-malaysia-en.html">Daily Life</a></li><li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINE Official</a></li></ul></div>
+    <div class="footer-section"><h3>Company Info</h3><ul><li><a href="index.html#about">About TP</a></li><li><a href="index.html#benefits">Salary & Benefits</a></li><li><a href="index.html#office">Office Environment</a></li><li><a href="index.html#team">Recruitment Team</a></li></ul></div>
+    <div class="footer-section"><h3>Recruitment</h3><ul><li><a href="open-jobs.html" aria-current="page">Open Jobs</a></li><li><a href="index.html#hiring">Hiring Process</a></li><li><a href="index.html#faq">FAQ</a></li><li><a href="index.html#chat">Casual Chat</a></li></ul></div>
+    <div class="footer-section"><h3>Living Info</h3><ul><li><a href="index.html#life">Around Office</a></li><li><a href="index.html#relocation">Relocation Support</a></li><li><a href="index.html#life">Daily Life</a></li><li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINE Official</a></li></ul></div>
   </div>
   <div class="footer-bottom"><p class="ssm-info">Teleperformance Malaysia Sdn Bhd SSM (Companies Commission of Malaysia) Registration No: 201601023769 (1194708-K)</p><p>&copy; 2026 TP. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p></div>
 </footer>
 <a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual" target="_blank" rel="noopener noreferrer" class="floating-apply">Apply Now</a>
 <a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer" class="floating-casual">Casual Chat</a>
-<button class="back-to-top" id="backToTop">↑</button>
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+
+<!-- MOBILE BOTTOM NAV -->
+<nav class="bottom-nav" id="bottomNav" aria-label="Bottom navigation">
+  <a href="index.html" class="bottom-nav-item">
+    <span class="bottom-nav-icon">🏠</span><span class="bottom-nav-label">Home</span>
+  </a>
+  <a href="open-jobs.html" class="bottom-nav-item active">
+    <span class="bottom-nav-icon">💼</span><span class="bottom-nav-label">Jobs</span>
+  </a>
+  <a href="index.html#benefits" class="bottom-nav-item">
+    <span class="bottom-nav-icon">💰</span><span class="bottom-nav-label">Benefits</span>
+  </a>
+  <a href="index.html#hiring" class="bottom-nav-item">
+    <span class="bottom-nav-icon">📋</span><span class="bottom-nav-label">Hiring</span>
+  </a>
+  <button class="bottom-nav-item" id="moreBtn" aria-label="More sections">
+    <span class="bottom-nav-icon">☰</span><span class="bottom-nav-label">More</span>
+  </button>
+</nav>
+
 <script>
-(function(){const toggle=document.getElementById('mobileToggle');const menu=document.getElementById('mobileMenu');if(toggle&&menu){toggle.addEventListener('click',function(){toggle.classList.toggle('active');menu.classList.toggle('active');toggle.setAttribute('aria-expanded',menu.classList.contains('active'))});menu.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{toggle.classList.remove('active');menu.classList.remove('active');toggle.setAttribute('aria-expanded','false')})});document.addEventListener('click',e=>{if(!menu.contains(e.target)&&!toggle.contains(e.target)){menu.classList.remove('active');toggle.classList.remove('active');toggle.setAttribute('aria-expanded','false')}})}})();
-(function(){const backToTop=document.getElementById('backToTop');if(!backToTop)return;window.addEventListener('scroll',()=>{if(window.pageYOffset>300)backToTop.classList.add('show');else backToTop.classList.remove('show')});backToTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})})();
-const cards=[...document.querySelectorAll('.card')];const count=document.getElementById('count');if(count)count.textContent=`Currently Hiring: ${cards.length} Positions`;
-console.log('TP Open Jobs - English version loaded');
+(function(){
+  /* Side Panel */
+  var menuBtn=document.getElementById('menuBtn');
+  var sidePanel=document.getElementById('sidePanel');
+  var sideOverlay=document.getElementById('sideOverlay');
+  var sidePanelClose=document.getElementById('sidePanelClose');
+  var moreBtn=document.getElementById('moreBtn');
+
+  function openPanel(){sidePanel.classList.add('open');sideOverlay.classList.add('open');menuBtn.classList.add('active');menuBtn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+  function closePanel(){sidePanel.classList.remove('open');sideOverlay.classList.remove('open');menuBtn.classList.remove('active');menuBtn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+
+  menuBtn.addEventListener('click',function(){sidePanel.classList.contains('open')?closePanel():openPanel();});
+  sidePanelClose.addEventListener('click',closePanel);
+  sideOverlay.addEventListener('click',closePanel);
+  moreBtn.addEventListener('click',openPanel);
+
+  sidePanel.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click',function(){closePanel();});
+  });
+
+  /* Back to Top */
+  var backToTop=document.getElementById('backToTop');
+  window.addEventListener('scroll',function(){
+    if(window.pageYOffset>300)backToTop.classList.add('show');
+    else backToTop.classList.remove('show');
+  });
+  backToTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+
+  /* Job count */
+  var cards=[].slice.call(document.querySelectorAll('.card'));
+  var count=document.getElementById('count');
+  if(count)count.textContent='Currently Hiring: '+cards.length+' Positions';
+})();
 </script>
 </body>
 </html>
