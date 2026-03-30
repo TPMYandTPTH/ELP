@@ -1071,4 +1071,13 @@ QA('.n-links a').forEach(a=>{a.onclick=e=>{e.preventDefault();const t=Q(a.getAtt
 
 // ── Location Hub Tabs ──
 QA('.loc-tab').forEach(tab=>{
-  t
+  tab.onclick=()=>{
+    QA('.loc-tab').forEach(t=>t.classList.remove('active'));
+    QA('.loc-panel').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    Q('#panel-'+tab.dataset.tab).classList.add('active');
+  };
+});
+</script>
+</body>
+</html>
