@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+<meta name="theme-color" content="#0E0E10" />
+<title>TP Malaysia — jobs that hit different</title>
+<meta name="description" content="Customer service, tech support and content mod roles in Penang. Paid training, shuttle, medical. First real paycheck, no cap." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Space+Mono:wght@400;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+<template id="__bundler_thumbnail" data-bg-color="#0E0E10">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0E0E10"/>
+    <rect x="420" y="220" width="360" height="360" rx="32" fill="#D4FF3A"/>
+    <text x="600" y="430" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="900" font-size="180" fill="#0E0E10" letter-spacing="-6">tp</text>
+    <circle cx="900" cy="260" r="22" fill="#FF2E88"/>
+  </svg>
+</template>
+
+<style>
+:root{
+  --ink:#0E0E10;
+  --ink-2:#17171B;
+  --ink-3:#242428;
+  --lime:#D4FF3A;
+  --lime-2:#BEE926;
+  --mag:#FF2E88;
+  --bone:#F4F1EA;
+  --mut:rgba(244,241,234,.6);
+  --line:rgba(244,241,234,.14);
+  --display:"Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --mono:"Space Mono", ui-monospace, Menlo, monospace;
+  --hand:"Caveat", "Bradley Hand", cursive;
+  --vh: 100dvh;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--ink);color:var(--bone);font-family:var(--display);overscroll-behavior:none}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-size:16px;line-height:1.35;-webkit-font-smoothing:antialiased;
+  min-height:100dvh;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+img{max-width:100%;display:block}
+::selection{background:var(--lime);color:var(--ink)}
+
+/* =========================================================
+   STAGE — snap scroll on phone, normal scroll on desktop
+   ========================================================= */
+.stage{
+  height:100dvh;height:var(--vh);
+  overflow-y:scroll;scroll-snap-type:y mandatory;
+  scroll-behavior:smooth;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.stage::-webkit-scrollbar{display:none}
+.screen{
+  scroll-snap-align:start;scroll-snap-stop:always;
+  min-height:100dvh;min-height:var(--vh);
+  width:100%;
+  position:relative;
+  display:flex;flex-direction:column;
+  padding: max(env(safe-area-inset-top,0),20px) 20px 120px;
+  overflow:hidden;
+}
+
+/* desktop escape: lay screens in a centered phone frame */
+@media (min-width: 900px){
+  body{background:#0a0a0c;display:flex;align-items:center;justify-content:center;padding:24px}
+  .device-wrap{width:100%;max-width:440px;height:min(900px, calc(100dvh - 48px));position:relative}
+  .stage{border-radius:42px;box-shadow:0 40px 120px rgba(0,0,0,.6), 0 0 0 8px #1a1a1e, 0 0 0 9px #2a2a2f;height:100%}
+  .device-hint{position:absolute;top:12px;left:calc(100% + 40px);width:260px;font-family:var(--hand);font-size:28px;color:var(--lime);line-height:1.15;transform:rotate(-3deg)}
+  .device-hint::before{content:"";position:absolute;left:-40px;top:18px;width:40px;height:30px;border-left:2px dashed var(--lime);border-bottom:2px dashed var(--lime);border-bottom-left-radius:40px}
+  .device-hint-2{position:absolute;bottom:60px;right:calc(100% + 40px);width:260px;font-family:var(--hand);font-size:24px;color:var(--mag);line-height:1.15;transform:rotate(4deg);text-align:right}
+}
+@media (max-width: 899px){
+  .device-hint,.device-hint-2{display:none}
+}
+
+/* =========================================================
+   Shared header bits
+   ========================================================= */
+.scr-head{display:flex;align-items:center;justify-content:space-between;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--mut);margin-bottom:4px}
+.scr-head .dot{width:7px;height:7px;border-radius:50%;background:var(--lime);display:inline-block;animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.scr-idx{color:var(--mut)}
+.brand{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:800;font-size:16px;letter-spacing:-.02em}
+.brand b{background:var(--lime);color:var(--ink);padding:2px 7px;border-radius:6px;transform:rotate(-2deg);display:inline-block}
+
+/* Bottom CTA (sticky-ish; actually anchored in each screen for snap) */
+.cta-zone{position:absolute;left:20px;right:20px;bottom:calc(24px + env(safe-area-inset-bottom,0));display:flex;flex-direction:column;gap:10px}
+.btn{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:20px 22px;border-radius:999px;
+  font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-.01em;
+  transition:transform .12s ease, background .18s;
+  min-height:56px;
+}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--lime);color:var(--ink)}
+.btn-primary:hover{background:#e4ff54}
+.btn-primary .arr{background:var(--ink);color:var(--lime);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;transition:transform .2s}
+.btn-primary:hover .arr{transform:rotate(-45deg)}
+.btn-ghost{background:transparent;color:var(--bone);border:1px solid var(--line);padding:14px 18px;font-weight:500;font-size:14px;min-height:46px}
+.swipe-nudge{text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--mut);text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:8px}
+.swipe-nudge::before, .swipe-nudge::after{content:"";height:1px;flex:0 0 20px;background:var(--line)}
+.swipe-arrow{display:inline-block;animation:bob 1.6s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
+
+/* Persistent floating apply (bottom-right), hidden on screen 1 + final */
+.fab{
+  position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0));
+  z-index:60;background:var(--mag);color:#fff;font-family:var(--display);font-weight:800;
+  padding:14px 18px;border-radius:999px;font-size:14px;letter-spacing:-.01em;
+  display:flex;align-items:center;gap:8px;
+  box-shadow:0 14px 30px rgba(255,46,136,.4), 0 0 0 4px rgba(255,46,136,.18);
+  opacity:0;pointer-events:none;transform:translateY(20px);
+  transition:opacity .25s, transform .25s;
+}
+.fab.on{opacity:1;pointer-events:auto;transform:translateY(0)}
+.fab::before{content:"";width:8px;height:8px;border-radius:50%;background:#fff;animation:pulse 1.4s infinite}
+@media (min-width: 900px){ .fab{right:calc(50% - 200px);bottom:60px} }
+
+/* Progress rail (top) */
+.rail{position:fixed;top:0;left:0;right:0;z-index:70;display:flex;gap:4px;padding:8px;pointer-events:none}
+.rail span{flex:1;height:3px;border-radius:2px;background:rgba(244,241,234,.16);overflow:hidden;position:relative}
+.rail span i{position:absolute;inset:0;background:var(--lime);transform-origin:left;transform:scaleX(0);transition:transform .25s ease}
+.rail span.done i{transform:scaleX(1)}
+.rail span.now i{transform:scaleX(1)}
+@media (min-width: 900px){ .rail{left:calc(50% - 220px);right:auto;width:440px;padding:14px 18px} }
+
+/* =========================================================
+   SCREEN 01 — HOOK
+   ========================================================= */
+.s1{background:var(--ink);justify-content:flex-start}
+.s1-blob{
+  position:absolute;inset:-20% -20% auto auto;width:130%;aspect-ratio:1;
+  background:radial-gradient(circle at 30% 30%, var(--lime) 0%, transparent 55%);
+  filter:blur(30px);opacity:.35;pointer-events:none;
+}
+.s1-stamp{position:absolute;top:84px;right:14px;width:110px;height:110px;display:flex;align-items:center;justify-content:center;transform:rotate(8deg);pointer-events:none}
+.s1-stamp svg{width:100%;height:100%;animation:rot 16s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+.s1-stamp .mid{position:absolute;font-family:var(--display);font-weight:800;color:var(--lime);font-size:22px;line-height:1;text-align:center}
+
+.s1 h1{
+  margin: 10vh 0 0;
+  font-family:var(--display);
+  font-weight:800;
+  font-size: clamp(58px, 16vw, 84px);
+  line-height:.92;letter-spacing:-.035em;
+}
+.s1 h1 .hl{background:var(--lime);color:var(--ink);padding:0 8px;border-radius:8px;display:inline-block;transform:rotate(-1.5deg)}
+.s1 h1 .stk{display:inline-block;position:relative}
+.s1 h1 .stk::after{content:"";position:absolute;left:0;right:0;top:58%;height:8px;background:var(--mag);border-radius:6px;z-index:-1;transform:rotate(-1.5deg)}
+.s1 h1 .em{color:var(--mag);font-style:italic;font-family:var(--display);font-weight:800}
+
+.s1-sub{margin-top:18px;font-family:var(--display);font-size:18px;font-weight:500;color:var(--mut);max-width:28ch;line-height:1.35}
+.s1-sub b{color:var(--bone);font-weight:700}
+
+.s1-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.badge{font-family:var(--mono);font-size:11px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:var(--bone)}
+.badge.lime{background:var(--lime);color:var(--ink);border-color:var(--lime);font-weight:700}
+.badge.mag{background:var(--mag);color:#fff;border-color:var(--mag);font-weight:700}
+
+/* =========================================================
+   SCREEN 02 — FIRST PAYCHECK
+   ========================================================= */
+.s2{background:var(--lime);color:var(--ink)}
+.s2 .scr-head{color:rgba(14,14,16,.65)}
+.s2 .scr-head .dot{background:var(--ink)}
+.s2-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-top:30px;color:rgba(14,14,16,.7)}
+.s2-num{
+  font-family:var(--display);font-weight:800;
+  font-size:clamp(120px, 38vw, 200px);
+  line-height:.85;letter-spacing:-.05em;margin:6px 0 0;
+  display:flex;align-items:flex-start;gap:6px;
+}
+.s2-num .rm{font-size:.35em;margin-top:.15em;font-weight:700;color:rgba(14,14,16,.7)}
+.s2-num .mo{font-size:.22em;margin-top:.8em;font-weight:700;color:rgba(14,14,16,.7)}
+.s2-big{font-family:var(--display);font-weight:800;font-size:clamp(38px,10vw,54px);line-height:.95;letter-spacing:-.03em;margin-top:14px}
+.s2-big em{font-style:italic;color:var(--mag)}
+.s2-note{margin-top:16px;font-size:15px;max-width:30ch;color:rgba(14,14,16,.75);line-height:1.4}
+.s2-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.s2-chips .chip{background:var(--ink);color:var(--lime);font-family:var(--mono);font-size:11px;padding:6px 10px;border-radius:999px}
+
+.s2 .cta-zone .btn-primary{background:var(--ink);color:var(--lime)}
+.s2 .cta-zone .btn-primary .arr{background:var(--lime);color:var(--ink)}
+.s2 .swipe-nudge{color:rgba(14,14,16,.55)}
+.s2 .swipe-nudge::before,.s2 .swipe-nudge::after{background:rgba(14,14,16,.2)}
+
+/* =========================================================
+   SCREEN 03 — TRAINING
+   ========================================================= */
+.s3{background:var(--ink)}
+.s3-eye{margin-top:30px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.s3-h{font-family:var(--display);font-weight:800;font-size:clamp(40px,10vw,56px);line-height:.98;letter-spacing:-.03em;margin-top:6px}
+.s3-h em{font-style:italic;color:var(--lime)}
+.s3-graph{margin-top:24px;border:1px solid var(--line);border-radius:20px;padding:18px;background:var(--ink-2);position:relative;overflow:hidden}
+.s3-graph .g-head{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+.s3-bars{margin-top:14px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;height:160px;align-items:end}
+.s3-bars .bar{background:var(--lime);border-radius:6px 6px 2px 2px;position:relative}
+.s3-bars .bar span{position:absolute;bottom:calc(100% + 4px);left:0;right:0;text-align:center;font-family:var(--mono);font-size:10px;color:var(--mut)}
+.s3-bars .bar::after{content:attr(data-w);position:absolute;left:0;right:0;bottom:-18px;text-align:center;font-family:var(--mono);font-size:9px;color:var(--mut)}
+.s3-count{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.s3-count .c{border:1px solid var(--line);border-radius:16px;padding:14px 16px;background:var(--ink-2)}
+.s3-count .c .k{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--mut);text-transform:uppercase}
+.s3-count .c .v{font-family:var(--display);font-weight:800;font-size:32px;letter-spacing:-.02em;margin-top:2px}
+.s3-count .c .v em{color:var(--lime);font-style:normal}
+.s3-quote{margin-top:18px;font-family:var(--display);font-style:italic;font-size:18px;color:var(--bone);line-height:1.35;max-width:32ch}
+.s3-quote span{color:var(--mut);font-style:normal;font-size:12px;font-family:var(--mono);display:block;margin-top:6px}
+
+/* =========================================================
+   SCREEN 04 — VIBE / 12 COUNTRIES
+   ========================================================= */
+.s4{background:var(--mag);color:#fff}
+.s4 .scr-head{color:rgba(255,255,255,.8)}
+.s4 .scr-head .dot{background:#fff}
+.s4-big{font-family:var(--display);font-weight:800;font-size:clamp(46px,12vw,68px);line-height:.95;letter-spacing:-.035em;margin-top:30px}
+.s4-big em{font-style:italic}
+.s4-tag{display:inline-block;background:var(--ink);color:var(--lime);padding:4px 10px;border-radius:8px;font-family:var(--mono);font-size:11px;transform:rotate(-3deg);margin-top:8px}
+.s4-flags{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap}
+.s4-flags span{background:rgba(255,255,255,.18);padding:8px 12px;border-radius:999px;font-family:var(--mono);font-size:12px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.s4-note{margin-top:22px;font-size:15px;max-width:30ch;color:rgba(255,255,255,.85);line-height:1.4}
+.s4-num{position:absolute;bottom:170px;right:-10px;font-family:var(--display);font-weight:800;font-size:280px;line-height:.85;color:rgba(255,255,255,.1);letter-spacing:-.05em;pointer-events:none}
+
+.s4 .cta-zone .btn-primary{background:#fff;color:var(--mag)}
+.s4 .cta-zone .btn-primary .arr{background:var(--mag);color:#fff}
+.s4 .swipe-nudge{color:rgba(255,255,255,.65)}
+.s4 .swipe-nudge::before,.s4 .swipe-nudge::after{background:rgba(255,255,255,.3)}
+
+/* =========================================================
+   SCREEN 05 — ROLES
+   ========================================================= */
+.s5{background:var(--ink)}
+.s5-title{font-family:var(--display);font-weight:800;font-size:clamp(38px,10vw,52px);line-height:.98;letter-spacing:-.03em;margin-top:14px}
+.s5-title em{color:var(--lime);font-style:italic}
+.s5-lede{color:var(--mut);font-size:14px;margin-top:8px;max-width:34ch}
+.roles{margin-top:18px;display:grid;gap:10px}
+.role{
+  border:1px solid var(--line);border-radius:18px;padding:16px;background:var(--ink-2);
+  cursor:pointer;transition:background .18s, border-color .18s;
+  position:relative;overflow:hidden;
+}
+.role:active{background:var(--ink-3)}
+.role.open{background:var(--ink-3);border-color:var(--lime)}
+.role-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.role-top .ttl{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-.02em;line-height:1.15}
+.role-top .ttl small{display:block;font-family:var(--mono);font-size:11px;color:var(--mut);margin-top:3px;font-weight:400}
+.role-top .sal{font-family:var(--display);font-weight:800;font-size:18px;color:var(--lime);white-space:nowrap}
+.role-top .sal small{display:block;font-family:var(--mono);font-size:10px;color:var(--mut);font-weight:400;margin-top:1px}
+.role-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .28s ease;margin-top:0}
+.role.open .role-body{grid-template-rows:1fr;margin-top:14px}
+.role-body > div{overflow:hidden;min-height:0}
+.role-body ul{list-style:none;padding:0;margin:0;display:grid;gap:6px;font-family:var(--mono);font-size:12px;color:var(--mut)}
+.role-body ul li::before{content:"— ";color:var(--lime)}
+.role-body .cta{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-family:var(--display);font-weight:700;color:var(--lime);font-size:14px}
+
+/* =========================================================
+   SCREEN 06 — DAY IN PENANG
+   ========================================================= */
+.s6{background:var(--bone);color:var(--ink)}
+.s6 .scr-head{color:rgba(14,14,16,.55)}
+.s6 .scr-head .dot{background:var(--mag)}
+.s6 .brand b{background:var(--ink);color:var(--lime)}
+.s6-title{font-family:var(--display);font-weight:800;font-size:clamp(36px,10vw,50px);line-height:.98;letter-spacing:-.03em;margin-top:14px}
+.s6-title em{color:var(--mag);font-style:italic}
+.s6-sub{color:rgba(14,14,16,.6);font-size:13px;margin-top:6px;max-width:30ch}
+.day{margin-top:16px;display:grid;gap:10px;position:relative}
+.day::before{content:"";position:absolute;left:50px;top:10px;bottom:10px;width:2px;background:var(--ink);opacity:.15}
+.mt{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:flex-start;position:relative}
+.mt .t{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--ink);padding-top:3px}
+.mt .b{background:#fff;border:1px solid rgba(14,14,16,.08);border-radius:14px;padding:12px 14px;position:relative}
+.mt .b::before{content:"";position:absolute;left:-12px;top:10px;width:8px;height:8px;background:var(--ink);border-radius:50%}
+.mt.hot .b::before{background:var(--mag)}
+.mt .w{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:-.01em;line-height:1.25}
+.mt .w em{font-style:italic;color:var(--mag)}
+.mt .n{font-family:var(--mono);font-size:11px;color:rgba(14,14,16,.55);margin-top:3px}
+
+.s6 .cta-zone .btn-primary{background:var(--ink);color:var(--lime)}
+.s6 .cta-zone .btn-primary .arr{background:var(--lime);color:var(--ink)}
+.s6 .swipe-nudge{color:rgba(14,14,16,.5)}
+.s6 .swipe-nudge::before,.s6 .swipe-nudge::after{background:rgba(14,14,16,.18)}
+
+/* =========================================================
+   SCREEN 07 — BENTO BENEFITS
+   ========================================================= */
+.s7{background:var(--ink)}
+.s7-title{font-family:var(--display);font-weight:800;font-size:clamp(38px,10vw,52px);line-height:.98;letter-spacing:-.03em;margin-top:14px}
+.s7-title em{color:var(--lime);font-style:italic}
+.bento{margin-top:18px;display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(70px,auto);gap:8px}
+.cell{border-radius:16px;padding:14px;background:var(--ink-2);border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:8px;min-height:76px}
+.cell .k{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--mut);text-transform:uppercase}
+.cell .v{font-family:var(--display);font-weight:800;font-size:22px;line-height:1;letter-spacing:-.02em}
+.cell .v small{font-family:var(--mono);font-size:10px;color:var(--mut);font-weight:400;margin-left:4px;letter-spacing:.03em}
+.cell.lime{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.cell.lime .k{color:rgba(14,14,16,.6)}
+.cell.lime .v{color:var(--ink)}
+.cell.mag{background:var(--mag);color:#fff;border-color:var(--mag)}
+.cell.mag .k{color:rgba(255,255,255,.8)}
+.cell.outline{background:var(--ink);border:1px solid var(--line)}
+.cell.c-6{grid-column:span 6}
+.cell.c-4{grid-column:span 4}
+.cell.c-3{grid-column:span 3}
+.cell.c-2{grid-column:span 2}
+.cell.r-2{grid-row:span 2}
+.cell .chip{align-self:flex-start;font-family:var(--mono);font-size:10px;padding:2px 6px;border-radius:6px;background:rgba(255,255,255,.12);color:var(--mut)}
+.cell.lime .chip{background:rgba(14,14,16,.12);color:rgba(14,14,16,.7)}
+
+/* =========================================================
+   SCREEN 08 — VOICES
+   ========================================================= */
+.s8{background:var(--ink)}
+.s8-title{font-family:var(--display);font-weight:800;font-size:clamp(36px,9vw,48px);line-height:.98;letter-spacing:-.03em;margin-top:14px}
+.s8-title em{color:var(--lime);font-style:italic}
+.posts{margin-top:16px;display:grid;gap:10px}
+.post{
+  border-radius:18px;padding:16px;position:relative;
+  background:var(--ink-2);border:1px solid var(--line);
+}
+.post.a{background:var(--lime);color:var(--ink);border-color:var(--lime);transform:rotate(-1deg)}
+.post.b{background:var(--ink-2);transform:rotate(1deg)}
+.post.c{background:var(--mag);color:#fff;border-color:var(--mag);transform:rotate(-1.5deg)}
+.post .who{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px}
+.post .av{width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--lime);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:12px}
+.post.a .av{background:var(--ink);color:var(--lime)}
+.post.c .av{background:#fff;color:var(--mag)}
+.post .who b{font-weight:700}
+.post .who span{opacity:.65}
+.post .msg{margin-top:10px;font-family:var(--display);font-weight:700;font-size:18px;line-height:1.3;letter-spacing:-.01em}
+.post .msg em{font-style:italic}
+.post .tags{margin-top:8px;font-family:var(--mono);font-size:11px;opacity:.75}
+
+/* =========================================================
+   SCREEN 09 — SHAREABLE / FINAL
+   ========================================================= */
+.s9{background:var(--ink);justify-content:flex-start}
+.s9-eye{margin-top:30px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.s9-card{
+  margin-top:12px;border-radius:26px;padding:22px;
+  background:linear-gradient(160deg, var(--lime) 0%, #E9FF7A 60%, #FFF08A 100%);
+  color:var(--ink);position:relative;overflow:hidden;
+  box-shadow:0 20px 60px rgba(212,255,58,.2);
+}
+.s9-card::after{content:"TP·MY·26";position:absolute;right:-10px;bottom:-18px;font-family:var(--display);font-weight:800;font-size:96px;opacity:.12;letter-spacing:-.04em}
+.s9-card .top{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.1em}
+.s9-card h2{margin:6px 0 0;font-family:var(--display);font-weight:800;font-size:44px;line-height:.95;letter-spacing:-.03em}
+.s9-card h2 em{font-style:italic;color:var(--mag)}
+.s9-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.s9-row .k{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:rgba(14,14,16,.6);text-transform:uppercase}
+.s9-row .v{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.02em;line-height:1.05}
+.s9-card .note{margin-top:14px;font-family:var(--hand);font-size:22px;line-height:1.1;color:var(--ink);transform:rotate(-1deg);display:inline-block;border-bottom:2px solid var(--ink)}
+.s9-share{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.s9-share .sb{border:1px solid var(--line);padding:10px 14px;border-radius:999px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--bone);display:flex;align-items:center;gap:6px}
+.s9-share .sb:active{background:var(--ink-2)}
+.s9-final{margin-top:16px;font-family:var(--display);font-weight:800;font-size:30px;line-height:1;letter-spacing:-.02em}
+.s9-final em{font-style:italic;color:var(--lime)}
+.s9 .footer{margin-top:auto;padding-top:18px;font-family:var(--mono);font-size:10px;color:var(--mut);letter-spacing:.06em;text-transform:uppercase;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line)}
+.s9 .footer a{color:var(--bone)}
+
+/* anim primitive */
+.enter{opacity:0;transform:translateY(14px);transition:opacity .55s ease, transform .55s ease}
+.screen.active .enter{opacity:1;transform:none}
+.screen.active .enter:nth-child(2){transition-delay:.06s}
+.screen.active .enter:nth-child(3){transition-delay:.12s}
+.screen.active .enter:nth-child(4){transition-delay:.18s}
+.screen.active .enter:nth-child(5){transition-delay:.22s}
+.screen.active .enter:nth-child(6){transition-delay:.26s}
+.screen.active .enter:nth-child(7){transition-delay:.3s}
+.screen.active .enter:nth-child(8){transition-delay:.34s}
+
+@media (prefers-reduced-motion:reduce){
+  .enter{opacity:1;transform:none;transition:none}
+  .swipe-arrow,.brand .dot,.scr-head .dot,.fab::before{animation:none}
+  .s1-stamp svg{animation:none}
+  .stage{scroll-behavior:auto}
+}
+
+/* taller content allowance for small phones */
+@media (max-height:700px){
+  .screen{padding-bottom:150px}
+  .s3-bars{height:120px}
+  .s1 h1{font-size:54px}
+}
+
+</style>
+</head>
+<body>
+
+<div class="device-wrap">
+  <div class="device-hint">your first job, on your thumb &rarr;</div>
+  <div class="device-hint-2">&larr; scroll = swipe. one screen at a time.</div>
+
+  <div class="rail" id="rail" aria-hidden="true">
+    <span><i></i></span><span><i></i></span><span><i></i></span>
+    <span><i></i></span><span><i></i></span><span><i></i></span>
+    <span><i></i></span><span><i></i></span><span><i></i></span>
+  </div>
+
+  <main class="stage" id="stage">
+
+    <!-- ============ SCREEN 1 — HOOK ============ -->
+    <section class="screen s1" data-screen="1">
+      <div class="s1-blob" aria-hidden="true"></div>
+
+      <div class="scr-head enter">
+        <span class="brand"><b>tp</b>&nbsp;malaysia · careers</span>
+        <span><span class="dot"></span> hiring · penang</span>
+      </div>
+
+      <div class="s1-stamp enter" aria-hidden="true">
+        <svg viewBox="0 0 100 100">
+          <defs><path id="cp" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"/></defs>
+          <text fill="#D4FF3A" font-family="Space Mono" font-size="9.5" letter-spacing="2">
+            <textPath href="#cp">· NOW HIRING · 47 SEATS · MAY INTAKE · PENANG · </textPath>
+          </text>
+        </svg>
+        <span class="mid">NOW<br>HIRING</span>
+      </div>
+
+      <h1 class="enter">
+        <span class="hl">your first</span><br>
+        real job.<br>
+        <span class="em">no cap.</span>
+      </h1>
+
+      <p class="s1-sub enter">Customer service, tech support, content mod — in Penang. <b>Paid training.</b> Actual career path. A shuttle bus and a medical card on day one.</p>
+
+      <div class="s1-badges enter">
+        <span class="badge lime">RM 3.5K–6.2K</span>
+        <span class="badge">shuttle ✓</span>
+        <span class="badge mag">47 seats</span>
+        <span class="badge">no degree req</span>
+      </div>
+
+      <div class="cta-zone enter">
+        <a class="btn btn-primary" href="https://careers.tp.com/malaysia" target="_blank" rel="noopener">
+          Apply in 4 minutes <span class="arr">→</span>
+        </a>
+        <div class="swipe-nudge">Swipe up <span class="swipe-arrow">↑</span> see why</div>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN 2 — PAY ============ -->
+    <section class="screen s2" data-screen="2">
+      <div class="scr-head enter">
+        <span><span class="dot"></span> reason 01 of 03</span>
+        <span>§ money</span>
+      </div>
+      <div class="s2-kicker enter">the number you came for</div>
+      <div class="s2-num enter" data-counter="6200" data-prefix="">
+        <span class="rm">RM</span><span class="val">0</span><span class="mo">/mo max</span>
+      </div>
+      <div class="s2-big enter">Your first <em>real</em> paycheck,<br>on the 25th.</div>
+      <p class="s2-note enter">Base starts at <b>RM 3,500</b>. Shift allowance up to <b>RM 800</b>. Quarterly bonus. Overtime at 1.5×. No “paid in exposure.”</p>
+      <div class="s2-chips enter">
+        <span class="chip">EPF + SOCSO</span>
+        <span class="chip">medical + dental</span>
+        <span class="chip">annual leave day 1</span>
+      </div>
+
+      <div class="cta-zone enter">
+        <a class="btn btn-primary" href="https://careers.tp.com/malaysia" target="_blank" rel="noopener">
+          Apply now <span class="arr">→</span>
+        </a>
+        <div class="swipe-nudge">Swipe up <span class="swipe-arrow">↑</span> training</div>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN 3 — TRAINING ============ -->
+    <section class="screen s3" data-screen="3">
+      <div class="scr-head enter">
+        <span><span class="dot"></span> reason 02 of 03</span>
+        <span>§ growth</span>
+      </div>
+      <div class="s3-eye enter">trained, not thrown</div>
+      <h2 class="s3-h enter">6 weeks paid<br>before you touch <em>one call</em>.</h2>
+
+      <div class="s3-graph enter">
+        <div class="g-head"><span>onboarding curve</span><span>weeks →</span></div>
+        <div class="s3-bars">
+          <div class="bar" style="height:22%" data-w="1"></div>
+          <div class="bar" style="height:38%" data-w="2"></div>
+          <div class="bar" style="height:52%" data-w="3"></div>
+          <div class="bar" style="height:70%" data-w="4"></div>
+          <div class="bar" style="height:86%" data-w="5"></div>
+          <div class="bar" style="height:100%" data-w="6"><span>live</span></div>
+        </div>
+      </div>
+
+      <div class="s3-count enter">
+        <div class="c"><div class="k">classroom hrs</div><div class="v" data-counter="240">0</div></div>
+        <div class="c"><div class="k">avg promo</div><div class="v"><em data-counter="12">0</em>mo</div></div>
+      </div>
+
+      <div class="s3-quote enter">“My coach actually <em>listened</em>. Didn't feel like a boot camp, felt like a group chat.”
+        <span>— Jun Sheng, CS Agent, 22</span>
+      </div>
+
+      <div class="cta-zone enter">
+        <a class="btn btn-primary" href="https://careers.tp.com/malaysia" target="_blank" rel="noopener">
+          Apply now <span class="arr">→</span>
+        </a>
+        <div class="swipe-nudge">Swipe up <span class="swipe-arrow">↑</span> the vibe</div>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN 4 — VIBE / 12 COUNTRIES ============ -->
+    <section class="screen s4" data-screen="4">
+      <div class="s4-num enter" aria-hidden="true">12</div>
+      <div class="scr-head enter">
+        <span><span class="dot"></span> reason 03 of 03</span>
+        <span>§ the vibe</span>
+      </div>
+      <h2 class="s4-big enter">
+        You'll work with<br>
+        people from<br>
+        <em>12+ countries</em>.
+        <br><span class="s4-tag">it's a whole vibe.</span>
+      </h2>
+      <div class="s4-flags enter">
+        <span>🇲🇾 MY</span><span>🇵🇭 PH</span><span>🇮🇩 ID</span>
+        <span>🇮🇳 IN</span><span>🇱🇰 LK</span><span>🇿🇦 ZA</span>
+        <span>🇳🇬 NG</span><span>🇹🇭 TH</span><span>🇻🇳 VN</span>
+      </div>
+      <p class="s4-note enter">Language exchanges at lunch. Eid, Diwali, Lunar New Year, Christmas — all company holidays. Bring your accent, keep it.</p>
+
+      <div class="cta-zone enter">
+        <a class="btn btn-primary" href="https://careers.tp.com/malaysia" target="_blank" rel="noopener">
+          Apply now <span class="arr">→</span>
+        </a>
+        <div class="swipe-nudge">Swipe up <span class="swipe-arrow">↑</span> pick a role</div>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN 5 — ROLES ============ -->
+    <section class="screen s5" data-screen="5">
+      <div class="scr-head enter">
+        <span class="brand"><b>roles</b> open now</span>
+        <span>§ 04</span>
+      </div>
+      <h2 class="s5-title enter">Pick one.<br><em>Tap to open.</em></h2>
+      <p class="s5-lede enter">All entry-level. All English first. Degree not required — we hire on how you talk.</p>
+
+      <div class="roles" id="roles">
+        <div class="role enter" data-open>
+          <div class="role-top">
+            <div class="ttl">Customer Service <br><small>English · Penang</small></div>
+            <div class="sal">RM 3,500+<small>/month</small></div>
+          </div>
+          <div class="role-body"><div>
+            <ul>
+              <li>chat &amp; voice, rotating shift</li>
+              <li>intake: May 12, Jun 9, Jul 7</li>
+              <li>6 weeks paid training</li>
+            </ul>
+            <a class="cta" href="https://careers.tp.com/malaysia" target="_blank" rel="noopener">Apply for this role →</a>
+          </div></div>
+        </div>
+
+        <div class="role enter">
+          <div class="role-top">
+            <div class="ttl">Technical Support <br><small>English · Penang</small></div>
+            <div class="sal">RM 4,000+<small>/month</small></div>
+          </div>
+          <div class="role-body"><div>
+            <ul>
+              <li>troubleshoot apps &amp; devices</li>
+              <li>consumer tech accounts</li>
+              <li>night shift allowance +RM 800</li>
+            </ul>
+            <a class="cta" href="https://careers.tp.com/malaysia" target="_blank" rel="noopener">Apply for this role →</a>
+          </div></div>
+        </div>
+
+        <div class="role enter">
+          <div class="role-top">
+            <div class="ttl">Content Moderation <br><small>English · Penang</small></div>
+            <div class="sal">RM 3,800+<small>/month</small></div>
+          </div>
+          <div class="role-body"><div>
+            <ul>
+              <li>trust &amp; safety team</li>
+              <li>mandatory wellness rotation</li>
+              <li>on-site counselor, no joke</li>
+            </ul>
+            <a class="cta" href="https://careers.tp.com/malaysia" target="_blank" rel="noopener">Apply for this role →</a>
+          </div></div>
+        </div>
+
+        <div class="role enter">
+          <div class="role-top">
+            <div class="ttl">CS — Mandarin / Thai / Bahasa <br><small>bilingual · Penang / Bangkok</small></div>
+            <div class="sal">RM 4,500+<small>/month</small></div>
+          </div>
+          <div class="role-body"><div>
+            <ul>
+              <li>bilingual premium +20%</li>
+              <li>Bangkok relocation option</li>
+              <li>visa + flight covered</li>
+            </ul>
+            <a class="cta" href="https://careers.tp.com/malaysia" target="_blank" rel="noopener">Apply for this role →</a>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="cta-zone enter" style="position:static;margin-top:18px">
+        <a class="btn btn-primary" href="https://careers.tp.com/malaysia" target="_blank" rel="noopener">
+          Apply — any role <span class="arr">→</span>
+        </a>
+        <div class="swipe-nudge">Swipe up <span class="swipe-arrow">↑</span> a day at TP</div>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN 6 — DAY IN PENANG ============ -->
+    <section class="screen s6" data-screen="6">
+      <div class="scr-head enter">
+        <span class="brand"><b>one</b> wednesday, penang</span>
+        <span>§ 05</span>
+      </div>
+      <h2 class="s6-title enter">A day that<br>actually <em>slaps</em>.</h2>
+      <p class="s6-sub enter">Not a perk list. A real schedule, from a real Wednesday.</p>
+
+      <div class="day">
+        <div class="mt enter"><div class="t">07:40</div>
+          <div class="b"><div class="w">shuttle picks you up</div><div class="n">bayan lepas · AC on full · 22 min</div></div>
+        </div>
+        <div class="mt enter"><div class="t">09:00</div>
+          <div class="b"><div class="w">kopi O at the canteen</div><div class="n">RM 2.50 · the uncle knows your order by week 3</div></div>
+        </div>
+        <div class="mt enter"><div class="t">09:30</div>
+          <div class="b"><div class="w">headset on · first call</div><div class="n">floor 5 · EN team · coach 2 seats away</div></div>
+        </div>
+        <div class="mt enter hot"><div class="t">12:30</div>
+          <div class="b"><div class="w">lunch run · <em>gurney</em></div><div class="n">nasi kandar, chicken rice, korean corn dogs</div></div>
+        </div>
+        <div class="mt enter"><div class="t">18:00</div>
+          <div class="b"><div class="w">camp5 bouldering</div><div class="n">gym subsidy · half of tech support goes thursdays</div></div>
+        </div>
+        <div class="mt enter hot"><div class="t">20:30</div>
+          <div class="b"><div class="w">chulia st hawker · <em>CKT</em></div><div class="n">RM 9 · best stall closes 21:30 · don't be late</div></div>
+        </div>
+      </div>
+
+      <div class="cta-zone enter">
+        <a class="btn btn-primary" href="https://careers.tp.com/malaysia" target="_blank" rel="noopener">
+          Apply now <span class="arr">→</span>
+        </a>
+        <div class="swipe-nudge">Swipe up <span class="swipe-arrow">↑</span> what's in it</div>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN 7 — BENEFITS BENTO ============ -->
+    <section class="screen s7" data-screen="7">
+      <div class="scr-head enter">
+        <span class="brand"><b>what's</b> in the box</span>
+        <span>§ 06</span>
+      </div>
+      <h2 class="s7-title enter">Benefits,<br>no <em>HR-speak</em>.</h2>
+
+      <div class="bento">
+        <div class="cell lime c-3 r-2 enter">
+          <div class="k">base salary</div>
+          <div class="v">RM 3.5K<small>–6.2K</small></div>
+          <div class="chip">on the 25th</div>
+        </div>
+        <div class="cell c-3 enter">
+          <div class="k">shift allowance</div>
+          <div class="v">+RM 800</div>
+        </div>
+        <div class="cell c-3 enter">
+          <div class="k">shuttle bus</div>
+          <div class="v">4 routes</div>
+        </div>
+        <div class="cell mag c-2 r-2 enter">
+          <div class="k">medical</div>
+          <div class="v">you +<br>family</div>
+          <div class="chip">dental incl.</div>
+        </div>
+        <div class="cell c-2 enter">
+          <div class="k">training</div>
+          <div class="v">240 hrs</div>
+        </div>
+        <div class="cell c-2 enter">
+          <div class="k">canteen meal</div>
+          <div class="v">RM 6</div>
+        </div>
+        <div class="cell c-2 enter">
+          <div class="k">annual leave</div>
+          <div class="v">day 1</div>
+        </div>
+        <div class="cell c-2 enter">
+          <div class="k">OT rate</div>
+          <div class="v">1.5×</div>
+        </div>
+        <div class="cell c-2 enter">
+          <div class="k">promo avg</div>
+          <div class="v">12 mo</div>
+        </div>
+        <div class="cell lime c-6 enter">
+          <div class="k">relocating?</div>
+          <div class="v" style="font-size:18px">flight + first-month rent + visa, covered up to RM 4,000.</div>
+        </div>
+      </div>
+
+      <div class="cta-zone enter">
+        <a class="btn btn-primary" href="https://careers.tp.com/malaysia" target="_blank" rel="noopener">
+          Apply now <span class="arr">→</span>
+        </a>
+        <div class="swipe-nudge">Swipe up <span class="swipe-arrow">↑</span> voices</div>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN 8 — VOICES ============ -->
+    <section class="screen s8" data-screen="8">
+      <div class="scr-head enter">
+        <span class="brand"><b>voices</b> (unedited)</span>
+        <span>§ 07</span>
+      </div>
+      <h2 class="s8-title enter">Not reviews.<br>Just <em>DMs</em>.</h2>
+
+      <div class="posts">
+        <div class="post a enter">
+          <div class="who"><div class="av">NK</div><div><b>nurul_k</b> <span>· team lead, 24</span></div></div>
+          <div class="msg">came in thinking it was a gap year thing. three promos later i'm running a team of 14. <em>lmao</em>.</div>
+          <div class="tags">#techsupport #penang #2.5yr</div>
+        </div>
+
+        <div class="post b enter">
+          <div class="who"><div class="av">TM</div><div><b>thandim.</b> <span>· cs, 23, moved from joburg</span></div></div>
+          <div class="msg">they picked me up from <em>the airport</em>. with a sim card. who DOES that.</div>
+          <div class="tags">#relocation #februaryintake</div>
+        </div>
+
+        <div class="post c enter">
+          <div class="who"><div class="av">JS</div><div><b>junsheng</b> <span>· fresh grad, USM</span></div></div>
+          <div class="msg">first job, <em>zero experience</em>, full salary on the 25th. told my mom. she cried. no cap.</div>
+          <div class="tags">#freshgrad #firstpaycheck</div>
+        </div>
+      </div>
+
+      <div class="cta-zone enter">
+        <a class="btn btn-primary" href="https://careers.tp.com/malaysia" target="_blank" rel="noopener">
+          Apply now <span class="arr">→</span>
+        </a>
+        <div class="swipe-nudge">Swipe up <span class="swipe-arrow">↑</span> your card</div>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN 9 — SHAREABLE / FINAL ============ -->
+    <section class="screen s9" data-screen="9">
+      <div class="scr-head enter">
+        <span class="brand"><b>tp</b> · your card</span>
+        <span>§ end</span>
+      </div>
+      <div class="s9-eye enter">screenshot this ↓ send to your group chat</div>
+
+      <div class="s9-card enter">
+        <div class="top">TP · Malaysia · 2026 Intake</div>
+        <h2>Reserved<br>for <em>you</em>.</h2>
+        <div class="s9-row">
+          <div><div class="k">location</div><div class="v">Penang, MY</div></div>
+          <div><div class="k">start date</div><div class="v">May 12</div></div>
+          <div><div class="k">pay from</div><div class="v">RM 3,500</div></div>
+          <div><div class="k">apply in</div><div class="v">~4 min</div></div>
+        </div>
+        <div class="note">don't overthink it ✱</div>
+      </div>
+
+      <div class="s9-share enter">
+        <button class="sb" data-share="copy">🔗 copy link</button>
+        <button class="sb" data-share="wa">💬 WhatsApp</button>
+        <button class="sb" data-share="tg">✈️ Telegram</button>
+      </div>
+
+      <div class="s9-final enter">
+        So <em>yeah</em>.<br>Tap apply.
+      </div>
+
+      <div class="cta-zone enter">
+        <a class="btn btn-primary" href="https://careers.tp.com/malaysia" target="_blank" rel="noopener">
+          Apply now — <span class="arr">→</span>
+        </a>
+        <a class="btn-ghost" href="#top" onclick="document.getElementById('stage').scrollTo({top:0,behavior:'smooth'});return false;">↺ back to top</a>
+      </div>
+
+      <div class="footer enter">
+        <span>© 2026 TP Malaysia careers</span>
+        <a href="#">privacy · contact</a>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<a class="fab" id="fab" href="https://careers.tp.com/malaysia" target="_blank" rel="noopener">Apply →</a>
+
+<script>
+/* ---------- dynamic viewport height for iOS ---------- */
+function setVh(){
+  document.documentElement.style.setProperty('--vh', window.innerHeight + 'px');
+}
+setVh();
+window.addEventListener('resize', setVh, {passive:true});
+window.addEventListener('orientationchange', setVh);
+
+/* ---------- screens + progress rail + active class ---------- */
+const stage = document.getElementById('stage');
+const screens = [...document.querySelectorAll('.screen')];
+const rail = document.getElementById('rail');
+const railBars = [...rail.children];
+const fab = document.getElementById('fab');
+
+let activeIndex = -1;
+function setActive(i){
+  if (i === activeIndex) return;
+  screens[activeIndex]?.classList.remove('active');
+  screens[i]?.classList.add('active');
+  activeIndex = i;
+  railBars.forEach((b, idx)=>{
+    b.classList.toggle('done', idx < i);
+    b.classList.toggle('now', idx === i);
+  });
+  // hide fab on hook + final (they have their own big CTAs)
+  fab.classList.toggle('on', i > 0 && i < screens.length - 1);
+}
+// fire active on first paint
+requestAnimationFrame(()=>setActive(0));
+
+const io = new IntersectionObserver((entries)=>{
+  // pick the most-visible screen
+  let best = null;
+  entries.forEach(e=>{
+    if (!best || e.intersectionRatio > best.intersectionRatio) best = e;
+  });
+  if (best && best.isIntersecting){
+    const idx = screens.indexOf(best.target);
+    if (idx >= 0) setActive(idx);
+  }
+}, {root:stage, threshold:[.3,.5,.75]});
+screens.forEach(s=>io.observe(s));
+
+/* ---------- counters (fire when screen active) ---------- */
+function animateCount(el, to, dur=1200){
+  const start = performance.now();
+  const from = 0;
+  function frame(t){
+    const k = Math.min(1, (t-start)/dur);
+    const eased = 1 - Math.pow(1-k, 3);
+    const n = Math.round(from + (to-from)*eased);
+    el.textContent = n.toLocaleString();
+    if (k<1) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+const counters = document.querySelectorAll('[data-counter]');
+const seen = new WeakSet();
+const cio = new IntersectionObserver((ents)=>{
+  ents.forEach(e=>{
+    if (e.isIntersecting && !seen.has(e.target)){
+      seen.add(e.target);
+      const to = parseInt(e.target.dataset.counter,10);
+      // value may be in a child .val
+      const tgt = e.target.querySelector('.val') || e.target;
+      animateCount(tgt, to);
+    }
+  });
+}, {root:stage, threshold:.5});
+counters.forEach(c=>cio.observe(c));
+
+/* ---------- role expand/collapse ---------- */
+document.querySelectorAll('.role').forEach(r=>{
+  if (r.hasAttribute('data-open')) r.classList.add('open');
+  r.addEventListener('click', (e)=>{
+    // don't toggle when clicking the inner Apply link
+    if (e.target.closest('a')) return;
+    r.classList.toggle('open');
+  });
+});
+
+/* ---------- share buttons ---------- */
+const applyUrl = 'https://careers.tp.com/malaysia';
+const shareText = 'TP Malaysia is hiring — RM 3,500+ start, Penang. Apply in 4 min:';
+document.querySelectorAll('[data-share]').forEach(btn=>{
+  btn.addEventListener('click', async ()=>{
+    const kind = btn.dataset.share;
+    try {
+      if (kind === 'copy'){
+        await navigator.clipboard.writeText(applyUrl);
+        btn.textContent = '✓ copied';
+        setTimeout(()=>{ btn.textContent = '🔗 copy link'; }, 1600);
+      } else if (kind === 'wa'){
+        location.href = 'https://wa.me/?text=' + encodeURIComponent(shareText + ' ' + applyUrl);
+      } else if (kind === 'tg'){
+        location.href = 'https://t.me/share/url?url=' + encodeURIComponent(applyUrl) + '&text=' + encodeURIComponent(shareText);
+      }
+    } catch(err){
+      // graceful fallback
+      location.href = applyUrl;
+    }
+  });
+});
+
+/* ---------- haptic-ish feedback on big buttons (mobile) ---------- */
+document.querySelectorAll('.btn-primary, .role, .sb').forEach(el=>{
+  el.addEventListener('touchstart', ()=>{
+    if (navigator.vibrate) navigator.vibrate(6);
+  }, {passive:true});
+});
+
+/* ---------- keyboard nav (desktop polish) ---------- */
+window.addEventListener('keydown', (e)=>{
+  if (e.key === 'ArrowDown' || e.key === 'PageDown'){
+    e.preventDefault();
+    const next = Math.min(screens.length-1, activeIndex+1);
+    screens[next].scrollIntoView({behavior:'smooth', block:'start'});
+  } else if (e.key === 'ArrowUp' || e.key === 'PageUp'){
+    e.preventDefault();
+    const prev = Math.max(0, activeIndex-1);
+    screens[prev].scrollIntoView({behavior:'smooth', block:'start'});
+  }
+});
+</script>
+</body>
+</html>
