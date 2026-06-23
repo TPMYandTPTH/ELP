@@ -1,1 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TP Careers | Malaysia & Thailand</title>
+<meta name="description" content="Join TP (formerly Teleperformance) in Malaysia & Thailand. Multilingual careers with relocation support.">
+<!-- Open Graph -->
+<meta property="og:title" content="TP Careers — Start Your Global Career">
+<meta property="og:description" content="Join a Fortune 500 team in Malaysia & Thailand. Multilingual roles with full relocation, visa, and training. Apply in 5 minutes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tpmyandtpth.github.io/ELP">
+<meta property="og:image" content="https://tpmyandtpth.github.io/photos/TPLogo11.png">
+<meta property="og:site_name" content="TP Careers">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TP Careers — Start Your Global Career">
+<meta name="twitter:description" content="Multilingual roles in Malaysia & Thailand. Full relocation package. Apply now.">
+<meta name="twitter:image" content="https://tpmyandtpth.github.io/photos/TPLogo11.png">
+<!-- Favicon -->
+<link rel="icon" href="https://tpmyandtpth.github.io/TPLogo11.png" type="image/png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SPPNGS1L2L"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-SPPNGS1L2L');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#000;--white:#fff;
+  --g50:#fafafa;--g100:#f5f5f5;--g200:#e5e5e5;--g300:#d4d4d4;--g400:#a3a3a3;
+  --g500:#737373;--g600:#525252;--g700:#404040;--g800:#262626;--g900:#171717;--g950:#0a0a0a;
+  --pink:#FF0082;--pink-soft:rgba(255,0,130,.08);--pink-glow:rgba(255,0,130,.15);
+  --slate:#4B4C6A;--slate-soft:rgba(75,76,106,.1);--slate-mid:#848DAD;
+  --violet:#706398;--violet-soft:rgba(112,99,152,.1);
+  --font:'Plus Jakarta Sans','TP Sans',Calibri,-apple-system,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:auto}
+body{font-family:var(--font);background:var(--black);color:var(--white);-webkit-font-smoothing:antialiased;overflow:hidden}
 
+/* ═══════ PROGRESS ═══════ */
+.progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--slate),var(--pink));z-index:400;width:0%;transition:width .08s linear}
+
+/* ═══════ SNAP CONTAINER ═══════ */
+#sc{height:100vh;overflow-y:scroll;scroll-snap-type:y mandatory;scrollbar-width:none}
+#sc::-webkit-scrollbar{display:none}
+.sn{min-height:100vh;scroll-snap-align:start;scroll-snap-stop:always;position:relative;display:flex;align-items:center;justify-content:center}
+.sn-auto{scroll-snap-align:start;position:relative}
+
+/* ═══════ NAV BAR ═══════ */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:200;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(0,0,0,.7);backdrop-filter:blur(40px) saturate(180%);-webkit-backdrop-filter:blur(40px) saturate(180%);border-bottom:1px solid rgba(255,255,255,.06);transition:background .4s}
+.topbar.solid{background:rgba(0,0,0,.94)}
+.n-logo{font-size:18px;font-weight:800;letter-spacing:-.03em;cursor:pointer}.n-logo span{color:var(--pink)}
+.n-links{display:flex;gap:24px;list-style:none}
+.n-links a{color:var(--g400);text-decoration:none;font-size:12px;font-weight:500;transition:color .3s;position:relative}
+.n-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--pink);transition:width .3s cubic-bezier(.16,1,.3,1)}
+.n-links a:hover{color:var(--white)}.n-links a:hover::after{width:100%}
+.n-right{display:flex;align-items:center;gap:10px}
+.n-live{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:var(--pink)}
+.n-live::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--pink);box-shadow:0 0 8px var(--pink-glow);animation:pulse 2s ease infinite}
+.n-cta{background:var(--white);color:var(--black);border:none;padding:6px 18px;border-radius:100px;font-size:11px;font-weight:700;font-family:var(--font);cursor:pointer;transition:opacity .3s;text-decoration:none}
+.n-cta:hover{opacity:.85}
+/* Menu trigger (hamburger on mobile, "Menu" on desktop) */
+.menu-trigger{background:none;border:1px solid rgba(255,255,255,.1);color:var(--g400);padding:5px 14px;border-radius:100px;font-size:11px;font-weight:600;font-family:var(--font);cursor:pointer;transition:all .3s;display:flex;align-items:center;gap:5px}
+.menu-trigger:hover{border-color:rgba(255,255,255,.25);color:var(--white)}
+.menu-trigger .material-symbols-outlined{font-size:16px}
+
+/* ═══════ OVERLAY MENU — Semi-transparent Luxury ═══════ */
+.overlay{position:fixed;inset:0;z-index:300;pointer-events:none;visibility:hidden;opacity:0;transition:opacity .5s cubic-bezier(.16,1,.3,1),visibility 0s .5s}
+.overlay.open{opacity:1;pointer-events:all;visibility:visible;transition:opacity .5s cubic-bezier(.16,1,.3,1),visibility 0s 0s}
+.overlay-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.82);backdrop-filter:blur(40px) saturate(140%);-webkit-backdrop-filter:blur(40px) saturate(140%);z-index:0}
+.overlay-content{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:center;padding:4rem 4rem 4rem 6rem}
+.overlay-item{font-size:clamp(2.8rem,7vw,5.5rem);font-weight:900;color:rgba(255,255,255,.1);text-decoration:none;line-height:1.1;transition:all .4s cubic-bezier(.16,1,.3,1);display:block;position:relative;padding:4px 0;transform:translateY(30px);opacity:0}
+.overlay.open .overlay-item{opacity:1;transform:translateY(0)}
+.overlay.open .overlay-item:nth-child(1){transition-delay:.06s}
+.overlay.open .overlay-item:nth-child(2){transition-delay:.1s}
+.overlay.open .overlay-item:nth-child(3){transition-delay:.14s}
+.overlay.open .overlay-item:nth-child(4){transition-delay:.18s}
+.overlay.open .overlay-item:nth-child(5){transition-delay:.22s}
+.overlay.open .overlay-item:nth-child(6){transition-delay:.26s}
+.overlay.open .overlay-item:nth-child(7){transition-delay:.3s}
+.overlay.open .overlay-item:nth-child(8){transition-delay:.34s}
+.overlay-item:hover{color:var(--white);transform:translateX(20px)}
+.overlay-item::before{content:attr(data-num);position:absolute;left:-48px;top:50%;transform:translateY(-50%);font-size:14px;font-weight:400;color:var(--pink);opacity:0;transition:opacity .3s,left .3s}
+.overlay-item:hover::before{opacity:1;left:-44px}
+.overlay-close{position:absolute;top:20px;right:32px;background:none;border:1px solid rgba(255,255,255,.12);color:var(--g400);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:20px;transition:all .3s;z-index:2}
+.overlay-close:hover{border-color:var(--white);color:var(--white)}
+.overlay-logo{position:absolute;top:22px;left:40px;font-size:18px;font-weight:800;color:var(--white);z-index:2}
+.overlay-logo span{color:var(--pink)}
+.overlay-footer{position:absolute;bottom:32px;left:6rem;font-size:11px;color:var(--g500);letter-spacing:.08em;z-index:2}
+
+/* ═══════ RIGHT-EDGE HOVER ZONE ═══════ */
+.edge-trigger{position:fixed;right:0;top:0;bottom:0;width:44px;z-index:160;cursor:pointer;display:flex;align-items:center;justify-content:center}
+/* Subtle line hint */
+.edge-trigger::after{content:'';position:absolute;right:8px;top:50%;transform:translateY(-50%);width:2px;height:40px;border-radius:1px;background:rgba(255,255,255,.06);transition:all .4s cubic-bezier(.16,1,.3,1)}
+.edge-trigger:hover::after{height:80px;background:rgba(255,255,255,.2);box-shadow:0 0 12px var(--pink-glow)}
+/* "Menu" label on hover */
+.edge-label{position:absolute;right:20px;top:50%;transform:translateY(-50%) rotate(-90deg);font-size:8px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,0);transition:all .4s;white-space:nowrap}
+.edge-trigger:hover .edge-label{color:rgba(255,255,255,.35)}
+
+/* ═══════ NAV DOTS — Moved inside edge zone ═══════ */
+.nav-dots{position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:170;display:flex;flex-direction:column;gap:8px;pointer-events:none}
+.nav-dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.1);border:none;cursor:pointer;transition:all .4s cubic-bezier(.16,1,.3,1);padding:0;pointer-events:all}
+.nav-dot.on{background:var(--pink);box-shadow:0 0 10px var(--pink-glow);height:22px;border-radius:2px}
+.nav-dot-label{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--g500);white-space:nowrap;opacity:0;transition:opacity .3s;pointer-events:none}
+.nav-dot:hover .nav-dot-label{opacity:1}
+.nav-dot{position:relative}
+
+/* ═══════ WALK-IN INTERVIEW ═══════ */
+.walkin-info{background:var(--g900);border:1px solid rgba(255,0,130,.1);border-radius:20px;padding:32px 28px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
+.walkin-info::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--pink),var(--violet))}
+.walkin-badge{display:inline-flex;align-items:center;gap:6px;background:var(--pink-soft);border:1px solid rgba(255,0,130,.12);border-radius:100px;padding:5px 14px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--pink);width:fit-content}
+.walkin-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--pink);animation:pulse 2s ease infinite}
+.walkin-detail{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--g400)}
+.walkin-detail .material-symbols-outlined{font-size:18px;color:var(--slate-mid);flex-shrink:0}
+.walkin-detail strong{color:var(--white);font-weight:600}
+.walkin-langs{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.walkin-lang{font-size:10px;font-weight:600;padding:4px 10px;border-radius:100px;background:var(--slate-soft);color:var(--slate-mid)}
+.walkin-bring{margin-top:6px}
+.walkin-bring h5{font-size:11px;font-weight:600;color:var(--g400);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.walkin-bring-items{display:flex;gap:6px;flex-wrap:wrap}
+.walkin-bring-item{display:flex;align-items:center;gap:4px;font-size:11px;color:var(--g500);background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.04);border-radius:8px;padding:5px 9px}
+.walkin-bring-item .material-symbols-outlined{font-size:14px;color:var(--g400)}
+
+/* ═══════ TALK TO US — Split (Walk-in + Chat) ═══════ */
+.talk-split{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:1060px;width:100%;margin:0 auto;align-items:stretch}
+.talk-card{background:var(--g900);border:1px solid rgba(255,255,255,.05);border-radius:20px;padding:32px 28px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden;transition:border-color .3s}
+.talk-card:hover{border-color:rgba(255,255,255,.1)}
+.talk-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;opacity:0;transition:opacity .3s}
+.talk-card:hover::before{opacity:1}
+.talk-card.talk-physical::before{background:linear-gradient(90deg,var(--pink),var(--violet))}
+.talk-card.talk-virtual::before{background:linear-gradient(90deg,#6264A7,var(--slate))}
+.talk-card-header{display:flex;align-items:center;gap:10px}
+.talk-card-icon{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.talk-card-icon.physical{background:var(--pink-soft)}
+.talk-card-icon.virtual{background:rgba(98,100,167,.1)}
+.talk-card-title{font-size:18px;font-weight:800;letter-spacing:-.01em}
+.talk-card-sub{font-size:12px;color:var(--g500);line-height:1.6}
+.talk-book{margin-top:auto;padding-top:8px}
+
+/* ═══════ LOCATION HUB — Tabbed ═══════ */
+.loc-tabs{display:flex;gap:4px;justify-content:center;margin-bottom:32px;background:var(--g900);border-radius:12px;padding:4px;width:fit-content;margin-left:auto;margin-right:auto}
+.loc-tab{padding:10px 24px;border-radius:10px;font-size:13px;font-weight:600;font-family:var(--font);color:var(--g500);background:transparent;border:none;cursor:pointer;transition:all .3s}
+.loc-tab.active{background:var(--white);color:var(--black)}
+.loc-tab:hover:not(.active){color:var(--g300)}
+.loc-panel{display:none}.loc-panel.active{display:block}
+.loc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;max-width:1060px;width:100%;margin:0 auto}
+.loc-place{border-radius:16px;overflow:hidden;background:var(--g900);border:1px solid rgba(255,255,255,.04);transition:all .4s}
+.loc-place:hover{border-color:rgba(255,255,255,.1);transform:translateY(-2px)}
+.loc-place iframe{width:100%;height:200px;border:none;filter:brightness(.75) contrast(1.05)}
+.loc-place-body{padding:18px}
+.loc-place-body h4{font-size:15px;font-weight:700;margin-bottom:3px}
+.loc-place-body p{font-size:11px;color:var(--g500);line-height:1.5;margin-bottom:10px}
+.loc-place-link{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:var(--slate-mid);text-decoration:none;transition:color .3s}
+.loc-place-link:hover{color:var(--white)}
+.loc-place-link .material-symbols-outlined{font-size:14px}
+/* WFH panel */
+.wfh-card{max-width:500px;margin:0 auto;background:var(--g900);border:1px solid rgba(255,255,255,.04);border-radius:20px;padding:40px;text-align:center}
+.wfh-card .material-symbols-outlined{font-size:48px;color:var(--slate-mid);margin-bottom:16px}
+.wfh-card h4{font-size:20px;font-weight:800;margin-bottom:8px}
+.wfh-card p{font-size:13px;color:var(--g500);line-height:1.6}
+
+/* ═══════ xRAF — REFER A FRIEND ═══════ */
+.raf-card{max-width:800px;width:100%;margin:0 auto;background:var(--g900);border:1px solid rgba(255,255,255,.05);border-radius:24px;padding:48px 40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.raf-left h3{font-size:28px;font-weight:800;letter-spacing:-.03em;margin-bottom:8px}
+.raf-left>p{font-size:13px;color:var(--g500);line-height:1.6;margin-bottom:24px}
+.raf-tiers{display:flex;flex-direction:column;gap:8px}
+.raf-tier{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.04)}
+.raf-tier-info{font-size:12px;color:var(--g400)}.raf-tier-info strong{color:var(--white);display:block;font-size:13px;margin-bottom:2px}
+.raf-amount{font-size:18px;font-weight:800;color:var(--white);white-space:nowrap}
+.raf-total{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-radius:12px;background:var(--pink-soft);border:1px solid rgba(255,0,130,.12);margin-top:4px}
+.raf-total-label{font-size:12px;font-weight:600;color:var(--pink)}.raf-total-amount{font-size:22px;font-weight:800;color:var(--pink)}
+.raf-right{display:flex;flex-direction:column;gap:12px}
+.raf-note{display:flex;align-items:flex-start;gap:8px;font-size:11px;color:var(--g500);line-height:1.5}
+.raf-note .material-symbols-outlined{font-size:14px;color:var(--slate-mid);flex-shrink:0;margin-top:1px}
+
+/* ═══════ CONTACT / SOCIAL ═══════ */
+.channels{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;max-width:800px;margin:0 auto}
+.ch-btn{display:flex;align-items:center;gap:10px;padding:16px 24px;border-radius:16px;background:var(--g900);border:1px solid rgba(255,255,255,.06);text-decoration:none;color:var(--white);font-size:14px;font-weight:600;font-family:var(--font);transition:all .4s;min-width:160px;justify-content:center}
+.ch-btn:hover{border-color:rgba(255,255,255,.15);transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,.3)}
+.ch-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;flex-shrink:0}
+.ch-icon.ig{background:linear-gradient(135deg,rgba(131,58,180,.15),rgba(253,29,29,.12),rgba(252,176,69,.1));color:#e1306c}
+.ch-icon.tk{background:rgba(255,255,255,.06);color:var(--white)}
+.ch-icon.xhs{background:rgba(255,42,51,.08);color:#ff2a33}
+.ch-icon.li{background:rgba(10,102,194,.1);color:#0a66c2}
+.ch-info{text-align:left}.ch-info span{display:block;font-size:10px;color:var(--g500);font-weight:400;margin-top:2px}
+/* LinkedIn team grid */
+.li-team{max-width:800px;width:100%;margin:20px auto 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
+.li-person{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);text-decoration:none;transition:all .3s}
+.li-person:hover{background:rgba(10,102,194,.06);border-color:rgba(10,102,194,.15)}
+.li-avatar{width:32px;height:32px;border-radius:8px;background:rgba(10,102,194,.08);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#0a66c2;flex-shrink:0}
+.li-name{font-size:12px;font-weight:600;color:var(--white)}
+.li-role{font-size:10px;color:var(--g500)}
+
+/* ═══════ SHARED ═══════ */
+.sec{padding:120px 40px}
+.sec-dark{background:var(--black)}.sec-alt{background:var(--g950)}
+.sec-header{text-align:center;margin-bottom:56px}
+.sec-header h2{font-size:clamp(32px,5vw,56px);font-weight:800;letter-spacing:-.04em;margin-bottom:8px}
+.sec-header p{font-size:15px;color:var(--g500);font-weight:300}
+.btn-w{background:var(--white);color:var(--black);border:none;padding:14px 36px;border-radius:100px;font-size:15px;font-weight:700;font-family:var(--font);cursor:pointer;transition:all .3s;display:inline-block;text-decoration:none}
+.btn-w:hover{opacity:.88;transform:scale(1.03)}
+.btn-o{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.15);padding:14px 36px;border-radius:100px;font-size:15px;font-weight:500;font-family:var(--font);cursor:pointer;transition:all .3s;display:inline-block;text-decoration:none}
+.btn-o:hover{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.04)}
+.btn-pink{background:var(--pink);color:var(--white);border:none;padding:10px 24px;border-radius:100px;font-size:13px;font-weight:700;font-family:var(--font);cursor:pointer;transition:all .3s;display:inline-block;text-decoration:none}
+.btn-pink:hover{box-shadow:0 4px 24px var(--pink-glow);transform:scale(1.04)}
+
+/* ═══════ SPLIT REVEAL ═══════ */
+.split{overflow:hidden}
+.split-left,.split-right{opacity:0;transition:opacity 1s ease,transform 1s cubic-bezier(.16,1,.3,1)}
+.split-left{transform:translateX(-60px)}
+.split-right{transform:translateX(60px)}
+.split.revealed .split-left,.split.revealed .split-right{opacity:1;transform:translateX(0)}
+/* Vertical split (for text sections) */
+.split-up{opacity:0;transform:translateY(50px) scale(.97);transition:opacity .9s ease,transform .9s cubic-bezier(.16,1,.3,1)}
+.split-down{opacity:0;transform:translateY(-40px);transition:opacity .9s ease,transform .9s cubic-bezier(.16,1,.3,1)}
+.split.revealed .split-up,.split.revealed .split-down{opacity:1;transform:translateY(0) scale(1)}
+
+/* ═══════ HERO ═══════ */
+.hero{flex-direction:column;text-align:center;padding:120px 40px 80px;overflow:hidden;background:radial-gradient(ellipse 70% 40% at 50% 0%,rgba(75,76,106,.12) 0%,var(--black) 60%)}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,0,130,.12);border-radius:100px;padding:6px 18px;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--pink);margin-bottom:48px;opacity:0;animation:fadeDown .8s ease .3s forwards}
+.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--pink);box-shadow:0 0 10px var(--pink-glow);animation:pulse 2s ease infinite}
+.hero h1{font-size:clamp(48px,9vw,96px);font-weight:800;letter-spacing:-.05em;line-height:.9;margin-bottom:24px}
+.hw{display:inline-block;opacity:0;transform:translateY(40px);animation:wR .7s cubic-bezier(.16,1,.3,1) forwards}
+.hw:nth-child(1){animation-delay:.5s}.hw:nth-child(2){animation-delay:.6s}.hw:nth-child(3){animation-delay:.7s}.hw:nth-child(4){animation-delay:.85s}.hw:nth-child(5){animation-delay:.95s}
+.hw.dim{color:var(--g400)}.hw.br{display:block}
+.hero>p{font-size:clamp(16px,2vw,20px);color:var(--g500);max-width:460px;margin:0 auto 48px;font-weight:300;line-height:1.65;opacity:0;animation:fadeUp .8s ease 1.1s forwards}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp .8s ease 1.3s forwards}
+.hero-stats{display:flex;gap:64px;justify-content:center;margin-top:80px}
+.hs{text-align:center}.hs h3{font-size:44px;font-weight:200;letter-spacing:-.03em;opacity:0;animation:fadeUp .7s ease forwards}
+.hs:nth-child(1) h3{animation-delay:1.5s}.hs:nth-child(2) h3{animation-delay:1.65s}.hs:nth-child(3) h3{animation-delay:1.8s}
+.hs p{font-size:10px;color:var(--g500);text-transform:uppercase;letter-spacing:.15em;font-weight:500;margin-top:6px;opacity:0;animation:fadeUp .6s ease forwards}
+.hs:nth-child(1) p{animation-delay:1.6s}.hs:nth-child(2) p{animation-delay:1.75s}.hs:nth-child(3) p{animation-delay:1.9s}
+.scroll-h{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:4px;opacity:0;animation:fadeUp .6s ease 2.2s forwards}
+.scroll-h span{font-size:10px;color:var(--g600);letter-spacing:.2em;text-transform:uppercase;font-weight:500}
+.scroll-h .material-symbols-outlined{animation:float 2.5s ease-in-out infinite}
+
+/* ═══════ HORIZONTAL ═══════ */
+.h-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 40px 20px;scrollbar-width:none;cursor:grab}
+.h-track:active{cursor:grabbing}.h-track::-webkit-scrollbar{display:none}
+
+/* ═══════ LOCATIONS ═══════ */
+.loc-card{flex:0 0 360px;height:480px;border-radius:20px;overflow:hidden;position:relative;scroll-snap-align:center;transition:transform .5s cubic-bezier(.16,1,.3,1);border:1px solid rgba(255,255,255,.04)}
+.loc-card:hover{transform:scale(1.02) translateY(-3px)}
+.loc-card iframe{width:100%;height:100%;border:none;filter:brightness(.7) contrast(1.1) saturate(.85);transition:filter .5s}
+.loc-card:hover iframe{filter:brightness(.8) contrast(1.15) saturate(1)}
+.loc-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.95) 0%,rgba(0,0,0,.2) 40%,transparent 65%);display:flex;flex-direction:column;justify-content:flex-end;padding:28px;pointer-events:none}
+.loc-ov h3{font-size:22px;font-weight:700;margin-bottom:3px}.loc-ov p{font-size:12px;color:rgba(255,255,255,.45)}
+.loc-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.loc-pill{display:inline-flex;align-items:center;gap:3px;background:rgba(255,255,255,.08);border-radius:100px;padding:3px 9px;font-size:9px;font-weight:500;color:rgba(255,255,255,.55)}
+.loc-pill .material-symbols-outlined{font-size:11px}
+.loc-tag{position:absolute;top:14px;left:14px;background:rgba(0,0,0,.55);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.06);border-radius:100px;padding:4px 12px;font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;pointer-events:none;color:rgba(255,255,255,.6)}
+.pips{display:flex;justify-content:center;gap:5px;margin-top:20px}
+.pip{width:20px;height:2px;border-radius:1px;background:rgba(255,255,255,.08);transition:all .4s;border:none;cursor:pointer;padding:0}
+.pip.on{background:var(--pink);width:32px}
+.swipe{text-align:center;font-size:10px;color:var(--g600);margin-top:10px;letter-spacing:.12em;text-transform:uppercase}
+
+/* ═══════ JOBS ═══════ */
+.jobs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;max-width:1100px;width:100%;margin:0 auto}
+.jc{background:var(--g900);border:1px solid rgba(255,255,255,.05);border-radius:18px;padding:0;display:flex;flex-direction:column;transition:all .4s;cursor:default;overflow:hidden;position:relative}
+.jc:hover{border-color:rgba(255,0,130,.12);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.4)}
+.jc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--slate),var(--violet));opacity:0;transition:opacity .4s}
+.jc:hover::before{opacity:1}
+.jc.hot-card::before{background:linear-gradient(90deg,var(--pink),var(--violet))}
+.jc-top{padding:24px 24px 0;display:flex;justify-content:space-between;align-items:flex-start}
+.jc-tags{display:flex;gap:5px;flex-wrap:wrap}
+.jc-tag{font-size:9px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:100px}
+.jc-tag.lang{background:var(--slate-soft);color:var(--slate-mid)}
+.jc-tag.hot{background:var(--pink-soft);color:var(--pink);border:1px solid rgba(255,0,130,.12)}
+.jc-tag.relo{background:var(--violet-soft);color:var(--violet)}
+.jc-tag.entry{background:rgba(255,255,255,.05);color:var(--g400)}
+.jc-status{font-size:9px;color:var(--g500);display:flex;align-items:center;gap:4px;white-space:nowrap}
+.jc-status .material-symbols-outlined{font-size:12px}
+.jc-body{padding:16px 24px 0;flex:1}
+.jc-body h4{font-size:18px;font-weight:700;letter-spacing:-.01em;margin-bottom:8px;line-height:1.3}
+.jc-body .jc-desc{font-size:12px;color:var(--g500);line-height:1.6;margin-bottom:14px}
+.jc-salary{display:flex;align-items:center;gap:6px;margin-bottom:14px;padding:10px 14px;background:rgba(75,76,106,.06);border:1px solid rgba(75,76,106,.1);border-radius:10px}
+.jc-salary .material-symbols-outlined{font-size:16px;color:var(--slate-mid)}
+.jc-salary-text{font-size:11px;color:var(--g400);line-height:1.4}
+.jc-salary-text strong{color:var(--white);font-weight:600;font-size:13px}
+.jc-perks{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.jc-perk{display:inline-flex;align-items:center;gap:3px;font-size:10px;color:var(--g500);background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.04);border-radius:6px;padding:4px 8px}
+.jc-perk .material-symbols-outlined{font-size:12px;color:var(--g400)}
+.jc-bot{padding:16px 24px;border-top:1px solid rgba(255,255,255,.04);display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.01)}
+.jc-loc{font-size:11px;color:var(--g500);display:flex;align-items:center;gap:3px}
+.jc-loc .material-symbols-outlined{font-size:13px}
+
+/* ═══════ LIFE ═══════ */
+.lc{flex:0 0 260px;border-radius:16px;overflow:hidden;background:var(--g900);border:1px solid rgba(255,255,255,.04);scroll-snap-align:center;transition:transform .4s}
+.lc:hover{transform:scale(1.02) translateY(-2px)}
+.lc iframe{width:100%;height:180px;border:none;filter:brightness(.75) contrast(1.05)}
+.lc-body{padding:16px}.lc-body .lc-type{font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--slate-mid);font-weight:600;margin-bottom:6px}
+.lc-body h4{font-size:14px;font-weight:700;margin-bottom:3px}.lc-body p{font-size:11px;color:var(--g500);line-height:1.5}
+.lc-rating{display:flex;align-items:center;gap:3px;font-size:11px;color:var(--g400);margin-top:6px}
+.lc-rating .material-symbols-outlined{font-size:13px;color:#f5c518;font-variation-settings:'FILL' 1}
+
+/* ═══════ BENEFITS ═══════ */
+.ben-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;max-width:1060px;width:100%;margin:0 auto;border-radius:20px;overflow:hidden;background:rgba(255,255,255,.03)}
+.ben{background:var(--g900);padding:36px 28px;display:flex;flex-direction:column;gap:10px;transition:background .3s}
+.ben:hover{background:var(--g800)}
+.ben .material-symbols-outlined{font-size:20px;color:var(--slate-mid)}
+.ben h4{font-size:15px;font-weight:700}.ben p{font-size:12px;color:var(--g500);line-height:1.55}
+
+/* ═══════ CHAT CTA ═══════ */
+.chat-cta{max-width:680px;margin:0 auto;text-align:center;background:var(--g900);border:1px solid rgba(75,76,106,.12);border-radius:24px;padding:48px 40px}
+.chat-cta h3{font-size:24px;font-weight:800;margin-bottom:8px}
+.chat-cta p{font-size:14px;color:var(--g500);margin-bottom:28px;line-height:1.6}
+.chat-feats{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.chat-feat{font-size:11px;color:var(--g400);display:flex;align-items:center;gap:4px}
+.chat-feat .material-symbols-outlined{font-size:14px;color:var(--slate-mid)}
+/* Teams weekly chat card */
+.teams-card{max-width:720px;width:100%;margin:0 auto;background:var(--g900);border:1px solid rgba(75,76,106,.12);border-radius:24px;padding:48px 40px;display:flex;gap:32px;align-items:center}
+.teams-logo{flex-shrink:0;width:64px;height:64px;border-radius:16px;background:rgba(98,100,167,.1);display:flex;align-items:center;justify-content:center}
+.teams-logo svg{width:36px;height:36px}
+.teams-body{flex:1}
+.teams-body h3{font-size:22px;font-weight:800;margin-bottom:6px}
+.teams-body>p{font-size:13px;color:var(--g500);line-height:1.6;margin-bottom:16px}
+.teams-schedule{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.teams-detail{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--g400)}
+.teams-detail .material-symbols-outlined{font-size:16px;color:var(--slate-mid)}
+.teams-detail strong{color:var(--white)}
+/* ═══════ BRAND ICONS (inline SVG) ═══════ */
+.brand-svg{width:20px;height:20px;flex-shrink:0}
+.brand-svg-lg{width:24px;height:24px}
+
+/* ═══════ ACCORDION ═══════ */
+.acc-wrap{max-width:640px;width:100%;margin:0 auto}
+.acc-item{border-bottom:1px solid rgba(255,255,255,.05)}
+.acc-btn{width:100%;display:flex;align-items:center;justify-content:space-between;padding:18px 0;background:none;border:none;color:var(--white);font-family:var(--font);font-size:16px;font-weight:600;cursor:pointer;text-align:left;transition:color .3s}
+.acc-btn:hover{color:var(--g300)}
+.morph{width:24px;height:24px;position:relative;flex-shrink:0}
+.morph::before,.morph::after{content:'';position:absolute;background:var(--g500);border-radius:1px;transition:all .4s cubic-bezier(.16,1,.3,1)}
+.morph::before{width:12px;height:1.5px;top:50%;left:50%;transform:translate(-50%,-50%)}
+.morph::after{width:1.5px;height:12px;top:50%;left:50%;transform:translate(-50%,-50%)}
+.acc-item.open .morph::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0}
+.acc-item.open .morph::before{background:var(--pink)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.16,1,.3,1)}
+.acc-inner{padding:0 0 20px;font-size:13px;color:var(--g500);line-height:1.75}
+
+/* ═══════ PROCESS ═══════ */
+.p-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 40px 40px;scrollbar-width:none}
+.p-track::-webkit-scrollbar{display:none}
+.p-step{flex:0 0 260px;scroll-snap-align:center;padding:32px 28px;position:relative}
+.p-step::after{content:'';position:absolute;top:50px;left:62px;right:0;height:1px;background:rgba(255,255,255,.06)}
+.p-step:last-child::after{display:none}
+.p-num{width:32px;height:32px;border-radius:50%;border:1.5px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--g400);margin-bottom:18px;position:relative;z-index:2;background:var(--black);transition:all .3s}
+.p-step:hover .p-num{border-color:var(--pink);color:var(--pink)}
+.p-step h4{font-size:16px;font-weight:700;margin-bottom:6px}.p-step p{font-size:12px;color:var(--g500);line-height:1.6}
+
+/* ═══════ LANG ═══════ */
+.lang-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;max-width:700px;margin:0 auto}
+.lang-btn{padding:10px 24px;border-radius:12px;font-size:13px;font-weight:600;font-family:var(--font);text-decoration:none;border:1px solid rgba(255,255,255,.08);color:var(--g400);background:var(--g900);transition:all .3s;display:inline-flex;align-items:center;gap:6px}
+.lang-btn:hover{border-color:rgba(255,255,255,.2);color:var(--white)}
+.lang-btn.soon{opacity:.35;pointer-events:none}
+.lang-btn .soon-tag{font-size:8px;text-transform:uppercase;letter-spacing:.1em;background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px}
+
+/* ═══════ CTA ═══════ */
+.cta-final{text-align:center;padding:100px 40px;background:radial-gradient(ellipse 50% 35% at 50% 100%,rgba(75,76,106,.08) 0%,var(--black) 60%)}
+.cta-final h2{font-size:clamp(36px,6vw,64px);font-weight:800;letter-spacing:-.04em;margin-bottom:12px;line-height:1}
+.cta-final .dim{color:var(--g500)}
+.cta-final p{font-size:15px;color:var(--g500);margin-bottom:40px;max-width:400px;margin-left:auto;margin-right:auto;font-weight:300;line-height:1.6}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* ═══════ FOOTER ═══════ */
+.ft{background:var(--g950);border-top:1px solid rgba(255,255,255,.04);padding:60px 40px 28px}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;max-width:1060px;margin:0 auto}
+.ft-brand h3{font-size:20px;font-weight:800;margin-bottom:10px}.ft-brand h3 span{color:var(--pink)}
+.ft-brand p{font-size:12px;color:var(--g500);line-height:1.6;margin-bottom:16px;max-width:280px}
+.ft-badges{display:flex;flex-direction:column;gap:4px;margin-bottom:16px}
+.ft-badge{font-size:10px;color:var(--g400)}
+.ft-social{display:flex;gap:8px}
+.ft-social a{width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;color:var(--g500);text-decoration:none;font-size:11px;font-weight:700;transition:all .3s}
+.ft-social a:hover{background:var(--pink-soft);border-color:rgba(255,0,130,.15);color:var(--pink)}
+.ft-col h4{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--g500);font-weight:600;margin-bottom:14px}
+.ft-col a{display:block;font-size:12px;color:var(--g500);text-decoration:none;margin-bottom:8px;transition:color .3s}.ft-col a:hover{color:var(--white)}
+.ft-office{margin-bottom:14px}.ft-office strong{display:block;font-size:12px;color:var(--g300);font-weight:600;margin-bottom:1px}.ft-office span{font-size:10px;color:var(--g600);line-height:1.4}
+.ft-bot{max-width:1060px;margin:36px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.04);display:flex;flex-direction:column;gap:8px;align-items:center;text-align:center}
+.ft-bot p{font-size:10px;color:var(--g600)}.ft-bot a{font-size:10px;color:var(--g600);text-decoration:none;transition:color .3s}.ft-bot a:hover{color:var(--g300)}
+.ft-legal{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+
+/* ═══════ MOBILE ═══════ */
+.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;background:rgba(0,0,0,.92);backdrop-filter:blur(30px);border-top:1px solid rgba(255,255,255,.06);padding:8px 16px;gap:8px}
+.mobile-bar a{flex:1;padding:12px 0;border-radius:12px;font-size:13px;font-weight:700;font-family:var(--font);text-align:center;text-decoration:none;border:none}
+.mb-w{background:var(--white);color:var(--black)}.mb-o{background:rgba(255,255,255,.06);color:var(--white);border:1px solid rgba(255,255,255,.08)}
+.fab{position:fixed;bottom:24px;right:24px;z-index:90;background:var(--pink);color:var(--white);border:none;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 28px var(--pink-glow);transition:transform .3s,opacity .4s,box-shadow .3s;text-decoration:none}
+.fab:hover{transform:scale(1.12) rotate(8deg);box-shadow:0 10px 40px rgba(255,0,130,.35)}
+/* Back to top */
+.btt{position:fixed;bottom:24px;left:24px;z-index:90;background:rgba(255,255,255,.06);color:var(--g400);border:1px solid rgba(255,255,255,.08);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .4s;opacity:0;pointer-events:none;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.btt.show{opacity:1;pointer-events:all}
+.btt:hover{background:rgba(255,255,255,.12);color:var(--white);border-color:rgba(255,255,255,.2);transform:translateY(-2px)}
+
+/* ═══════ REVEAL ═══════ */
+.rv{opacity:0;transform:translateY(36px);transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1)}.rv.v{opacity:1;transform:translateY(0)}
+.sg>*{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s cubic-bezier(.16,1,.3,1)}
+.sg.v>*:nth-child(1){transition-delay:.04s;opacity:1;transform:translateY(0)}.sg.v>*:nth-child(2){transition-delay:.08s;opacity:1;transform:translateY(0)}.sg.v>*:nth-child(3){transition-delay:.12s;opacity:1;transform:translateY(0)}.sg.v>*:nth-child(4){transition-delay:.16s;opacity:1;transform:translateY(0)}.sg.v>*:nth-child(5){transition-delay:.2s;opacity:1;transform:translateY(0)}.sg.v>*:nth-child(6){transition-delay:.24s;opacity:1;transform:translateY(0)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes wR{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.5)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}.hw,.rv{opacity:1;transform:none}.sg>*{opacity:1;transform:none}.split-left,.split-right,.split-up,.split-down{opacity:1;transform:none}}
+@media(max-width:768px){
+  .n-links{display:none}.topbar{padding:0 16px}.hero{padding:100px 20px 60px}.hero-stats{gap:24px;flex-wrap:wrap}.hs h3{font-size:28px}
+  .hero-ctas{flex-direction:column;align-items:center;width:100%}.hero-ctas .btn-w,.hero-ctas .btn-o{width:100%;max-width:300px;text-align:center}
+  .ben-grid{grid-template-columns:1fr}.loc-card{flex:0 0 280px;height:380px}.p-step{flex:0 0 230px;padding:28px 20px}
+  .sec{padding:80px 20px}.ft-grid{grid-template-columns:1fr 1fr;gap:28px}.jobs-grid{grid-template-columns:1fr}.lc{flex:0 0 230px}
+  .mobile-bar{display:flex}.fab{display:none}.btt{display:none}.ft{padding-bottom:72px}.cta-final{padding-bottom:80px}
+  .chat-cta{padding:32px 24px}.teams-card{flex-direction:column;text-align:center;padding:32px 24px;gap:20px}.teams-schedule{justify-content:center}
+  .talk-split{grid-template-columns:1fr}.loc-grid{grid-template-columns:1fr}.loc-tabs{flex-wrap:wrap}
+  .raf-card{grid-template-columns:1fr;padding:32px 24px;gap:24px}.channels{flex-direction:column}.ch-btn{min-width:auto}
+  .li-team{grid-template-columns:1fr 1fr;gap:6px}.li-person{padding:8px 10px}
+  .nav-dots{display:none}.edge-trigger{width:32px}.edge-trigger::after{display:none}.edge-label{display:none}
+  #sc{scroll-snap-type:none}.sn{min-height:auto}
+  body{overflow:auto}#sc{height:auto;overflow:visible}
+  .overlay-item{font-size:clamp(2rem,6vw,3rem)}.overlay-content{padding:3rem 2rem 3rem 3rem}.overlay-item::before{left:-32px;font-size:11px}.overlay-item:hover::before{left:-28px}.overlay-footer{left:3rem;bottom:24px}
+}
+@media(max-width:480px){.hero h1{font-size:36px}.ft-grid{grid-template-columns:1fr}.lang-btn{padding:8px 16px;font-size:12px}}
+</style>
+</head>
+<body>
+
+<div class="progress" id="prog"></div>
+
+<!-- ═══════ RIGHT-EDGE HOVER ZONE ═══════ -->
+<div class="edge-trigger" id="edgeTrigger">
+  <span class="edge-label">Menu</span>
+</div>
+
+<!-- ═══════ OVERLAY MENU — Semi-transparent Luxury ═══════ -->
+<div class="overlay" id="overlay">
+  <div class="overlay-backdrop"></div>
+  <div class="overlay-logo">TP<span>.</span></div>
+  <button class="overlay-close" id="overlayClose"><span class="material-symbols-outlined">close</span></button>
+  <div class="overlay-content">
+    <a href="#hero" class="overlay-item" data-nav data-num="01">Home</a>
+    <a href="#locations" class="overlay-item" data-nav data-num="02">Locations</a>
+    <a href="#jobs" class="overlay-item" data-nav data-num="03">Open Roles</a>
+    <a href="#benefits" class="overlay-item" data-nav data-num="04">Benefits</a>
+    <a href="#meetus" class="overlay-item" data-nav data-num="05">Meet Us</a>
+    <a href="#process" class="overlay-item" data-nav data-num="06">Process</a>
+    <a href="#offices" class="overlay-item" data-nav data-num="07">Offices</a>
+    <a href="#faq" class="overlay-item" data-nav data-num="08">FAQ</a>
+  </div>
+  <div class="overlay-footer">TP Careers — Malaysia & Thailand</div>
+</div>
+
+<!-- ═══════ TOP BAR ═══════ -->
+<nav class="topbar" id="topbar">
+  <div class="n-logo" onclick="document.querySelector('#hero').scrollIntoView({behavior:'smooth'})">TP<span>.</span></div>
+  <ul class="n-links">
+    <li><a href="#locations">Locations</a></li>
+    <li><a href="#jobs">Jobs</a></li>
+    <li><a href="#benefits">Benefits</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <div class="n-right">
+    <button class="menu-trigger" id="menuBtn"><span class="material-symbols-outlined">menu</span> Menu</button>
+    <span class="n-live">Hiring</span>
+    <a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual" target="_blank" rel="noopener" class="n-cta">Apply</a>
+  </div>
+</nav>
+
+<!-- ═══════ NAV DOTS ═══════ -->
+<div class="nav-dots" id="dots"></div>
+
+<!-- ═══════ FAB ═══════ -->
+<a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual" target="_blank" rel="noopener" class="fab"><span class="material-symbols-outlined" style="font-size:22px;font-variation-settings:'FILL' 1">send</span></a>
+
+<!-- ═══════ BACK TO TOP ═══════ -->
+<button class="btt" id="btt" aria-label="Back to top"><span class="material-symbols-outlined" style="font-size:20px">arrow_upward</span></button>
+
+<!-- ═══════ MOBILE BAR ═══════ -->
+<div class="mobile-bar">
+  <a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual" target="_blank" rel="noopener" class="mb-w">View Roles</a>
+  <a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener" class="mb-o">Chat with Us</a>
+</div>
+
+<!-- ═══════════════════════ SNAP CONTAINER ═══════════════════════ -->
+<div id="sc">
+
+<!-- 1 HERO -->
+<section class="sn hero" id="hero" data-dot="Home">
+  <div class="hero-badge"><span class="dot"></span> Now Hiring — Malaysia & Thailand</div>
+  <h1><span class="hw">Your</span> <span class="hw">next</span> <span class="hw">chapter</span> <span class="hw br dim">starts here.</span></h1>
+  <p>Join a Fortune 500 global team. Live in Southeast Asia. Grow without limits.</p>
+  <div class="hero-ctas">
+    <a href="#jobs" class="btn-w">View Open Roles</a>
+    <a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener" class="btn-o">Book a Casual Chat</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hs"><h3 data-count="500">0</h3><p>K+ team members</p></div>
+    <div class="hs"><h3 data-count="100">0</h3><p>+ countries</p></div>
+    <div class="hs"><h3 data-count="170">0</h3><p>+ languages</p></div>
+  </div>
+  <div class="scroll-h"><span>Scroll</span><span class="material-symbols-outlined" style="font-size:14px;color:var(--g600)">expand_more</span></div>
+</section>
+
+
+<!-- 3 LOCATIONS -->
+<section class="sn sec sec-dark split" id="locations" data-dot="Locations">
+  <div style="width:100%;display:flex;flex-direction:column;align-items:center">
+    <div class="sec-header split-down"><h2>Where you'll live.</h2><p>Swipe to explore. Data from Google Maps.</p></div>
+    <div class="h-track split-up" id="locTrack">
+      <div class="loc-card"><iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7967!2d101.7068!3d3.157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc37dab5cb6407%3A0x9e85cfbe84c9b0!2sKLCC%20Park!5e0!3m2!1sen!2smy" allowfullscreen></iframe><div class="loc-ov"><h3>Kuala Lumpur</h3><p>HQ at G-Tower, Jalan Tun Razak</p><div class="loc-pills"><span class="loc-pill"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span> 4.6 KLCC</span><span class="loc-pill"><span class="material-symbols-outlined">restaurant</span> Cafes</span></div></div><div class="loc-tag">🇲🇾 HQ</div></div>
+      <div class="loc-card"><iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983!2d101.7096!3d3.1575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc37d5d831fbd7%3A0x9e23f0e45dc8091c!2sPetronas%20Twin%20Towers!5e0!3m2!1sen!2smy" allowfullscreen></iframe><div class="loc-ov"><h3>Petronas Towers</h3><p>5 min walk from office</p><div class="loc-pills"><span class="loc-pill"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span> 4.7 · 101K</span></div></div><div class="loc-tag">Landmark</div></div>
+      <div class="loc-card"><iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7941!2d100.284!3d5.326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac00877dcc00c%3A0x16d21e2afec8b489!2sQueensbay%20Mall!5e0!3m2!1sen!2smy" allowfullscreen></iframe><div class="loc-ov"><h3>Penang · Bayan Lepas</h3><p>TP office near Queensbay</p><div class="loc-pills"><span class="loc-pill"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span> 4.4</span><span class="loc-pill"><span class="material-symbols-outlined">shopping_bag</span> Mall</span></div></div><div class="loc-tag">🇲🇾 Penang</div></div>
+      <div class="loc-card"><iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7941!2d100.336!3d5.414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac39269ca0c9b%3A0xe7a19466741c5b17!2sPenang%20Street%20Art!5e0!3m2!1sen!2smy" allowfullscreen></iframe><div class="loc-ov"><h3>George Town</h3><p>UNESCO heritage</p><div class="loc-pills"><span class="loc-pill"><span class="material-symbols-outlined">ramen_dining</span> Hawkers</span><span class="loc-pill"><span class="material-symbols-outlined">temple_buddhist</span> Jetties</span></div></div><div class="loc-tag">Heritage</div></div>
+      <div class="loc-card"><iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31000!2d100.5018!3d13.7563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ecde3aee521%3A0x9f43939a2caf2963!2sBangkok%2C%20Thailand!5e0!3m2!1sen!2sth" allowfullscreen></iframe><div class="loc-ov"><h3>Bangkok</h3><p>Tradition meets tomorrow</p><div class="loc-pills"><span class="loc-pill"><span class="material-symbols-outlined">train</span> BTS</span></div></div><div class="loc-tag">🇹🇭 Thailand</div></div>
+    </div>
+    <div class="pips" id="pips"></div>
+    <p class="swipe">← swipe to explore →</p>
+  </div>
+</section>
+
+<!-- 3 JOBS -->
+<section class="sn-auto sec sec-alt split" id="jobs" data-dot="Jobs" style="scroll-snap-align:start">
+  <div style="width:100%">
+    <div class="sec-header split-left"><h2>Open roles.</h2><p>Full training. Relocation included. Apply in 5 minutes.</p></div>
+    <div class="jobs-grid sg" style="opacity:0;transform:translateX(40px);transition:all 1s cubic-bezier(.16,1,.3,1)">
+      <div class="jc hot-card"><div class="jc-top"><div class="jc-tags"><span class="jc-tag hot">Urgent Hire</span><span class="jc-tag lang">Mandarin</span></div><span class="jc-status"><span class="material-symbols-outlined">group</span> ~50 openings</span></div><div class="jc-body"><h4>Guest Experience Specialist</h4><p class="jc-desc">Provide Mandarin-language support for a global tech brand across email, chat, and phone.</p><div class="jc-salary"><span class="material-symbols-outlined">payments</span><div class="jc-salary-text"><strong>Competitive + Language Premium</strong><br>Base + Mandarin premium + shift allowance. Bi-annual reviews.</div></div><div class="jc-perks"><span class="jc-perk"><span class="material-symbols-outlined">flight</span> Flight</span><span class="jc-perk"><span class="material-symbols-outlined">home</span> Housing</span><span class="jc-perk"><span class="material-symbols-outlined">badge</span> Visa</span><span class="jc-perk"><span class="material-symbols-outlined">health_and_safety</span> Medical</span><span class="jc-perk"><span class="material-symbols-outlined">school</span> Training</span></div></div><div class="jc-bot"><span class="jc-loc"><span class="material-symbols-outlined">location_on</span> Penang, Malaysia</span><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=mandarin" target="_blank" rel="noopener" class="btn-pink">Apply Now</a></div></div>
+      <div class="jc"><div class="jc-top"><div class="jc-tags"><span class="jc-tag lang">Japanese</span><span class="jc-tag relo">Relocation</span></div><span class="jc-status"><span class="material-symbols-outlined">translate</span> JLPT N1/N2</span></div><div class="jc-body"><h4>Customer Support Analyst</h4><p class="jc-desc">Handle Japanese-language inquiries for a major e-commerce platform via chat and email.</p><div class="jc-salary"><span class="material-symbols-outlined">payments</span><div class="jc-salary-text"><strong>Competitive + Japanese Premium</strong><br>Premium for JLPT N1/N2 holders. Overtime available.</div></div><div class="jc-perks"><span class="jc-perk"><span class="material-symbols-outlined">flight</span> Flight</span><span class="jc-perk"><span class="material-symbols-outlined">hotel</span> 7-day Hotel</span><span class="jc-perk"><span class="material-symbols-outlined">badge</span> Visa</span><span class="jc-perk"><span class="material-symbols-outlined">health_and_safety</span> Medical</span></div></div><div class="jc-bot"><span class="jc-loc"><span class="material-symbols-outlined">location_on</span> Kuala Lumpur</span><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=japanese" target="_blank" rel="noopener" class="btn-pink">Apply Now</a></div></div>
+      <div class="jc hot-card"><div class="jc-top"><div class="jc-tags"><span class="jc-tag hot">Urgent Hire</span><span class="jc-tag lang">Korean</span></div><span class="jc-status"><span class="material-symbols-outlined">translate</span> Native level</span></div><div class="jc-body"><h4>Content Review Specialist</h4><p class="jc-desc">Review Korean-language content for a global social platform. Ensure community guideline compliance.</p><div class="jc-salary"><span class="material-symbols-outlined">payments</span><div class="jc-salary-text"><strong>Competitive + Korean Premium</strong><br>Above-market base. Full benefits package.</div></div><div class="jc-perks"><span class="jc-perk"><span class="material-symbols-outlined">flight</span> Flight</span><span class="jc-perk"><span class="material-symbols-outlined">badge</span> Visa</span><span class="jc-perk"><span class="material-symbols-outlined">psychology</span> Wellbeing</span><span class="jc-perk"><span class="material-symbols-outlined">trending_up</span> Growth</span></div></div><div class="jc-bot"><span class="jc-loc"><span class="material-symbols-outlined">location_on</span> Kuala Lumpur</span><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=korean" target="_blank" rel="noopener" class="btn-pink">Apply Now</a></div></div>
+      <div class="jc"><div class="jc-top"><div class="jc-tags"><span class="jc-tag lang">Thai</span></div><span class="jc-status"><span class="material-symbols-outlined">schedule</span> Rotating shifts</span></div><div class="jc-body"><h4>Technical Support Agent</h4><p class="jc-desc">First-line tech support in Thai for a global streaming service. Troubleshoot app and device issues.</p><div class="jc-salary"><span class="material-symbols-outlined">payments</span><div class="jc-salary-text"><strong>Competitive Thai Market Rate</strong><br>Shift allowances + performance bonuses.</div></div><div class="jc-perks"><span class="jc-perk"><span class="material-symbols-outlined">health_and_safety</span> Medical</span><span class="jc-perk"><span class="material-symbols-outlined">school</span> Training</span><span class="jc-perk"><span class="material-symbols-outlined">trending_up</span> Growth</span></div></div><div class="jc-bot"><span class="jc-loc"><span class="material-symbols-outlined">location_on</span> Bangkok</span><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=thai" target="_blank" rel="noopener" class="btn-pink">Apply Now</a></div></div>
+      <div class="jc"><div class="jc-top"><div class="jc-tags"><span class="jc-tag lang">Cantonese</span><span class="jc-tag relo">Relocation</span></div><span class="jc-status"><span class="material-symbols-outlined">translate</span> Native level</span></div><div class="jc-body"><h4>Customer Service Executive</h4><p class="jc-desc">Handle Cantonese-speaking accounts for a fintech leader. Manage transactions and premium support.</p><div class="jc-salary"><span class="material-symbols-outlined">payments</span><div class="jc-salary-text"><strong>Competitive + Cantonese Premium</strong><br>Housing allowance included on top of base.</div></div><div class="jc-perks"><span class="jc-perk"><span class="material-symbols-outlined">flight</span> Flight</span><span class="jc-perk"><span class="material-symbols-outlined">apartment</span> Housing</span><span class="jc-perk"><span class="material-symbols-outlined">badge</span> Visa</span><span class="jc-perk"><span class="material-symbols-outlined">health_and_safety</span> Medical</span></div></div><div class="jc-bot"><span class="jc-loc"><span class="material-symbols-outlined">location_on</span> Penang</span><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=cantonese" target="_blank" rel="noopener" class="btn-pink">Apply Now</a></div></div>
+      <div class="jc"><div class="jc-top"><div class="jc-tags"><span class="jc-tag entry">Entry Level</span><span class="jc-tag lang">English</span></div><span class="jc-status"><span class="material-symbols-outlined">verified</span> No exp. needed</span></div><div class="jc-body"><h4>Customer Experience Associate</h4><p class="jc-desc">Support English-speaking customers. Perfect first career step — we train you from scratch.</p><div class="jc-salary"><span class="material-symbols-outlined">payments</span><div class="jc-salary-text"><strong>Competitive Entry-Level Package</strong><br>Full benefits from day one. Promotion path within 12 months.</div></div><div class="jc-perks"><span class="jc-perk"><span class="material-symbols-outlined">school</span> Training</span><span class="jc-perk"><span class="material-symbols-outlined">health_and_safety</span> Medical</span><span class="jc-perk"><span class="material-symbols-outlined">trending_up</span> Growth</span><span class="jc-perk"><span class="material-symbols-outlined">diversity_3</span> Global</span></div></div><div class="jc-bot"><span class="jc-loc"><span class="material-symbols-outlined">location_on</span> Kuala Lumpur</span><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=english" target="_blank" rel="noopener" class="btn-pink">Apply Now</a></div></div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- 5 BENEFITS (merged with salary) -->
+<section class="sn sec sec-alt split" id="benefits" data-dot="Benefits">
+  <div style="width:100%;display:flex;flex-direction:column;align-items:center">
+    <div class="sec-header split-down"><h2>What you get.</h2><p>Full package. No hidden fine print. Final details in your offer letter.</p></div>
+    <div class="ben-grid sg split-up">
+      <div class="ben"><span class="material-symbols-outlined">payments</span><h4>Compensation</h4><p>Competitive base salary + language premium for specialist languages. Shift allowances for early/late schedules. Bi-annual performance reviews with raise opportunities.</p></div>
+      <div class="ben"><span class="material-symbols-outlined">flight</span><h4>Relocation</h4><p>One-way flight to Malaysia or Thailand. Airport pickup on arrival. 6 nights / 7 days hotel (Malaysia). Employment Pass sponsored and processed at company cost.</p></div>
+      <div class="ben"><span class="material-symbols-outlined">health_and_safety</span><h4>Medical & Wellness</h4><p>Private medical + dental insurance from day one. Mental health support programmes for you and family.</p></div>
+      <div class="ben"><span class="material-symbols-outlined">calendar_month</span><h4>Time Off</h4><p>14 days annual leave (up to 21 with tenure). 14 sick days. Local public holidays + select home-country holidays (project-dependent).</p></div>
+      <div class="ben"><span class="material-symbols-outlined">school</span><h4>Full Training</h4><p>2–6 weeks paid training before you start. GoFluent language programmes. No prior BPO experience needed — we train from scratch.</p></div>
+      <div class="ben"><span class="material-symbols-outlined">trending_up</span><h4>Career Growth</h4><p>Structured promotion cycles every 12 months. Mentorship programmes. Leadership academies. Many team leads started in frontline roles.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TALK TO US — Walk-in + Chat side by side -->
+<section class="sn-auto sec sec-dark split" id="meetus" data-dot="Meet Us" style="scroll-snap-align:start">
+  <div style="width:100%;display:flex;flex-direction:column;align-items:center">
+    <div class="sec-header split-down"><h2>Meet us.</h2><p>In person, online, or by email — your choice.</p></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:1060px;width:100%" class="talk-split">
+
+      <!-- LEFT: Walk-in Interviews -->
+      <div class="talk-card talk-physical split-left" style="gap:0">
+        <div class="talk-card-header" style="margin-bottom:14px">
+          <div class="talk-card-icon physical"><span class="material-symbols-outlined" style="color:var(--pink)">location_on</span></div>
+          <div class="talk-card-title">Walk-in Interviews</div>
+        </div>
+
+        <!-- Walk-in 1: G-Tower KL -->
+        <div class="walkin-info" style="border:none;padding:12px 0;background:transparent;border-bottom:1px solid rgba(255,255,255,.04)">
+          <div class="walkin-badge">KL · G-Tower</div>
+          <div class="walkin-detail"><span class="material-symbols-outlined">calendar_month</span> <strong>Tuesday, 1 April 2026</strong></div>
+          <div class="walkin-detail"><span class="material-symbols-outlined">schedule</span> <strong>10:00 AM — 5:00 PM</strong> · Reg. closes 3 PM</div>
+          <div class="walkin-detail"><span class="material-symbols-outlined">location_on</span> <strong>Level 11, G-Tower</strong>, 199 Jln Tun Razak, KL</div>
+          <div class="walkin-detail"><span class="material-symbols-outlined">person_pin_circle</span> Local candidates only</div>
+          <div class="walkin-langs"><span class="walkin-lang">English</span><span class="walkin-lang">Chinese (Mandarin)</span></div>
+        </div>
+
+        <!-- Walk-in 2: GBS Penang -->
+        <div class="walkin-info" style="border:none;padding:12px 0;background:transparent">
+          <div class="walkin-badge">Penang · GBS Mahsuri</div>
+          <div class="walkin-detail"><span class="material-symbols-outlined">calendar_month</span> <strong>Friday, 4 April 2026</strong></div>
+          <div class="walkin-detail"><span class="material-symbols-outlined">schedule</span> <strong>10:00 AM — 5:00 PM</strong> · Reg. closes 3 PM</div>
+          <div class="walkin-detail"><span class="material-symbols-outlined">location_on</span> <strong>1A, Persiaran Mahsuri</strong>, Bayan Baru, 11900</div>
+          <div class="walkin-detail"><span class="material-symbols-outlined">person_pin_circle</span> Local candidates only</div>
+          <div class="walkin-langs"><span class="walkin-lang">English</span><span class="walkin-lang">Chinese (Mandarin)</span></div>
+        </div>
+
+        <div class="walkin-bring" style="margin-top:8px">
+          <h5>What to bring</h5>
+          <div class="walkin-bring-items">
+            <span class="walkin-bring-item"><span class="material-symbols-outlined">description</span> CV</span>
+            <span class="walkin-bring-item"><span class="material-symbols-outlined">badge</span> IC (MyKad)</span>
+            <span class="walkin-bring-item"><span class="material-symbols-outlined">school</span> Certs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Chat + Email -->
+      <div class="split-right" style="display:flex;flex-direction:column;gap:16px">
+
+        <!-- Weekly Teams Q&A -->
+        <div class="talk-card talk-virtual" style="flex:1">
+          <div class="talk-card-header">
+            <div class="talk-card-icon virtual">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20.625 6.547h-2.344V5.484a1.64 1.64 0 0 0-1.64-1.64h-.235a2.344 2.344 0 1 0-3.14 0h-.235a1.64 1.64 0 0 0-1.64 1.64v1.063H9.046a1.172 1.172 0 0 0-1.171 1.171v6.563a1.172 1.172 0 0 0 1.171 1.172h4.345v2.578a1.64 1.64 0 0 0 1.64 1.64h5.594a1.64 1.64 0 0 0 1.64-1.64V8.187a1.64 1.64 0 0 0-1.64-1.64Z" fill="#6264A7"/><path d="M3.375 7.031h8.437a1.172 1.172 0 0 1 1.172 1.172v7.594a1.172 1.172 0 0 1-1.172 1.172H3.375a1.172 1.172 0 0 1-1.172-1.172V8.203a1.172 1.172 0 0 1 1.172-1.172Z" fill="#6264A7"/><path d="M9.375 10.078H5.86v1.016h1.289v3.281h.938v-3.281h1.288v-1.016Z" fill="white"/></svg>
+            </div>
+            <div class="talk-card-title">Weekly Q&A on Teams</div>
+          </div>
+          <div class="talk-card-sub">Join our recruitment team every Friday. Ask about roles, salary, relocation — anything. No registration needed.</div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin:4px 0">
+            <div class="walkin-detail"><span class="material-symbols-outlined">event_repeat</span> <strong>Every Friday</strong></div>
+            <div class="walkin-detail"><span class="material-symbols-outlined">schedule</span> <strong>3:00 PM (MYT)</strong></div>
+          </div>
+          <div class="talk-book" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:auto">
+            <!-- ✏️ EDIT HERE: Replace with actual Teams meeting link -->
+            <a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener" class="btn-w" style="padding:9px 20px;font-size:12px;flex:1;text-align:center">Join Friday Session</a>
+            <!-- ✏️ END EDIT -->
+            <a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener" class="btn-o" style="padding:9px 20px;font-size:12px;flex:1;text-align:center">Book 1-on-1 Chat</a>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="talk-card" style="border-color:rgba(255,255,255,.06)">
+          <div class="talk-card-header">
+            <div class="talk-card-icon" style="background:rgba(255,255,255,.04)"><span class="material-symbols-outlined" style="font-size:20px;color:var(--g400)">mail</span></div>
+            <div class="talk-card-title">Email Us</div>
+          </div>
+          <div class="talk-card-sub">Have questions? Send us an email anytime — we reply within 1 business day.</div>
+          <a href="mailto:tpmycareers@teleperformance.com" class="btn-o" style="padding:9px 20px;font-size:12px;text-align:center;margin-top:auto">
+            <span class="material-symbols-outlined" style="font-size:14px;vertical-align:middle;margin-right:4px">mail</span> tpmycareers@teleperformance.com
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 PROCESS -->
+<section class="sn-auto sec sec-dark split" id="process" data-dot="Process" style="scroll-snap-align:start">
+  <div style="width:100%;display:flex;flex-direction:column;align-items:center">
+    <div class="sec-header split-left"><h2>How it works.</h2><p>Four steps. That's it.</p></div>
+    <div class="p-track split-right"><div class="p-step"><div class="p-num">1</div><h4>Apply Online</h4><p>Submit your CV. 5 minutes.</p></div><div class="p-step"><div class="p-num">2</div><h4>Assessment</h4><p>Language + skills check. From anywhere.</p></div><div class="p-step"><div class="p-num">3</div><h4>Interview</h4><p>Video chat. Casual, conversational.</p></div><div class="p-step"><div class="p-num">4</div><h4>Welcome</h4><p>We handle visa, flight, hotel, onboarding.</p></div></div>
+    <p class="swipe">← swipe for steps →</p>
+  </div>
+</section>
+
+
+<!-- xRAF — REFER A FRIEND -->
+<section class="sn-auto sec sec-dark split" style="scroll-snap-align:start">
+  <div style="width:100%;display:flex;flex-direction:column;align-items:center">
+    <div class="sec-header split-left"><h2>Refer a friend.</h2><p>Know someone who'd be great? Earn up to RM3,000.</p></div>
+    <div class="raf-card split-right">
+      <div class="raf-left">
+        <h3>Earn up to RM3,000</h3>
+        <p>Refer a friend to TP. When they complete 90 days probation, you earn the full bonus via Touch 'n Go eWallet.</p>
+        <div class="raf-tiers">
+          <div class="raf-tier">
+            <div class="raf-tier-info"><strong>Mandarin — Johor</strong>After 90 days probation</div>
+            <div class="raf-amount">RM500</div>
+          </div>
+          <div class="raf-tier">
+            <div class="raf-tier-info"><strong>Standard Roles (Other Locations)</strong>After 90 days probation</div>
+            <div class="raf-amount">RM800</div>
+          </div>
+          <div class="raf-total">
+            <span class="raf-total-label">Interpreter (WFH)</span>
+            <span class="raf-total-amount">RM3,000</span>
+          </div>
+        </div>
+      </div>
+      <div class="raf-right">
+        <div class="raf-note"><span class="material-symbols-outlined">credit_card</span> Paid via Touch 'n Go eWallet only. Processing within 30 working days.</div>
+        <div class="raf-note"><span class="material-symbols-outlined">block</span> Previously applied candidates and current TP employees are not eligible.</div>
+        <div class="raf-note"><span class="material-symbols-outlined">info</span> Single payment after 90 days probation. No split payments.</div>
+        <div class="raf-note"><span class="material-symbols-outlined">verified_user</span> Your friend must consent to sharing info with TP for recruitment.</div>
+        <a href="https://tpmyandtpth.github.io/xRAF/" target="_blank" rel="noopener" class="btn-w" style="margin-top:8px;text-align:center;padding:12px 28px;font-size:14px">Start Referring</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECT WITH US -->
+<section class="sn-auto sec sec-alt split" style="scroll-snap-align:start">
+  <div style="width:100%;display:flex;flex-direction:column;align-items:center">
+    <div class="sec-header split-right"><h2>Follow us.</h2><p>Behind-the-scenes, job updates, and life in Malaysia.</p></div>
+    <div class="channels split-left">
+      <a href="https://www.instagram.com/tpinmalaysia" target="_blank" rel="noopener" class="ch-btn">
+        <div class="ch-icon ig">
+          <svg class="brand-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </div>
+        <div class="ch-info">Instagram<span>@tpinmalaysia</span></div>
+      </a>
+      <a href="https://www.tiktok.com/@tpinmalaysia" target="_blank" rel="noopener" class="ch-btn">
+        <div class="ch-icon tk">
+          <svg class="brand-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        </div>
+        <div class="ch-info">TikTok<span>@tpinmalaysia</span></div>
+      </a>
+      <a href="https://www.xiaohongshu.com/user/profile/63890888642" target="_blank" rel="noopener" class="ch-btn">
+        <div class="ch-icon xhs">
+          <svg class="brand-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm2.559 16.003H9.442c-1.274 0-2.309-1.036-2.309-2.31V10.31c0-1.273 1.035-2.309 2.309-2.309h5.117c1.274 0 2.309 1.036 2.309 2.31v3.383c0 1.274-1.035 2.31-2.309 2.31z"/><text x="9.5" y="14.5" font-size="7" font-weight="900" fill="white" font-family="sans-serif">小</text></svg>
+        </div>
+        <div class="ch-info">Xiaohongshu<span>小红书 · TP Careers</span></div>
+      </a>
+      <a href="https://www.linkedin.com/company/teleperformance/people/?keywords=talent%20acquisition%20malaysia" target="_blank" rel="noopener" class="ch-btn">
+        <div class="ch-icon li">
+          <svg class="brand-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </div>
+        <div class="ch-info">LinkedIn<span>Our Sourcing Team</span></div>
+      </a>
+    </div>
+    <!-- Sourcing Team on LinkedIn -->
+    <div class="li-team split-up rv">
+      <a href="https://www.linkedin.com/in/nghsiangboon" target="_blank" rel="noopener" class="li-person">
+        <div class="li-avatar">HB</div>
+        <div><div class="li-name">Ng Hsiang Boon</div><div class="li-role">Sourcing · Penang</div></div>
+      </a>
+      <a href="https://www.linkedin.com/in/jerry-chuah" target="_blank" rel="noopener" class="li-person">
+        <div class="li-avatar">TH</div>
+        <div><div class="li-name">Tian Han Chuah</div><div class="li-role">Sourcing · Penang</div></div>
+      </a>
+      <a href="https://www.linkedin.com/in/jocelyn-soh-11a33338/" target="_blank" rel="noopener" class="li-person">
+        <div class="li-avatar">JS</div>
+        <div><div class="li-name">Jocelyn Soh</div><div class="li-role">Sourcing · KL</div></div>
+      </a>
+      <a href="https://www.linkedin.com/in/heyminlee/" target="_blank" rel="noopener" class="li-person">
+        <div class="li-avatar">MS</div>
+        <div><div class="li-name">Melaine Sua</div><div class="li-role">Sourcing · KL</div></div>
+      </a>
+      <a href="https://www.linkedin.com/search/results/all/?keywords=Anna%20Saw%20Teleperformance" target="_blank" rel="noopener" class="li-person">
+        <div class="li-avatar">AS</div>
+        <div><div class="li-name">Anna Saw</div><div class="li-role">Sourcing · Penang</div></div>
+      </a>
+      <a href="https://www.linkedin.com/search/results/all/?keywords=Chloe%20Yoon%20Jung%20Heo" target="_blank" rel="noopener" class="li-person">
+        <div class="li-avatar">CH</div>
+        <div><div class="li-name">Chloe Heo</div><div class="li-role">Sourcing · KL</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- LANGUAGES -->
+<section class="sn-auto sec sec-dark" style="scroll-snap-align:start">
+  <div class="sec-header rv"><h2>Prefer your language?</h2></div>
+  <div class="lang-row rv">
+    <a href="https://tpmyandtpth.github.io/JLP" class="lang-btn">🇯🇵 日本語</a>
+    <a href="https://tpmyandtpth.github.io/MLP" class="lang-btn">🇨🇳 中文</a>
+    <a href="https://tpmyandtpth.github.io/KLP" class="lang-btn">🇰🇷 한국어</a>
+    <a href="#" class="lang-btn soon">🇹🇭 ภาษาไทย <span class="soon-tag">Soon</span></a>
+  </div>
+</section>
+
+<!-- OUR OFFICES — Tabbed Location Hub -->
+<section class="sn-auto sec sec-alt split" id="offices" data-dot="Offices" style="scroll-snap-align:start">
+  <div style="width:100%;display:flex;flex-direction:column;align-items:center">
+    <div class="sec-header split-down"><h2>Our offices.</h2><p>Click any location to open in Google Maps.</p></div>
+
+    <div class="loc-tabs" id="locTabs">
+      <button class="loc-tab active" data-tab="my">🇲🇾 Malaysia</button>
+      <button class="loc-tab" data-tab="wfh">🏠 Work From Home</button>
+      <button class="loc-tab" data-tab="th">🇹🇭 Thailand</button>
+    </div>
+
+    <!-- Malaysia Panel -->
+    <div class="loc-panel active" id="panel-my">
+      <div class="loc-grid">
+        <div class="loc-place">
+          <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1985!2d101.718!3d3.159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc37356040b977%3A0x73a5a94751b64697!2sTP%20Malaysia%20(G-Tower)!5e0!3m2!1sen!2smy" allowfullscreen></iframe>
+          <div class="loc-place-body">
+            <h4>KL — G-Tower (HQ)</h4>
+            <p>Level 11, G-Tower, 199 Jln Tun Razak, 50400 KL. KLCC district, 5 min from Petronas Towers.</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <a href="https://maps.google.com/?q=TP+Malaysia+G-Tower" target="_blank" rel="noopener" class="loc-place-link"><span class="material-symbols-outlined">open_in_new</span> Google Maps</a>
+              <a href="https://my.matterport.com/show/?m=GKSMFBkKip2" target="_blank" rel="noopener" class="loc-place-link"><span class="material-symbols-outlined">view_in_ar</span> Virtual Tour</a>
+            </div>
+          </div>
+        </div>
+        <div class="loc-place">
+          <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1985!2d100.2845!3d5.3257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac15bc4926931%3A0x551773c69f5774e4!2sTP%20Malaysia%20(OP)!5e0!3m2!1sen!2smy" allowfullscreen></iframe>
+          <div class="loc-place-body">
+            <h4>Penang — OP (Mayang Pasir)</h4>
+            <p>Lengkok Mayang Pasir 1, Bayan Baru, 11900. Near Queensbay Mall.</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <a href="https://maps.google.com/?q=TP+Malaysia+OP+Penang" target="_blank" rel="noopener" class="loc-place-link"><span class="material-symbols-outlined">open_in_new</span> Google Maps</a>
+              <a href="https://my.matterport.com/show/?m=GKSMFBkKip2" target="_blank" rel="noopener" class="loc-place-link"><span class="material-symbols-outlined">view_in_ar</span> Virtual Tour</a>
+            </div>
+          </div>
+        </div>
+        <div class="loc-place">
+          <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1985!2d100.2823!3d5.3279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac16a19db06c9%3A0x9b8f7fab6bd80c0a!2sTP%20Malaysia%20(GBS%20Mahsuri)!5e0!3m2!1sen!2smy" allowfullscreen></iframe>
+          <div class="loc-place-body">
+            <h4>Penang — GBS Mahsuri</h4>
+            <p>1A, Persiaran Mahsuri, Bayan Baru, 11900. Walk-in interview venue.</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <a href="https://maps.google.com/?q=TP+Malaysia+GBS+Mahsuri" target="_blank" rel="noopener" class="loc-place-link"><span class="material-symbols-outlined">open_in_new</span> Google Maps</a>
+              <a href="https://my.matterport.com/show/?m=GKSMFBkKip2" target="_blank" rel="noopener" class="loc-place-link"><span class="material-symbols-outlined">view_in_ar</span> Virtual Tour</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WFH Panel -->
+    <div class="loc-panel" id="panel-wfh">
+      <div class="wfh-card">
+        <span class="material-symbols-outlined">home</span>
+        <h4>Work From Home</h4>
+        <p>Select roles are available as fully remote positions from anywhere in Malaysia. Equipment provided. Same benefits package.</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:16px 0">
+          <span class="walkin-lang">Mandarin</span>
+          <span class="walkin-lang">Japanese</span>
+          <span class="walkin-lang">Korean</span>
+          <span class="walkin-lang">Cantonese</span>
+          <span class="walkin-lang">Thai</span>
+          <span class="walkin-lang">English</span>
+        </div>
+        <a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=work+from+home" target="_blank" rel="noopener" class="btn-w" style="margin-top:12px;padding:12px 28px;font-size:14px">View WFH Roles</a>
+      </div>
+    </div>
+
+    <!-- Thailand Panel -->
+    <div class="loc-panel" id="panel-th">
+      <div class="loc-grid">
+        <div class="loc-place">
+          <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31000!2d100.5018!3d13.7563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ecde3aee521%3A0x9f43939a2caf2963!2sBangkok%2C%20Thailand!5e0!3m2!1sen!2sth" allowfullscreen></iframe>
+          <div class="loc-place-body">
+            <h4>Bangkok</h4>
+            <p>TP Thailand operations. BTS-connected, vibrant city, affordable cost of living.</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <a href="https://maps.google.com/?q=Bangkok+Thailand" target="_blank" rel="noopener" class="loc-place-link"><span class="material-symbols-outlined">open_in_new</span> Google Maps</a>
+              <a href="https://my.matterport.com/show/?m=GKSMFBkKip2" target="_blank" rel="noopener" class="loc-place-link"><span class="material-symbols-outlined">view_in_ar</span> Virtual Tour</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ (moved to end) -->
+<section class="sn-auto sec sec-dark split" id="faq" data-dot="FAQ" style="scroll-snap-align:start">
+  <div style="width:100%;display:flex;flex-direction:column;align-items:center">
+    <div class="sec-header split-down"><h2>Questions.</h2></div>
+    <div class="acc-wrap split-up">
+      <div class="acc-item"><button class="acc-btn">Do I need BPO experience?<div class="morph"></div></button><div class="acc-body"><div class="acc-inner">No. We value language skills and communication. Full paid training — 2 to 6 weeks — before you handle any customer interactions.</div></div></div>
+      <div class="acc-item"><button class="acc-btn">Who handles my visa and relocation?<div class="morph"></div></button><div class="acc-body"><div class="acc-inner">We do — end to end. Employment Pass, one-way flight, airport pickup, and initial accommodation.</div></div></div>
+      <div class="acc-item"><button class="acc-btn">What languages are you hiring for?<div class="morph"></div></button><div class="acc-body"><div class="acc-inner">Mandarin, Japanese, Korean, Thai, Cantonese, and English — with new lines opening regularly.</div></div></div>
+      <div class="acc-item"><button class="acc-btn">What's the salary range?<div class="morph"></div></button><div class="acc-body"><div class="acc-inner">Competitive with your language premium. Your recruiter shares the range early. Final terms in your offer letter.</div></div></div>
+      <div class="acc-item"><button class="acc-btn">What does a typical workday look like?<div class="morph"></div></button><div class="acc-body"><div class="acc-inner">8-hour shifts, 2 rest days per week. Pantries, prayer rooms, break areas. After work — hawker food, malls, or beach.</div></div></div>
+      <div class="acc-item"><button class="acc-btn">Is Malaysia safe and affordable?<div class="morph"></div></button><div class="acc-body"><div class="acc-inner">One of Asia's most expat-friendly countries. Street food from RM5 (~US$1), rent RM800–1,500. 100+ nationalities on our team.</div></div></div>
+      <div class="acc-item"><button class="acc-btn">Can I grow into leadership?<div class="morph"></div></button><div class="acc-body"><div class="acc-inner">Many team leads started frontline. Structured promotions, mentorship, leadership academies, GoFluent training.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-final" id="apply" style="scroll-snap-align:start">
+  <h2>Ready to<br><span class="dim">make the move?</span></h2>
+  <p>One application. A career that crosses borders.</p>
+  <div class="cta-btns"><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual" target="_blank" rel="noopener" class="btn-w">Apply Now</a><a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener" class="btn-o">Book a Casual Chat</a></div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ft">
+  <div class="ft-grid">
+    <div class="ft-brand"><h3>TP<span>.</span></h3><p>TP (formerly Teleperformance) is a global digital business services company across 100+ countries and 170+ languages.</p><div class="ft-badges"><span class="ft-badge">🏆 6 Years Great Place to Work® Malaysia</span><span class="ft-badge">🏆 5 Years World's Best Workplaces™</span></div><div class="ft-social"><a href="https://www.linkedin.com/company/teleperformance" target="_blank" rel="noopener" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a><a href="https://www.instagram.com/tpinmalaysia" target="_blank" rel="noopener" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a><a href="https://www.tiktok.com/@tpinmalaysia" target="_blank" rel="noopener" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="https://www.xiaohongshu.com/user/profile/63890888642" target="_blank" rel="noopener" title="Xiaohongshu" style="font-size:11px;font-weight:900">小</a><a href="https://www.facebook.com/TeleperformanceMalaysia" target="_blank" rel="noopener" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div></div>
+    <div class="ft-col"><h4>Explore</h4><a href="#jobs">Open Roles</a><a href="#locations">Locations</a><a href="#benefits">Benefits & Salary</a><a href="#process">How to Apply</a><a href="#faq">FAQ</a><a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener">Casual Chat</a><a href="#">Refer a Friend</a></div>
+    <div class="ft-col"><h4>Company</h4><a href="https://www.teleperformance.com" target="_blank" rel="noopener">About TP</a><a href="#">Diversity & Inclusion</a><a href="#">Great Place to Work®</a><a href="#">Newsroom</a><a href="#">Contact Us</a></div>
+    <div class="ft-col"><h4>Our Offices</h4><div class="ft-office"><strong>Kuala Lumpur (HQ)</strong><span>Level 11, G-Tower, 199 Jln Tun Razak, 50400 KL</span></div><div class="ft-office"><strong>Penang</strong><span>Lengkok Mayang Pasir 1, Bayan Baru, 11900</span></div><div class="ft-office"><strong>Bangkok</strong><span>Thailand Operations</span></div></div>
+  </div>
+  <div class="ft-bot"><p>Teleperformance Malaysia Sdn Bhd · SSM: 201601023769 (1194708-K)</p><div class="ft-legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a><a href="#">Accessibility</a></div><p>© 2026 TP (Teleperformance SE). All rights reserved.</p></div>
+</footer>
+
+</div><!-- /sc -->
+
+<!-- ═══════════════════════ SCRIPTS ═══════════════════════ -->
+<script>
+const D=document,Q=s=>D.querySelector(s),QA=s=>D.querySelectorAll(s),sc=Q('#sc');
+const isMobile=()=>window.innerWidth<=768;
+
+// ── Scroll progress + nav solid ──
+function onScroll(s,total){
+  Q('#prog').style.width=(s/total*100)+'%';
+  Q('#topbar').classList.toggle('solid',s>60);
+  let ai=0;
+  dotSections.forEach((sec,i)=>{
+    const offset=isMobile()?sec.getBoundingClientRect().top+window.scrollY:sec.offsetTop;
+    const scrollMid=s+(isMobile()?window.innerHeight:sc.clientHeight)/2;
+    if(scrollMid>=offset)ai=i;
+  });
+  QA('.nav-dot').forEach((d,i)=>d.classList.toggle('on',i===ai));
+}
+sc.addEventListener('scroll',()=>{onScroll(sc.scrollTop,sc.scrollHeight-sc.clientHeight)});
+window.addEventListener('scroll',()=>{if(isMobile())onScroll(window.scrollY,D.body.scrollHeight-window.innerHeight)});
+
+// ── Build nav dots from data-dot sections ──
+const dotSections=[...QA('[data-dot]')];
+const dotsC=Q('#dots');
+dotSections.forEach((sec,i)=>{
+  const btn=D.createElement('button');
+  btn.className='nav-dot'+(i===0?' on':'');
+  btn.innerHTML='<span class="nav-dot-label">'+sec.dataset.dot+'</span>';
+  btn.onclick=()=>sec.scrollIntoView({behavior:'smooth'});
+  dotsC.appendChild(btn);
+});
+
+// ── Overlay menu ──
+const overlay=Q('#overlay');
+const edgeTrigger=Q('#edgeTrigger');
+
+// Open via button
+Q('#menuBtn').onclick=()=>overlay.classList.add('open');
+
+// Open via right-edge hover (desktop) with delay to prevent accidental triggers
+let edgeTimer=null;
+edgeTrigger.addEventListener('mouseenter',()=>{
+  edgeTimer=setTimeout(()=>overlay.classList.add('open'),250);
+});
+edgeTrigger.addEventListener('mouseleave',()=>{
+  if(edgeTimer)clearTimeout(edgeTimer);
+});
+
+// Open via right-edge touch (mobile)
+edgeTrigger.addEventListener('touchstart',e=>{
+  e.preventDefault();
+  overlay.classList.add('open');
+},{passive:false});
+
+// Close
+Q('#overlayClose').onclick=()=>overlay.classList.remove('open');
+Q('.overlay-backdrop').onclick=()=>overlay.classList.remove('open');
+QA('[data-nav]').forEach(a=>{
+  a.onclick=e=>{
+    e.preventDefault();
+    overlay.classList.remove('open');
+    const t=Q(a.getAttribute('href'));
+    if(t)setTimeout(()=>t.scrollIntoView({behavior:'smooth'}),350);
+  };
+});
+D.addEventListener('keydown',e=>{if(e.key==='Escape')overlay.classList.remove('open')});
+
+// Hide edge trigger when overlay is open
+const mutObs=new MutationObserver(()=>{
+  edgeTrigger.style.display=overlay.classList.contains('open')?'none':'flex';
+});
+mutObs.observe(overlay,{attributes:true,attributeFilter:['class']});
+
+// ── Magnetic buttons ──
+QA('.btn-w,.btn-o,.btn-pink,.n-cta,.fab').forEach(b=>{
+  b.addEventListener('mousemove',e=>{
+    const r=b.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;
+    b.style.transform=`translate(${x*.12}px,${y*.12}px) scale(1.04)`;
+  });
+  b.addEventListener('mouseleave',()=>{b.style.transform=''});
+});
+
+// ── Cursor glow on job cards ──
+const glowCSS=D.createElement('style');
+glowCSS.textContent='.jc::after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(255,0,130,.08) 0%,transparent 70%);pointer-events:none;opacity:0;transition:opacity .4s;transform:translate(-50%,-50%);z-index:0;left:var(--gx,50%);top:var(--gy,50%)}.jc:hover::after{opacity:1}';
+D.head.appendChild(glowCSS);
+QA('.jc').forEach(c=>{
+  c.addEventListener('mousemove',e=>{
+    const r=c.getBoundingClientRect();
+    c.style.setProperty('--gx',(e.clientX-r.left)+'px');
+    c.style.setProperty('--gy',(e.clientY-r.top)+'px');
+  });
+});
+
+// ── FAB + BTT show/hide on scroll ──
+const fab=Q('.fab'),btt=Q('#btt');
+function handleScroll(s){
+  if(s>400){fab.style.opacity='1';fab.style.pointerEvents='all'}
+  else{fab.style.opacity='0';fab.style.pointerEvents='none'}
+  btt.classList.toggle('show',s>300);
+}
+sc.addEventListener('scroll',()=>handleScroll(sc.scrollTop));
+window.addEventListener('scroll',()=>handleScroll(window.scrollY));
+fab.style.opacity='0';fab.style.pointerEvents='none';fab.style.transition='transform .3s, opacity .3s, box-shadow .3s';
+btt.onclick=()=>{
+  sc.scrollTo({top:0,behavior:'smooth'});
+  window.scrollTo({top:0,behavior:'smooth'});
+};
+
+// ── Detect scroll root: sc on desktop, null (viewport) on mobile ──
+const obsRoot=()=>isMobile()?null:sc;
+
+// ── Reveal + Split reveal ──
+const rO=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v')})},{threshold:.1,root:obsRoot()});
+QA('.rv').forEach(el=>rO.observe(el));
+
+const splitO=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('revealed')})},{threshold:.15,root:obsRoot()});
+QA('.split').forEach(el=>splitO.observe(el));
+
+// Jobs grid custom reveal (slide from right)
+const jobsGrid=Q('.jobs-grid.sg');
+if(jobsGrid){
+  const jO=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateX(0)';e.target.classList.add('v')}})},{threshold:.08,root:obsRoot()});
+  jO.observe(jobsGrid);
+}
+
+// ── Counter ──
+const cO=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting&&!e.target.dataset.c){e.target.dataset.c='1';const t=+e.target.dataset.count,d=1600,s=performance.now();const f=n=>{const p=Math.min((n-s)/d,1),v=1-Math.pow(1-p,4);e.target.textContent=Math.floor(t*v);if(p<1)requestAnimationFrame(f);else e.target.textContent=t};requestAnimationFrame(f)}})},{threshold:.5,root:obsRoot()});
+QA('[data-count]').forEach(el=>cO.observe(el));
+
+// ── Gallery pips ──
+const lt=Q('#locTrack'),lc=lt.querySelectorAll('.loc-card'),pc=Q('#pips');
+lc.forEach((_,i)=>{const p=D.createElement('button');p.className='pip'+(i===0?' on':'');p.onclick=()=>lc[i].scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});pc.appendChild(p)});
+lt.addEventListener('scroll',()=>{const s=lt.scrollLeft,w=lc[0].offsetWidth+16,a=Math.round(s/w);pc.querySelectorAll('.pip').forEach((p,i)=>p.classList.toggle('on',i===a))});
+
+// ── Gallery autoplay ──
+let gA,gP=false;
+(function sa(){gA=setInterval(()=>{if(gP)return;const m=lt.scrollWidth-lt.clientWidth;lt.scrollLeft>=m-10?lt.scrollTo({left:0,behavior:'smooth'}):lt.scrollBy({left:400,behavior:'smooth'})},5000)})();
+lt.onmouseenter=()=>gP=true;lt.onmouseleave=()=>gP=false;lt.ontouchstart=()=>clearInterval(gA);
+
+// ── Drag scroll ──
+QA('.h-track,.p-track').forEach(t=>{let d=0,sx,sl;t.onmousedown=e=>{d=1;t.style.cursor='grabbing';sx=e.pageX-t.offsetLeft;sl=t.scrollLeft};t.onmouseleave=t.onmouseup=()=>{d=0;t.style.cursor='grab'};t.onmousemove=e=>{if(!d)return;e.preventDefault();t.scrollLeft=sl-(e.pageX-t.offsetLeft-sx)*1.5}});
+
+// ── Accordion ──
+QA('.acc-btn').forEach(b=>{b.onclick=()=>{const i=b.parentElement,c=i.querySelector('.acc-body'),o=i.classList.contains('open');QA('.acc-item').forEach(x=>{x.classList.remove('open');x.querySelector('.acc-body').style.maxHeight='0'});if(!o){i.classList.add('open');c.style.maxHeight=c.scrollHeight+'px'}}});
+
+// ── Smooth anchors ──
+QA('.n-links a').forEach(a=>{a.onclick=e=>{e.preventDefault();const t=Q(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'})}});
+
+// ── Location Hub Tabs ──
+QA('.loc-tab').forEach(tab=>{
+  tab.onclick=()=>{
+    QA('.loc-tab').forEach(t=>t.classList.remove('active'));
+    QA('.loc-panel').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    Q('#panel-'+tab.dataset.tab).classList.add('active');
+  };
+});
+</script>
+</body>
+</html>
