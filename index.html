@@ -153,27 +153,30 @@ em{font-style:italic;color:var(--pink);font-weight:600}
 .swipe i{animation:bob 1.4s ease infinite;font-style:normal}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
 
-/* ========== FAB ========== */
-.fab{position:fixed;right:18px;bottom:18px;z-index:450;display:inline-flex;align-items:center;gap:8px;
-  background:var(--pink);color:#fff;font-family:var(--display);font-weight:700;font-size:14px;
-  padding:13px 18px;border-radius:100px;box-shadow:0 12px 28px rgba(255,0,130,.34);
-  opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .35s,transform .35s,background .2s}
-.fab.on{opacity:1;transform:none;pointer-events:auto}
-.fab:hover{background:var(--pink-2)}
-.fab::before{content:"";width:8px;height:8px;border-radius:50%;background:#fff;animation:pulse 1.4s infinite}
-
-/* FAB cluster: scroll-up + apply, fixed bottom-right, clears iOS safe area */
-.fab-cluster{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:450;
-  display:flex;align-items:center;gap:9px}
-@media(min-width:1024px){.fab-cluster{right:64px;bottom:calc(28px + env(safe-area-inset-bottom))}}
-.fab-cluster .fab{position:static;right:auto;bottom:auto}
-.fab-up{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;
-  background:var(--slate);color:#fff;box-shadow:0 10px 24px rgba(75,76,106,.32);
-  opacity:0;transform:translateY(14px);pointer-events:none;
-  transition:opacity .35s,transform .35s,background .2s}
-.fab-up .ms{font-size:22px}
-.fab-up.on{opacity:1;transform:none;pointer-events:auto}
-.fab-up:hover{background:var(--slate-ink)}
+/* ========== FAB STACK (WhatsApp on top, then back-to-top + Apply) ========== */
+.fab-stack{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:450;
+  display:flex;flex-direction:column;align-items:flex-end;gap:10px;
+  opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .35s,transform .35s}
+.fab-stack.on{opacity:1;transform:none;pointer-events:auto}
+.fab-row{display:flex;align-items:center;gap:8px}
+.fab-btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:700;font-size:14px;
+  padding:13px 18px;border-radius:100px;color:#fff;box-shadow:0 10px 26px rgba(0,0,0,.16);white-space:nowrap;
+  transition:transform .18s,filter .2s,background .2s}
+.fab-btn:active{transform:scale(.96)}
+.fab-btn svg{width:20px;height:20px;fill:currentColor;flex-shrink:0}
+.fab-btn .ms{font-size:20px}
+.fab-wa{background:#25D366}
+.fab-wa:hover{filter:brightness(1.06)}
+.fab-apply{background:var(--pink)}
+.fab-apply:hover{background:var(--pink-2)}
+.fab-apply::before{content:"";width:8px;height:8px;border-radius:50%;background:#fff;animation:pulse 1.4s infinite}
+.fab-top{width:44px;height:44px;border-radius:50%;background:#fff;color:var(--slate);border:1px solid var(--line-2);
+  box-shadow:0 8px 20px rgba(75,76,106,.18);display:grid;place-items:center;transition:background .2s,color .2s,transform .18s}
+.fab-top .ms{font-size:22px}
+.fab-top:active{transform:scale(.94)}
+.fab-top:hover{background:var(--paper);color:var(--pink)}
+@media(min-width:1024px){.fab-stack{right:28px;bottom:calc(28px + env(safe-area-inset-bottom))}}
+@media(max-width:380px){.fab-btn{font-size:12.5px;padding:11px 14px;gap:7px}}
 
 /* WhatsApp screening button */
 .btn-wa{background:#25D366;color:#fff;box-shadow:0 14px 30px rgba(37,211,102,.26)}
@@ -204,13 +207,28 @@ a.member .li{position:absolute;right:-2px;bottom:-2px;width:20px;height:20px;bor
 a.member .li svg{width:11px;height:11px;fill:#fff}
 a.member:hover .mn{color:var(--pink)}
 
-/* spacing: clear the FAB cluster on the last screens + safe area */
+/* spacing: clear the FAB stack on the last screens + safe area */
 .screen{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
 .s-final,.s-faq{padding-bottom:calc(40px + env(safe-area-inset-bottom))}
 @media(min-width:1024px){
   .screen{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
   .wrap{max-width:920px}
 }
+
+/* LP hub link under roles list */
+.roles-all{display:inline-flex;align-items:center;gap:7px;margin-top:14px;align-self:center;
+  font-family:var(--display);font-weight:600;font-size:13px;color:var(--pink);
+  border:1px solid rgba(255,0,130,.3);background:rgba(255,0,130,.05);padding:9px 16px;border-radius:100px;flex-shrink:0}
+.roles-all:hover{background:rgba(255,0,130,.1)}
+.roles-all .ms{font-size:16px}
+
+/* office embedded maps */
+.office-map{height:172px;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;background:var(--paper-2)}
+.office-map iframe{width:100%;height:100%;border:0;display:block}
+.office .tag-region{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.04em;
+  color:#fff;background:var(--slate);padding:3px 9px;border-radius:7px;margin-left:auto}
+.office h4{justify-content:flex-start}
+.office h4 .tag-region{margin-left:auto}
 
 /* =====================================================
    01 — HERO
@@ -265,8 +283,9 @@ a.member:hover .mn{color:var(--pink)}
    03 — ROLES (accordion, internal scroll)
 ===================================================== */
 .s-roles{justify-content:flex-start}
-.roles{margin-top:16px;display:flex;flex-direction:column;gap:9px;overflow-y:auto;flex:0 1 auto;
-  max-height:min(56vh,520px);padding-right:2px;-webkit-overflow-scrolling:touch}
+.s-roles>.wrap{flex:1;width:100%}
+.roles{margin-top:14px;display:flex;flex-direction:column;gap:9px;overflow-y:auto;flex:1 1 auto;min-height:0;
+  padding:2px 2px 16px;-webkit-overflow-scrolling:touch}
 .roles::-webkit-scrollbar{width:5px}.roles::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:4px}
 .role{border:1px solid var(--line);border-radius:16px;background:var(--paper);overflow:hidden;transition:border-color .2s,background .2s}
 .role.open{border-color:var(--slate);background:#fff;box-shadow:0 10px 26px rgba(75,76,106,.08)}
@@ -281,8 +300,9 @@ a.member:hover .mn{color:var(--pink)}
 .role-top .tag.teal{background:var(--teal)}
 .role-top .chev{font-family:'Material Symbols Outlined';color:var(--slate-2);transition:transform .25s;font-size:22px}
 .role.open .chev{transform:rotate(180deg)}
-.role-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
-.role.open .role-body{max-height:360px}
+.role-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .32s ease}
+.role.open .role-body{grid-template-rows:1fr}
+.role-body>.role-inner{overflow:hidden;min-height:0}
 .role-inner{padding:0 16px 16px}
 .role-inner p{font-size:13.5px;color:var(--muted);line-height:1.5}
 .role-perks{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
@@ -420,8 +440,9 @@ a.member:hover .mn{color:var(--pink)}
 .qa .q{display:flex;align-items:center;gap:10px;padding:15px 16px;cursor:pointer;font-family:var(--display);font-weight:600;font-size:14.5px;color:var(--ink)}
 .qa .q .ms{margin-left:auto;color:var(--slate-2);transition:transform .25s}
 .qa.open .q .ms{transform:rotate(45deg);color:var(--pink)}
-.qa .a{max-height:0;overflow:hidden;transition:max-height .3s ease}
-.qa.open .a{max-height:240px}
+.qa .a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+.qa.open .a{grid-template-rows:1fr}
+.qa .a>p{overflow:hidden;min-height:0}
 .qa .a p{padding:0 16px 16px;font-size:13px;color:var(--muted);line-height:1.55}
 
 /* =====================================================
@@ -460,7 +481,7 @@ a.member:hover .mn{color:var(--pink)}
 
 @media (prefers-reduced-motion:reduce){
   .enter{opacity:1;transform:none;transition:none}
-  .stamp svg,.dot-live,.fab::before,.swipe i{animation:none}
+  .stamp svg,.dot-live,.fab-apply::before,.swipe i{animation:none}
   .stage{scroll-behavior:auto}
 }
 @media (max-height:680px){
@@ -510,9 +531,8 @@ a.member:hover .mn{color:var(--pink)}
       </div>
 
       <div class="cta-zone enter">
-        <a class="btn btn-wa" href="https://wa.me/60193320265?text=Hi%20TP%20Talent%20Acquisition%2C%20I%27d%20like%20to%20apply%20and%20start%20the%20quick%20screening." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.8-1.49-1.78-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47 0 1.46 1.06 2.86 1.21 3.06.15.2 2.1 3.2 5.08 4.48.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91A9.82 9.82 0 0 0 12.04 2z"/></svg> Start screening on WhatsApp <span class="arr">→</span></a>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&amp;searchKeyword=multilingual" target="_blank" rel="noopener">View open roles <span class="arr">→</span></a>
+          <a class="btn btn-primary" href="https://tpmyandtpth.github.io/LP/" target="_blank" rel="noopener">View all open roles <span class="arr">→</span></a>
           <a class="btn-ghost" href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener"><span class="ms">chat</span> Book a casual chat</a>
         </div>
         <div class="swipe">Scroll <i>↓</i> explore</div>
@@ -634,6 +654,7 @@ a.member:hover .mn{color:var(--pink)}
           </div></div>
         </div>
       </div>
+      <a class="roles-all" href="https://tpmyandtpth.github.io/LP/" target="_blank" rel="noopener"><span class="ms">grid_view</span> See all open roles on our jobs hub <span class="ms">arrow_forward</span></a>
     </div>
   </section>
 
@@ -719,13 +740,13 @@ a.member:hover .mn{color:var(--pink)}
   <!-- ============ 07 REFER A FRIEND ============ -->
   <section class="screen s-raf" data-label="refer">
     <div class="wrap">
-      <div class="scr-head enter"><span class="brand"><span class="logo"><img src="https://tpmyandtpth.github.io/ELP/TPLogo.png" alt="TP"></span> refer a friend</span><span>§ earn up to RM3,000</span></div>
+      <div class="scr-head enter"><span class="brand"><span class="logo"><img src="https://tpmyandtpth.github.io/ELP/TPLogo.png" alt="TP"></span> refer a friend</span><span>§ earn up to RM10,000</span></div>
       <h2 class="enter" style="font-size:clamp(28px,6.5vw,44px)">Refer a <em>friend</em>.</h2>
-      <p class="lede enter">Know someone who'd be great? When they pass 90 days' probation, you earn the full bonus via Touch 'n Go eWallet.</p>
+      <p class="lede enter">Know someone who'd be great? Refer a friend and earn up to <strong>RM10,000</strong> when they join and pass 90 days' probation — paid via Touch 'n Go eWallet.</p>
       <div class="tiers enter">
         <div class="tier"><div class="amt">RM500</div><div class="role-n">Mandarin — Johor</div><div class="cond">after 90 days probation</div></div>
         <div class="tier"><div class="amt">RM800</div><div class="role-n">Standard roles · other locations</div><div class="cond">after 90 days probation</div></div>
-        <div class="tier top"><div class="crown">highest</div><div class="amt">RM3,000</div><div class="role-n">Interpreter (WFH)</div><div class="cond">after 90 days probation</div></div>
+        <div class="tier top"><div class="crown">highest</div><div class="amt">RM10,000</div><div class="role-n">Interpreter (WFH)</div><div class="cond">after 90 days probation</div></div>
       </div>
       <div class="fine enter">
         <div><span class="ms">credit_card</span>Paid via Touch 'n Go eWallet only. Processing within 30 working days.</div>
@@ -744,36 +765,71 @@ a.member:hover .mn{color:var(--pink)}
     <div class="wrap">
       <div class="scr-head enter"><span class="brand"><span class="logo"><img src="https://tpmyandtpth.github.io/ELP/TPLogo.png" alt="TP"></span> offices</span><span>§ open in maps</span></div>
       <h2 class="enter" style="font-size:clamp(28px,6.5vw,44px)">Our <em>offices</em>.</h2>
-      <p class="lede enter">Click any location to open it in Google Maps.</p>
+      <p class="lede enter">Six locations across Malaysia, plus work-from-home. Open any office in Google Maps.</p>
 
       <div class="tabs enter">
-        <button class="tab active" data-tab="my">🇲🇾 Malaysia</button>
-        <button class="tab" data-tab="wfh">🏠 Work From Home</button>
-        <button class="tab" data-tab="th">🇹🇭 Thailand</button>
+        <button class="tab active" data-tab="png">🇲🇾 Penang</button>
+        <button class="tab" data-tab="kl">🇲🇾 Kuala Lumpur</button>
+        <button class="tab" data-tab="jb">🇲🇾 Johor</button>
+        <button class="tab" data-tab="wfh">🏠 WFH</button>
       </div>
 
       <div class="tabpanes enter">
-        <div class="tabpane active" id="pane-my">
-          <div class="office"><h4><span class="ms">corporate_fare</span>KL — G-Tower (HQ)</h4>
-            <p>Level 11, G-Tower, 199 Jln Tun Razak, 50400 KL. KLCC district, 5 min from Petronas Towers.</p>
-            <div class="links"><a href="https://maps.google.com/?q=G-Tower+Kuala+Lumpur" target="_blank" rel="noopener"><span class="ms">open_in_new</span>Google Maps</a></div></div>
-          <div class="office"><h4><span class="ms">corporate_fare</span>Penang — OP (Mayang Pasir)</h4>
-            <p>Lengkok Mayang Pasir 1, Bayan Baru, 11900. Near Queensbay Mall.</p>
-            <div class="links"><a href="https://maps.google.com/?q=Lengkok+Mayang+Pasir+Bayan+Baru" target="_blank" rel="noopener"><span class="ms">open_in_new</span>Google Maps</a></div></div>
-          <div class="office"><h4><span class="ms">corporate_fare</span>Penang — GBS Mahsuri</h4>
-            <p>1A, Persiaran Mahsuri, Bayan Baru, 11900. Walk-in interview venue.</p>
-            <div class="links"><a href="https://maps.google.com/?q=GBS+Mahsuri+Bayan+Baru" target="_blank" rel="noopener"><span class="ms">open_in_new</span>Google Maps</a></div></div>
+        <!-- PENANG (3) -->
+        <div class="tabpane active" id="pane-png">
+          <div class="office">
+            <div class="office-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="TP One Precinct, Penang" src="https://www.google.com/maps?q=Lengkok%20Mayang%20Pasir%201%2C%20Bandar%20Bayan%20Baru%2C%2011900%20Bayan%20Lepas%2C%20Penang&z=15&output=embed"></iframe></div>
+            <h4><span class="ms">corporate_fare</span>One Precinct (OP)<span class="tag-region">Penang</span></h4>
+            <p>Lengkok Mayang Pasir 1, Bandar Bayan Baru, 11900 Bayan Lepas, Penang. Shuttle bus available.</p>
+            <div class="links"><a href="https://maps.app.goo.gl/Nq6RKZ7spH89THG8A" target="_blank" rel="noopener"><span class="ms">open_in_new</span>Open in Google Maps</a></div>
+          </div>
+          <div class="office">
+            <div class="office-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="TP GBS Mahsuri, Penang" src="https://www.google.com/maps?q=1A%2C%20Persiaran%20Mahsuri%2C%20Bayan%20Baru%2C%2011900%20Bayan%20Lepas%2C%20Penang&z=15&output=embed"></iframe></div>
+            <h4><span class="ms">corporate_fare</span>GBS @ Mahsuri<span class="tag-region">Penang</span></h4>
+            <p>1A, Persiaran Mahsuri, Bayan Baru, 11900 Bayan Lepas, Penang. Walk-in interview venue.</p>
+            <div class="links"><a href="https://maps.app.goo.gl/Zpy6r8na4Wg31uhT8" target="_blank" rel="noopener"><span class="ms">open_in_new</span>Open in Google Maps</a></div>
+          </div>
+          <div class="office">
+            <div class="office-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="TP Livingston Tower, George Town" src="https://www.google.com/maps?q=170%20Jalan%20Argyll%2C%2010050%20George%20Town%2C%20Penang&z=15&output=embed"></iframe></div>
+            <h4><span class="ms">corporate_fare</span>Livingston Tower (LV)<span class="tag-region">Penang</span></h4>
+            <p>170 Jalan Argyll, Georgetown, 10050 George Town, Penang. In the UNESCO heritage zone.</p>
+            <div class="links"><a href="https://maps.app.goo.gl/9i841vf18KRyunQK6" target="_blank" rel="noopener"><span class="ms">open_in_new</span>Open in Google Maps</a></div>
+          </div>
         </div>
+
+        <!-- KUALA LUMPUR / KLANG VALLEY (2) -->
+        <div class="tabpane" id="pane-kl">
+          <div class="office">
+            <div class="office-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="TP G-Tower, Kuala Lumpur" src="https://www.google.com/maps?q=G-Tower%2C%20199%20Jalan%20Tun%20Razak%2C%2050400%20Kuala%20Lumpur&z=15&output=embed"></iframe></div>
+            <h4><span class="ms">corporate_fare</span>G-Tower (HQ)<span class="tag-region">KL</span></h4>
+            <p>Level 11, G-Tower, 199 Jalan Tun Razak, 50400 Kuala Lumpur. KLCC district, 5 min from Petronas Towers.</p>
+            <div class="links"><a href="https://maps.app.goo.gl/vd5ju3VXhxfhpJuN7" target="_blank" rel="noopener"><span class="ms">open_in_new</span>Open in Google Maps</a></div>
+          </div>
+          <div class="office">
+            <div class="office-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="TP KCP, Petaling Jaya" src="https://www.google.com/maps?q=Kelana%20Centre%20Point%2C%20Jalan%20SS%207%2F19%2C%2047301%20Petaling%20Jaya%2C%20Selangor&z=15&output=embed"></iframe></div>
+            <h4><span class="ms">corporate_fare</span>Kelana Centre Point (KCP)<span class="tag-region">PJ</span></h4>
+            <p>Level 3, Block D, Kelana Centre Point, Jalan SS 7/19, 47301 Petaling Jaya, Selangor.</p>
+            <div class="links"><a href="https://maps.app.goo.gl/UE8tTboaukkeCWZW9" target="_blank" rel="noopener"><span class="ms">open_in_new</span>Open in Google Maps</a></div>
+          </div>
+        </div>
+
+        <!-- JOHOR (1) -->
+        <div class="tabpane" id="pane-jb">
+          <!-- JOHOR: no saved Maps pin yet — embed + link use a search by name. Replace href with the real maps.app.goo.gl pin when you have it. -->
+          <div class="office">
+            <div class="office-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="TP Johor Bahru" src="https://www.google.com/maps?q=Teleperformance%20Johor%20Bahru&z=12&output=embed"></iframe></div>
+            <h4><span class="ms">corporate_fare</span>Johor Bahru (JB)<span class="tag-region">Johor</span></h4>
+            <p>TP Johor Bahru. Mandarin and multilingual roles. Interviews by appointment.</p>
+            <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Teleperformance%20Johor%20Bahru" target="_blank" rel="noopener"><span class="ms">open_in_new</span>Open in Google Maps</a></div>
+          </div>
+        </div>
+
+        <!-- WFH -->
         <div class="tabpane" id="pane-wfh">
           <div class="office"><h4><span class="ms">home</span>Work From Home</h4>
             <p>Select roles are fully remote from anywhere in Malaysia. Equipment provided. Same benefits package.</p>
             <div class="wfh-langs"><span>Mandarin</span><span>Japanese</span><span>Korean</span><span>Cantonese</span><span>Thai</span><span>English</span></div>
             <div class="links" style="margin-top:12px"><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&amp;searchKeyword=remote" target="_blank" rel="noopener"><span class="ms">work</span>View WFH roles</a></div></div>
-        </div>
-        <div class="tabpane" id="pane-th">
-          <div class="office"><h4><span class="ms">corporate_fare</span>Bangkok</h4>
-            <p>TP Thailand operations. BTS-connected, vibrant city, affordable cost of living.</p>
-            <div class="links"><a href="https://maps.google.com/?q=Teleperformance+Bangkok" target="_blank" rel="noopener"><span class="ms">open_in_new</span>Google Maps</a></div></div>
         </div>
       </div>
     </div>
@@ -787,23 +843,23 @@ a.member:hover .mn{color:var(--pink)}
       <p class="lede enter">Behind-the-scenes, job updates, and life in Malaysia.</p>
 
       <div class="social-row enter">
-        <a class="soc" href="https://www.instagram.com/tp_malaysia/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.72 3.72 0 0 1-.9 1.38c-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.88 5.88 0 0 0-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91a5.88 5.88 0 0 0 1.38 2.13 5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg><div class="h"><b>Instagram</b><span>@tp_malaysia</span></div></a>
-        <a class="soc" href="https://www.tiktok.com/@tp_malaysia" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05 6.33 6.33 0 0 0-5.58 9.44A6.34 6.34 0 0 0 15.78 15.5V8.69a8.16 8.16 0 0 0 4.77 1.52V6.83a4.78 4.78 0 0 1-.96-.14z"/></svg><div class="h"><b>TikTok</b><span>@tp_malaysia</span></div></a>
-        <a class="soc" href="https://www.linkedin.com/company/teleperformance-malaysia" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg><div class="h"><b>LinkedIn</b><span>TP Malaysia</span></div></a>
-        <!-- XIAOHONGSHU: replace href with the real TP Xiaohongshu/RedNote profile URL (currently points to homepage) -->
-        <a class="soc" href="https://www.xiaohongshu.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none"/><text x="3" y="17" font-family="sans-serif" font-size="13" font-weight="700" fill="#4B4C6A">小红书</text></svg><div class="h"><b>Xiaohongshu</b><span>小红书 · TP Careers</span></div></a>
+        <a class="soc" href="https://www.facebook.com/TPinMalaysia" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.01 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.5 0-1.96.93-1.96 1.89v2.25h3.34l-.53 3.49h-2.81V24C19.61 23.08 24 18.09 24 12.07z"/></svg><div class="h"><b>Facebook</b><span>TP Malaysia</span></div></a>
+        <a class="soc" href="https://www.instagram.com/tpinmalaysia/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.72 3.72 0 0 1-.9 1.38c-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.88 5.88 0 0 0-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91a5.88 5.88 0 0 0 1.38 2.13 5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg><div class="h"><b>Instagram</b><span>@tpinmalaysia</span></div></a>
+        <a class="soc" href="https://www.tiktok.com/@tpinmalaysia" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05 6.33 6.33 0 0 0-5.58 9.44A6.34 6.34 0 0 0 15.78 15.5V8.69a8.16 8.16 0 0 0 4.77 1.52V6.83a4.78 4.78 0 0 1-.96-.14z"/></svg><div class="h"><b>TikTok</b><span>@tpinmalaysia</span></div></a>
+        <a class="soc" href="https://www.youtube.com/@wearetpgroup" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg><div class="h"><b>YouTube</b><span>@wearetpgroup</span></div></a>
+        <a class="soc" href="https://www.linkedin.com/company/wearetpgroup" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg><div class="h"><b>LinkedIn</b><span>TP Group</span></div></a>
       </div>
 
       <div class="team-h enter">Our sourcing team</div>
-      <!-- LINKEDIN: replace each href below with the recruiter's real LinkedIn profile URL.
-           Defaults point to a LinkedIn name-search so links work until you paste profiles. -->
+      <!-- LinkedIn: Hsiang Boon, Tian Han (jerry-chuah), Jocelyn, Melaine (heyminlee) = real profiles.
+           Anna Saw & Chloe Heo have no public profile yet, so they use a LinkedIn name-search. -->
       <div class="team enter">
-        <a class="member" href="https://www.linkedin.com/search/results/people/?keywords=Ng%20Hsiang%20Boon%20Teleperformance" target="_blank" rel="noopener"><div class="av">HB<span class="li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></span></div><div class="mn">Ng Hsiang Boon</div><div class="mr">Sourcing · Penang</div></a>
-        <a class="member" href="https://www.linkedin.com/search/results/people/?keywords=Tian%20Han%20Chuah%20Teleperformance" target="_blank" rel="noopener"><div class="av">TH<span class="li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></span></div><div class="mn">Tian Han Chuah</div><div class="mr">Sourcing · Penang</div></a>
-        <a class="member" href="https://www.linkedin.com/search/results/people/?keywords=Jocelyn%20Soh%20Teleperformance" target="_blank" rel="noopener"><div class="av">JS<span class="li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></span></div><div class="mn">Jocelyn Soh</div><div class="mr">Sourcing · KL</div></a>
-        <a class="member" href="https://www.linkedin.com/search/results/people/?keywords=Melaine%20Sua%20Teleperformance" target="_blank" rel="noopener"><div class="av">MS<span class="li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></span></div><div class="mn">Melaine Sua</div><div class="mr">Sourcing · KL</div></a>
-        <a class="member" href="https://www.linkedin.com/search/results/people/?keywords=Anna%20Saw%20Teleperformance" target="_blank" rel="noopener"><div class="av">AS<span class="li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></span></div><div class="mn">Anna Saw</div><div class="mr">Sourcing · Penang</div></a>
-        <a class="member" href="https://www.linkedin.com/search/results/people/?keywords=Chloe%20Heo%20Teleperformance" target="_blank" rel="noopener"><div class="av">CH<span class="li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></span></div><div class="mn">Chloe Heo</div><div class="mr">Sourcing · KL</div></a>
+        <a class="member" href="https://www.linkedin.com/in/nghsiangboon" target="_blank" rel="noopener"><div class="av">HB<span class="li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></span></div><div class="mn">Ng Hsiang Boon</div><div class="mr">Sourcing · Penang</div></a>
+        <a class="member" href="https://www.linkedin.com/in/jerry-chuah" target="_blank" rel="noopener"><div class="av">TH<span class="li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></span></div><div class="mn">Tian Han Chuah</div><div class="mr">Sourcing · Penang</div></a>
+        <a class="member" href="https://www.linkedin.com/in/jocelyn-soh-11a33338/" target="_blank" rel="noopener"><div class="av">JS<span class="li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></span></div><div class="mn">Jocelyn Soh</div><div class="mr">Sourcing · KL</div></a>
+        <a class="member" href="https://www.linkedin.com/in/heyminlee/" target="_blank" rel="noopener"><div class="av">MS<span class="li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></span></div><div class="mn">Melaine Sua</div><div class="mr">Sourcing · KL</div></a>
+        <a class="member" href="https://www.linkedin.com/search/results/all/?keywords=Anna%20Saw%20Teleperformance" target="_blank" rel="noopener"><div class="av">AS<span class="li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></span></div><div class="mn">Anna Saw</div><div class="mr">Sourcing · Penang</div></a>
+        <a class="member" href="https://www.linkedin.com/search/results/all/?keywords=Chloe%20Yoon%20Jung%20Heo" target="_blank" rel="noopener"><div class="av">CH<span class="li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></span></div><div class="mn">Chloe Heo</div><div class="mr">Sourcing · KL</div></a>
       </div>
 
       <div class="switch enter">
@@ -811,7 +867,7 @@ a.member:hover .mn{color:var(--pink)}
         <a href="https://tpmyandtpth.github.io/JLP/" target="_blank" rel="noopener">🇯🇵 日本語</a>
         <a href="https://tpmyandtpth.github.io/MLP/" target="_blank" rel="noopener">🇨🇳 中文</a>
         <a href="https://tpmyandtpth.github.io/KLP/" target="_blank" rel="noopener">🇰🇷 한국어</a>
-        <a class="soon" href="#">🇹🇭 ภาษาไทย · soon</a>
+        <a href="https://tpmyandtpth.github.io/TLP/" target="_blank" rel="noopener">🇹🇭 ภาษาไทย</a>
       </div>
     </div>
   </section>
@@ -856,10 +912,10 @@ a.member:hover .mn{color:var(--pink)}
         </div>
       </div>
 
-      <div class="cta-zone full enter">
-        <a class="btn btn-wa" href="https://wa.me/60193320265?text=Hi%20TP%20Talent%20Acquisition%2C%20I%27d%20like%20to%20apply%20and%20start%20the%20quick%20screening." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.8-1.49-1.78-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47 0 1.46 1.06 2.86 1.21 3.06.15.2 2.1 3.2 5.08 4.48.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91A9.82 9.82 0 0 0 12.04 2z"/></svg> Start screening on WhatsApp <span class="arr">→</span></a>
+      <div class="cta-zone enter">
         <div class="cta-row">
           <a class="btn btn-primary" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&amp;searchKeyword=multilingual" target="_blank" rel="noopener">Apply now <span class="arr">→</span></a>
+          <a class="btn-ghost" href="https://tpmyandtpth.github.io/LP/" target="_blank" rel="noopener"><span class="ms">grid_view</span>Browse all roles</a>
           <a class="btn-ghost" href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener"><span class="ms">chat</span>Book a casual chat</a>
         </div>
       </div>
@@ -874,13 +930,14 @@ a.member:hover .mn{color:var(--pink)}
           <a href="https://tpmyandtpth.github.io/MLP/" target="_blank" rel="noopener" lang="zh">中文</a>
           <a href="https://tpmyandtpth.github.io/JLP/" target="_blank" rel="noopener" lang="ja">日本語</a>
           <a href="https://tpmyandtpth.github.io/KLP/" target="_blank" rel="noopener" lang="ko">한국어</a>
+          <a href="https://tpmyandtpth.github.io/TLP/" target="_blank" rel="noopener" lang="th">ภาษาไทย</a>
         </div>
         <div class="foot-socials">
-          <a href="https://www.linkedin.com/company/teleperformance-malaysia" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></a>
-          <a href="https://www.instagram.com/tp_malaysia/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.72 3.72 0 0 1-.9 1.38c-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.88 5.88 0 0 0-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91a5.88 5.88 0 0 0 1.38 2.13 5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
-          <a href="https://www.tiktok.com/@tp_malaysia" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05 6.33 6.33 0 0 0-5.58 9.44A6.34 6.34 0 0 0 15.78 15.5V8.69a8.16 8.16 0 0 0 4.77 1.52V6.83a4.78 4.78 0 0 1-.96-.14z"/></svg></a>
-          <a href="https://wa.me/60193320265" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.8-1.49-1.78-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47 0 1.46 1.06 2.86 1.21 3.06.15.2 2.1 3.2 5.08 4.48.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91A9.82 9.82 0 0 0 12.04 2z"/></svg></a>
-          <a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.65 2 10.13c0 4.02 3.54 7.38 8.34 8.02.32.07.76.21.87.49.1.25.07.63.03.88l-.14.84c-.04.25-.2.98.86.53 1.05-.44 5.68-3.35 7.75-5.74 1.43-1.57 2.12-3.15 2.12-5.02C21.83 5.65 17.35 2 12 2z"/></svg></a>
+          <a href="https://www.facebook.com/TPinMalaysia" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.01 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.5 0-1.96.93-1.96 1.89v2.25h3.34l-.53 3.49h-2.81V24C19.61 23.08 24 18.09 24 12.07z"/></svg></a>
+          <a href="https://www.instagram.com/tpinmalaysia/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.72 3.72 0 0 1-.9 1.38c-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.88 5.88 0 0 0-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91a5.88 5.88 0 0 0 1.38 2.13 5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
+          <a href="https://www.tiktok.com/@tpinmalaysia" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05 6.33 6.33 0 0 0-5.58 9.44A6.34 6.34 0 0 0 15.78 15.5V8.69a8.16 8.16 0 0 0 4.77 1.52V6.83a4.78 4.78 0 0 1-.96-.14z"/></svg></a>
+          <a href="https://www.youtube.com/@wearetpgroup" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
+          <a href="https://www.linkedin.com/company/wearetpgroup" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></a>
         </div>
         <p class="foot-legal">Teleperformance Malaysia Sdn Bhd · SSM: 201601023769 (1194708-K)<br>
           TP (formerly Teleperformance) is a global digital business services company across 100+ countries and 170+ languages.<br>
@@ -892,9 +949,17 @@ a.member:hover .mn{color:var(--pink)}
 
 </main>
 
-<div class="fab-cluster">
-  <button class="fab-up" id="fabUp" aria-label="Back to top"><span class="ms">arrow_upward</span></button>
-  <a class="fab" id="fab" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&amp;searchKeyword=multilingual" target="_blank" rel="noopener">Apply</a>
+<div class="fab-stack" id="fabStack">
+  <a class="fab-btn fab-wa" href="https://wa.me/60193320265?text=Hi%20TP%20Talent%20Acquisition%2C%20I%27d%20like%20to%20apply%20and%20start%20the%20quick%20screening." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.8-1.49-1.78-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47 0 1.46 1.06 2.86 1.21 3.06.15.2 2.1 3.2 5.08 4.48.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91A9.82 9.82 0 0 0 12.04 2z"/></svg>
+    <span>WhatsApp screening</span>
+  </a>
+  <div class="fab-row">
+    <button class="fab-top" id="fabTop" aria-label="Back to top" title="Back to top"><span class="ms">arrow_upward</span></button>
+    <a class="fab-btn fab-apply" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&amp;searchKeyword=multilingual" target="_blank" rel="noopener">
+      <span>Apply now</span><span class="ms" aria-hidden="true">arrow_forward</span>
+    </a>
+  </div>
 </div>
 
 <script>
@@ -905,8 +970,8 @@ a.member:hover .mn{color:var(--pink)}
   var prog=document.getElementById('prog');
   var rail=document.getElementById('rail');
   var dotsBox=document.getElementById('dots');
-  var fab=document.getElementById('fab');
-  var fabUp=document.getElementById('fabUp');
+  var fabStack=document.getElementById('fabStack');
+  var fabTop=document.getElementById('fabTop');
 
   /* ---- dynamic viewport height (iOS safe) ---- */
   function setVh(){document.documentElement.style.setProperty('--vh', window.innerHeight+'px');}
@@ -934,10 +999,9 @@ a.member:hover .mn{color:var(--pink)}
     activeIndex=i;
     railBars.forEach(function(b,idx){b.classList.toggle('done',idx<i);b.classList.toggle('now',idx===i);});
     navDots.forEach(function(d,idx){d.classList.toggle('on',idx===i);});
-    fab.classList.toggle('on', i>0 && i<screens.length-1);
-    fabUp.classList.toggle('on', i>0);
+    fabStack.classList.toggle('on', i>0);
   }
-  fabUp.addEventListener('click',function(){
+  fabTop.addEventListener('click',function(){
     stage.scrollTo({top:0,behavior:'smooth'});
   });
   requestAnimationFrame(function(){setActive(0);});
