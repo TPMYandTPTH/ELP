@@ -385,5 +385,6 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 (function(){const observerOptions={threshold:0.1,rootMargin:'0px 0px -50px 0px'};const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.style.opacity='1';entry.target.style.transform='translateY(0)'}})},observerOptions);const elements=document.querySelectorAll('.about-content,.stat-item,.award-item,.testimonial,.contact-card,.gptw-gallery-item,.gptw-banner');elements.forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity 0.6s, transform 0.6s';observer.observe(el)})})();
 console.log('TP About page initialized - English version');
 </script>
+<script src="a11y.js" defer></script>
 </body>
 </html>

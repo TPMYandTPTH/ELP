@@ -554,5 +554,6 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 (function(){document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){const href=this.getAttribute('href');if(href==='#')return;e.preventDefault();const target=document.querySelector(href);if(target){const offset=80;const targetPosition=target.getBoundingClientRect().top+window.pageYOffset-offset;window.scrollTo({top:targetPosition,behavior:'smooth'})}})})})();
 console.log('TP English TA Team page initialized');
 </script>
+<script src="a11y.js" defer></script>
 </body>
 </html>

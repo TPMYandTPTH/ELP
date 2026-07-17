@@ -31,7 +31,7 @@
 :root{
   /* TP palette */
   --slate:#4B4C6A; --slate-ink:#2A2B3D; --slate-2:#5E5F7E;
-  --pink:#FF0082; --pink-2:#E6007A;
+  --pink:#FF0082; --pink-2:#E6007A; --pink-text:#C4006B;
   --teal:#00AF9B; --teal-ink:#0B6F63;
   /* surfaces */
   --bg:#FFFFFF; --paper:#F6F6FA; --paper-2:#EFEFF5;
@@ -73,6 +73,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;-webki
   display:none;flex-direction:column;gap:11px}
 @media(min-width:1024px){.dots{display:flex}}
 .dot{position:relative;width:6px;height:6px;border-radius:50%;background:var(--line-2);transition:all .35s cubic-bezier(.16,1,.3,1)}
+.dot::after{content:"";position:absolute;inset:-9px;border-radius:50%} /* 24px min hit target */
 .dot.on{background:var(--pink);height:22px;border-radius:3px;box-shadow:0 0 0 4px rgba(255,0,130,.12)}
 .dot .lbl{position:absolute;right:18px;top:50%;transform:translateY(-50%);white-space:nowrap;
   font-family:var(--mono);font-size:10px;letter-spacing:.04em;color:var(--slate-2);
@@ -113,13 +114,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;-webki
   margin-right:6px;animation:pulse 1.6s infinite}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(0,175,155,.45)}50%{box-shadow:0 0 0 6px rgba(0,175,155,0)}}
 
-.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--pink);font-weight:700}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--pink-text);font-weight:700}
 .eyebrow{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;
-  letter-spacing:.06em;text-transform:uppercase;color:var(--pink);font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--pink-text);font-weight:700;
   background:rgba(255,0,130,.07);border:1px solid rgba(255,0,130,.18);border-radius:100px;padding:5px 14px;width:fit-content}
 
 h1,h2{font-family:var(--display);letter-spacing:-.025em;line-height:1.02;font-weight:700;color:var(--ink)}
-em{font-style:italic;color:var(--pink);font-weight:600}
+em{font-style:italic;color:var(--pink-text);font-weight:600}
 .lede{color:var(--muted);font-size:clamp(14px,2.6vw,16px);line-height:1.5;max-width:46ch;margin-top:14px}
 
 /* badges */
@@ -495,7 +496,7 @@ a.member:hover .mn{color:var(--pink)}
 <div class="prog" id="prog"></div>
 
 <div class="rail" id="rail" aria-hidden="true"></div>
-<div class="dots" id="dots" aria-hidden="true"></div>
+<nav class="dots" id="dots" aria-label="Page sections"></nav>
 
 <main class="stage" id="stage">
 
@@ -569,7 +570,7 @@ a.member:hover .mn{color:var(--pink)}
             <div class="meta"><span><span class="ms">train</span>BTS</span></div>
             <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Teleperformance%20Bangkok" target="_blank" rel="noopener"><span class="ms">location_on</span>Open in Maps</a></div></div>
       </div>
-      <div class="pips enter" id="locPips"></div>
+      <div class="pips enter" id="locPips" role="group" aria-label="Location cards"></div>
     </div>
   </section>
 
@@ -767,16 +768,16 @@ a.member:hover .mn{color:var(--pink)}
       <h2 class="enter" style="font-size:clamp(28px,6.5vw,44px)">Our <em>offices</em>.</h2>
       <p class="lede enter">Six locations across Malaysia, plus work-from-home. Open any office in Google Maps.</p>
 
-      <div class="tabs enter">
-        <button class="tab active" data-tab="png">🇲🇾 Penang</button>
-        <button class="tab" data-tab="kl">🇲🇾 Kuala Lumpur</button>
-        <button class="tab" data-tab="jb">🇲🇾 Johor</button>
-        <button class="tab" data-tab="wfh">🏠 WFH</button>
+      <div class="tabs enter" role="tablist" aria-label="Office locations">
+        <button class="tab active" data-tab="png" role="tab" id="tab-png" aria-controls="pane-png" aria-selected="true">🇲🇾 Penang</button>
+        <button class="tab" data-tab="kl" role="tab" id="tab-kl" aria-controls="pane-kl" aria-selected="false" tabindex="-1">🇲🇾 Kuala Lumpur</button>
+        <button class="tab" data-tab="jb" role="tab" id="tab-jb" aria-controls="pane-jb" aria-selected="false" tabindex="-1">🇲🇾 Johor</button>
+        <button class="tab" data-tab="wfh" role="tab" id="tab-wfh" aria-controls="pane-wfh" aria-selected="false" tabindex="-1">🏠 WFH</button>
       </div>
 
       <div class="tabpanes enter">
         <!-- PENANG (3) -->
-        <div class="tabpane active" id="pane-png">
+        <div class="tabpane active" id="pane-png" role="tabpanel" aria-labelledby="tab-png">
           <div class="office">
             <div class="office-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="TP One Precinct, Penang" src="https://www.google.com/maps?q=Lengkok%20Mayang%20Pasir%201%2C%20Bandar%20Bayan%20Baru%2C%2011900%20Bayan%20Lepas%2C%20Penang&z=15&output=embed"></iframe></div>
             <h4><span class="ms">corporate_fare</span>One Precinct (OP)<span class="tag-region">Penang</span></h4>
@@ -798,7 +799,7 @@ a.member:hover .mn{color:var(--pink)}
         </div>
 
         <!-- KUALA LUMPUR / KLANG VALLEY (2) -->
-        <div class="tabpane" id="pane-kl">
+        <div class="tabpane" id="pane-kl" role="tabpanel" aria-labelledby="tab-kl">
           <div class="office">
             <div class="office-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="TP G-Tower, Kuala Lumpur" src="https://www.google.com/maps?q=G-Tower%2C%20199%20Jalan%20Tun%20Razak%2C%2050400%20Kuala%20Lumpur&z=15&output=embed"></iframe></div>
             <h4><span class="ms">corporate_fare</span>G-Tower (HQ)<span class="tag-region">KL</span></h4>
@@ -814,7 +815,7 @@ a.member:hover .mn{color:var(--pink)}
         </div>
 
         <!-- JOHOR (1) -->
-        <div class="tabpane" id="pane-jb">
+        <div class="tabpane" id="pane-jb" role="tabpanel" aria-labelledby="tab-jb">
           <!-- JOHOR: no saved Maps pin yet — embed + link use a search by name. Replace href with the real maps.app.goo.gl pin when you have it. -->
           <div class="office">
             <div class="office-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="TP Johor Bahru" src="https://www.google.com/maps?q=Teleperformance%20Johor%20Bahru&z=12&output=embed"></iframe></div>
@@ -825,7 +826,7 @@ a.member:hover .mn{color:var(--pink)}
         </div>
 
         <!-- WFH -->
-        <div class="tabpane" id="pane-wfh">
+        <div class="tabpane" id="pane-wfh" role="tabpanel" aria-labelledby="tab-wfh">
           <div class="office"><h4><span class="ms">home</span>Work From Home</h4>
             <p>Select roles are fully remote from anywhere in Malaysia. Equipment provided. Same benefits package.</p>
             <div class="wfh-langs"><span>Mandarin</span><span>Japanese</span><span>Korean</span><span>Cantonese</span><span>Thai</span><span>English</span></div>
@@ -973,6 +974,12 @@ a.member:hover .mn{color:var(--pink)}
   var fabStack=document.getElementById('fabStack');
   var fabTop=document.getElementById('fabTop');
 
+  /* honor OS reduced-motion and the site accessibility toggle */
+  function scrollBehavior(){
+    return (window.matchMedia('(prefers-reduced-motion: reduce)').matches||
+      document.documentElement.classList.contains('a11y-motion'))?'auto':'smooth';
+  }
+
   /* ---- dynamic viewport height (iOS safe) ---- */
   function setVh(){document.documentElement.style.setProperty('--vh', window.innerHeight+'px');}
   setVh();
@@ -983,8 +990,9 @@ a.member:hover .mn{color:var(--pink)}
   screens.forEach(function(s,i){
     var r=document.createElement('span'); r.innerHTML='<i></i>'; rail.appendChild(r);
     var d=document.createElement('button'); d.className='dot';
+    d.setAttribute('aria-label','Go to '+(s.dataset.label||('section '+(i+1))));
     d.innerHTML='<span class="lbl">'+(s.dataset.label||('0'+(i+1)))+'</span>';
-    d.addEventListener('click',function(){screens[i].scrollIntoView({behavior:'smooth'});});
+    d.addEventListener('click',function(){screens[i].scrollIntoView({behavior:scrollBehavior()});});
     dotsBox.appendChild(d);
   });
   var railBars=[].slice.call(rail.children);
@@ -998,11 +1006,14 @@ a.member:hover .mn{color:var(--pink)}
     screens[i].classList.add('active');
     activeIndex=i;
     railBars.forEach(function(b,idx){b.classList.toggle('done',idx<i);b.classList.toggle('now',idx===i);});
-    navDots.forEach(function(d,idx){d.classList.toggle('on',idx===i);});
+    navDots.forEach(function(d,idx){
+      d.classList.toggle('on',idx===i);
+      if(idx===i)d.setAttribute('aria-current','true');else d.removeAttribute('aria-current');
+    });
     fabStack.classList.toggle('on', i>0);
   }
   fabTop.addEventListener('click',function(){
-    stage.scrollTo({top:0,behavior:'smooth'});
+    stage.scrollTo({top:0,behavior:scrollBehavior()});
   });
   requestAnimationFrame(function(){setActive(0);});
 
@@ -1026,6 +1037,7 @@ a.member:hover .mn{color:var(--pink)}
 
   /* ---- counters ---- */
   function animateCount(el,to){
+    if(scrollBehavior()==='auto'){el.textContent=to;return;}
     var start=performance.now(),dur=1400;
     function frame(t){
       var k=Math.min(1,(t-start)/dur), eased=1-Math.pow(1-k,3);
@@ -1063,13 +1075,28 @@ a.member:hover .mn{color:var(--pink)}
     });
   });
 
-  /* ---- offices tabs ---- */
-  document.querySelectorAll('.tab').forEach(function(t){
-    t.addEventListener('click',function(){
-      document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active');});
-      document.querySelectorAll('.tabpane').forEach(function(x){x.classList.remove('active');});
-      t.classList.add('active');
-      document.getElementById('pane-'+t.dataset.tab).classList.add('active');
+  /* ---- offices tabs (with ARIA state + arrow-key navigation) ---- */
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function selectTab(t,focus){
+    tabs.forEach(function(x){
+      var on=x===t;
+      x.classList.toggle('active',on);
+      x.setAttribute('aria-selected',on?'true':'false');
+      x.tabIndex=on?0:-1;
+    });
+    document.querySelectorAll('.tabpane').forEach(function(x){x.classList.remove('active');});
+    document.getElementById('pane-'+t.dataset.tab).classList.add('active');
+    if(focus)t.focus();
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){selectTab(t,false);});
+    t.addEventListener('keydown',function(e){
+      var n=null;
+      if(e.key==='ArrowRight'||e.key==='ArrowDown')n=(i+1)%tabs.length;
+      else if(e.key==='ArrowLeft'||e.key==='ArrowUp')n=(i-1+tabs.length)%tabs.length;
+      else if(e.key==='Home')n=0;
+      else if(e.key==='End')n=tabs.length-1;
+      if(n!==null){e.preventDefault();e.stopPropagation();selectTab(tabs[n],true);}
     });
   });
 
@@ -1077,9 +1104,11 @@ a.member:hover .mn{color:var(--pink)}
   var track=document.getElementById('locTrack');
   var cards=[].slice.call(track.querySelectorAll('.loc-card'));
   var pipBox=document.getElementById('locPips');
-  cards.forEach(function(_,i){
+  cards.forEach(function(c,i){
     var p=document.createElement('button'); p.className='pip'+(i===0?' on':'');
-    p.addEventListener('click',function(){cards[i].scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});});
+    var city=c.querySelector('.city');
+    p.setAttribute('aria-label','Show '+(city?city.textContent:'location '+(i+1)));
+    p.addEventListener('click',function(){cards[i].scrollIntoView({behavior:scrollBehavior(),inline:'center',block:'nearest'});});
     pipBox.appendChild(p);
   });
   track.addEventListener('scroll',function(){
@@ -1111,11 +1140,13 @@ a.member:hover .mn{color:var(--pink)}
   /* ---- keyboard nav (desktop) ---- */
   window.addEventListener('keydown',function(e){
     var tag=(e.target.tagName||'').toLowerCase();
-    if(tag==='input'||tag==='textarea') return;
-    if(e.key==='ArrowDown'||e.key==='PageDown'){e.preventDefault();screens[Math.min(screens.length-1,activeIndex+1)].scrollIntoView({behavior:'smooth'});}
-    else if(e.key==='ArrowUp'||e.key==='PageUp'){e.preventDefault();screens[Math.max(0,activeIndex-1)].scrollIntoView({behavior:'smooth'});}
+    if(tag==='input'||tag==='textarea'||tag==='select'||e.target.isContentEditable) return;
+    if(e.target.getAttribute&&e.target.getAttribute('role')==='tab') return;
+    if(e.key==='ArrowDown'||e.key==='PageDown'){e.preventDefault();screens[Math.min(screens.length-1,activeIndex+1)].scrollIntoView({behavior:scrollBehavior()});}
+    else if(e.key==='ArrowUp'||e.key==='PageUp'){e.preventDefault();screens[Math.max(0,activeIndex-1)].scrollIntoView({behavior:scrollBehavior()});}
   });
 })();
 </script>
+<script src="a11y.js" defer></script>
 </body>
 </html>
