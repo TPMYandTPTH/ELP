@@ -1,0 +1,1122 @@
+test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FF0082">
+<title>TP Careers | Malaysia &amp; Thailand</title>
+<meta name="description" content="Join TP in Malaysia & Thailand. Multilingual careers — paid training, relocation, visa, medical. Apply in 5 minutes.">
+<!-- Open Graph -->
+<meta property="og:title" content="TP Careers — Start Your Global Career">
+<meta property="og:description" content="Join a Fortune 500 team in Malaysia & Thailand. Multilingual roles with full relocation, visa, and training. Apply in 5 minutes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tpmyandtpth.github.io/ELP/">
+<meta property="og:image" content="https://tpmyandtpth.github.io/photos/TPLogo11.png">
+<meta property="og:site_name" content="TP Careers">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TP Careers — Start Your Global Career">
+<meta name="twitter:description" content="Multilingual roles in Malaysia & Thailand. Full relocation package. Apply now.">
+<meta name="twitter:image" content="https://tpmyandtpth.github.io/photos/TPLogo11.png">
+<link rel="icon" href="https://tpmyandtpth.github.io/ELP/TPLogo.png" type="image/png">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SPPNGS1L2L"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-SPPNGS1L2L');</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&family=Caveat:wght@600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  /* TP palette */
+  --slate:#4B4C6A; --slate-ink:#2A2B3D; --slate-2:#5E5F7E;
+  --pink:#FF0082; --pink-2:#E6007A;
+  --teal:#00AF9B; --teal-ink:#0B6F63;
+  /* surfaces */
+  --bg:#FFFFFF; --paper:#F6F6FA; --paper-2:#EFEFF5;
+  --line:rgba(75,76,106,.14); --line-2:rgba(75,76,106,.22);
+  --ink:#2A2B3D; --muted:#6A6B85;
+  /* type */
+  --display:'Space Grotesk','Plus Jakarta Sans',sans-serif;
+  --base:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  --mono:'Space Mono',ui-monospace,monospace;
+  --hand:'Caveat',cursive;
+  --vh:100vh;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:var(--base); background:var(--bg); color:var(--ink);
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  overscroll-behavior:none;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+::selection{background:var(--pink);color:#fff}
+.ms{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;line-height:1;vertical-align:middle}
+
+/* ========== TOP PROGRESS BAR ========== */
+.prog{position:fixed;top:0;left:0;height:3px;width:0%;z-index:500;
+  background:linear-gradient(90deg,var(--slate),var(--pink));transition:width .12s linear}
+
+/* ========== SEGMENTED RAIL (mobile top) ========== */
+.rail{position:fixed;top:10px;left:14px;right:14px;z-index:400;display:flex;gap:5px}
+.rail span{flex:1;height:3px;border-radius:2px;background:rgba(75,76,106,.16);overflow:hidden;position:relative}
+.rail span i{position:absolute;inset:0;background:var(--pink);transform-origin:left;transform:scaleX(0);transition:transform .3s ease}
+.rail span.done i{transform:scaleX(1)}
+.rail span.now i{transform:scaleX(.5);background:var(--slate)}
+@media(min-width:1024px){.rail{display:none}}
+
+/* ========== SIDE DOT NAV (desktop) ========== */
+.dots{position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:400;
+  display:none;flex-direction:column;gap:11px}
+@media(min-width:1024px){.dots{display:flex}}
+.dot{position:relative;width:6px;height:6px;border-radius:50%;background:var(--line-2);transition:all .35s cubic-bezier(.16,1,.3,1)}
+.dot.on{background:var(--pink);height:22px;border-radius:3px;box-shadow:0 0 0 4px rgba(255,0,130,.12)}
+.dot .lbl{position:absolute;right:18px;top:50%;transform:translateY(-50%);white-space:nowrap;
+  font-family:var(--mono);font-size:10px;letter-spacing:.04em;color:var(--slate-2);
+  opacity:0;pointer-events:none;transition:opacity .25s;text-transform:lowercase}
+.dot:hover .lbl{opacity:1}
+
+/* ========== STAGE / SCREENS ========== */
+.stage{height:var(--vh);overflow-y:auto;scroll-snap-type:y mandatory;scroll-behavior:smooth;
+  scrollbar-width:none}
+.stage::-webkit-scrollbar{display:none}
+.screen{min-height:var(--vh);scroll-snap-align:start;scroll-snap-stop:always;
+  position:relative;display:flex;flex-direction:column;justify-content:center;
+  padding:64px clamp(20px,5vw,40px) 96px;overflow:hidden}
+.wrap{width:100%;max-width:880px;margin:0 auto}
+@media(min-width:1024px){.screen{padding:80px 64px 80px}}
+
+/* entrance animation */
+.enter{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
+.screen.active .enter{opacity:1;transform:none}
+.screen.active .enter:nth-child(1){transition-delay:.02s}
+.screen.active .enter:nth-child(2){transition-delay:.07s}
+.screen.active .enter:nth-child(3){transition-delay:.12s}
+.screen.active .enter:nth-child(4){transition-delay:.17s}
+.screen.active .enter:nth-child(5){transition-delay:.22s}
+.screen.active .enter:nth-child(6){transition-delay:.27s}
+.screen.active .enter:nth-child(7){transition-delay:.32s}
+.screen.active .enter:nth-child(8){transition-delay:.37s}
+
+/* ========== SHARED BITS ========== */
+.scr-head{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  font-family:var(--mono);font-size:11px;color:var(--muted);text-transform:lowercase;letter-spacing:.02em;margin-bottom:18px}
+.scr-head .brand{display:flex;align-items:center;gap:7px;font-family:var(--display);font-weight:700;
+  text-transform:none;color:var(--ink);font-size:14px}
+.scr-head .brand .logo{display:inline-flex;align-items:center;justify-content:center;height:24px;width:auto}
+.scr-head .brand .logo img{height:24px;width:auto;display:block;object-fit:contain}
+.scr-head .brand small{font-family:var(--mono);font-weight:400;color:var(--muted);font-size:11px}
+.scr-head .dot-live{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--teal);
+  margin-right:6px;animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(0,175,155,.45)}50%{box-shadow:0 0 0 6px rgba(0,175,155,0)}}
+
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--pink);font-weight:700}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--pink);font-weight:700;
+  background:rgba(255,0,130,.07);border:1px solid rgba(255,0,130,.18);border-radius:100px;padding:5px 14px;width:fit-content}
+
+h1,h2{font-family:var(--display);letter-spacing:-.025em;line-height:1.02;font-weight:700;color:var(--ink)}
+em{font-style:italic;color:var(--pink);font-weight:600}
+.lede{color:var(--muted);font-size:clamp(14px,2.6vw,16px);line-height:1.5;max-width:46ch;margin-top:14px}
+
+/* badges */
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.badge{font-family:var(--mono);font-size:11px;padding:6px 12px;border-radius:100px;border:1px solid var(--line-2);color:var(--slate)}
+.badge.solid{background:var(--slate);color:#fff;border-color:var(--slate);font-weight:700}
+.badge.pink{background:var(--pink);color:#fff;border-color:var(--pink);font-weight:700}
+.badge.teal{background:var(--teal);color:#fff;border-color:var(--teal);font-weight:700}
+
+/* buttons */
+.cta-zone{margin-top:24px;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:15px;
+  padding:14px 22px;border-radius:100px;min-height:50px;transition:transform .18s,box-shadow .25s,background .2s}
+.btn .arr{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;font-size:17px;transition:transform .2s}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--pink);color:#fff;box-shadow:0 14px 30px rgba(255,0,130,.24)}
+.btn-primary:hover{background:var(--pink-2)}
+.btn-primary .arr{background:#fff;color:var(--pink)}
+.btn-primary:hover .arr{transform:translateX(3px)}
+.btn-slate{background:var(--slate);color:#fff}
+.btn-slate .arr{background:#fff;color:var(--slate)}
+.btn-teal{background:var(--teal);color:#fff;box-shadow:0 14px 30px rgba(0,175,155,.22)}
+.btn-teal .arr{background:#fff;color:var(--teal)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line-2);color:var(--slate);
+  padding:13px 20px;border-radius:100px;font-weight:600;font-size:14px;min-height:46px}
+.btn-ghost:hover{border-color:var(--slate);background:var(--paper)}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+
+.swipe{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:6px}
+.swipe::before,.swipe::after{content:"";height:1px;width:16px;background:var(--line-2)}
+.swipe i{animation:bob 1.4s ease infinite;font-style:normal}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+
+/* ========== FAB STACK (WhatsApp on top, then back-to-top + Apply) ========== */
+.fab-stack{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:450;
+  display:flex;flex-direction:column;align-items:flex-end;gap:10px;
+  opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .35s,transform .35s}
+.fab-stack.on{opacity:1;transform:none;pointer-events:auto}
+.fab-row{display:flex;align-items:center;gap:8px}
+.fab-btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:700;font-size:14px;
+  padding:13px 18px;border-radius:100px;color:#fff;box-shadow:0 10px 26px rgba(0,0,0,.16);white-space:nowrap;
+  transition:transform .18s,filter .2s,background .2s}
+.fab-btn:active{transform:scale(.96)}
+.fab-btn svg{width:20px;height:20px;fill:currentColor;flex-shrink:0}
+.fab-btn .ms{font-size:20px}
+.fab-wa{background:#25D366}
+.fab-wa:hover{filter:brightness(1.06)}
+.fab-apply{background:var(--pink)}
+.fab-apply:hover{background:var(--pink-2)}
+.fab-apply::before{content:"";width:8px;height:8px;border-radius:50%;background:#fff;animation:pulse 1.4s infinite}
+.fab-top{width:44px;height:44px;border-radius:50%;background:#fff;color:var(--slate);border:1px solid var(--line-2);
+  box-shadow:0 8px 20px rgba(75,76,106,.18);display:grid;place-items:center;transition:background .2s,color .2s,transform .18s}
+.fab-top .ms{font-size:22px}
+.fab-top:active{transform:scale(.94)}
+.fab-top:hover{background:var(--paper);color:var(--pink)}
+@media(min-width:1024px){.fab-stack{right:28px;bottom:calc(28px + env(safe-area-inset-bottom))}}
+@media(max-width:380px){.fab-btn{font-size:12.5px;padding:11px 14px;gap:7px}}
+
+/* WhatsApp screening button */
+.btn-wa{background:#25D366;color:#fff;box-shadow:0 14px 30px rgba(37,211,102,.26)}
+.btn-wa:hover{background:#1FB855}
+.btn-wa .arr{background:#fff;color:#25D366}
+.btn-wa svg{width:20px;height:20px;fill:currentColor}
+.cta-zone.full .cta-row,.cta-zone.full .btn-wa{width:100%}
+.cta-zone.full .btn{justify-content:center}
+@media(min-width:560px){.cta-zone.full .btn-wa{width:auto}}
+
+/* location card map link */
+.loc-card .maplink{display:inline-flex;align-items:center;gap:5px;margin-top:12px;
+  font-family:var(--mono);font-size:11px;color:var(--slate);background:#fff;border:1px solid var(--line);
+  padding:7px 12px;border-radius:100px;transition:border-color .2s,color .2s}
+.loc-card .maplink:hover{border-color:var(--slate);color:var(--pink)}
+.loc-card .maplink .ms{font-size:14px;color:var(--pink)}
+
+/* walk-in venue map link */
+.detail a.maplink{display:inline-flex;align-items:center;gap:5px;color:var(--pink);font-weight:600}
+.detail a.maplink:hover{text-decoration:underline}
+
+/* recruiter -> LinkedIn */
+a.member{cursor:pointer;text-decoration:none;transition:transform .2s}
+a.member:hover{transform:translateY(-3px)}
+a.member .av{position:relative}
+a.member .li{position:absolute;right:-2px;bottom:-2px;width:20px;height:20px;border-radius:50%;
+  background:#0A66C2;display:grid;place-items:center;border:2px solid var(--bg)}
+a.member .li svg{width:11px;height:11px;fill:#fff}
+a.member:hover .mn{color:var(--pink)}
+
+/* spacing: clear the FAB stack on the last screens + safe area */
+.screen{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+.s-final,.s-faq{padding-bottom:calc(40px + env(safe-area-inset-bottom))}
+@media(min-width:1024px){
+  .screen{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
+  .wrap{max-width:920px}
+}
+
+/* LP hub link under roles list */
+.roles-all{display:inline-flex;align-items:center;gap:7px;margin-top:14px;align-self:center;
+  font-family:var(--display);font-weight:600;font-size:13px;color:var(--pink);
+  border:1px solid rgba(255,0,130,.3);background:rgba(255,0,130,.05);padding:9px 16px;border-radius:100px;flex-shrink:0}
+.roles-all:hover{background:rgba(255,0,130,.1)}
+.roles-all .ms{font-size:16px}
+
+/* office embedded maps */
+.office-map{height:172px;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;background:var(--paper-2)}
+.office-map iframe{width:100%;height:100%;border:0;display:block}
+.office .tag-region{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.04em;
+  color:#fff;background:var(--slate);padding:3px 9px;border-radius:7px;margin-left:auto}
+.office h4{justify-content:flex-start}
+.office h4 .tag-region{margin-left:auto}
+
+/* =====================================================
+   01 — HERO
+===================================================== */
+.s-hero{background:
+  radial-gradient(120% 90% at 85% 0%,rgba(255,0,130,.07),transparent 55%),
+  radial-gradient(120% 90% at 0% 100%,rgba(75,76,106,.06),transparent 55%),var(--bg)}
+.hero-h{font-size:clamp(44px,11vw,84px);margin-top:14px}
+.hero-h .hl{background:var(--slate);color:#fff;padding:0 10px;border-radius:10px;display:inline-block;transform:rotate(-1.5deg)}
+.hero-h .pk{color:var(--pink)}
+.stamp{position:absolute;top:clamp(60px,12vw,90px);right:clamp(16px,6vw,70px);width:104px;height:104px;opacity:.92}
+.stamp svg{width:100%;height:100%;animation:spin 18s linear infinite}
+.stamp .mid{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-weight:700;
+  font-size:13px;line-height:1;text-align:center;color:var(--pink)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:560px){.stamp{display:none}}
+.trust{display:flex;flex-wrap:wrap;gap:clamp(18px,5vw,40px);margin-top:26px}
+.trust .g{display:flex;flex-direction:column}
+.trust .g b{font-family:var(--display);font-weight:700;font-size:clamp(26px,5vw,34px);color:var(--slate);letter-spacing:-.02em}
+.trust .g b .sfx{color:var(--pink)}
+.trust .g span{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:2px;text-transform:lowercase}
+
+/* =====================================================
+   02 — LOCATIONS (horizontal carousel)
+===================================================== */
+.loc-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 14px;margin-top:18px;
+  scrollbar-width:none}
+.loc-track::-webkit-scrollbar{display:none}
+.loc-card{flex:0 0 78%;max-width:330px;scroll-snap-align:center;border:1px solid var(--line);border-radius:20px;
+  overflow:hidden;background:var(--paper);position:relative}
+@media(min-width:760px){.loc-card{flex:0 0 320px}}
+.loc-card .top{height:128px;display:flex;align-items:flex-end;padding:14px;
+  background:linear-gradient(135deg,var(--slate),var(--slate-ink));color:#fff;position:relative}
+.loc-card:nth-child(2) .top{background:linear-gradient(135deg,#6A6B92,var(--slate))}
+.loc-card:nth-child(3) .top{background:linear-gradient(135deg,var(--pink),#B8005F)}
+.loc-card:nth-child(4) .top{background:linear-gradient(135deg,var(--teal),var(--teal-ink))}
+.loc-card:nth-child(5) .top{background:linear-gradient(135deg,var(--slate-ink),#1C1D2B)}
+.loc-card .flag{position:absolute;top:12px;right:12px;font-family:var(--mono);font-size:11px;background:rgba(255,255,255,.18);
+  padding:4px 9px;border-radius:100px;backdrop-filter:blur(6px)}
+.loc-card .city{font-family:var(--display);font-weight:700;font-size:20px;line-height:1.1}
+.loc-card .body{padding:14px 16px 18px}
+.loc-card .desc{font-size:13px;color:var(--muted);line-height:1.45}
+.loc-card .meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.loc-card .meta span{font-family:var(--mono);font-size:10.5px;color:var(--slate);background:#fff;border:1px solid var(--line);
+  padding:4px 8px;border-radius:8px;display:inline-flex;align-items:center;gap:4px}
+.loc-card .meta .ms{font-size:13px;color:var(--pink)}
+.pips{display:flex;gap:6px;justify-content:center;margin-top:6px}
+.pip{width:7px;height:7px;border-radius:50%;background:var(--line-2);transition:all .3s}
+.pip.on{background:var(--pink);width:18px;border-radius:4px}
+
+/* =====================================================
+   03 — ROLES (accordion, internal scroll)
+===================================================== */
+.s-roles{justify-content:flex-start}
+.s-roles>.wrap{flex:1;width:100%}
+.roles{margin-top:14px;display:flex;flex-direction:column;gap:9px;overflow-y:auto;flex:1 1 auto;min-height:0;
+  padding:2px 2px 16px;-webkit-overflow-scrolling:touch}
+.roles::-webkit-scrollbar{width:5px}.roles::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:4px}
+.role{border:1px solid var(--line);border-radius:16px;background:var(--paper);overflow:hidden;transition:border-color .2s,background .2s}
+.role.open{border-color:var(--slate);background:#fff;box-shadow:0 10px 26px rgba(75,76,106,.08)}
+.role-top{display:flex;align-items:center;gap:10px;padding:15px 16px;cursor:pointer}
+.role-top .ttl{flex:1;min-width:0}
+.role-top .ttl .name{font-family:var(--display);font-weight:600;font-size:15.5px;letter-spacing:-.01em;color:var(--ink)}
+.role-top .ttl .sub{font-size:12px;color:var(--muted);margin-top:2px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.role-top .ttl .sub .ms{font-size:14px;color:var(--slate-2)}
+.role-top .tag{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.04em;padding:5px 9px;border-radius:7px;
+  background:var(--slate);color:#fff;white-space:nowrap}
+.role-top .tag.pk{background:var(--pink)}
+.role-top .tag.teal{background:var(--teal)}
+.role-top .chev{font-family:'Material Symbols Outlined';color:var(--slate-2);transition:transform .25s;font-size:22px}
+.role.open .chev{transform:rotate(180deg)}
+.role-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .32s ease}
+.role.open .role-body{grid-template-rows:1fr}
+.role-body>.role-inner{overflow:hidden;min-height:0}
+.role-inner{padding:0 16px 16px}
+.role-inner p{font-size:13.5px;color:var(--muted);line-height:1.5}
+.role-perks{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+.role-perks span{font-family:var(--mono);font-size:10.5px;color:var(--slate);background:var(--paper-2);
+  padding:5px 9px;border-radius:8px;display:inline-flex;align-items:center;gap:4px}
+.role-perks .ms{font-size:13px;color:var(--teal)}
+.role-pay{font-size:12.5px;color:var(--ink);font-weight:600;margin-bottom:4px;display:flex;align-items:center;gap:6px}
+.role-pay .ms{color:var(--pink);font-size:16px}
+.role-pay .det{font-weight:400;color:var(--muted)}
+.role .apply{display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-family:var(--display);font-weight:600;
+  font-size:13px;color:#fff;background:var(--pink);padding:9px 16px;border-radius:100px}
+.role .apply:hover{background:var(--pink-2)}
+
+/* =====================================================
+   04 — BENEFITS bento
+===================================================== */
+.bento{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}
+@media(min-width:760px){.bento{grid-template-columns:repeat(3,1fr)}}
+.cell{border:1px solid var(--line);border-radius:16px;padding:16px;background:var(--paper);display:flex;flex-direction:column;gap:7px}
+.cell .ms{font-size:24px;color:var(--pink)}
+.cell .k{font-family:var(--display);font-weight:600;font-size:15px;color:var(--ink)}
+.cell .v{font-size:12.5px;color:var(--muted);line-height:1.45}
+.cell.slate{background:var(--slate);border-color:var(--slate)}
+.cell.slate .ms,.cell.slate .k{color:#fff}.cell.slate .v{color:rgba(255,255,255,.82)}
+.cell.pink{background:var(--pink);border-color:var(--pink)}
+.cell.pink .ms,.cell.pink .k{color:#fff}.cell.pink .v{color:rgba(255,255,255,.9)}
+.cell.teal{background:var(--teal);border-color:var(--teal)}
+.cell.teal .ms,.cell.teal .k{color:#fff}.cell.teal .v{color:rgba(255,255,255,.9)}
+@media(min-width:760px){.cell.wide{grid-column:span 2}}
+
+/* =====================================================
+   05 — PROCESS
+===================================================== */
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
+@media(min-width:760px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{border:1px solid var(--line);border-radius:16px;padding:18px 16px;background:var(--paper);position:relative}
+.step .no{font-family:var(--display);font-weight:700;font-size:30px;color:var(--pink);line-height:1}
+.step .st{font-family:var(--display);font-weight:600;font-size:15px;margin-top:8px;color:var(--ink)}
+.step .sd{font-size:12.5px;color:var(--muted);line-height:1.45;margin-top:5px}
+
+/* =====================================================
+   06 — MEET US
+===================================================== */
+.meet-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:18px}
+@media(min-width:760px){.meet-grid{grid-template-columns:1fr 1fr}}
+.panel{border:1px solid var(--line);border-radius:18px;padding:18px;background:var(--paper);position:relative;overflow:hidden}
+.panel::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--pink),var(--slate))}
+.panel.teal::before{background:linear-gradient(90deg,var(--teal),var(--slate))}
+.panel h3{font-family:var(--display);font-weight:700;font-size:17px;color:var(--ink);display:flex;align-items:center;gap:8px}
+.panel h3 .ms{color:var(--pink);font-size:20px}
+.panel.teal h3 .ms{color:var(--teal)}
+.detail{display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--muted);margin-top:9px;line-height:1.4}
+.detail .ms{font-size:17px;color:var(--slate-2);flex-shrink:0}
+.bring{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.bring span{font-family:var(--mono);font-size:11px;color:var(--slate);background:#fff;border:1px solid var(--line);padding:5px 10px;border-radius:8px;display:inline-flex;gap:5px;align-items:center}
+.bring .ms{font-size:14px;color:var(--pink)}
+.langpills{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.langpills span{font-family:var(--mono);font-size:11px;background:var(--paper-2);padding:5px 10px;border-radius:100px;color:var(--slate)}
+
+/* =====================================================
+   07 — REFER A FRIEND
+===================================================== */
+.s-raf{background:radial-gradient(120% 90% at 90% 0%,rgba(0,175,155,.06),transparent 55%),var(--bg)}
+.tiers{display:grid;grid-template-columns:1fr;gap:12px;margin-top:18px}
+@media(min-width:680px){.tiers{grid-template-columns:repeat(3,1fr)}}
+.tier{border:1px solid var(--line);border-radius:18px;padding:20px 18px;background:var(--paper);text-align:center;position:relative}
+.tier.top{background:var(--slate);border-color:var(--slate)}
+.tier .amt{font-family:var(--display);font-weight:700;font-size:clamp(28px,6vw,38px);color:var(--pink);letter-spacing:-.02em}
+.tier.top .amt{color:#fff}
+.tier .role-n{font-size:13px;color:var(--ink);font-weight:600;margin-top:6px}
+.tier.top .role-n{color:#fff}
+.tier .cond{font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:4px}
+.tier.top .cond{color:rgba(255,255,255,.7)}
+.tier .crown{position:absolute;top:-9px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:10px;
+  font-weight:700;background:var(--teal);color:#fff;padding:3px 10px;border-radius:100px}
+.fine{margin-top:16px;display:flex;flex-direction:column;gap:7px}
+.fine div{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--muted);line-height:1.4}
+.fine .ms{font-size:15px;color:var(--slate-2);flex-shrink:0}
+
+/* =====================================================
+   08 — OFFICES (tabs)
+===================================================== */
+.tabs{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+.tab{font-family:var(--mono);font-size:12px;padding:9px 16px;border-radius:100px;border:1px solid var(--line-2);color:var(--slate);transition:all .2s}
+.tab.active{background:var(--slate);color:#fff;border-color:var(--slate)}
+.tabpanes{margin-top:14px}
+.tabpane{display:none;flex-direction:column;gap:10px}
+.tabpane.active{display:flex}
+.office{border:1px solid var(--line);border-radius:16px;padding:16px;background:var(--paper)}
+.office h4{font-family:var(--display);font-weight:600;font-size:15.5px;color:var(--ink);display:flex;align-items:center;gap:7px}
+.office h4 .ms{color:var(--pink);font-size:18px}
+.office p{font-size:12.5px;color:var(--muted);line-height:1.45;margin-top:5px}
+.office .links{display:flex;gap:8px;margin-top:11px;flex-wrap:wrap}
+.office .links a{font-family:var(--mono);font-size:11px;color:var(--slate);background:#fff;border:1px solid var(--line);
+  padding:7px 12px;border-radius:100px;display:inline-flex;align-items:center;gap:5px}
+.office .links a:hover{border-color:var(--slate)}
+.office .links .ms{font-size:14px;color:var(--pink)}
+.wfh-langs{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.wfh-langs span{font-family:var(--mono);font-size:11px;background:var(--paper-2);padding:5px 11px;border-radius:100px;color:var(--slate)}
+
+/* =====================================================
+   09 — FOLLOW + TEAM
+===================================================== */
+.social-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.soc{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:14px;padding:12px 16px;background:var(--paper)}
+.soc:hover{border-color:var(--slate)}
+.soc svg{width:20px;height:20px;fill:var(--slate)}
+.soc .h{display:flex;flex-direction:column;line-height:1.2}
+.soc .h b{font-family:var(--display);font-weight:600;font-size:13.5px;color:var(--ink)}
+.soc .h span{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.team-h{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:22px;margin-bottom:10px}
+.team{display:flex;gap:10px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none}
+.team::-webkit-scrollbar{display:none}
+.member{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:7px;width:88px;text-align:center}
+.member .av{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:700;
+  font-size:18px;color:#fff;background:var(--slate)}
+.member:nth-child(2n) .av{background:var(--pink)}
+.member:nth-child(3n) .av{background:var(--teal)}
+.member .mn{font-size:12px;font-weight:600;color:var(--ink);line-height:1.2}
+.member .mr{font-family:var(--mono);font-size:10px;color:var(--muted)}
+.switch{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;align-items:center}
+.switch .lab{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.switch a{font-size:13px;border:1px solid var(--line-2);border-radius:100px;padding:7px 14px;color:var(--slate)}
+.switch a:hover{border-color:var(--slate);background:var(--paper)}
+.switch a.soon{opacity:.5;pointer-events:none}
+
+/* =====================================================
+   10 — FAQ
+===================================================== */
+.s-faq{justify-content:flex-start}
+.faq{margin-top:16px;display:flex;flex-direction:column;gap:8px;overflow-y:auto;max-height:min(58vh,540px);padding-right:2px}
+.faq::-webkit-scrollbar{width:5px}.faq::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:4px}
+.qa{border:1px solid var(--line);border-radius:14px;background:var(--paper);overflow:hidden}
+.qa.open{background:#fff;border-color:var(--slate)}
+.qa .q{display:flex;align-items:center;gap:10px;padding:15px 16px;cursor:pointer;font-family:var(--display);font-weight:600;font-size:14.5px;color:var(--ink)}
+.qa .q .ms{margin-left:auto;color:var(--slate-2);transition:transform .25s}
+.qa.open .q .ms{transform:rotate(45deg);color:var(--pink)}
+.qa .a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+.qa.open .a{grid-template-rows:1fr}
+.qa .a>p{overflow:hidden;min-height:0}
+.qa .a p{padding:0 16px 16px;font-size:13px;color:var(--muted);line-height:1.55}
+
+/* =====================================================
+   11 — FINAL
+===================================================== */
+.s-final{background:radial-gradient(120% 90% at 50% 0%,rgba(255,0,130,.06),transparent 55%),var(--bg);
+  justify-content:flex-start}
+.final-card{margin-top:14px;border-radius:22px;padding:24px;background:var(--slate);color:#fff;position:relative;overflow:hidden}
+.final-card::after{content:"";position:absolute;top:-40%;right:-10%;width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,0,130,.4),transparent 60%)}
+.final-card .top{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:rgba(255,255,255,.7);position:relative}
+.final-card h2{color:#fff;font-size:clamp(30px,8vw,44px);margin-top:8px;position:relative}
+.final-card h2 em{color:#fff;text-decoration:underline;text-decoration-color:var(--pink);text-underline-offset:5px}
+.final-row{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px;position:relative}
+@media(min-width:560px){.final-row{grid-template-columns:repeat(4,1fr)}}
+.final-row .k{font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.06em}
+.final-row .v{font-family:var(--display);font-weight:600;font-size:14px;margin-top:3px}
+.share{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.sb{font-family:var(--mono);font-size:12px;border:1px solid var(--line-2);border-radius:100px;padding:9px 15px;color:var(--slate);background:var(--paper)}
+.sb:hover{border-color:var(--slate)}
+
+/* footer */
+.footer{margin-top:24px;border-top:1px solid var(--line);padding-top:20px}
+.foot-awards{display:flex;gap:8px;flex-wrap:wrap}
+.foot-awards span{font-family:var(--mono);font-size:11px;color:var(--slate);background:var(--paper);border:1px solid var(--line);padding:6px 12px;border-radius:100px}
+.foot-langs{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:16px}
+.foot-langs .lab{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.foot-langs a{font-size:13px;color:var(--slate);border-bottom:1px solid transparent}
+.foot-langs a:hover{border-color:var(--pink);color:var(--pink)}
+.foot-socials{display:flex;gap:12px;margin-top:16px}
+.foot-socials a svg{width:20px;height:20px;fill:var(--slate-2);transition:fill .2s}
+.foot-socials a:hover svg{fill:var(--pink)}
+.foot-legal{font-size:11px;color:var(--muted);line-height:1.6;margin-top:16px}
+.foot-legal a{color:var(--slate)}
+.disc{font-size:10.5px;color:var(--muted);margin-top:12px;line-height:1.5;opacity:.85}
+
+@media (prefers-reduced-motion:reduce){
+  .enter{opacity:1;transform:none;transition:none}
+  .stamp svg,.dot-live,.fab-apply::before,.swipe i{animation:none}
+  .stage{scroll-behavior:auto}
+}
+@media (max-height:680px){
+  .screen{padding-top:54px;padding-bottom:84px}
+  .hero-h{font-size:clamp(38px,9vw,60px)}
+}
+</style>
+</head>
+<body>
+
+<div class="prog" id="prog"></div>
+
+<div class="rail" id="rail" aria-hidden="true"></div>
+<div class="dots" id="dots" aria-hidden="true"></div>
+
+<main class="stage" id="stage">
+
+  <!-- ============ 01 HERO ============ -->
+  <section class="screen s-hero" data-label="home">
+    <div class="wrap">
+      <div class="scr-head enter">
+        <span class="brand"><span class="logo"><img src="https://tpmyandtpth.github.io/ELP/TPLogo.png" alt="TP"></span> Careers <small>Malaysia &amp; Thailand</small></span>
+        <span><span class="dot-live"></span>now hiring</span>
+      </div>
+
+      <div class="stamp enter" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><defs><path id="cp" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"></path></defs>
+          <text fill="#4B4C6A" font-family="Space Mono" font-size="8.5" letter-spacing="2.4"><textPath href="#cp">· NOW HIRING · MALAYSIA · THAILAND · MULTILINGUAL · </textPath></text>
+        </svg>
+        <span class="mid">APPLY<br>IN 5′</span>
+      </div>
+
+      <div class="kicker enter">Now Hiring — Malaysia &amp; Thailand</div>
+      <h1 class="hero-h enter">Your next<br><span class="hl">chapter</span><br>starts <span class="pk">here.</span></h1>
+      <p class="lede enter">Join a Fortune 500 global team. Live in Southeast Asia. Grow without limits — full training, relocation, visa, medical.</p>
+
+      <div class="badges enter">
+        <span class="badge solid">Multilingual roles</span>
+        <span class="badge">Paid training</span>
+        <span class="badge pink">Relocation included</span>
+      </div>
+
+      <div class="trust enter" aria-label="TP at a glance">
+        <div class="g"><b><span data-count="500">0</span>K<span class="sfx">+</span></b><span>team members</span></div>
+        <div class="g"><b><span data-count="100">0</span><span class="sfx">+</span></b><span>countries</span></div>
+        <div class="g"><b><span data-count="170">0</span><span class="sfx">+</span></b><span>languages</span></div>
+      </div>
+
+      <div class="cta-zone enter">
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://tpmyandtpth.github.io/LP/" target="_blank" rel="noopener">View all open roles <span class="arr">→</span></a>
+          <a class="btn-ghost" href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener"><span class="ms">chat</span> Book a casual chat</a>
+        </div>
+        <div class="swipe">Scroll <i>↓</i> explore</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 LOCATIONS ============ -->
+  <section class="screen" data-label="locations">
+    <div class="wrap">
+      <div class="scr-head enter"><span class="brand"><span class="logo"><img src="https://tpmyandtpth.github.io/ELP/TPLogo.png" alt="TP"></span> locations</span><span>§ where you'll live</span></div>
+      <h2 class="enter" style="font-size:clamp(30px,7vw,48px)">Where you'll <em>live</em>.</h2>
+      <p class="lede enter">Swipe to explore. Penang, Kuala Lumpur and Bangkok — heritage, hawker food and skylines.</p>
+
+      <div class="loc-track enter" id="locTrack">
+        <div class="loc-card"><div class="top"><span class="flag">🇲🇾 HQ</span><span class="city">Kuala Lumpur</span></div>
+          <div class="body"><div class="desc">HQ at G-Tower, 199 Jalan Tun Razak — the heart of KLCC.</div>
+            <div class="meta"><span><span class="ms">corporate_fare</span>G-Tower</span><span><span class="ms">restaurant</span>Cafés</span></div>
+            <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=G-Tower%2C%20199%20Jalan%20Tun%20Razak%2C%20Kuala%20Lumpur" target="_blank" rel="noopener"><span class="ms">location_on</span>Open in Maps</a></div></div>
+        <div class="loc-card"><div class="top"><span class="flag">Landmark</span><span class="city">Petronas Towers</span></div>
+          <div class="body"><div class="desc">Five minutes' walk from the office. The view never gets old.</div>
+            <div class="meta"><span><span class="ms">star</span>4.7 · 101K</span></div>
+            <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Petronas%20Twin%20Towers%2C%20Kuala%20Lumpur" target="_blank" rel="noopener"><span class="ms">location_on</span>Open in Maps</a></div></div>
+        <div class="loc-card"><div class="top"><span class="flag">🇲🇾 Penang</span><span class="city">Penang — Bayan Baru</span></div>
+          <div class="body"><div class="desc">TP offices near Queensbay Mall. Island life, ten minutes from work.</div>
+            <div class="meta"><span><span class="ms">corporate_fare</span>2 offices</span><span><span class="ms">shopping_bag</span>Queensbay</span></div>
+            <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Persiaran%20Mahsuri%2C%20Bayan%20Baru%2C%20Penang" target="_blank" rel="noopener"><span class="ms">location_on</span>Open in Maps</a></div></div>
+        <div class="loc-card"><div class="top"><span class="flag">Heritage</span><span class="city">George Town</span></div>
+          <div class="body"><div class="desc">UNESCO heritage streets, jetties and the best char kway teow.</div>
+            <div class="meta"><span><span class="ms">ramen_dining</span>Hawker</span><span><span class="ms">temple_buddhist</span>Jetties</span></div>
+            <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=George%20Town%2C%20Penang" target="_blank" rel="noopener"><span class="ms">location_on</span>Open in Maps</a></div></div>
+        <div class="loc-card"><div class="top"><span class="flag">🇹🇭 Thailand</span><span class="city">Bangkok</span></div>
+          <div class="body"><div class="desc">Tradition meets tomorrow. BTS-connected and endlessly alive.</div>
+            <div class="meta"><span><span class="ms">train</span>BTS</span></div>
+            <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Teleperformance%20Bangkok" target="_blank" rel="noopener"><span class="ms">location_on</span>Open in Maps</a></div></div>
+      </div>
+      <div class="pips enter" id="locPips"></div>
+    </div>
+  </section>
+
+  <!-- ============ 03 ROLES ============ -->
+  <section class="screen s-roles" data-label="open roles">
+    <div class="wrap" style="display:flex;flex-direction:column;min-height:0">
+      <div class="scr-head enter"><span class="brand"><span class="logo"><img src="https://tpmyandtpth.github.io/ELP/TPLogo.png" alt="TP"></span> open roles</span><span>§ tap to open</span></div>
+      <h2 class="enter" style="font-size:clamp(28px,6.5vw,44px)">Open <em>roles</em>.</h2>
+      <p class="lede enter" style="margin-bottom:4px">Full training. Relocation included. Apply in 5 minutes.</p>
+
+      <div class="roles enter" id="roles">
+        <!-- Mandarin -->
+        <div class="role open">
+          <div class="role-top"><div class="ttl"><div class="name">Guest Experience Specialist</div>
+            <div class="sub"><span class="ms">translate</span>Mandarin · ~50 openings · <span class="ms">location_on</span>Penang</div></div>
+            <span class="tag pk">Urgent hire</span><span class="chev">expand_more</span></div>
+          <div class="role-body"><div class="role-inner">
+            <p>Provide Mandarin-language support for a global tech brand across email, chat and phone.</p>
+            <div class="role-pay"><span class="ms">payments</span>Competitive + Language Premium <span class="det">— base + Mandarin premium + shift allowance. Bi-annual reviews.</span></div>
+            <div class="role-perks"><span><span class="ms">flight</span>Flight</span><span><span class="ms">home</span>Housing</span><span><span class="ms">badge</span>Visa</span><span><span class="ms">health_and_safety</span>Medical</span><span><span class="ms">school</span>Training</span></div>
+            <a class="apply" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&amp;searchKeyword=mandarin" target="_blank" rel="noopener">Apply now →</a>
+          </div></div>
+        </div>
+        <!-- Japanese -->
+        <div class="role">
+          <div class="role-top"><div class="ttl"><div class="name">Customer Support Analyst</div>
+            <div class="sub"><span class="ms">translate</span>Japanese JLPT N1/N2 · <span class="ms">location_on</span>Kuala Lumpur</div></div>
+            <span class="tag">Relocation</span><span class="chev">expand_more</span></div>
+          <div class="role-body"><div class="role-inner">
+            <p>Handle Japanese-language inquiries for a major e-commerce platform via chat and email.</p>
+            <div class="role-pay"><span class="ms">payments</span>Competitive + Japanese Premium <span class="det">— premium for JLPT N1/N2 holders. Overtime available.</span></div>
+            <div class="role-perks"><span><span class="ms">flight</span>Flight</span><span><span class="ms">hotel</span>7-day Hotel</span><span><span class="ms">badge</span>Visa</span><span><span class="ms">health_and_safety</span>Medical</span></div>
+            <a class="apply" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&amp;searchKeyword=japanese" target="_blank" rel="noopener">Apply now →</a>
+          </div></div>
+        </div>
+        <!-- Korean -->
+        <div class="role">
+          <div class="role-top"><div class="ttl"><div class="name">Content Review Specialist</div>
+            <div class="sub"><span class="ms">translate</span>Korean (native level) · <span class="ms">location_on</span>Kuala Lumpur</div></div>
+            <span class="tag pk">Urgent hire</span><span class="chev">expand_more</span></div>
+          <div class="role-body"><div class="role-inner">
+            <p>Review Korean-language content for a global social platform. Ensure community-guideline compliance.</p>
+            <div class="role-pay"><span class="ms">payments</span>Competitive + Korean Premium <span class="det">— above-market base. Full benefits package.</span></div>
+            <div class="role-perks"><span><span class="ms">flight</span>Flight</span><span><span class="ms">badge</span>Visa</span><span><span class="ms">psychology</span>Wellbeing</span><span><span class="ms">trending_up</span>Growth</span></div>
+            <a class="apply" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&amp;searchKeyword=korean" target="_blank" rel="noopener">Apply now →</a>
+          </div></div>
+        </div>
+        <!-- Thai -->
+        <div class="role">
+          <div class="role-top"><div class="ttl"><div class="name">Technical Support Agent</div>
+            <div class="sub"><span class="ms">schedule</span>Thai · rotating shifts · <span class="ms">location_on</span>Bangkok</div></div>
+            <span class="tag teal">Thailand</span><span class="chev">expand_more</span></div>
+          <div class="role-body"><div class="role-inner">
+            <p>First-line tech support in Thai for a global streaming service. Troubleshoot app and device issues.</p>
+            <div class="role-pay"><span class="ms">payments</span>Competitive Thai Market Rate <span class="det">— shift allowances + performance bonuses.</span></div>
+            <div class="role-perks"><span><span class="ms">health_and_safety</span>Medical</span><span><span class="ms">school</span>Training</span><span><span class="ms">trending_up</span>Growth</span></div>
+            <a class="apply" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&amp;searchKeyword=thai" target="_blank" rel="noopener">Apply now →</a>
+          </div></div>
+        </div>
+        <!-- Cantonese -->
+        <div class="role">
+          <div class="role-top"><div class="ttl"><div class="name">Customer Service Executive</div>
+            <div class="sub"><span class="ms">translate</span>Cantonese (native level) · <span class="ms">location_on</span>Penang</div></div>
+            <span class="tag">Relocation</span><span class="chev">expand_more</span></div>
+          <div class="role-body"><div class="role-inner">
+            <p>Handle Cantonese-speaking accounts for a fintech leader. Manage transactions and premium support.</p>
+            <div class="role-pay"><span class="ms">payments</span>Competitive + Cantonese Premium <span class="det">— housing allowance included on top of base.</span></div>
+            <div class="role-perks"><span><span class="ms">flight</span>Flight</span><span><span class="ms">apartment</span>Housing</span><span><span class="ms">badge</span>Visa</span><span><span class="ms">health_and_safety</span>Medical</span></div>
+            <a class="apply" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&amp;searchKeyword=cantonese" target="_blank" rel="noopener">Apply now →</a>
+          </div></div>
+        </div>
+        <!-- English entry -->
+        <div class="role">
+          <div class="role-top"><div class="ttl"><div class="name">Customer Experience Associate</div>
+            <div class="sub"><span class="ms">verified</span>English · no experience needed · <span class="ms">location_on</span>Kuala Lumpur</div></div>
+            <span class="tag teal">Entry level</span><span class="chev">expand_more</span></div>
+          <div class="role-body"><div class="role-inner">
+            <p>Support English-speaking customers. The perfect first career step — we train you from scratch.</p>
+            <div class="role-pay"><span class="ms">payments</span>Competitive Entry-Level Package <span class="det">— full benefits from day one. Promotion path within 12 months.</span></div>
+            <div class="role-perks"><span><span class="ms">school</span>Training</span><span><span class="ms">health_and_safety</span>Medical</span><span><span class="ms">trending_up</span>Growth</span><span><span class="ms">diversity_3</span>Global</span></div>
+            <a class="apply" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&amp;searchKeyword=english" target="_blank" rel="noopener">Apply now →</a>
+          </div></div>
+        </div>
+      </div>
+      <a class="roles-all" href="https://tpmyandtpth.github.io/LP/" target="_blank" rel="noopener"><span class="ms">grid_view</span> See all open roles on our jobs hub <span class="ms">arrow_forward</span></a>
+    </div>
+  </section>
+
+  <!-- ============ 04 BENEFITS ============ -->
+  <section class="screen" data-label="benefits">
+    <div class="wrap">
+      <div class="scr-head enter"><span class="brand"><span class="logo"><img src="https://tpmyandtpth.github.io/ELP/TPLogo.png" alt="TP"></span> benefits</span><span>§ what you get</span></div>
+      <h2 class="enter" style="font-size:clamp(28px,6.5vw,44px)">What you <em>get</em>.</h2>
+      <p class="lede enter">Full package, no hidden fine print. Final details land in your offer letter.</p>
+      <div class="bento enter">
+        <div class="cell slate"><span class="ms">payments</span><div class="k">Compensation</div><div class="v">Competitive base + language premium for specialist languages. Shift allowances. Bi-annual reviews with raise opportunities.</div></div>
+        <div class="cell pink"><span class="ms">flight</span><div class="k">Relocation</div><div class="v">One-way flight + airport pickup. 6 nights / 7 days hotel (Malaysia). Employment Pass sponsored at company cost.</div></div>
+        <div class="cell"><span class="ms">health_and_safety</span><div class="k">Medical &amp; Wellness</div><div class="v">Private medical + dental from day one. Mental-health support for you and family.</div></div>
+        <div class="cell"><span class="ms">calendar_month</span><div class="k">Time Off</div><div class="v">14 days annual leave (up to 21 with tenure). 14 sick days. Local + select home-country holidays.</div></div>
+        <div class="cell"><span class="ms">school</span><div class="k">Full Training</div><div class="v">2–6 weeks paid training before you start. GoFluent language programmes. No prior BPO experience needed.</div></div>
+        <div class="cell teal"><span class="ms">trending_up</span><div class="k">Career Growth</div><div class="v">Structured promotions every 12 months. Mentorship + leadership academies. Many team leads started frontline.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 PROCESS ============ -->
+  <section class="screen" data-label="process">
+    <div class="wrap">
+      <div class="scr-head enter"><span class="brand"><span class="logo"><img src="https://tpmyandtpth.github.io/ELP/TPLogo.png" alt="TP"></span> process</span><span>§ four steps</span></div>
+      <h2 class="enter" style="font-size:clamp(28px,6.5vw,44px)">How it <em>works</em>.</h2>
+      <p class="lede enter">Four steps. That's it.</p>
+      <div class="steps enter">
+        <div class="step"><div class="no">1</div><div class="st">Apply Online</div><div class="sd">Submit your CV. 5 minutes.</div></div>
+        <div class="step"><div class="no">2</div><div class="st">Assessment</div><div class="sd">Language + skills check, from anywhere.</div></div>
+        <div class="step"><div class="no">3</div><div class="st">Interview</div><div class="sd">Video chat. Casual, conversational.</div></div>
+        <div class="step"><div class="no">4</div><div class="st">Welcome</div><div class="sd">We handle visa, flight, hotel, onboarding.</div></div>
+      </div>
+      <div class="cta-zone enter">
+        <a class="btn btn-primary" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&amp;searchKeyword=multilingual" target="_blank" rel="noopener">Start your application <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 MEET US ============ -->
+  <section class="screen" data-label="meet us">
+    <div class="wrap">
+      <div class="scr-head enter"><span class="brand"><span class="logo"><img src="https://tpmyandtpth.github.io/ELP/TPLogo.png" alt="TP"></span> meet us</span><span>§ in person or online</span></div>
+      <h2 class="enter" style="font-size:clamp(28px,6.5vw,44px)">Meet <em>us</em>.</h2>
+      <p class="lede enter">In person, online, or by email — your choice.</p>
+      <div class="meet-grid enter">
+        <div class="panel">
+          <h3><span class="ms">location_on</span>Walk-in · KL</h3>
+          <div class="detail"><span class="ms">calendar_month</span>Tuesday, 1 April 2026</div>
+          <div class="detail"><span class="ms">schedule</span>10:00 AM – 5:00 PM · reg. closes 3 PM</div>
+          <div class="detail"><span class="ms">pin_drop</span>Level 11, G-Tower, 199 Jln Tun Razak, KL · <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=G-Tower%2C%20199%20Jalan%20Tun%20Razak%2C%20Kuala%20Lumpur" target="_blank" rel="noopener"><span class="ms">map</span>Maps</a></div>
+          <div class="detail"><span class="ms">person_pin_circle</span>Local candidates only</div>
+          <div class="langpills"><span>English</span><span>Chinese (Mandarin)</span></div>
+          <div class="bring"><span><span class="ms">description</span>CV</span><span><span class="ms">badge</span>IC (MyKad)</span><span><span class="ms">school</span>Certs</span></div>
+        </div>
+        <div class="panel">
+          <h3><span class="ms">location_on</span>Walk-in · Penang</h3>
+          <div class="detail"><span class="ms">calendar_month</span>Friday, 4 April 2026</div>
+          <div class="detail"><span class="ms">schedule</span>10:00 AM – 5:00 PM · reg. closes 3 PM</div>
+          <div class="detail"><span class="ms">pin_drop</span>1A, Persiaran Mahsuri, Bayan Baru, 11900 · <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=1A%20Persiaran%20Mahsuri%2C%20Bayan%20Baru%2C%2011900%20Penang" target="_blank" rel="noopener"><span class="ms">map</span>Maps</a></div>
+          <div class="detail"><span class="ms">person_pin_circle</span>Local candidates only</div>
+          <div class="langpills"><span>English</span><span>Chinese (Mandarin)</span></div>
+          <div class="bring"><span><span class="ms">description</span>CV</span><span><span class="ms">badge</span>IC (MyKad)</span><span><span class="ms">school</span>Certs</span></div>
+        </div>
+        <div class="panel teal">
+          <h3><span class="ms">groups</span>Weekly Q&amp;A on Teams</h3>
+          <div class="detail">Join our recruitment team every Friday. Ask about roles, salary, relocation — anything. No registration needed.</div>
+          <div class="detail"><span class="ms">event_repeat</span>Every Friday</div>
+          <div class="detail"><span class="ms">schedule</span>3:00 PM (MYT)</div>
+          <div class="cta-row" style="margin-top:12px">
+            <a class="btn-ghost" href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener"><span class="ms">videocam</span>Join Friday session</a>
+          </div>
+        </div>
+        <div class="panel">
+          <h3><span class="ms">mail</span>Email us</h3>
+          <div class="detail">Have questions? Send us an email anytime — we reply within 1 business day.</div>
+          <div class="detail"><span class="ms">mail</span><a href="mailto:tpmycareers@teleperformance.com" style="color:var(--pink);font-weight:600">tpmycareers@teleperformance.com</a></div>
+          <div class="detail" style="font-family:var(--mono);font-size:11px;color:var(--muted)">— TP Talent Acquisition</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 07 REFER A FRIEND ============ -->
+  <section class="screen s-raf" data-label="refer">
+    <div class="wrap">
+      <div class="scr-head enter"><span class="brand"><span class="logo"><img src="https://tpmyandtpth.github.io/ELP/TPLogo.png" alt="TP"></span> refer a friend</span><span>§ earn up to RM10,000</span></div>
+      <h2 class="enter" style="font-size:clamp(28px,6.5vw,44px)">Refer a <em>friend</em>.</h2>
+      <p class="lede enter">Know someone who'd be great? Refer a friend and earn up to <strong>RM10,000</strong> when they join and pass 90 days' probation — paid via Touch 'n Go eWallet.</p>
+      <div class="tiers enter">
+        <div class="tier"><div class="amt">RM500</div><div class="role-n">Mandarin — Johor</div><div class="cond">after 90 days probation</div></div>
+        <div class="tier"><div class="amt">RM800</div><div class="role-n">Standard roles · other locations</div><div class="cond">after 90 days probation</div></div>
+        <div class="tier top"><div class="crown">highest</div><div class="amt">RM10,000</div><div class="role-n">Interpreter (WFH)</div><div class="cond">after 90 days probation</div></div>
+      </div>
+      <div class="fine enter">
+        <div><span class="ms">credit_card</span>Paid via Touch 'n Go eWallet only. Processing within 30 working days.</div>
+        <div><span class="ms">block</span>Previously-applied candidates and current TP employees are not eligible.</div>
+        <div><span class="ms">info</span>Single payment after 90 days probation. No split payments.</div>
+        <div><span class="ms">verified_user</span>Your friend must consent to sharing info with TP for recruitment.</div>
+      </div>
+      <div class="cta-zone enter">
+        <a class="btn btn-teal" href="https://tpmyandtpth.github.io/xRAF/" target="_blank" rel="noopener">Start referring <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 08 OFFICES ============ -->
+  <section class="screen" data-label="offices">
+    <div class="wrap">
+      <div class="scr-head enter"><span class="brand"><span class="logo"><img src="https://tpmyandtpth.github.io/ELP/TPLogo.png" alt="TP"></span> offices</span><span>§ open in maps</span></div>
+      <h2 class="enter" style="font-size:clamp(28px,6.5vw,44px)">Our <em>offices</em>.</h2>
+      <p class="lede enter">Six locations across Malaysia, plus work-from-home. Open any office in Google Maps.</p>
+
+      <div class="tabs enter">
+        <button class="tab active" data-tab="png">🇲🇾 Penang</button>
+        <button class="tab" data-tab="kl">🇲🇾 Kuala Lumpur</button>
+        <button class="tab" data-tab="jb">🇲🇾 Johor</button>
+        <button class="tab" data-tab="wfh">🏠 WFH</button>
+      </div>
+
+      <div class="tabpanes enter">
+        <!-- PENANG (3) -->
+        <div class="tabpane active" id="pane-png">
+          <div class="office">
+            <div class="office-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="TP One Precinct, Penang" src="https://www.google.com/maps?q=Lengkok%20Mayang%20Pasir%201%2C%20Bandar%20Bayan%20Baru%2C%2011900%20Bayan%20Lepas%2C%20Penang&z=15&output=embed"></iframe></div>
+            <h4><span class="ms">corporate_fare</span>One Precinct (OP)<span class="tag-region">Penang</span></h4>
+            <p>Lengkok Mayang Pasir 1, Bandar Bayan Baru, 11900 Bayan Lepas, Penang. Shuttle bus available.</p>
+            <div class="links"><a href="https://maps.app.goo.gl/Nq6RKZ7spH89THG8A" target="_blank" rel="noopener"><span class="ms">open_in_new</span>Open in Google Maps</a></div>
+          </div>
+          <div class="office">
+            <div class="office-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="TP GBS Mahsuri, Penang" src="https://www.google.com/maps?q=1A%2C%20Persiaran%20Mahsuri%2C%20Bayan%20Baru%2C%2011900%20Bayan%20Lepas%2C%20Penang&z=15&output=embed"></iframe></div>
+            <h4><span class="ms">corporate_fare</span>GBS @ Mahsuri<span class="tag-region">Penang</span></h4>
+            <p>1A, Persiaran Mahsuri, Bayan Baru, 11900 Bayan Lepas, Penang. Walk-in interview venue.</p>
+            <div class="links"><a href="https://maps.app.goo.gl/Zpy6r8na4Wg31uhT8" target="_blank" rel="noopener"><span class="ms">open_in_new</span>Open in Google Maps</a></div>
+          </div>
+          <div class="office">
+            <div class="office-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="TP Livingston Tower, George Town" src="https://www.google.com/maps?q=170%20Jalan%20Argyll%2C%2010050%20George%20Town%2C%20Penang&z=15&output=embed"></iframe></div>
+            <h4><span class="ms">corporate_fare</span>Livingston Tower (LV)<span class="tag-region">Penang</span></h4>
+            <p>170 Jalan Argyll, Georgetown, 10050 George Town, Penang. In the UNESCO heritage zone.</p>
+            <div class="links"><a href="https://maps.app.goo.gl/9i841vf18KRyunQK6" target="_blank" rel="noopener"><span class="ms">open_in_new</span>Open in Google Maps</a></div>
+          </div>
+        </div>
+
+        <!-- KUALA LUMPUR / KLANG VALLEY (2) -->
+        <div class="tabpane" id="pane-kl">
+          <div class="office">
+            <div class="office-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="TP G-Tower, Kuala Lumpur" src="https://www.google.com/maps?q=G-Tower%2C%20199%20Jalan%20Tun%20Razak%2C%2050400%20Kuala%20Lumpur&z=15&output=embed"></iframe></div>
+            <h4><span class="ms">corporate_fare</span>G-Tower (HQ)<span class="tag-region">KL</span></h4>
+            <p>Level 11, G-Tower, 199 Jalan Tun Razak, 50400 Kuala Lumpur. KLCC district, 5 min from Petronas Towers.</p>
+            <div class="links"><a href="https://maps.app.goo.gl/vd5ju3VXhxfhpJuN7" target="_blank" rel="noopener"><span class="ms">open_in_new</span>Open in Google Maps</a></div>
+          </div>
+          <div class="office">
+            <div class="office-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="TP KCP, Petaling Jaya" src="https://www.google.com/maps?q=Kelana%20Centre%20Point%2C%20Jalan%20SS%207%2F19%2C%2047301%20Petaling%20Jaya%2C%20Selangor&z=15&output=embed"></iframe></div>
+            <h4><span class="ms">corporate_fare</span>Kelana Centre Point (KCP)<span class="tag-region">PJ</span></h4>
+            <p>Level 3, Block D, Kelana Centre Point, Jalan SS 7/19, 47301 Petaling Jaya, Selangor.</p>
+            <div class="links"><a href="https://maps.app.goo.gl/UE8tTboaukkeCWZW9" target="_blank" rel="noopener"><span class="ms">open_in_new</span>Open in Google Maps</a></div>
+          </div>
+        </div>
+
+        <!-- JOHOR (1) -->
+        <div class="tabpane" id="pane-jb">
+          <!-- JOHOR: no saved Maps pin yet — embed + link use a search by name. Replace href with the real maps.app.goo.gl pin when you have it. -->
+          <div class="office">
+            <div class="office-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="TP Johor Bahru" src="https://www.google.com/maps?q=Teleperformance%20Johor%20Bahru&z=12&output=embed"></iframe></div>
+            <h4><span class="ms">corporate_fare</span>Johor Bahru (JB)<span class="tag-region">Johor</span></h4>
+            <p>TP Johor Bahru. Mandarin and multilingual roles. Interviews by appointment.</p>
+            <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Teleperformance%20Johor%20Bahru" target="_blank" rel="noopener"><span class="ms">open_in_new</span>Open in Google Maps</a></div>
+          </div>
+        </div>
+
+        <!-- WFH -->
+        <div class="tabpane" id="pane-wfh">
+          <div class="office"><h4><span class="ms">home</span>Work From Home</h4>
+            <p>Select roles are fully remote from anywhere in Malaysia. Equipment provided. Same benefits package.</p>
+            <div class="wfh-langs"><span>Mandarin</span><span>Japanese</span><span>Korean</span><span>Cantonese</span><span>Thai</span><span>English</span></div>
+            <div class="links" style="margin-top:12px"><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&amp;searchKeyword=remote" target="_blank" rel="noopener"><span class="ms">work</span>View WFH roles</a></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 09 FOLLOW + TEAM ============ -->
+  <section class="screen" data-label="follow">
+    <div class="wrap">
+      <div class="scr-head enter"><span class="brand"><span class="logo"><img src="https://tpmyandtpth.github.io/ELP/TPLogo.png" alt="TP"></span> follow us</span><span>§ life at TP</span></div>
+      <h2 class="enter" style="font-size:clamp(28px,6.5vw,44px)">Follow <em>us</em>.</h2>
+      <p class="lede enter">Behind-the-scenes, job updates, and life in Malaysia.</p>
+
+      <div class="social-row enter">
+        <a class="soc" href="https://www.facebook.com/wearetpinmalaysia" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.01 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.5 0-1.96.93-1.96 1.89v2.25h3.34l-.53 3.49h-2.81V24C19.61 23.08 24 18.09 24 12.07z"/></svg><div class="h"><b>Facebook</b><span>TP Malaysia</span></div></a>
+        <a class="soc" href="https://www.instagram.com/wearetpinmalaysia/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.72 3.72 0 0 1-.9 1.38c-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.88 5.88 0 0 0-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91a5.88 5.88 0 0 0 1.38 2.13 5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg><div class="h"><b>Instagram</b><span>@wearetpinmalaysia</span></div></a>
+        <a class="soc" href="https://www.tiktok.com/@wearetpinmalaysia" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05 6.33 6.33 0 0 0-5.58 9.44A6.34 6.34 0 0 0 15.78 15.5V8.69a8.16 8.16 0 0 0 4.77 1.52V6.83a4.78 4.78 0 0 1-.96-.14z"/></svg><div class="h"><b>TikTok</b><span>@wearetpinmalaysia</span></div></a>
+        <a class="soc" href="https://www.youtube.com/@wearetpgroup" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg><div class="h"><b>YouTube</b><span>@wearetpgroup</span></div></a>
+        <a class="soc" href="https://www.linkedin.com/company/wearetpgroup" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg><div class="h"><b>LinkedIn</b><span>TP Group</span></div></a>
+      </div>
+
+      <div class="team-h enter">Our sourcing team</div>
+      <!-- LinkedIn: Hsiang Boon, Tian Han (jerry-chuah), Jocelyn, Melaine (heyminlee) = real profiles.
+           Anna Saw & Chloe Heo have no public profile yet, so they use a LinkedIn name-search. -->
+      <div class="team enter">
+        <a class="member" href="https://www.linkedin.com/in/nghsiangboon" target="_blank" rel="noopener"><div class="av">HB<span class="li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></span></div><div class="mn">Ng Hsiang Boon</div><div class="mr">Sourcing · Penang</div></a>
+        <a class="member" href="https://www.linkedin.com/in/jerry-chuah" target="_blank" rel="noopener"><div class="av">TH<span class="li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></span></div><div class="mn">Tian Han Chuah</div><div class="mr">Sourcing · Penang</div></a>
+        <a class="member" href="https://www.linkedin.com/in/jocelyn-soh-11a33338/" target="_blank" rel="noopener"><div class="av">JS<span class="li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></span></div><div class="mn">Jocelyn Soh</div><div class="mr">Sourcing · KL</div></a>
+        <a class="member" href="https://www.linkedin.com/in/annethidaaung//" target="_blank" rel="noopener"><div class="av">TA<span class="li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></span></div><div class="mn">Anne Thida Aung</div><div class="mr">Sourcing Lead· Penang</div></a>
+        <a class="member" href="https://www.linkedin.com/search/results/all/?keywords=Anna%20Saw%20Teleperformance" target="_blank" rel="noopener"><div class="av">AS<span class="li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></span></div><div class="mn">Anna Saw</div><div class="mr">Sourcing · Penang</div></a>
+        <a class="member" href="https://www.linkedin.com/search/results/all/?keywords=Chloe%20Yoon%20Jung%20Heo" target="_blank" rel="noopener"><div class="av">CH<span class="li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></span></div><div class="mn">Chloe Heo</div><div class="mr">Sourcing · KL</div></a>
+      </div>
+
+      <div class="switch enter">
+        <span class="lab">Prefer your language?</span>
+        <a href="https://tpmyandtpth.github.io/JLP/" target="_blank" rel="noopener">🇯🇵 日本語</a>
+        <a href="https://tpmyandtpth.github.io/MLP/" target="_blank" rel="noopener">🇨🇳 中文</a>
+        <a href="https://tpmyandtpth.github.io/KLP/" target="_blank" rel="noopener">🇰🇷 한국어</a>
+        <a href="https://tpmyandtpth.github.io/TLP/" target="_blank" rel="noopener">🇹🇭 ภาษาไทย</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 10 FAQ ============ -->
+  <section class="screen s-faq" data-label="faq">
+    <div class="wrap" style="display:flex;flex-direction:column;min-height:0">
+      <div class="scr-head enter"><span class="brand"><span class="logo"><img src="https://tpmyandtpth.github.io/ELP/TPLogo.png" alt="TP"></span> questions</span><span>§ tap to expand</span></div>
+      <h2 class="enter" style="font-size:clamp(28px,6.5vw,44px)"><em>Questions.</em></h2>
+      <div class="faq enter" id="faq">
+        <div class="qa open"><div class="q">Do I need BPO experience?<span class="ms">add</span></div><div class="a"><p>No. We value language skills and communication. Full paid training — 2 to 6 weeks — before you handle any customer interactions.</p></div></div>
+        <div class="qa"><div class="q">Who handles my visa and relocation?<span class="ms">add</span></div><div class="a"><p>We do — end to end. Employment Pass, one-way flight, airport pickup, and initial accommodation.</p></div></div>
+        <div class="qa"><div class="q">What languages are you hiring for?<span class="ms">add</span></div><div class="a"><p>Mandarin, Japanese, Korean, Thai, Cantonese, and English — with new lines opening regularly.</p></div></div>
+        <div class="qa"><div class="q">What's the salary range?<span class="ms">add</span></div><div class="a"><p>Competitive, with your language premium. Your recruiter shares the range early. Final terms are confirmed in your offer letter.</p></div></div>
+        <div class="qa"><div class="q">What does a typical workday look like?<span class="ms">add</span></div><div class="a"><p>8-hour shifts, 2 rest days per week. Pantries, prayer rooms, break areas. After work — hawker food, malls, or beach.</p></div></div>
+        <div class="qa"><div class="q">Is Malaysia safe and affordable?<span class="ms">add</span></div><div class="a"><p>One of Asia's most expat-friendly countries. Street food from RM5 (~US$1), rent RM800–1,500. 100+ nationalities on our team.</p></div></div>
+        <div class="qa"><div class="q">Can I grow into leadership?<span class="ms">add</span></div><div class="a"><p>Many team leads started frontline. Structured promotions, mentorship, leadership academies, GoFluent training.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 11 FINAL ============ -->
+  <section class="screen s-final" data-label="apply">
+    <div class="wrap">
+      <div class="scr-head enter"><span class="brand"><span class="logo"><img src="https://tpmyandtpth.github.io/ELP/TPLogo.png" alt="TP"></span> ready?</span><span>§ one application</span></div>
+      <h2 class="enter" style="font-size:clamp(30px,8vw,52px)">Ready to make<br>the <em>move</em>?</h2>
+      <p class="lede enter">One application. A career that crosses borders.</p>
+
+      <div class="final-card enter">
+        <div class="top">TP · Malaysia &amp; Thailand · Multilingual roles</div>
+        <h2>Reserved for <em>you</em>.</h2>
+        <div class="final-row">
+          <div><div class="k">locations</div><div class="v">Penang · KL · BKK</div></div>
+          <div><div class="k">roles</div><div class="v">CS · Tech · Mod</div></div>
+          <div><div class="k">apply in</div><div class="v">~5 min</div></div>
+          <div><div class="k">chat in</div><div class="v">30 min</div></div>
+        </div>
+        <div class="share">
+          <button class="sb" data-share="copy" style="border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff">🔗 copy link</button>
+          <button class="sb" data-share="wa" style="border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff">💬 WhatsApp</button>
+          <button class="sb" data-share="tg" style="border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff">✈️ Telegram</button>
+        </div>
+      </div>
+
+      <div class="cta-zone enter">
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&amp;searchKeyword=multilingual" target="_blank" rel="noopener">Apply now <span class="arr">→</span></a>
+          <a class="btn-ghost" href="https://tpmyandtpth.github.io/LP/" target="_blank" rel="noopener"><span class="ms">grid_view</span>Browse all roles</a>
+          <a class="btn-ghost" href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener"><span class="ms">chat</span>Book a casual chat</a>
+        </div>
+      </div>
+
+      <footer class="footer enter">
+        <div class="foot-awards">
+          <span>🏆 6 Years Great Place to Work® Malaysia</span>
+          <span>🏆 5 Years World's Best Workplaces™</span>
+        </div>
+        <div class="foot-langs">
+          <span class="lab">also in</span>
+          <a href="https://tpmyandtpth.github.io/MLP/" target="_blank" rel="noopener" lang="zh">中文</a>
+          <a href="https://tpmyandtpth.github.io/JLP/" target="_blank" rel="noopener" lang="ja">日本語</a>
+          <a href="https://tpmyandtpth.github.io/KLP/" target="_blank" rel="noopener" lang="ko">한국어</a>
+          <a href="https://tpmyandtpth.github.io/TLP/" target="_blank" rel="noopener" lang="th">ภาษาไทย</a>
+        </div>
+        <div class="foot-socials">
+          <a href="https://www.facebook.com/wearetpinmalaysia" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.01 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.5 0-1.96.93-1.96 1.89v2.25h3.34l-.53 3.49h-2.81V24C19.61 23.08 24 18.09 24 12.07z"/></svg></a>
+          <a href="https://www.instagram.com/wearetpinmalaysia/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.72 3.72 0 0 1-.9 1.38c-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.88 5.88 0 0 0-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91a5.88 5.88 0 0 0 1.38 2.13 5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
+          <a href="https://www.tiktok.com/@wearetpinmalaysia" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05 6.33 6.33 0 0 0-5.58 9.44A6.34 6.34 0 0 0 15.78 15.5V8.69a8.16 8.16 0 0 0 4.77 1.52V6.83a4.78 4.78 0 0 1-.96-.14z"/></svg></a>
+          <a href="https://www.youtube.com/@wearetpgroup" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
+          <a href="https://www.linkedin.com/company/wearetpgroup" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></a>
+        </div>
+        <p class="foot-legal">Teleperformance Malaysia Sdn Bhd · SSM: 201601023769 (1194708-K)<br>
+          TP (formerly Teleperformance) is a global digital business services company across 100+ countries and 170+ languages.<br>
+          © 2026 TP (Teleperformance SE). All rights reserved.</p>
+        <p class="disc">This page is an overview. Conditions vary by project / region / regulations. Final conditions are confirmed in the offer letter and employment contract.</p>
+      </footer>
+    </div>
+  </section>
+
+</main>
+
+<div class="fab-stack" id="fabStack">
+  <a class="fab-btn fab-wa" href="https://wa.me/60193320265?text=Hi%20TP%20Talent%20Acquisition%2C%20I%27d%20like%20to%20apply%20and%20start%20the%20quick%20screening." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.8-1.49-1.78-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47 0 1.46 1.06 2.86 1.21 3.06.15.2 2.1 3.2 5.08 4.48.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91A9.82 9.82 0 0 0 12.04 2z"/></svg>
+    <span>WhatsApp screening</span>
+  </a>
+  <div class="fab-row">
+    <button class="fab-top" id="fabTop" aria-label="Back to top" title="Back to top"><span class="ms">arrow_upward</span></button>
+    <a class="fab-btn fab-apply" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&amp;searchKeyword=multilingual" target="_blank" rel="noopener">
+      <span>Apply now</span><span class="ms" aria-hidden="true">arrow_forward</span>
+    </a>
+  </div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var stage=document.getElementById('stage');
+  var screens=[].slice.call(document.querySelectorAll('.screen'));
+  var prog=document.getElementById('prog');
+  var rail=document.getElementById('rail');
+  var dotsBox=document.getElementById('dots');
+  var fabStack=document.getElementById('fabStack');
+  var fabTop=document.getElementById('fabTop');
+
+  /* ---- dynamic viewport height (iOS safe) ---- */
+  function setVh(){document.documentElement.style.setProperty('--vh', window.innerHeight+'px');}
+  setVh();
+  window.addEventListener('resize',setVh,{passive:true});
+  window.addEventListener('orientationchange',setVh);
+
+  /* ---- build rail + dots ---- */
+  screens.forEach(function(s,i){
+    var r=document.createElement('span'); r.innerHTML='<i></i>'; rail.appendChild(r);
+    var d=document.createElement('button'); d.className='dot';
+    d.innerHTML='<span class="lbl">'+(s.dataset.label||('0'+(i+1)))+'</span>';
+    d.addEventListener('click',function(){screens[i].scrollIntoView({behavior:'smooth'});});
+    dotsBox.appendChild(d);
+  });
+  var railBars=[].slice.call(rail.children);
+  var navDots=[].slice.call(dotsBox.children);
+
+  /* ---- active screen tracking (single observer, single root) ---- */
+  var activeIndex=-1;
+  function setActive(i){
+    if(i===activeIndex||i<0) return;
+    if(screens[activeIndex]) screens[activeIndex].classList.remove('active');
+    screens[i].classList.add('active');
+    activeIndex=i;
+    railBars.forEach(function(b,idx){b.classList.toggle('done',idx<i);b.classList.toggle('now',idx===i);});
+    navDots.forEach(function(d,idx){d.classList.toggle('on',idx===i);});
+    fabStack.classList.toggle('on', i>0);
+  }
+  fabTop.addEventListener('click',function(){
+    stage.scrollTo({top:0,behavior:'smooth'});
+  });
+  requestAnimationFrame(function(){setActive(0);});
+
+  var io=new IntersectionObserver(function(entries){
+    var best=null;
+    entries.forEach(function(e){ if(!best||e.intersectionRatio>best.intersectionRatio) best=e; });
+    if(best&&best.isIntersecting){
+      var idx=screens.indexOf(best.target);
+      if(idx>=0) setActive(idx);
+    }
+  },{root:stage,threshold:[.35,.55,.75]});
+  screens.forEach(function(s){io.observe(s);});
+
+  /* ---- progress bar ---- */
+  function onScroll(){
+    var max=stage.scrollHeight-stage.clientHeight;
+    prog.style.width=(max>0?(stage.scrollTop/max*100):0)+'%';
+  }
+  stage.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  /* ---- counters ---- */
+  function animateCount(el,to){
+    var start=performance.now(),dur=1400;
+    function frame(t){
+      var k=Math.min(1,(t-start)/dur), eased=1-Math.pow(1-k,3);
+      el.textContent=Math.round(to*eased);
+      if(k<1) requestAnimationFrame(frame); else el.textContent=to;
+    }
+    requestAnimationFrame(frame);
+  }
+  var seen=new WeakSet();
+  var cio=new IntersectionObserver(function(ents){
+    ents.forEach(function(e){
+      if(e.isIntersecting&&!seen.has(e.target)){
+        seen.add(e.target);
+        animateCount(e.target, parseInt(e.target.dataset.count,10));
+      }
+    });
+  },{root:stage,threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+
+  /* ---- roles accordion ---- */
+  document.querySelectorAll('#roles .role').forEach(function(r){
+    r.querySelector('.role-top').addEventListener('click',function(){
+      var open=r.classList.contains('open');
+      document.querySelectorAll('#roles .role').forEach(function(x){x.classList.remove('open');});
+      if(!open) r.classList.add('open');
+    });
+  });
+
+  /* ---- FAQ accordion ---- */
+  document.querySelectorAll('#faq .qa').forEach(function(q){
+    q.querySelector('.q').addEventListener('click',function(){
+      var open=q.classList.contains('open');
+      document.querySelectorAll('#faq .qa').forEach(function(x){x.classList.remove('open');});
+      if(!open) q.classList.add('open');
+    });
+  });
+
+  /* ---- offices tabs ---- */
+  document.querySelectorAll('.tab').forEach(function(t){
+    t.addEventListener('click',function(){
+      document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active');});
+      document.querySelectorAll('.tabpane').forEach(function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      document.getElementById('pane-'+t.dataset.tab).classList.add('active');
+    });
+  });
+
+  /* ---- locations carousel pips ---- */
+  var track=document.getElementById('locTrack');
+  var cards=[].slice.call(track.querySelectorAll('.loc-card'));
+  var pipBox=document.getElementById('locPips');
+  cards.forEach(function(_,i){
+    var p=document.createElement('button'); p.className='pip'+(i===0?' on':'');
+    p.addEventListener('click',function(){cards[i].scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});});
+    pipBox.appendChild(p);
+  });
+  track.addEventListener('scroll',function(){
+    var w=cards[0].offsetWidth+14, a=Math.round(track.scrollLeft/w);
+    pipBox.querySelectorAll('.pip').forEach(function(p,i){p.classList.toggle('on',i===a);});
+  },{passive:true});
+
+  /* ---- share buttons ---- */
+  var pageUrl=window.location.href;
+  var shareText='TP is hiring — multilingual roles in Malaysia & Thailand. Apply:';
+  document.querySelectorAll('[data-share]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var kind=btn.dataset.share;
+      if(kind==='copy'){
+        if(navigator.clipboard){
+          navigator.clipboard.writeText(pageUrl).then(function(){
+            var o=btn.textContent; btn.textContent='✓ copied';
+            setTimeout(function(){btn.textContent=o;},1600);
+          });
+        }
+      } else if(kind==='wa'){
+        window.open('https://wa.me/?text='+encodeURIComponent(shareText+' '+pageUrl),'_blank');
+      } else if(kind==='tg'){
+        window.open('https://t.me/share/url?url='+encodeURIComponent(pageUrl)+'&text='+encodeURIComponent(shareText),'_blank');
+      }
+    });
+  });
+
+  /* ---- keyboard nav (desktop) ---- */
+  window.addEventListener('keydown',function(e){
+    var tag=(e.target.tagName||'').toLowerCase();
+    if(tag==='input'||tag==='textarea') return;
+    if(e.key==='ArrowDown'||e.key==='PageDown'){e.preventDefault();screens[Math.min(screens.length-1,activeIndex+1)].scrollIntoView({behavior:'smooth'});}
+    else if(e.key==='ArrowUp'||e.key==='PageUp'){e.preventDefault();screens[Math.max(0,activeIndex-1)].scrollIntoView({behavior:'smooth'});}
+  });
+})();
+</script>
+</body>
+</html>
