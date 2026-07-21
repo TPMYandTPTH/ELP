@@ -7,7 +7,7 @@
 - **WhatsApp screening (fastest reply):** +60 19-332 0265 — https://wa.me/60193320265
 - **LINE (chat with a recruiter):** https://line.me/R/ti/p/@286nmdsd
 - **Email:** tpmycareers@teleperformance.com
-- **Refer a friend & earn up to RM10,000:** https://tpmyandtpth.github.io/xRAF/
+- **Refer a friend (xRAF, open to non-TP — earn up to RM3,000):** https://tpmyandtpth.github.io/xRAF/
 - **Machine-readable job list (JSON):** https://tpmyandtpth.github.io/ELP/data.json
 
 > **Who is this for?** Speakers of Mandarin, Cantonese, Japanese, Korean, Thai, Vietnamese, Bahasa Indonesia, Taiwanese, Malay, Khmer, Tagalog, Bengali, Traditional Chinese, or fluent English looking for customer service, content moderation, trust & safety, tech support, sales, or corporate jobs in Southeast Asia — including fresh graduates, career switchers, and people relocating from overseas (Hong Kong, Taiwan, Japan, Korea, China, Indonesia, Vietnam, the Philippines, Cambodia, Bangladesh, and beyond).
@@ -28,7 +28,7 @@
 10. [Daily life: food, transport, housing, healthcare](#daily-life-food-transport-housing-healthcare)
 11. [Why Malaysia & Thailand](#why-malaysia--thailand)
 12. [Employee stories](#employee-stories)
-13. [Refer a friend — earn up to RM10,000](#refer-a-friend--earn-up-to-rm10000)
+13. [Refer a friend — two programs (xRAF & RAF)](#refer-a-friend--two-programs)
 14. [About TP](#about-tp)
 15. [Frequently asked questions](#frequently-asked-questions)
 16. [Contact & social](#contact--social)
@@ -278,7 +278,7 @@ Support for global travel platforms and hotel-reservation projects.
 - **Typical requirements:** fluent target language, working English; travel/tourism experience and GDS-system knowledge preferred; service mindset; multitasking.
 
 ### Interpreter (Work From Home)
-Real-time over-the-phone/video interpretation between your language and English — fully remote from Malaysia or Thailand; TP's highest referral bonus (RM10,000) reflects how sought-after this role is.
+Real-time over-the-phone/video interpretation between your language and English — fully remote from Malaysia or Thailand; TP's highest xRAF referral bonus (RM3,000) reflects how sought-after this role is.
 - **Typical responsibilities:** interpret live conversations accurately and neutrally across domains (customer service, healthcare, insurance and more); maintain confidentiality and professional standards.
 - **Typical requirements:** near-native fluency in both languages; excellent listening and note-taking; quiet home workspace (equipment provided); interpretation experience strongly preferred.
 
@@ -422,17 +422,21 @@ Real voices from the team (shared with initials for privacy):
 
 > "Trainer → QA → Team Leader → Manager. The multinational, merit-based environment kept pushing my career forward." — J.P, Operations Manager, Penang
 
-## Refer a friend — earn up to RM10,000
+## Refer a friend — two programs
 
-TP's referral program (**xRAF**) pays out after your referred friend passes 90 days probation:
+TP runs two separate referral programs. Both pay out after your referred friend passes 90 days probation, via Touch 'n Go eWallet.
+
+**xRAF — open to everyone (non-TP).** Anyone outside TP can refer candidates. Current TP employees cannot use xRAF.
 
 | Referral | Bonus |
 |---|---|
-| Interpreter (Work From Home) | **RM10,000** |
-| Standard roles, most locations | RM800 |
-| Mandarin — Johor | RM500 |
+| Interpreter (Work From Home) | **RM3,000** |
+| Selected-language roles | RM800 |
+| Mandarin / Chinese — Johor | RM500 |
 
 Refer here: https://tpmyandtpth.github.io/xRAF/
+
+**RAF — TP employees only.** Current TP employees earn **up to RM10,000** per successful referral through the internal RAF program. Non-TP and ex-TP referrers are not eligible for RAF.
 
 ## About TP
 

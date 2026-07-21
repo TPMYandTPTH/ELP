@@ -369,9 +369,15 @@ a.member:hover .mn{color:var(--pink)}
 ===================================================== */
 .s-raf{background:radial-gradient(120% 90% at 90% 0%,rgba(0,175,155,.06),transparent 55%),var(--bg)}
 .tiers{display:grid;grid-template-columns:1fr;gap:12px;margin-top:18px}
-@media(min-width:680px){.tiers{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:680px){.tiers{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:980px){.tiers{grid-template-columns:repeat(4,1fr)}}
 .tier{border:1px solid var(--line);border-radius:18px;padding:20px 18px;background:var(--paper);text-align:center;position:relative}
 .tier.top{background:var(--slate);border-color:var(--slate)}
+.tier.raf{background:linear-gradient(160deg,#0b3d38,var(--slate));border-color:var(--teal)}
+.raf-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;font-weight:700;
+  color:var(--teal);text-transform:uppercase;letter-spacing:.06em;margin:26px 0 2px}
+.raf-tag .ms{font-size:15px}
+.prog-note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.5}
 .tier .amt{font-family:var(--display);font-weight:700;font-size:clamp(28px,6vw,38px);color:var(--pink);letter-spacing:-.02em}
 .tier.top .amt{color:#fff}
 .tier .role-n{font-size:13px;color:var(--ink);font-weight:600;margin-top:6px}
@@ -742,22 +748,28 @@ a.member:hover .mn{color:var(--pink)}
   <!-- ============ 07 REFER A FRIEND ============ -->
   <section class="screen s-raf" data-label="refer">
     <div class="wrap">
-      <div class="scr-head enter"><span class="brand"><span class="logo"><img src="https://tpmyandtpth.github.io/ELP/TPLogo.png" alt="TP"></span> refer a friend</span><span>§ earn up to RM10,000</span></div>
+      <div class="scr-head enter"><span class="brand"><span class="logo"><img src="https://tpmyandtpth.github.io/ELP/TPLogo.png" alt="TP"></span> refer a friend</span><span>§ two ways to earn</span></div>
       <h2 class="enter" style="font-size:clamp(28px,6.5vw,44px)">Refer a <em>friend</em>.</h2>
-      <p class="lede enter">Know someone who'd be great? Refer a friend and earn up to <strong>RM10,000</strong> when they join and pass 90 days' probation — paid via Touch 'n Go eWallet.</p>
+      <p class="lede enter">Know someone who'd be great? There are two programs — <strong>xRAF</strong>, open to you right now, and <strong>RAF</strong>, our higher reward for TP employees. Every bonus is paid via Touch 'n Go eWallet after your referral passes 90 days' probation.</p>
+
+      <!-- xRAF — anyone -->
+      <div class="raf-tag enter"><span class="ms">public</span>xRAF · open to everyone (non-TP)</div>
+      <p class="prog-note enter">Anyone outside TP can refer. Earn up to <strong>RM3,000</strong> per successful referral.</p>
       <div class="tiers enter">
-        <div class="tier"><div class="amt">RM500</div><div class="role-n">Mandarin — Johor</div><div class="cond">after 90 days probation</div></div>
-        <div class="tier"><div class="amt">RM800</div><div class="role-n">Standard roles · other locations</div><div class="cond">after 90 days probation</div></div>
-        <div class="tier top"><div class="crown">highest</div><div class="amt">RM10,000</div><div class="role-n">Interpreter (WFH)</div><div class="cond">after 90 days probation</div></div>
+        <div class="tier"><div class="amt">RM500</div><div class="role-n">Mandarin / Chinese — Johor</div><div class="cond">after 90 days probation</div></div>
+        <div class="tier"><div class="amt">RM800</div><div class="role-n">Selected-language roles</div><div class="cond">after 90 days probation</div></div>
+        <div class="tier top"><div class="crown">highest · xRAF</div><div class="amt">RM3,000</div><div class="role-n">Interpreter (WFH)</div><div class="cond">after 90 days probation</div></div>
+        <div class="tier raf"><div class="crown">employees only</div><div class="amt">RM10,000</div><div class="role-n">RAF · TP employees</div><div class="cond">up to — internal program</div></div>
       </div>
+
       <div class="fine enter">
-        <div><span class="ms">credit_card</span>Paid via Touch 'n Go eWallet only. Processing within 30 working days.</div>
-        <div><span class="ms">block</span>Previously-applied candidates and current TP employees are not eligible.</div>
-        <div><span class="ms">info</span>Single payment after 90 days probation. No split payments.</div>
-        <div><span class="ms">verified_user</span>Your friend must consent to sharing info with TP for recruitment.</div>
+        <div><span class="ms">public</span><strong style="color:var(--ink)">xRAF</strong> is for non-TP referrers. Current TP employees can't use xRAF — they use RAF.</div>
+        <div><span class="ms">badge</span><strong style="color:var(--ink)">RAF</strong> pays up to RM10,000 and is for TP employees only. Non-TP and ex-TP are not eligible.</div>
+        <div><span class="ms">credit_card</span>Paid via Touch 'n Go eWallet only. Single payment after 90 days probation — no split payments. Processing within 30 working days.</div>
+        <div><span class="ms">verified_user</span>Your friend must consent to sharing their info with TP for recruitment. Previously-applied candidates are not eligible.</div>
       </div>
       <div class="cta-zone enter">
-        <a class="btn btn-teal" href="https://tpmyandtpth.github.io/xRAF/" target="_blank" rel="noopener">Start referring <span class="arr">→</span></a>
+        <a class="btn btn-teal" href="https://tpmyandtpth.github.io/xRAF/" target="_blank" rel="noopener">Start referring with xRAF <span class="arr">→</span></a>
       </div>
     </div>
   </section>
