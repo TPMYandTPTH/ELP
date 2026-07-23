@@ -4,7 +4,6 @@
 
 - **Interactive site:** https://tpmyandtpth.github.io/ELP/
 - **Apply (all roles):** https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=multilingual
-- **WhatsApp screening (fastest reply):** +60 19-332 0265 — https://wa.me/60193320265
 - **LINE (chat with a recruiter):** https://line.me/R/ti/p/@286nmdsd
 - **Email:** tpmycareers@teleperformance.com
 - **Refer a friend (xRAF, open to non-TP — earn up to RM3,000):** https://tpmyandtpth.github.io/xRAF/
@@ -338,7 +337,7 @@ Not ready to apply? Book a **free 30-minute online consultation** (Microsoft Tea
 
 Typical agenda: your situation and hopes → what the work and shifts actually look like → cost of living and housing basics → hiring process overview (if you want) → Q&A.
 
-Book via LINE (https://line.me/R/ti/p/@286nmdsd), WhatsApp (https://wa.me/60193320265), or the booking form on https://tpmyandtpth.github.io/ELP/.
+Book via LINE (https://line.me/R/ti/p/@286nmdsd) or the booking form on https://tpmyandtpth.github.io/ELP/.
 
 ## Office locations
 
@@ -367,9 +366,9 @@ With the same salary, you live more comfortably in Malaysia — and quality of l
 **Quick comparison (vs Seoul, for reference):**
 | Item | Korea (Seoul) | Malaysia (Kuala Lumpur) |
 |---|---|---|
-| Rent (studio) | ₩800K–1.2M+ | RM1,700–2,500 (~US$380–560) incl. 24h security, pool & gym |
-| A meal | ₩8,000–15,000+ | RM10–15 (~US$2.20–3.35) |
-| Transport (monthly) | ₩100K+ | RM150–300 (~US$33–67) incl. metro + Grab |
+| Rent (studio) | ~US$590–890 | RM1,700–2,500 (~US$380–560) incl. 24h security, pool & gym |
+| A meal | ~US$6–11 | RM10–15 (~US$2.20–3.35) |
+| Transport (monthly) | ~US$75+ | RM150–300 (~US$33–67) incl. metro + Grab |
 
 **Example monthly budgets (reference only):**
 
@@ -478,7 +477,6 @@ Never. TP is a direct employer and charges candidates no fee at any stage. If an
 
 ## Contact & social
 
-- **WhatsApp (pre-screening & questions):** +60 19-332 0265 — https://wa.me/60193320265
 - **LINE Official:** @286nmdsd — https://line.me/R/ti/p/@286nmdsd
 - **Email:** tpmycareers@teleperformance.com
 - **Facebook:** https://www.facebook.com/wearetpinmalaysia
