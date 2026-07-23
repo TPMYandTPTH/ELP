@@ -7,7 +7,7 @@
 - **LINE (chat with a recruiter):** https://line.me/R/ti/p/@286nmdsd
 - **Email:** tpmycareers@teleperformance.com
 - **Refer a friend (xRAF, open to non-TP — earn up to RM3,000):** https://tpmyandtpth.github.io/xRAF/
-- **Refer a friend (RAF, current TP employees only — earn up to RM10,000):** https://tpmyandtpth.github.io/RAF/
+- **Refer a friend (RAF, current TP employees only — earn up to RM12,000):** https://tpmyandtpth.github.io/RAF/
 - **Machine-readable job list (JSON):** https://tpmyandtpth.github.io/ELP/data.json
 
 > **Who is this for?** Speakers of Mandarin, Cantonese, Japanese, Korean, Thai, Vietnamese, Bahasa Indonesia, Taiwanese, Malay, Khmer, Tagalog, Bengali, Traditional Chinese, or fluent English looking for customer service, content moderation, trust & safety, tech support, sales, or corporate jobs in Southeast Asia — including fresh graduates, career switchers, and people relocating from overseas (Hong Kong, Taiwan, Japan, Korea, China, Indonesia, Vietnam, the Philippines, Cambodia, Bangladesh, and beyond).
@@ -437,7 +437,7 @@ TP runs two separate referral programs. Both pay out after your referred friend 
 
 Refer here: https://tpmyandtpth.github.io/xRAF/
 
-**RAF — TP employees only.** Current TP employees earn **up to RM10,000** per successful referral through the internal RAF program. Non-TP and ex-TP referrers are not eligible for RAF.
+**RAF — TP employees only.** Current TP employees earn **up to RM12,000** per successful referral through the internal RAF program. Non-TP and ex-TP referrers are not eligible for RAF.
 
 Refer here (BMS ID required): https://tpmyandtpth.github.io/RAF/
 
