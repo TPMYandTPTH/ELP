@@ -47,8 +47,8 @@
 | Interview format | Microsoft Teams video call, 30–45 minutes per interview, 2–3 rounds depending on project |
 | Working hours | 8-hour shifts, 2 rest days per week (day shift or rotating shift depending on role) |
 | Annual leave | Malaysia: 15 days (up to 21 with tenure); Thailand: 12 days; plus 14 sick days and public holidays |
-| Medical | Private medical + dental from day one; mental-health support for you and your family |
-| Salary | Competitive base + language premium for specialist languages; housing/shift allowances on some roles; bi-annual reviews. Exact range shared early by your recruiter and confirmed in the offer letter |
+| Medical | Private medical, dental & optical from day one; mental-health support for you and your family |
+| Salary | Competitive base + language premium for specialist languages; housing/shift allowances on some roles; bi-annual reviews; support roles receive a 13-month salary. Exact range shared early by your recruiter and confirmed in the offer letter |
 | Awards | Great Place to Work® Malaysia — 6 consecutive years; World's Best Workplaces™ — 5 years |
 
 ---
@@ -295,9 +295,10 @@ For experienced professionals: **Team Leader (CS), Assistant Contact Centre Mana
 ## Salary, benefits & compensation
 
 - **Base salary** is determined by role, language, experience, and skills — with a **language premium** for specialist languages (Japanese, Korean, Mandarin, Cantonese, and others). Your recruiter shares the range early in the process; **final terms are always confirmed in your offer letter and employment contract.**
+- **13-month salary:** support roles (customer service, content moderation, sales, and other frontline support positions) receive a guaranteed 13th-month salary on top of base pay.
 - **Allowances:** housing allowance and language allowance on eligible positions; shift allowances for rotating schedules.
 - **Performance-based reviews** twice a year with salary-increase opportunities.
-- **Medical:** private medical + dental insurance from day one, usable at local English-speaking hospitals and clinics; mental-health/wellbeing support for you and your family.
+- **Medical:** private medical, dental & optical insurance from day one, usable at local English-speaking hospitals and clinics; mental-health/wellbeing support for you and your family.
 - **Time off:** Malaysia 15 days annual leave (up to 21 with tenure); Thailand 12 days; 14 sick days; local public holidays plus select home-country holidays.
 - **Learning:** 2–6 weeks paid training before going live; Language Bootcamp and **GoFluent** for English improvement; continuous upskilling and leadership academies.
 - **Career growth:** structured promotion windows (typically every 12 months); mentorship; many of today's team leads and managers started in frontline roles (a real path: Trainer → QA → Team Leader → Manager).
