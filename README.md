@@ -62,182 +62,182 @@ Every role below is a live "evergreen" requisition — the links go straight to 
 
 | Position | Location | Country | Apply |
 |---|---|---|---|
-| Ad Sales Specialist | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/39524/ad-sales-specialist---mandarin-speaker/job?mode=job&iis=md&iisn=english) |
-| Content Moderator | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/59761/content-moderator---mandarin---thailand/job?mode=job&iis=md&iisn=english) |
-| Inside Sales Representative | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/83901/inside-sales-representative-%28technical-b2b---industrial-solutions%29---mandarin-speaker---bangkok/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist | Johor | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/50874/customer-success-specialist---mandarin---johor/job?mode=job&iis=md&iisn=english) |
-| Anti-Money-Laundering (AML) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49479/anti-money-laundering-%28aml%29---mandarin---kl/job?mode=job&iis=md&iisn=english) |
-| Content Moderator | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49697/content-moderator---mandarin---kl/job?mode=job&iis=md&iisn=english) |
-| Content Moderator | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/48954/content-moderator---chinese-support--social-media-project/job?mode=job&iis=md&iisn=english) |
-| Customer Service Representative | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/48972/customer-service-representative---mandarin-support---reservation-project/job?mode=job&iis=md&iisn=english) |
-| Customer Service Representative | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/70012/customer-service-representative-%e2%80%93-mandarin/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist (Non-Voice) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/51754/customer-success-specialist-%28non-voice%29---mandarin---kl/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist (hotel reservation project) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49435/customer-success-specialist---mandarin---kl/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist - Banking | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/51989/customer-success-specialist---banking---mandarin---kl/job?mode=job&iis=md&iisn=english) |
-| Gaming Support Representative | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/64133/gaming-support-representative---mandarin-speaking/job?mode=job&iis=md&iisn=english) |
-| Global Protections Agent | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/63230/global-protections-agent---mandarin---kuala-lumpur/job?mode=job&iis=md&iisn=english) |
-| IT Business Continuity Project Manager | Kuala Lumpur | Malaysia | [Apply online](https://careers-teleperformance.icims.com/jobs/61507/it-business-continuity-project-manager---kl---mandarin-speaker/job?mode=job&iis=md&iisn=english) |
-| Inbound Sales Representative | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49635/inbound-sales-representative---mandarin---kl/job?mode=job&iis=md&iisn=english) |
-| Procurement Specialist | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/52474/procurement-specialist---mandarin---kl/job?mode=job&iis=md&iisn=english) |
-| Risk Operations Agent | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/63228/risk-operations-agent---mandarin---kuala-lumpur/job?mode=job&iis=md&iisn=english) |
-| Senior Finance & Logistics Operation | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/69468/senior-finance-%26-logistic-operation---kl/job?mode=job&iis=md&iisn=english) |
-| Content Moderator | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49679/content-moderator---mandarin---penang/job?mode=job&iis=md&iisn=english) |
-| Customer Service Representative( Tobacco Project) | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/78607/customer-service-representative%28-tobacco-project%29---mandarin----penang/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49438/customer-success-specialist---mandarin----penang/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist (Hotel Reservation) | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/37277/customer-success-specialist-%28hotel-reservation%29---mandarin-%28penang%29/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist (One Precinct) | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/78570/customer-success-specialist---mandarin---one-precinct%2c-penang/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist (Social Media Project) | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49438/customer-success-specialist-%28social-media-project%29--mandarin----penang/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist (Video Hosting) | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/78570/customer-success-specialist-%28video-hosting-%29---mandarin---one-precinct%2c-penang/job?mode=job&iis=md&iisn=english) |
-| Customer Service Representative | Work From Home (Malaysia) | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/69863/customer-service-representative---mandarin--%28work-from-home%29/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist (Work from home) | Work From Home (Malaysia) | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/64135/work-from-home-customer-success-specialist---mandarin---kuala-lumpur/job?mode=job&iis=md&iisn=english) |
-| Interpreter | Work From Home (Malaysia) | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49561/interpreter---mandarin---work-from-home/job?mode=job&iis=md&iisn=english) |
-| Interpreter | Work From Home (Thailand) | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/71050/interpreter---mandarin---work-from-home-%28thailand%29/job?mode=job&iis=md&iisn=english) |
+| Ad Sales Specialist | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/39524/ad-sales-specialist---mandarin-speaker/job?mode=job&iis=geo&iisn=elp) |
+| Content Moderator | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/59761/content-moderator---mandarin---thailand/job?mode=job&iis=geo&iisn=elp) |
+| Inside Sales Representative | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/83901/inside-sales-representative-%28technical-b2b---industrial-solutions%29---mandarin-speaker---bangkok/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist | Johor | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/50874/customer-success-specialist---mandarin---johor/job?mode=job&iis=geo&iisn=elp) |
+| Anti-Money-Laundering (AML) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49479/anti-money-laundering-%28aml%29---mandarin---kl/job?mode=job&iis=geo&iisn=elp) |
+| Content Moderator | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49697/content-moderator---mandarin---kl/job?mode=job&iis=geo&iisn=elp) |
+| Content Moderator | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/48954/content-moderator---chinese-support--social-media-project/job?mode=job&iis=geo&iisn=elp) |
+| Customer Service Representative | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/48972/customer-service-representative---mandarin-support---reservation-project/job?mode=job&iis=geo&iisn=elp) |
+| Customer Service Representative | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/70012/customer-service-representative-%e2%80%93-mandarin/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist (Non-Voice) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/51754/customer-success-specialist-%28non-voice%29---mandarin---kl/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist (hotel reservation project) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49435/customer-success-specialist---mandarin---kl/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist - Banking | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/51989/customer-success-specialist---banking---mandarin---kl/job?mode=job&iis=geo&iisn=elp) |
+| Gaming Support Representative | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/64133/gaming-support-representative---mandarin-speaking/job?mode=job&iis=geo&iisn=elp) |
+| Global Protections Agent | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/63230/global-protections-agent---mandarin---kuala-lumpur/job?mode=job&iis=geo&iisn=elp) |
+| IT Business Continuity Project Manager | Kuala Lumpur | Malaysia | [Apply online](https://careers-teleperformance.icims.com/jobs/61507/it-business-continuity-project-manager---kl---mandarin-speaker/job?mode=job&iis=geo&iisn=elp) |
+| Inbound Sales Representative | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49635/inbound-sales-representative---mandarin---kl/job?mode=job&iis=geo&iisn=elp) |
+| Procurement Specialist | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/52474/procurement-specialist---mandarin---kl/job?mode=job&iis=geo&iisn=elp) |
+| Risk Operations Agent | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/63228/risk-operations-agent---mandarin---kuala-lumpur/job?mode=job&iis=geo&iisn=elp) |
+| Senior Finance & Logistics Operation | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/69468/senior-finance-%26-logistic-operation---kl/job?mode=job&iis=geo&iisn=elp) |
+| Content Moderator | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49679/content-moderator---mandarin---penang/job?mode=job&iis=geo&iisn=elp) |
+| Customer Service Representative( Tobacco Project) | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/78607/customer-service-representative%28-tobacco-project%29---mandarin----penang/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49438/customer-success-specialist---mandarin----penang/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist (Hotel Reservation) | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/37277/customer-success-specialist-%28hotel-reservation%29---mandarin-%28penang%29/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist (One Precinct) | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/78570/customer-success-specialist---mandarin---one-precinct%2c-penang/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist (Social Media Project) | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49438/customer-success-specialist-%28social-media-project%29--mandarin----penang/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist (Video Hosting) | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/78570/customer-success-specialist-%28video-hosting-%29---mandarin---one-precinct%2c-penang/job?mode=job&iis=geo&iisn=elp) |
+| Customer Service Representative | Work From Home (Malaysia) | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/69863/customer-service-representative---mandarin--%28work-from-home%29/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist (Work from home) | Work From Home (Malaysia) | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/64135/work-from-home-customer-success-specialist---mandarin---kuala-lumpur/job?mode=job&iis=geo&iisn=elp) |
+| Interpreter | Work From Home (Malaysia) | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49561/interpreter---mandarin---work-from-home/job?mode=job&iis=geo&iisn=elp) |
+| Interpreter | Work From Home (Thailand) | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/71050/interpreter---mandarin---work-from-home-%28thailand%29/job?mode=job&iis=geo&iisn=elp) |
 
 ### English
 
 | Position | Location | Country | Apply |
 |---|---|---|---|
-| Team Leader (CS) | Bangkok | Thailand | [Apply online](https://careers-teleperformance.icims.com/jobs/70575/team-leader-%28cs%29---english---bangkok/job?mode=job&iis=md&iisn=english) |
-| Anti-Money-Laundering (AML) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49255/anti-money-laundering-%28aml%29-analyst---english---kl/job?mode=job&iis=md&iisn=english) |
-| Collection Officer | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/52651/collection-officer---english---kl/job?mode=job&iis=md&iisn=english) |
-| Content Moderator | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49401/content-moderator---english---kl/job?mode=job&iis=md&iisn=english) |
-| Content Moderator | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/48968/content-moderator---english-support---social-media-project/job?mode=job&iis=md&iisn=english) |
-| Creator Support Specialist (UGC) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/62136/customer-support-specialist-%28ugc%29---mandarin---kuala-lumpur/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49254/customer-success-specialist---english---kl/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist - Banking | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/51988/customer-success-specialist---banking---english---kl/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist KL (G tower) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/78569/customer-success-specialist---english---kl/job?mode=job&iis=md&iisn=english) |
-| Inbound Sales Representative | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49404/inbound-sales-representative---english---kl/job?mode=job&iis=md&iisn=english) |
-| Procurement Specialist | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/51851/procurement-specialist---english---kl/job?mode=job&iis=md&iisn=english) |
-| Content Moderator | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49399/content-moderator---english---penang/job?mode=job&iis=md&iisn=english) |
-| Customer Service Representative | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/53235/customer-service-representative---english---seberang-perai/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49253/customer-success-specialist---english---penang/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/52759/customer-success-specialist---english---permanent-night-shift---penang/job?mode=job&iis=md&iisn=english) |
-| Inbound Sales Representative | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49406/inbound-sales-representative---english---penang/job?mode=job&iis=md&iisn=english) |
+| Team Leader (CS) | Bangkok | Thailand | [Apply online](https://careers-teleperformance.icims.com/jobs/70575/team-leader-%28cs%29---english---bangkok/job?mode=job&iis=geo&iisn=elp) |
+| Anti-Money-Laundering (AML) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49255/anti-money-laundering-%28aml%29-analyst---english---kl/job?mode=job&iis=geo&iisn=elp) |
+| Collection Officer | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/52651/collection-officer---english---kl/job?mode=job&iis=geo&iisn=elp) |
+| Content Moderator | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49401/content-moderator---english---kl/job?mode=job&iis=geo&iisn=elp) |
+| Content Moderator | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/48968/content-moderator---english-support---social-media-project/job?mode=job&iis=geo&iisn=elp) |
+| Creator Support Specialist (UGC) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/62136/customer-support-specialist-%28ugc%29---mandarin---kuala-lumpur/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49254/customer-success-specialist---english---kl/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist - Banking | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/51988/customer-success-specialist---banking---english---kl/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist KL (G tower) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/78569/customer-success-specialist---english---kl/job?mode=job&iis=geo&iisn=elp) |
+| Inbound Sales Representative | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49404/inbound-sales-representative---english---kl/job?mode=job&iis=geo&iisn=elp) |
+| Procurement Specialist | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/51851/procurement-specialist---english---kl/job?mode=job&iis=geo&iisn=elp) |
+| Content Moderator | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49399/content-moderator---english---penang/job?mode=job&iis=geo&iisn=elp) |
+| Customer Service Representative | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/53235/customer-service-representative---english---seberang-perai/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49253/customer-success-specialist---english---penang/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/52759/customer-success-specialist---english---permanent-night-shift---penang/job?mode=job&iis=geo&iisn=elp) |
+| Inbound Sales Representative | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49406/inbound-sales-representative---english---penang/job?mode=job&iis=geo&iisn=elp) |
 
 ### Japanese
 
 | Position | Location | Country | Apply |
 |---|---|---|---|
-| Ad Sales Specialist | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/63899/ad-sales-specialist---japanese--bangkok/job?mode=job&iis=md&iisn=english) |
-| Assistant Operations Manager (Customer Service) | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/78542/assistant-operation-manager-%28customer-service%29---japanese-speaking/job?mode=job&iis=md&iisn=english) |
-| Content Moderator | Bangkok | Thailand | [Apply online](https://jobs-teleperformance.icims.com/jobs/71802/%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%83%a2%e3%83%87%e3%83%ac%e3%83%bc%e3%82%bf%e3%83%bc%e3%83%bb%e6%97%a5%e6%9c%ac%e8%aa%9e%e5%af%be%e5%bf%9c%ef%bc%88japanese-speaking-content-moderator%ef%bc%89/job?mode=job&iis=md&iisn=english) |
-| Customer Service Representative | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/39527/customer-success-specialist---japanese-speaker/job?mode=job&iis=md&iisn=english) |
-| Customer Service Team Leader | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/73450/customer-service-team-lead---japanese/job?mode=job&iis=md&iisn=english) |
-| Quality Analyst | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/78539/quality-analyst---japanese-speaking/job?mode=job&iis=md&iisn=english) |
-| Sales Specialist | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/71850/%e6%97%a5%e6%9c%ac%e8%aa%9e%e5%af%be%e5%bf%9c%e3%83%bb%e3%82%bb%e3%83%bc%e3%83%ab%e3%82%b9%e3%82%b9%e3%83%9a%e3%82%b7%e3%83%a3%e3%83%aa%e3%82%b9%e3%83%88%ef%bc%88japanese-speaking-sales-specialist%ef%bc%89%e3%80%90%e3%82%a8%e3%83%90%e3%83%bc%e3%82%b0%e3%83%aa%e3%83%bc%e3%83%b3%e6%b1%82%e4%ba%ba%e3%80%91/job?mode=job&iis=md&iisn=english) |
-| Customer Service Representative | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-support---reservation-project/job?mode=job&iis=md&iisn=english) |
-| Japanese speaking HRBP (IR) | Kuala Lumpur | Malaysia | [Apply online](https://jobs-teleperformance.icims.com/jobs/61109/human-resource-business-partner---japanese-speaker---kl/job?mode=job&iis=md&iisn=english) |
-| Procurement Specialist | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/51854/procurement-specialist---japanese---kl/job?mode=job&iis=md&iisn=english) |
-| Sales Specialist | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/71849/%e6%97%a5%e6%9c%ac%e8%aa%9e%e5%af%be%e5%bf%9c%e3%83%bb%e3%82%bb%e3%83%bc%e3%83%ab%e3%82%b9%e3%82%b9%e3%83%9a%e3%82%b7%e3%83%a3%e3%83%aa%e3%82%b9%e3%83%88%ef%bc%88japanese-speaking-sales-specialist%ef%bc%89%e3%80%90%e3%82%a8%e3%83%90%e3%83%bc%e3%82%b0%e3%83%aa%e3%83%bc%e3%83%b3%e6%b1%82%e4%ba%ba%e3%80%91/job?mode=job&iis=md&iisn=english) |
-| Customer Service Representative | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49421/customer-success-specialist---japanese---penang/job?mode=job&iis=md&iisn=english) |
+| Ad Sales Specialist | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/63899/ad-sales-specialist---japanese--bangkok/job?mode=job&iis=geo&iisn=elp) |
+| Assistant Operations Manager (Customer Service) | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/78542/assistant-operation-manager-%28customer-service%29---japanese-speaking/job?mode=job&iis=geo&iisn=elp) |
+| Content Moderator | Bangkok | Thailand | [Apply online](https://jobs-teleperformance.icims.com/jobs/71802/%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%83%a2%e3%83%87%e3%83%ac%e3%83%bc%e3%82%bf%e3%83%bc%e3%83%bb%e6%97%a5%e6%9c%ac%e8%aa%9e%e5%af%be%e5%bf%9c%ef%bc%88japanese-speaking-content-moderator%ef%bc%89/job?mode=job&iis=geo&iisn=elp) |
+| Customer Service Representative | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/39527/customer-success-specialist---japanese-speaker/job?mode=job&iis=geo&iisn=elp) |
+| Customer Service Team Leader | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/73450/customer-service-team-lead---japanese/job?mode=job&iis=geo&iisn=elp) |
+| Quality Analyst | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/78539/quality-analyst---japanese-speaking/job?mode=job&iis=geo&iisn=elp) |
+| Sales Specialist | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/71850/%e6%97%a5%e6%9c%ac%e8%aa%9e%e5%af%be%e5%bf%9c%e3%83%bb%e3%82%bb%e3%83%bc%e3%83%ab%e3%82%b9%e3%82%b9%e3%83%9a%e3%82%b7%e3%83%a3%e3%83%aa%e3%82%b9%e3%83%88%ef%bc%88japanese-speaking-sales-specialist%ef%bc%89%e3%80%90%e3%82%a8%e3%83%90%e3%83%bc%e3%82%b0%e3%83%aa%e3%83%bc%e3%83%b3%e6%b1%82%e4%ba%ba%e3%80%91/job?mode=job&iis=geo&iisn=elp) |
+| Customer Service Representative | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-support---reservation-project/job?mode=job&iis=geo&iisn=elp) |
+| Japanese speaking HRBP (IR) | Kuala Lumpur | Malaysia | [Apply online](https://jobs-teleperformance.icims.com/jobs/61109/human-resource-business-partner---japanese-speaker---kl/job?mode=job&iis=geo&iisn=elp) |
+| Procurement Specialist | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/51854/procurement-specialist---japanese---kl/job?mode=job&iis=geo&iisn=elp) |
+| Sales Specialist | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/71849/%e6%97%a5%e6%9c%ac%e8%aa%9e%e5%af%be%e5%bf%9c%e3%83%bb%e3%82%bb%e3%83%bc%e3%83%ab%e3%82%b9%e3%82%b9%e3%83%9a%e3%82%b7%e3%83%a3%e3%83%aa%e3%82%b9%e3%83%88%ef%bc%88japanese-speaking-sales-specialist%ef%bc%89%e3%80%90%e3%82%a8%e3%83%90%e3%83%bc%e3%82%b0%e3%83%aa%e3%83%bc%e3%83%b3%e6%b1%82%e4%ba%ba%e3%80%91/job?mode=job&iis=geo&iisn=elp) |
+| Customer Service Representative | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49421/customer-success-specialist---japanese---penang/job?mode=job&iis=geo&iisn=elp) |
 
 ### Korean
 
 | Position | Location | Country | Apply |
 |---|---|---|---|
-| Ad Sales Specialist | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/50060/ad-sales-specialist---korean---bangkok/job?mode=job&iis=md&iisn=english) |
-| Content Moderator | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49720/content-moderator---korean---bangkok/job?mode=job&iis=md&iisn=english) |
-| Customer Service Advisor | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/51106/customer-service-advisor---korean---bangkok/job?mode=job&iis=md&iisn=english) |
-| Anti-Money-Laundering (AML) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49470/anti-money-laundering-%28aml%29---korean---kl/job?mode=job&iis=md&iisn=english) |
-| Assistant Contact Centre Manager | Kuala Lumpur | Malaysia | [Apply online](https://careers-teleperformance.icims.com/jobs/50384/assistant-contact-centre-manager-%28customer-service%29----kl/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist (Non-Voice) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/51756/customer-success-specialist-%28non-voice%29---korean---kl/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist (Reservation) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49427/customer-success-specialist---korean---kl/job?mode=job&iis=md&iisn=english) |
-| Procurement Specialist | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/53115/procurement-specialist---korean---kl/job?mode=job&iis=md&iisn=english) |
-| Assistant Contact Centre Manager | Penang | Malaysia | [Apply online](https://careers-teleperformance.icims.com/jobs/50384/assistant-contact-centre-manager-%28customer-service%29----kl/job?mode=job&iis=md&iisn=english) |
-| Content Moderator | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49614/content-moderator---korean---penang/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49422/customer-success-specialist---korean---penang/job?mode=job&iis=md&iisn=english) |
-| Inbound Sales Representative | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49594/inbound-sales-representative---korean---penang/job?mode=job&iis=md&iisn=english) |
+| Ad Sales Specialist | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/50060/ad-sales-specialist---korean---bangkok/job?mode=job&iis=geo&iisn=elp) |
+| Content Moderator | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49720/content-moderator---korean---bangkok/job?mode=job&iis=geo&iisn=elp) |
+| Customer Service Advisor | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/51106/customer-service-advisor---korean---bangkok/job?mode=job&iis=geo&iisn=elp) |
+| Anti-Money-Laundering (AML) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49470/anti-money-laundering-%28aml%29---korean---kl/job?mode=job&iis=geo&iisn=elp) |
+| Assistant Contact Centre Manager | Kuala Lumpur | Malaysia | [Apply online](https://careers-teleperformance.icims.com/jobs/50384/assistant-contact-centre-manager-%28customer-service%29----kl/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist (Non-Voice) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/51756/customer-success-specialist-%28non-voice%29---korean---kl/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist (Reservation) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49427/customer-success-specialist---korean---kl/job?mode=job&iis=geo&iisn=elp) |
+| Procurement Specialist | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/53115/procurement-specialist---korean---kl/job?mode=job&iis=geo&iisn=elp) |
+| Assistant Contact Centre Manager | Penang | Malaysia | [Apply online](https://careers-teleperformance.icims.com/jobs/50384/assistant-contact-centre-manager-%28customer-service%29----kl/job?mode=job&iis=geo&iisn=elp) |
+| Content Moderator | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49614/content-moderator---korean---penang/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49422/customer-success-specialist---korean---penang/job?mode=job&iis=geo&iisn=elp) |
+| Inbound Sales Representative | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49594/inbound-sales-representative---korean---penang/job?mode=job&iis=geo&iisn=elp) |
 
 ### Thai
 
 | Position | Location | Country | Apply |
 |---|---|---|---|
-| Customer Service Representative - Bilingual | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/64381/customer-service-support--thai/job?mode=job&iis=md&iisn=english) |
-| Customer Service Representative - Mono Thai | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/70006/customer-service-representative---thai--bangkok/job?mode=job&iis=md&iisn=english) |
-| Guest Service Call Executive - (Bilingual) | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/51105/guest-service-call-executive---%28bilingual%29---thai---bangkok/job?mode=job&iis=md&iisn=english) |
-| Inside Sales Representative -  (Bilingual) | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/83898/inside-sales-representative-%28technical-b2b---industrial-solutions%29---vietnamese---bangkok/job?mode=job&iis=md&iisn=english) |
-| Team Leader - Bilingual (Thai & English) | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/78604/customer-service-team-lead---thai/job?mode=job&iis=md&iisn=english) |
-| Anti-Money-Laundering (AML) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49471/anti-money-laundering-%28aml%29---thai---kl/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49429/customer-success-specialist---thai---kl/job?mode=job&iis=md&iisn=english) |
-| Fraud & Risk Analyst | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/58707/fraud-%26-risk-analyst---thai--kuala-lumpur/job?mode=job&iis=md&iisn=english) |
-| Global Protections Agent | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/63229/global-protections-agent---thai---kuala-lumpur/job?mode=job&iis=md&iisn=english) |
-| Content Moderator | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49616/content-moderator---thai---penang/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49423/customer-success-specialist---thai---penang/job?mode=job&iis=md&iisn=english) |
+| Customer Service Representative - Bilingual | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/64381/customer-service-support--thai/job?mode=job&iis=geo&iisn=elp) |
+| Customer Service Representative - Mono Thai | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/70006/customer-service-representative---thai--bangkok/job?mode=job&iis=geo&iisn=elp) |
+| Guest Service Call Executive - (Bilingual) | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/51105/guest-service-call-executive---%28bilingual%29---thai---bangkok/job?mode=job&iis=geo&iisn=elp) |
+| Inside Sales Representative -  (Bilingual) | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/83898/inside-sales-representative-%28technical-b2b---industrial-solutions%29---vietnamese---bangkok/job?mode=job&iis=geo&iisn=elp) |
+| Team Leader - Bilingual (Thai & English) | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/78604/customer-service-team-lead---thai/job?mode=job&iis=geo&iisn=elp) |
+| Anti-Money-Laundering (AML) | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49471/anti-money-laundering-%28aml%29---thai---kl/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49429/customer-success-specialist---thai---kl/job?mode=job&iis=geo&iisn=elp) |
+| Fraud & Risk Analyst | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/58707/fraud-%26-risk-analyst---thai--kuala-lumpur/job?mode=job&iis=geo&iisn=elp) |
+| Global Protections Agent | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/63229/global-protections-agent---thai---kuala-lumpur/job?mode=job&iis=geo&iisn=elp) |
+| Content Moderator | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49616/content-moderator---thai---penang/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49423/customer-success-specialist---thai---penang/job?mode=job&iis=geo&iisn=elp) |
 
 ### Cantonese
 
 | Position | Location | Country | Apply |
 |---|---|---|---|
-| Customer Success Specialist | Johor | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/50878/customer-success-specialist---cantonese---johor/job?mode=job&iis=md&iisn=english) |
-| Customer Service Representative | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/48973/customer-service-representative---cantonese-support---reservation-project/job?mode=job&iis=md&iisn=english) |
-| Merchant Risk Monitoring | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/63226/merchant-risk-monitoring----cantonese---kuala-lumpur/job?mode=job&iis=md&iisn=english) |
-| Customer Service Representative (Non-Voice) | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/80932/customer-service-representative-%28non-voice%29-–-cantonese-speaker/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49440/customer-success-specialist---cantonese---penang/job?mode=job&iis=md&iisn=english) |
-| Inbound Sales Representative | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49613/inbound-sales-representative---cantonese---penang/job?mode=job&iis=md&iisn=english) |
-| Service Advisor | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/42692/service-advisor---cantonese-%26-english/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist (Work From Home) | Work From Home (Malaysia) | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49437/customer-success-specialist---cantonese---kl/job?mode=job&iis=md&iisn=english) |
-| Interpreter | Work From Home (Malaysia) | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49598/interpreter---cantonese---work-from-home/job?mode=job&iis=md&iisn=english) |
-| Interpreter | Work From Home (Thailand) | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/71046/interpreter---cantonese---work-from-home-%28thailand%29/job?mode=job&iis=md&iisn=english) |
+| Customer Success Specialist | Johor | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/50878/customer-success-specialist---cantonese---johor/job?mode=job&iis=geo&iisn=elp) |
+| Customer Service Representative | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/48973/customer-service-representative---cantonese-support---reservation-project/job?mode=job&iis=geo&iisn=elp) |
+| Merchant Risk Monitoring | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/63226/merchant-risk-monitoring----cantonese---kuala-lumpur/job?mode=job&iis=geo&iisn=elp) |
+| Customer Service Representative (Non-Voice) | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/80932/customer-service-representative-%28non-voice%29-–-cantonese-speaker/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49440/customer-success-specialist---cantonese---penang/job?mode=job&iis=geo&iisn=elp) |
+| Inbound Sales Representative | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49613/inbound-sales-representative---cantonese---penang/job?mode=job&iis=geo&iisn=elp) |
+| Service Advisor | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/42692/service-advisor---cantonese-%26-english/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist (Work From Home) | Work From Home (Malaysia) | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49437/customer-success-specialist---cantonese---kl/job?mode=job&iis=geo&iisn=elp) |
+| Interpreter | Work From Home (Malaysia) | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49598/interpreter---cantonese---work-from-home/job?mode=job&iis=geo&iisn=elp) |
+| Interpreter | Work From Home (Thailand) | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/71046/interpreter---cantonese---work-from-home-%28thailand%29/job?mode=job&iis=geo&iisn=elp) |
 
 ### Vietnamese
 
 | Position | Location | Country | Apply |
 |---|---|---|---|
-| Content Moderator | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49722/content-moderator---vietnamese---bangkok/job?mode=job&iis=md&iisn=english) |
-| Customer Service Advisor | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/73778/customer-service-advisor---vietnamese--bangkok/job?mode=job&iis=md&iisn=english) |
-| Inside Sales Representative | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/83902/inside-sales-representative-%28technical-b2b---industrial-solutions%29---thai-bilingual---bangkok/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49430/customer-success-specialist---vietnamese---kl/job?mode=job&iis=md&iisn=english) |
-| Interpreter | Work From Home (Malaysia) | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49548/interpreter---vietnamese---work-from-home/job?mode=job&iis=md&iisn=english) |
+| Content Moderator | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49722/content-moderator---vietnamese---bangkok/job?mode=job&iis=geo&iisn=elp) |
+| Customer Service Advisor | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/73778/customer-service-advisor---vietnamese--bangkok/job?mode=job&iis=geo&iisn=elp) |
+| Inside Sales Representative | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/83902/inside-sales-representative-%28technical-b2b---industrial-solutions%29---thai-bilingual---bangkok/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49430/customer-success-specialist---vietnamese---kl/job?mode=job&iis=geo&iisn=elp) |
+| Interpreter | Work From Home (Malaysia) | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49548/interpreter---vietnamese---work-from-home/job?mode=job&iis=geo&iisn=elp) |
 
 ### Bahasa Indonesia
 
 | Position | Location | Country | Apply |
 |---|---|---|---|
-| Content Moderator | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49719/content-moderator---bahasa-indonesia---bangkok/job?mode=job&iis=md&iisn=english) |
-| Customer Service Partner Specialist | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/74572/customer-service-partner-specialist---bahasa-indonesia---bangkok/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49433/customer-success-specialist---bahasa-indonesia---kl/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49436/customer-success-specialist---bahasa-indonesia---penang/job?mode=job&iis=md&iisn=english) |
+| Content Moderator | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49719/content-moderator---bahasa-indonesia---bangkok/job?mode=job&iis=geo&iisn=elp) |
+| Customer Service Partner Specialist | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/74572/customer-service-partner-specialist---bahasa-indonesia---bangkok/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49433/customer-success-specialist---bahasa-indonesia---kl/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49436/customer-success-specialist---bahasa-indonesia---penang/job?mode=job&iis=geo&iisn=elp) |
 
 ### Taiwanese
 
 | Position | Location | Country | Apply |
 |---|---|---|---|
-| Ad Sales Specialist | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/39524/ad-sales-specialist---mandarin-speaker/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist - Taiwanese Bangkok | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/67038/customer-success-specialist---taiwanese--bangkok/job?mode=job&iis=md&iisn=english) |
-| Customer Success Specialist | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49442/customer-success-specialist---taiwanese----penang/job?mode=job&iis=md&iisn=english) |
+| Ad Sales Specialist | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/39524/ad-sales-specialist---mandarin-speaker/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist - Taiwanese Bangkok | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/67038/customer-success-specialist---taiwanese--bangkok/job?mode=job&iis=geo&iisn=elp) |
+| Customer Success Specialist | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49442/customer-success-specialist---taiwanese----penang/job?mode=job&iis=geo&iisn=elp) |
 
 ### Malay
 
 | Position | Location | Country | Apply |
 |---|---|---|---|
-| Content Moderator | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/59762/content-moderator---bahasa-malaysia--thailand/job?mode=job&iis=md&iisn=english) |
-| Merchant Onboarding Agent | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/63227/merchant-onboarding-agent---bahasa-malaysia---kuala-lumpur/job?mode=job&iis=md&iisn=english) |
-| Assisted Sales Advisor | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/42693/assisted-sales-advisor---english-%26-malay/job?mode=job&iis=md&iisn=english) |
+| Content Moderator | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/59762/content-moderator---bahasa-malaysia--thailand/job?mode=job&iis=geo&iisn=elp) |
+| Merchant Onboarding Agent | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/63227/merchant-onboarding-agent---bahasa-malaysia---kuala-lumpur/job?mode=job&iis=geo&iisn=elp) |
+| Assisted Sales Advisor | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/42693/assisted-sales-advisor---english-%26-malay/job?mode=job&iis=geo&iisn=elp) |
 
 ### Khmer
 
 | Position | Location | Country | Apply |
 |---|---|---|---|
-| Content Moderator | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49685/content-moderator---khmer---penang/job?mode=job&iis=md&iisn=english) |
-| Interpreter | Work From Home (Malaysia) | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49603/interpreter---khmer---work-from-home/job?mode=job&iis=md&iisn=english) |
+| Content Moderator | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49685/content-moderator---khmer---penang/job?mode=job&iis=geo&iisn=elp) |
+| Interpreter | Work From Home (Malaysia) | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/49603/interpreter---khmer---work-from-home/job?mode=job&iis=geo&iisn=elp) |
 
 ### Chinese - Traditional
 
 | Position | Location | Country | Apply |
 |---|---|---|---|
-| Customer Service Representative | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/48971/customer-service-representative---traditional-chinese-support---reservation-project/job?mode=job&iis=md&iisn=english) |
+| Customer Service Representative | Kuala Lumpur | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/48971/customer-service-representative---traditional-chinese-support---reservation-project/job?mode=job&iis=geo&iisn=elp) |
 
 ### Tagalog
 
 | Position | Location | Country | Apply |
 |---|---|---|---|
-| Content Moderator | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/59760/content-moderator---tagalog---thailand/job?mode=job&iis=md&iisn=english) |
+| Content Moderator | Bangkok | Thailand | [Apply online](https://careerseng-teleperformance.icims.com/jobs/59760/content-moderator---tagalog---thailand/job?mode=job&iis=geo&iisn=elp) |
 
 ### Bengali
 
 | Position | Location | Country | Apply |
 |---|---|---|---|
-| Content Moderator | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/51083/content-moderator---bengali---penang/job?mode=job&iis=md&iisn=english) |
+| Content Moderator | Penang | Malaysia | [Apply online](https://careerseng-teleperformance.icims.com/jobs/51083/content-moderator---bengali---penang/job?mode=job&iis=geo&iisn=elp) |
 
 ---
 
